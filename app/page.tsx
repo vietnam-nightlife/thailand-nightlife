@@ -3,6 +3,7 @@ import PlaceCard from "@/components/PlaceCard";
 import ContactButtons from "@/components/ContactButtons";
 import { cities, places } from "@/lib/data";
 import bgImage from "../thailand-bg.webp";
+import mobileBgImage from "../thailand-mobile.webp";
 
 export default function Home() {
   const featured = places.filter((p) => p.featured);
