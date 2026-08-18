@@ -9,10 +9,15 @@ export default function Home() {
 
   return (
     <main>
-      <section
-  className="hero-grid relative overflow-hidden border-b border-white/10 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${bgImage.src})` }}
->
+      13  <section
+14    className="relative overflow-hidden border-b border-white/10"
+15    style={{
+16      backgroundImage: `url(${bgImage.src})`,
+17      backgroundSize: "cover",
+18      backgroundPosition: "center",
+19      backgroundRepeat: "no-repeat",
+20    }}
+21  >
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
         <div className="container relative py-28 md:py-36">
           <div className="max-w-4xl">
