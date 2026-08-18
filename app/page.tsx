@@ -33,7 +33,7 @@ export default function Home() {
             <h1 className="mt-7 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-8xl">
               태국에서 <br /><span className="red">눈탱이 맞지 마세요.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-8 text-zinc-400 md:text-lg">
+            <p className="mt-8 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
               방콕과 파타야에서 이용할 수 있는 마사지와 가라오케 정보를 지역별로 확인하세요.
               가격, 위치, 영업시간 등 여행자가 필요한 정보를 한곳에서 비교할 수 있도록 구성했습니다.
             </p>
