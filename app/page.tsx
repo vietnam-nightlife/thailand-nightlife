@@ -9,17 +9,16 @@ export default function Home() {
 
   return (
     <main>
-      13  <section
-14    className="relative overflow-hidden border-b border-white/10"
-15    style={{
-16      backgroundImage: `url(${bgImage.src})`,
-17      backgroundSize: "cover",
-18      backgroundPosition: "center",
-19      backgroundRepeat: "no-repeat",
-20    }}
-21  >
+<section className="relative overflow-hidden border-b border-white/10">
+  <img
+    src={bgImage.src}
+    alt=""
+    className="absolute inset-0 h-full w-full object-cover object-center"
+  />
+
+  <div className="absolute inset-0 bg-black/55" />
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
-        <div className="container relative py-28 md:py-36">
+        <div className="container relative z-10 py-28 md:py-36">
           <div className="max-w-4xl">
             <div className="inline-flex rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-xs font-black tracking-widest text-red-400">
               THAILAND TRAVEL & NIGHTLIFE
