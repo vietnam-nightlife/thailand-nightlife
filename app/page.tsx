@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <section
-  className="hero-grid relative overflow-hidden border-b border-white/10 bg-cover bg-center"
+  className="hero-grid relative overflow-hidden border-b border-white/10 bg-cover bg-center bg-no-repeat"
   style={{ backgroundImage: `url(${bgImage.src})` }}
 >
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
