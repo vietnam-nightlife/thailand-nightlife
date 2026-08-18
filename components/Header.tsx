@@ -14,7 +14,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-20 text-sm text-white md:flex">
+        <nav className="hidden items-center gap-30 text-sm text-white md:flex">
           <Link href="/bangkok" className="text-2xl font-black text-white hover:text-white">방콕</Link>
           <Link href="/pattaya" className="text-2xl font-black text-white hover:text-white">파타야</Link>
         </nav>
