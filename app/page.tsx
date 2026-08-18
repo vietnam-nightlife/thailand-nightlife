@@ -16,7 +16,7 @@ export default function Home() {
     className="absolute inset-0 h-full w-full object-cover object-center"
   />
 
-  <div className="absolute inset-0 bg-black/55" />
+  <div className="absolute inset-0 bg-black/35" />
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
         <div className="container relative z-10 py-28 md:py-36">
           <div className="max-w-4xl">
