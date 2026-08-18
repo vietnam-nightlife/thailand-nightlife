@@ -2,13 +2,17 @@ import CityCard from "@/components/CityCard";
 import PlaceCard from "@/components/PlaceCard";
 import ContactButtons from "@/components/ContactButtons";
 import { cities, places } from "@/lib/data";
+import bgImage from "../thailand-bg.webp";
 
 export default function Home() {
   const featured = places.filter((p) => p.featured);
 
   return (
     <main>
-      <section className="hero-grid relative overflow-hidden border-b border-white/10">
+      <section
+  className="hero-grid relative overflow-hidden border-b border-white/10 bg-cover bg-center"
+  style={{ backgroundImage: `url(${bgImage.src})` }}
+>
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
         <div className="container relative py-28 md:py-36">
           <div className="max-w-4xl">
