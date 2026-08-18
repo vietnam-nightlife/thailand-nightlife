@@ -1,5 +1,6 @@
 import CityCard from "@/components/CityCard";
 import PlaceCard from "@/components/PlaceCard";
+import ContactButtons from "@/components/ContactButtons";
 import { cities, places } from "@/lib/data";
 
 export default function Home() {
