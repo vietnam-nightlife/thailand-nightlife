@@ -101,7 +101,9 @@ export default function Home() {
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-500">
             사이트에 업소를 등록하거나 가격·주소·영업시간 등의 정보 수정이 필요한 경우 문의 채널을 이용하세요.
           </p>
-          <ContactButtons className="mt-8" />
+          <div className="flex justify-center">
+  <ContactButtons className="mt-8" />
+</div>
         </div>
       </section>
     </main>
