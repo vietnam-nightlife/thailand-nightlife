@@ -11,11 +11,17 @@ export default function Home() {
   return (
     <main>
 <section className="relative overflow-hidden border-b border-white/10">
+<picture>
+  <source
+    media="(max-width: 767px)"
+    srcSet={mobileBgImage.src}
+  />
   <img
     src={bgImage.src}
     alt=""
     className="absolute inset-0 h-full w-full object-cover object-center"
   />
+</picture>
 
   <div className="absolute inset-0 bg-black/10" />
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
