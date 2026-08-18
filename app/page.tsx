@@ -38,7 +38,7 @@ export default function Home() {
 
           <div className="mt-20 grid max-w-3xl grid-cols-3 gap-3">
             {[
-              ["2", "주요 지역"], ["2", "주요 카테고리"], ["24H", "정보 확인"]
+              ["김민진", "주요 지역"], ["김종서", "주요 카테고리"], ["김민규", "정보 확인"]
             ].map(([n, label]) => (
               <div key={label} className="rounded-2xl border border-white/10 bg-white/[.03] p-5">
                 <div className="text-2xl font-black">{n}</div>
