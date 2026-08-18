@@ -15,8 +15,8 @@ export default function Header() {
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm text-zinc-400 md:flex">
-          <Link href="/bangkok" className="text-xl font-bold hover:text-white">방콕</Link>
-          <Link href="/pattaya" className="text-xl font-bold hover:text-white">파타야</Link>
+          <Link href="/bangkok" className="text-2xl font-bold hover:text-white">방콕</Link>
+          <Link href="/pattaya" className="text-2xl font-bold hover:text-white">파타야</Link>
         </nav>
 
         <div className="hidden sm:block">
