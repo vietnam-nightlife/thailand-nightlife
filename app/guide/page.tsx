@@ -4,11 +4,11 @@ export default function GuidePage() {
       <section className="border-b border-white/10">
         <div className="container py-16">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
-            BANGKOK TRAVEL GUIDE
+            BANGKOK NIGHT LIFE TRAVEL GUIDE
           </div>
 
           <h1 className="mt-4 text-4xl font-black">
-            방콕 여행 가이드
+            방콕 밤문화 여행 가이드
           </h1>
 
           <p className="mt-6 max-w-3xl leading-8 text-zinc-400">
@@ -25,7 +25,7 @@ export default function GuidePage() {
 
           <div>
             <h2 className="text-3xl font-bold">
-              방콕 여행을 준비하는 방법
+              방콕 밤문화 여행을 준비하는 방법
             </h2>
 
             <p className="mt-5 leading-8 text-zinc-400">
@@ -63,7 +63,7 @@ export default function GuidePage() {
 
           <div>
             <h2 className="text-3xl font-bold">
-              방콕 여행 시 확인할 사항
+              방콕 밤문화 여행 시 확인할 사항
             </h2>
 
             <p className="mt-5 leading-8 text-zinc-400">
