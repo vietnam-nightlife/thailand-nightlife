@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Link from "next/link";
 import PlaceCard from "@/components/PlaceCard";
 import { cities, getCity, getPlaces } from "@/lib/data";
@@ -7,6 +8,29 @@ export function generateStaticParams() {
   return cities.flatMap((city) =>
     ["massage", "karaoke"].map((category) => ({ city: city.slug, category }))
   );
+  export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ city: string; category: string }>;
+}): Promise<Metadata> {
+  const { city: citySlug, category } = await params;
+  const city = getCity(citySlug);
+
+  if (!city) {
+    return {
+      title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
+      description:
+        "방콕과 파타야의 마사지와 가라오케 정보를 확인하세요.",
+    };
+  }
+
+  const title = category === "massage" ? "불건" : "가라오케";
+
+  return {
+    title: `${city.name} ${title} | 태국 눈탱이 방지 위원회`,
+    description: `${city.name} ${title} 업소 정보를 확인하고 가격, 위치, 영업시간 등 필요한 정보를 비교해보세요.`,
+  };
+}
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ city: string; category: string }> }) {
@@ -15,7 +39,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ city:
   if (!city || !["massage", "karaoke"].includes(category)) notFound();
 
   const items = getPlaces(citySlug, category);
-  const title = category === "massage" ? "마사지" : "가라오케";
+  const title = category === "massage" ? "불건마" : "가라오케";
 
   return (
     <main>
