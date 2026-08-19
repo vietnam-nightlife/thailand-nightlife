@@ -52,7 +52,7 @@ export default function Home() {
     <div className="text-2xl font-black">방콕 가라오케</div>
     <div className="mt-1 text-xs text-zinc-600">가라오케 보기 →</div>
   </a>
-
+  
   <a
     href="/bangkok/massage"
     className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
