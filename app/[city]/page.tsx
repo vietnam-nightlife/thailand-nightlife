@@ -17,17 +17,27 @@ export async function generateMetadata({
 
   if (!city) {
     return {
-      title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
-      description:
-        "방콕과 파타야의 불건마와 가라오케 정보를 확인하세요.",
+      title: "태국 밤문화 가이드",
+      description: "방콕과 파타야의 밤문화, 마사지, 가라오케 정보를 확인하세요.",
     };
   }
 
   return {
-    title: `${city.name} 유흥 가이드 | 태국 눈탱이 방지 위원회`,
-    description: `${city.name} 불건마와 가라오케 정보를 확인하고 가격, 위치, 영업시간 등 여행에 필요한 정보를 비교해보세요.`,
+    title: `${city.name} 밤문화 가이드 | 불건마 & 가라오케`,
+    description: `${city.name}의 밤문화와 불건마, 가라오케 정보를 지역별로 확인하세요. 위치, 가격, 영업시간 등 여행에 필요한 정보를 비교해보세요.`,
+    keywords: [
+      `${city.name} 밤문화`,
+      `${city.name} 유흥`,
+      `${city.name} 불건마`,
+      `${city.name} 가라오케`,
+      `${city.name} 여행`,
+      "태국 밤문화",
+      "태국 불건마",
+      "태국 가라오케",
+    ],
   };
 }
+
 export default async function CityPage({ params }: { params: Promise<{ city: string }> }) {
   const { city: citySlug } = await params;
   const city = getCity(citySlug);
@@ -46,7 +56,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <h1 className="mt-4 text-6xl font-black">{city.name}</h1>
           <p className="mt-6 max-w-2xl leading-7 text-zinc-400">{city.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`/${city.slug}/massage`} className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black">마사지</Link>
+            <Link href={`/${city.slug}/massage`} className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black">불건마</Link>
             <Link href={`/${city.slug}/karaoke`} className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-black">가라오케</Link>
           </div>
         </div>
@@ -54,7 +64,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
 
       <section className="container py-20">
         <div className="flex items-end justify-between">
-          <div><div className="text-xs font-black tracking-[.3em] red">MASSAGE</div><h2 className="mt-2 text-3xl font-black">{city.name} 마사지</h2></div>
+          <div><div className="text-xs font-black tracking-[.3em] red">MASSAGE</div><h2 className="mt-2 text-3xl font-black">{city.name} 불건마</h2></div>
           <Link href={`/${city.slug}/massage`} className="text-sm text-zinc-500 hover:text-white">전체보기 →</Link>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
