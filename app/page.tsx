@@ -65,7 +65,7 @@ export default function Home() {
           </div>
 
           {/* 지역별 바로가기 */}
-          <div className="mt-20 grid max-w-4xl grid-cols-2 gap-3">
+          <div className="mt-20 grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-2">
 
             {/* 방콕 가라오케 */}
             <a
