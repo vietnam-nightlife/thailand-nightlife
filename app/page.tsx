@@ -50,7 +50,7 @@ export default function Home() {
     className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
   >
     <div className="text-2xl font-black">방콕 가라오케</div>
-    <div className="mt-1 text-xs text-zinc-600">가라오케 보기 →</div>
+    <div className="mt-1 text-xs text-zinc-600">수쿰빗 인기 KTV  →</div>
   </a>
 
   <a
@@ -58,7 +58,7 @@ export default function Home() {
     className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
   >
     <div className="text-2xl font-black">방콕 불건마</div>
-    <div className="mt-1 text-xs text-zinc-600">마사지 보기 →</div>
+    <div className="mt-1 text-xs text-zinc-600">인기 해피엔딩 마사지 →</div>
   </a>
 
   <a
@@ -66,7 +66,7 @@ export default function Home() {
     className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
   >
     <div className="text-2xl font-black">파타야 가라오케</div>
-    <div className="mt-1 text-xs text-zinc-600">가라오케 보기 →</div>
+    <div className="mt-1 text-xs text-zinc-600">파타야 인기 KTV 보기 →</div>
   </a>
 
   <a
@@ -74,7 +74,7 @@ export default function Home() {
     className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
   >
     <div className="text-2xl font-black">파타야 불건마</div>
-    <div className="mt-1 text-xs text-zinc-600">마사지 보기 →</div>
+    <div className="mt-1 text-xs text-zinc-600">인기 해피엔딩 마사지 →</div>
   </a>
 
 </div>
