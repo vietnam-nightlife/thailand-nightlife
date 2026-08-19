@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container py-14">
 
         {/* 사이트 이름 - 클릭하면 홈으로 이동 */}
-        <Link href="/" className="inline-block group">
+        <Link href="/#top" className="inline-block group">
           <div className="text-xl font-black text-white">
             태국 <span className="text-red-500">눈탱이 방지 위원회</span>
           </div>
