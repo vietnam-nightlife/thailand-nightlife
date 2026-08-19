@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { places, getPlace } from "@/lib/data";
+import ContactButtons from "@/components/ContactButtons";
 
 export function generateStaticParams() {
   return places.map((p) => ({ city: p.city, category: p.category, slug: p.slug }));
@@ -81,6 +82,7 @@ export default async function PlaceDetail({ params }: { params: Promise<{ city: 
               <div><dt className="text-zinc-600">영업시간</dt><dd className="mt-1 text-zinc-300">{place.hours}</dd></div>
               <div><dt className="text-zinc-600">평점</dt><dd className="mt-1 text-zinc-300">★ {place.rating} ({place.reviews})</dd></div>
             </dl>
+            <ContactButtons />
             <Link href={`/${city}/${category}`} className="mt-7 block rounded-xl bg-red-600 px-5 py-3 text-center text-sm font-black hover:bg-red-500">목록으로 돌아가기</Link>
           </aside>
         </div>
