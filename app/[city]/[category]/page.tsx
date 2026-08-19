@@ -9,7 +9,7 @@ export function generateStaticParams() {
     ["massage", "karaoke"].map((category) => ({ city: city.slug, category }))
   );
   }
-  export async function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ city: string; category: string }>;
@@ -17,7 +17,7 @@ export function generateStaticParams() {
   const { city: citySlug, category } = await params;
   const city = getCity(citySlug);
 
-  if (!city) {
+  if (!city || !["massage", "karaoke"].includes(category)) {
     return {
       title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
       description:
@@ -30,6 +30,22 @@ export function generateStaticParams() {
   return {
     title: `${city.name} ${title} | 태국 눈탱이 방지 위원회`,
     description: `${city.name} ${title} 업소 정보를 확인하고 가격, 위치, 영업시간 등 필요한 정보를 비교해보세요.`,
+    keywords: [
+      `${city.name} ${title}`,
+      `${city.name} 밤문화`,
+      `${city.name} 유흥`,
+      `${city.name} 여행`,
+      "태국 밤문화",
+      "태국 유흥",
+    ],
+    alternates: {
+      canonical: `/${city.slug}/${category}`,
+    },
+    openGraph: {
+      title: `${city.name} ${title} | 태국 눈탱이 방지 위원회`,
+      description: `${city.name} ${title} 정보를 확인하세요.`,
+      type: "website",
+    },
   };
 }
 
