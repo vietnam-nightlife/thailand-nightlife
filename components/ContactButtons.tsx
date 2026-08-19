@@ -28,13 +28,13 @@ export default function ContactButtons({
         <div className="h-10 w-px shrink-0 bg-yellow-400/40" />
 
         <div className="min-w-0 flex-1">
-          <div className="whitespace-nowrap text-base font-black text-yellow-400">
-            카카오톡 상담
-          </div>
-          <div className="mt-1 whitespace-nowrap text-xs text-zinc-400">
-            24시간 빠른 상담 →
-          </div>
-        </div>
+  <div className="text-base font-black leading-tight text-yellow-400">
+    카카오톡 상담
+  </div>
+  <div className="mt-1 text-xs text-zinc-400">
+    24시간 빠른 상담 →
+  </div>
+</div>
       </a>
 
       {/* 텔레그램 */}
@@ -55,13 +55,13 @@ export default function ContactButtons({
         <div className="h-10 w-px shrink-0 bg-sky-400/40" />
 
         <div className="min-w-0 flex-1">
-          <div className="whitespace-nowrap text-base font-black text-sky-400">
-            텔레그램 상담
-          </div>
-          <div className="mt-1 whitespace-nowrap text-xs text-zinc-400">
-            24시간 빠른 상담 →
-          </div>
-        </div>
+  <div className="text-base font-black leading-tight text-sky-400">
+    텔레그램 상담
+  </div>
+  <div className="mt-1 text-xs text-zinc-400">
+    24시간 빠른 상담 →
+  </div>
+</div>
       </a>
     </div>
   );
