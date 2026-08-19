@@ -8,6 +8,7 @@ export function generateStaticParams() {
   return cities.flatMap((city) =>
     ["massage", "karaoke"].map((category) => ({ city: city.slug, category }))
   );
+  }
   export async function generateMetadata({
   params,
 }: {
