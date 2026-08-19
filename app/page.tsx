@@ -413,6 +413,78 @@ export default function Home() {
 
         </div>
       </section>
+
+      <footer className="border-t border-white/10 bg-[#0c0c0c]">
+  <div className="container mx-auto px-5 py-10">
+
+    <a href="/" className="block w-fit">
+      <div className="text-xl font-black leading-none">
+        <span className="text-white">태국 </span>
+        <span className="text-red-500">눈탱이 방지 위원회</span>
+      </div>
+
+      <div className="mt-2 text-[9px] font-medium tracking-[0.28em] text-zinc-500">
+        THAILAND TRAVEL & NIGHTLIFE GUIDE
+      </div>
+    </a>
+
+    <div className="mt-6 flex flex-wrap gap-x-2 gap-y-2 text-sm text-zinc-400">
+
+      <a href="/terms" className="transition hover:text-white">
+        서비스이용약관
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/privacy" className="transition hover:text-white">
+        개인정보처리방침
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/email-policy" className="transition hover:text-white">
+        이메일무단수집거부
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/ad-policy" className="transition hover:text-white">
+        광고정책
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/copyright" className="transition hover:text-white">
+        저작권정책
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/about" className="transition hover:text-white">
+        사이트소개
+      </a>
+
+      <span className="text-zinc-700">|</span>
+
+      <a href="/contact" className="transition hover:text-white">
+        문의하기
+      </a>
+
+    </div>
+
+    <div className="mt-5 text-sm text-zinc-500">
+      © 2026 태국 눈탱이 방지 위원회 · THAILAND TRAVEL & NIGHTLIFE GUIDE
+    </div>
+
+    <div className="mt-2 text-sm leading-7 text-zinc-500">
+      본 사이트는 정보 제공 목적의 블로그이며 특정 업체의 영업을 대행하지 않습니다.
+      <br />
+      이용·예약 등 거래는 각 업체와 직접 진행됩니다.
+    </div>
+
+  </div>
+</footer>
+      
     </main>
   );
 }
