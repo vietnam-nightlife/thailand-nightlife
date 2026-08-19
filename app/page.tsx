@@ -10,7 +10,7 @@ export default function Home() {
   const featured = places.filter((p) => p.featured);
 
   return (
-    <main>
+    <main id="top">
       <section className="relative overflow-hidden border-b border-white/10">
         <picture>
           <source
