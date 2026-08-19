@@ -14,11 +14,12 @@ export default function BackToTop() {
         gap: "14px",
       }}
     >
-      {/* 카카오톡 */}
+      {/* 카카오톡 상담 */}
       <a
         href="https://open.kakao.com/o/snvQKD4h"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="카카오톡 상담"
         style={{
           textDecoration: "none",
           display: "flex",
@@ -27,7 +28,7 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/kakaotalk.web"
+          src="/kakaotalk.webp"
           alt="카카오톡 상담"
           style={{
             width: "52px",
@@ -50,11 +51,12 @@ export default function BackToTop() {
         </span>
       </a>
 
-      {/* 텔레그램 */}
+      {/* 텔레그램 상담 */}
       <a
         href="https://t.me/boom3230"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="텔레그램 상담"
         style={{
           textDecoration: "none",
           display: "flex",
@@ -63,7 +65,7 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/telegram.web"
+          src="/telegram.webp"
           alt="텔레그램 상담"
           style={{
             width: "52px",
