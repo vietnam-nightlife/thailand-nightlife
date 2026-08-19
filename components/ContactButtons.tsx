@@ -1,7 +1,14 @@
-export default function ContactButtons() {
-  return (
-    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+type ContactButtonsProps = {
+  className?: string;
+};
 
+export default function ContactButtons({
+  className = "",
+}: ContactButtonsProps) {
+  return (
+    <div
+      className={`grid grid-cols-1 gap-4 sm:grid-cols-2 ${className}`}
+    >
       {/* 카카오톡 */}
       <a
         href="여기에 기존 카카오톡 주소"
@@ -55,7 +62,6 @@ export default function ContactButtons() {
           </div>
         </div>
       </a>
-
     </div>
   );
 }
