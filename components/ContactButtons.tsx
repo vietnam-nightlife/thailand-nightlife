@@ -9,12 +9,10 @@ export default function ContactButtons({
   className = "",
 }: ContactButtonsProps) {
   return (
-    <div
-      className={`grid grid-cols-1 gap-3 sm:grid-cols-2 ${className}`}
-    >
+    <div className={`grid grid-cols-1 gap-3 sm:grid-cols-2 ${className}`}>
       {/* 카카오톡 */}
       <a
-        href="https://open.kakao.com/o/snvQKD4h"
+        href="여기에 기존 카카오톡 주소"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex min-w-0 items-center gap-3 overflow-hidden rounded-2xl border border-yellow-400/80 bg-[#111] px-4 py-4 transition-all duration-200 hover:border-yellow-400 hover:bg-yellow-400/10"
@@ -41,7 +39,7 @@ export default function ContactButtons({
 
       {/* 텔레그램 */}
       <a
-        href="https://t.me/boom3230"
+        href="여기에 기존 텔레그램 주소"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex min-w-0 items-center gap-3 overflow-hidden rounded-2xl border border-sky-400/80 bg-[#111] px-4 py-4 transition-all duration-200 hover:border-sky-400 hover:bg-sky-400/10"
@@ -64,10 +62,6 @@ export default function ContactButtons({
             24시간 빠른 상담 →
           </div>
         </div>
-      </a>
-    </div>
-  );
-}
       </a>
     </div>
   );
