@@ -6,6 +6,31 @@ import { cities, places } from "@/lib/data";
 import bgImage from "../thailand-bg.webp";
 import mobileBgImage from "../thailand-mobile.webp";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "태국 밤문화 가이드 | 방콕·파타야 불건마 & 가라오케",
+  description:
+    "태국 방콕과 파타야의 불건마, 마사지, 가라오케 정보를 지역별로 확인하세요. 위치, 가격, 영업시간 등 여행에 필요한 정보를 비교해보세요.",
+  keywords: [
+    "태국 밤문화",
+    "태국 유흥",
+    "방콕 밤문화",
+    "파타야 밤문화",
+    "방콕 불건마",
+    "파타야 불건마",
+    "방콕 가라오케",
+    "파타야 가라오케",
+    "태국 마사지",
+  ],
+  openGraph: {
+    title: "태국 밤문화 가이드 | 방콕·파타야",
+    description:
+      "방콕과 파타야의 불건마, 마사지, 가라오케 정보를 확인하세요.",
+    type: "website",
+  },
+};
+
 export default function Home() {
   const featured = places.filter((p) => p.featured);
 
