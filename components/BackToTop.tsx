@@ -27,7 +27,7 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/kakaotalk.webp"
+          src="/kakaotalk.web"
           alt="카카오톡 상담"
           style={{
             width: "52px",
@@ -63,7 +63,7 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/telegram.webp"
+          src="/telegram.web"
           alt="텔레그램 상담"
           style={{
             width: "52px",
