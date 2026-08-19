@@ -45,39 +45,142 @@ export default function Home() {
 
 <div className="mt-20 grid max-w-4xl grid-cols-2 gap-3">
 
+  {/* 방콕 가라오케 */}
   <a
     href="/bangkok/karaoke"
-    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+    className="group rounded-2xl border border-red-400/50 bg-black/20 p-5 transition-all duration-300 hover:border-red-400 hover:bg-red-950/20 hover:shadow-[0_0_25px_rgba(248,113,113,0.15)]"
   >
-    <div className="text-2xl font-black">방콕 가라오케</div>
-    <div className="mt-1 text-xs text-zinc-600">수쿰빗 인기 KTV  →</div>
+    <div className="flex items-center gap-5">
+
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-red-400/20 bg-red-950/30 text-red-400 transition group-hover:scale-105">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-9 w-9"
+        >
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+      </div>
+
+      <div className="border-l border-red-400/30 pl-5">
+        <div className="text-2xl font-black text-red-300 transition group-hover:text-red-200">
+          방콕 가라오케
+        </div>
+        <div className="mt-2 text-sm font-medium text-zinc-300">
+          수쿰빗 인기 KTV →
+        </div>
+      </div>
+
+    </div>
   </a>
 
+
+  {/* 방콕 불건마 */}
   <a
     href="/bangkok/massage"
-    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+    className="group rounded-2xl border border-amber-300/50 bg-black/20 p-5 transition-all duration-300 hover:border-amber-300 hover:bg-amber-950/20 hover:shadow-[0_0_25px_rgba(251,191,36,0.15)]"
   >
-    <div className="text-2xl font-black">방콕 불건마</div>
-    <div className="mt-1 text-xs text-zinc-600">인기 해피엔딩 마사지 →</div>
+    <div className="flex items-center gap-5">
+
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-amber-300/20 bg-amber-950/30 text-amber-300 transition group-hover:scale-105">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-9 w-9"
+        >
+          <path d="M12 21c-4-2-7-5.5-7-10 0-3.5 2.3-6 5-6 1.7 0 3.1.9 4 2.2C14.9 5.9 16.3 5 18 5c2.7 0 5 2.5 5 6 0 4.5-3 8-7 10l-2-1z" />
+          <path d="M12 21c-2.5-2.2-4-4.7-4-7.5 0-2.2 1.3-3.8 3-3.8 1 0 1.8.5 2.3 1.3" />
+        </svg>
+      </div>
+
+      <div className="border-l border-amber-300/30 pl-5">
+        <div className="text-2xl font-black text-amber-200 transition group-hover:text-amber-100">
+          방콕 불건마
+        </div>
+        <div className="mt-2 text-sm font-medium text-zinc-300">
+          인기 해피엔딩 마사지 →
+        </div>
+      </div>
+
+    </div>
   </a>
 
+
+  {/* 파타야 가라오케 */}
   <a
     href="/pattaya/karaoke"
-    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+    className="group rounded-2xl border border-purple-400/50 bg-black/20 p-5 transition-all duration-300 hover:border-purple-400 hover:bg-purple-950/20 hover:shadow-[0_0_25px_rgba(192,132,252,0.15)]"
   >
-    <div className="text-2xl font-black">파타야 가라오케</div>
-    <div className="mt-1 text-xs text-zinc-600">파타야 인기 KTV 보기 →</div>
+    <div className="flex items-center gap-5">
+
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-purple-400/20 bg-purple-950/30 text-purple-400 transition group-hover:scale-105">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-9 w-9"
+        >
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+      </div>
+
+      <div className="border-l border-purple-400/30 pl-5">
+        <div className="text-2xl font-black text-purple-300 transition group-hover:text-purple-200">
+          파타야 가라오케
+        </div>
+        <div className="mt-2 text-sm font-medium text-zinc-300">
+          파타야 인기 KTV 보기 →
+        </div>
+      </div>
+
+    </div>
   </a>
 
+
+  {/* 파타야 불건마 */}
   <a
     href="/pattaya/massage"
-    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+    className="group rounded-2xl border border-cyan-400/50 bg-black/20 p-5 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-950/20 hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]"
   >
-    <div className="text-2xl font-black">파타야 불건마</div>
-    <div className="mt-1 text-xs text-zinc-600">인기 해피엔딩 마사지 →</div>
-  </a>
+    <div className="flex items-center gap-5">
 
-</div>
+      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-cyan-400/20 bg-cyan-950/30 text-cyan-300 transition group-hover:scale-105">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          className="h-9 w-9"
+        >
+          <path d="M20 11c0 5-4 9-8 11-4-2-8-6-8-11 0-3 2-5 5-5 1.5 0 2.5.7 3 1.5C12.5 6.7 13.5 6 15 6c3 0 5 2 5 5z" />
+          <path d="M8 15c1.5-1 2.8-1.2 4-1 1.2.2 2.5 0 4-1" />
+        </svg>
+      </div>
+
+      <div className="border-l border-cyan-400/30 pl-5">
+        <div className="text-2xl font-black text-cyan-300 transition group-hover:text-cyan-200">
+          파타야 불건마
+        </div>
+        <div className="mt-2 text-sm font-medium text-zinc-300">
+          인기 해피엔딩 마사지 →
+        </div>
+      </div>
+
+    </div>
+  </a>
 
 </div>
 
