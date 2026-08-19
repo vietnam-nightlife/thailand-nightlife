@@ -1,9 +1,48 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { places, getPlace } from "@/lib/data";
 
 export function generateStaticParams() {
   return places.map((p) => ({ city: p.city, category: p.category, slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ city: string; category: string; slug: string }>;
+}): Promise<Metadata> {
+  const { city, category, slug } = await params;
+  const place = getPlace(slug);
+
+  if (!place || place.city !== city || place.category !== category) {
+    return {
+      title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
+      description: "태국 방콕과 파타야의 업소 정보를 확인하세요.",
+    };
+  }
+
+  const cityName = city === "bangkok" ? "방콕" : "파타야";
+  const categoryName = category === "massage" ? "불건마" : "가라오케";
+
+  return {
+    title: `${place.name} | ${cityName} ${categoryName} | 태국 눈탱이 방지 위원회`,
+    description: `${place.name}의 위치, 가격, 영업시간, 평점 및 업소 정보를 확인하세요.`,
+    alternates: {
+      canonical: `/${city}/${category}/${slug}`,
+    },
+    openGraph: {
+      title: `${place.name} | ${cityName} ${categoryName}`,
+      description: `${place.name}의 위치, 가격, 영업시간 및 업소 정보를 확인하세요.`,
+      type: "website",
+      images: [
+        {
+          url: place.image,
+          alt: place.name,
+        },
+      ],
+    },
+  };
 }
 
 export default async function PlaceDetail({ params }: { params: Promise<{ city: string; category: string; slug: string }> }) {
@@ -12,7 +51,7 @@ export default async function PlaceDetail({ params }: { params: Promise<{ city: 
   if (!place || place.city !== city || place.category !== category) notFound();
 
   const cityName = city === "bangkok" ? "방콕" : "파타야";
-  const categoryName = category === "massage" ? "마사지" : "가라오케";
+  const categoryName = category === "massage" ? "불건마" : "가라오케";
 
   return (
     <main>
