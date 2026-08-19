@@ -1,5 +1,8 @@
 "use client";
 
+import kakaotalkImage from "../kakaotalk.webp";
+import telegramImage from "../telegram.webp";
+
 export default function BackToTop() {
   return (
     <div
@@ -28,12 +31,13 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/kakaotalk.webp"
+          src={kakaotalkImage.src}
           alt="카카오톡 상담"
           style={{
             width: "52px",
             height: "52px",
             objectFit: "contain",
+            display: "block",
           }}
         />
 
@@ -44,7 +48,7 @@ export default function BackToTop() {
             fontSize: "13px",
             fontWeight: "600",
             whiteSpace: "nowrap",
-            textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+            textShadow: "0 1px 4px rgba(0,0,0,0.9)",
           }}
         >
           카카오 상담
@@ -65,12 +69,13 @@ export default function BackToTop() {
         }}
       >
         <img
-          src="/telegram.webp"
+          src={telegramImage.src}
           alt="텔레그램 상담"
           style={{
             width: "52px",
             height: "52px",
             objectFit: "contain",
+            display: "block",
           }}
         />
 
@@ -81,14 +86,14 @@ export default function BackToTop() {
             fontSize: "13px",
             fontWeight: "600",
             whiteSpace: "nowrap",
-            textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+            textShadow: "0 1px 4px rgba(0,0,0,0.9)",
           }}
         >
           텔레그램
         </span>
       </a>
 
-      {/* TOP */}
+      {/* TOP 버튼 */}
       <button
         onClick={() =>
           window.scrollTo({
