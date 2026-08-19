@@ -16,7 +16,7 @@ export default function BackToTop() {
     >
       {/* 카카오톡 */}
       <a
-        href="여기에_카카오톡_상담링크"
+        href="https://open.kakao.com/o/snvQKD4h"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -52,7 +52,7 @@ export default function BackToTop() {
 
       {/* 텔레그램 */}
       <a
-        href="여기에_텔레그램_상담링크"
+        href="https://t.me/boom3230"
         target="_blank"
         rel="noopener noreferrer"
         style={{
