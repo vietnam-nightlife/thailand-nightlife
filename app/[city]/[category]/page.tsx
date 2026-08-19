@@ -24,7 +24,7 @@ export function generateStaticParams() {
     };
   }
 
-  const title = category === "massage" ? "불건" : "가라오케";
+  const title = category === "massage" ? "불건마" : "가라오케";
 
   return {
     title: `${city.name} ${title} | 태국 눈탱이 방지 위원회`,
