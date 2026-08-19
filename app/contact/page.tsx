@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="mt-12 grid max-w-3xl gap-4 sm:grid-cols-2">
 
           <a
-            href="#"
+            href="https://open.kakao.com/o/snvQKD4h"
             className="rounded-2xl border border-yellow-400/30 bg-yellow-400/5 p-6 transition hover:bg-yellow-400/10"
           >
             <div className="text-lg font-bold text-yellow-300">
@@ -32,7 +32,7 @@ export default function ContactPage() {
           </a>
 
           <a
-            href="#"
+            href="https://t.me/boom3230"
             className="rounded-2xl border border-cyan-400/30 bg-cyan-400/5 p-6 transition hover:bg-cyan-400/10"
           >
             <div className="text-lg font-bold text-cyan-300">
