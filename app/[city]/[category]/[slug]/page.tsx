@@ -31,7 +31,8 @@ export async function generateMetadata({
   }
 
   const cityName = city === "bangkok" ? "방콕" : "파타야";
-  const categoryName = category === "massage" ? "마사지" : "가라오케";
+  const categoryName =
+    category === "massage" ? "마사지" : "가라오케";
 
   return {
     title: `${place.name} | ${cityName} ${categoryName} | 태국 눈탱이 방지 위원회`,
@@ -51,6 +52,62 @@ export async function generateMetadata({
       ],
     },
   };
+}
+
+function PlaceBreadcrumbJsonLd({
+  cityName,
+  citySlug,
+  category,
+  categoryName,
+  placeName,
+  placeSlug,
+}: {
+  cityName: string;
+  citySlug: string;
+  category: string;
+  categoryName: string;
+  placeName: string;
+  placeSlug: string;
+}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "홈",
+        item: "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: cityName,
+        item: `/${citySlug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: categoryName,
+        item: `/${citySlug}/${category}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: placeName,
+        item: `/${citySlug}/${category}/${placeSlug}`,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
+    />
+  );
 }
 
 export default async function PlaceDetail({
@@ -74,12 +131,23 @@ export default async function PlaceDetail({
     notFound();
   }
 
-  const cityName = city === "bangkok" ? "방콕" : "파타야";
+  const cityName =
+    city === "bangkok" ? "방콕" : "파타야";
+
   const categoryName =
     category === "massage" ? "마사지" : "가라오케";
 
   return (
     <main>
+      <PlaceBreadcrumbJsonLd
+        cityName={cityName}
+        citySlug={city}
+        category={category}
+        categoryName={categoryName}
+        placeName={place.name}
+        placeSlug={place.slug}
+      />
+
       {/* 업소 메인 이미지 */}
       <section className="relative h-[520px] overflow-hidden">
         <img
@@ -110,7 +178,7 @@ export default async function PlaceDetail({
       {/* 업소 정보 */}
       <section className="container py-20">
         <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
-          
+
           {/* 설명 */}
           <div>
             <div className="text-xs font-black tracking-[.3em] red">
