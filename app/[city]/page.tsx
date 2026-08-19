@@ -86,7 +86,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <section className="container py-16">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold">
-              {city.name} 불건 & 가라오케 FAQ
+              {city.name} 불건마 & 가라오케 FAQ
             </h2>
 
             <div className="mt-8 space-y-6">
