@@ -62,6 +62,15 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "태국 밤문화 가이드",
+  description:
+    "태국 방콕과 파타야의 밤문화, 마사지, 가라오케 정보를 제공하는 여행 가이드입니다.",
+  inLanguage: "ko-KR",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,28 +78,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-<body>
-  <Header />
+      <body>
+        <Header />
 
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "태국 밤문화 가이드",
-        description:
-          "태국 방콕과 파타야의 밤문화, 마사지, 가라오케 정보를 제공하는 여행 가이드입니다.",
-        inLanguage: "ko-KR",
-      }),
-    }}
-  />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
 
-  {children}
+        {children}
 
-  <BackToTop />
-  <Footer />
-</body>
+        <BackToTop />
+        <Footer />
+      </body>
     </html>
   );
 }
