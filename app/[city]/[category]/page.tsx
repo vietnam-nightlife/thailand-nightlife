@@ -32,7 +32,6 @@ export function generateStaticParams() {
     description: `${city.name} ${title} 업소 정보를 확인하고 가격, 위치, 영업시간 등 필요한 정보를 비교해보세요.`,
   };
 }
-}
 
 export default async function CategoryPage({ params }: { params: Promise<{ city: string; category: string }> }) {
   const { city: citySlug, category } = await params;
