@@ -69,12 +69,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
-        <Header />
-        {children}
-        <BackToTop />
-        <Footer />
-      </body>
+<body>
+  <Header />
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "태국 밤문화 가이드",
+        description:
+          "태국 방콕과 파타야의 밤문화, 마사지, 가라오케 정보를 제공하는 여행 가이드입니다.",
+        inLanguage: "ko-KR",
+      }),
+    }}
+  />
+
+  {children}
+
+  <BackToTop />
+  <Footer />
+</body>
     </html>
   );
 }
