@@ -11,7 +11,7 @@ export default function ContactButtons({
     >
       {/* 카카오톡 */}
       <a
-        href="여기에 기존 카카오톡 주소"
+        href="https://open.kakao.com/o/snvQKD4h"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-4 rounded-2xl border border-yellow-400/80 bg-[#111] px-5 py-4 transition-all duration-200 hover:border-yellow-400 hover:bg-yellow-400/10"
@@ -38,7 +38,7 @@ export default function ContactButtons({
 
       {/* 텔레그램 */}
       <a
-        href="여기에 기존 텔레그램 주소"
+        href="https://t.me/boom3230"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-4 rounded-2xl border border-sky-400/80 bg-[#111] px-5 py-4 transition-all duration-200 hover:border-sky-400 hover:bg-sky-400/10"
