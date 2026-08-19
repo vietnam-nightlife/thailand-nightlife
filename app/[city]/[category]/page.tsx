@@ -21,7 +21,7 @@ export async function generateMetadata({
     return {
       title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
       description:
-        "방콕과 파타야의 마사지와 가라오케 정보를 확인하세요.",
+        "방콕과 파타야의 불건마와 가라오케 정보를 확인하세요.",
     };
   }
 
