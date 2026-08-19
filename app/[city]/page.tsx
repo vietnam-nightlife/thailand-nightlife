@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Link from "next/link";
 import PlaceCard from "@/components/PlaceCard";
 import { cities, getCity, getPlaces } from "@/lib/data";
@@ -6,7 +7,27 @@ import { cities, getCity, getPlaces } from "@/lib/data";
 export function generateStaticParams() {
   return cities.map((city) => ({ city: city.slug }));
 }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ city: string }>;
+}): Promise<Metadata> {
+  const { city: citySlug } = await params;
+  const city = getCity(citySlug);
 
+  if (!city) {
+    return {
+      title: "태국 유흥 가이드 | 태국 눈탱이 방지 위원회",
+      description:
+        "방콕과 파타야의 불건마와 가라오케 정보를 확인하세요.",
+    };
+  }
+
+  return {
+    title: `${city.name} 유흥 가이드 | 태국 눈탱이 방지 위원회`,
+    description: `${city.name} 마사지와 가라오케 정보를 확인하고 가격, 위치, 영업시간 등 여행에 필요한 정보를 비교해보세요.`,
+  };
+}
 export default async function CityPage({ params }: { params: Promise<{ city: string }> }) {
   const { city: citySlug } = await params;
   const city = getCity(citySlug);
