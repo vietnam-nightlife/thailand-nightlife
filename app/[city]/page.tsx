@@ -22,6 +22,42 @@ export async function generateMetadata({
     };
   }
 
+function CityBreadcrumbJsonLd({
+  cityName,
+  citySlug,
+}: {
+  cityName: string;
+  citySlug: string;
+}) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "홈",
+        item: "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: cityName,
+        item: `/${citySlug}`,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
+    />
+  );
+}
+  
   return {
     title: `${city.name} 밤문화 가이드 | 불건마 & 가라오케`,
     description: `${city.name}의 밤문화와 불건마, 가라오케 정보를 지역별로 확인하세요. 위치, 가격, 영업시간 등 여행에 필요한 정보를 비교해보세요.`,
@@ -56,6 +92,10 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
 
   return (
     <main>
+      <CityBreadcrumbJsonLd
+  cityName={city.name}
+  citySlug={city.slug}
+/>
       <section className="relative overflow-hidden border-b border-white/10">
         <img src={city.image} alt={city.name} className="absolute inset-0 h-full w-full object-cover opacity-20" />
         <div className="absolute inset-0 bg-black/75" />
