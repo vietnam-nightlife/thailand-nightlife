@@ -32,7 +32,7 @@ export default function Home() {
               THAILAND TRAVEL & NIGHTLIFE
             </div>
             <h1 className="mt-7 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-8xl">
-              태국에서 <br /><span className="red">눈탱이 맞지 마세요.</span>
+              태국 밤문화 <br /><span className="red">눈탱이 맞지 마세요.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
               방콕과 파타야에서 이용할 수 있는 마사지와 가라오케 정보를 지역별로 확인하세요.
