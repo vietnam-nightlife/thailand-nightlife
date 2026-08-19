@@ -285,7 +285,7 @@ export default function Home() {
           <div className="mx-auto mt-16 max-w-4xl text-left">
 
   <h3 className="text-2xl font-black text-white">
-    태국 유흥 자주 묻는 질문
+    태국 유흥 자주 묻는 대표 질문 (FAQ)
   </h3>
 
   <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[.03]">
@@ -300,8 +300,10 @@ export default function Home() {
       </summary>
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-        방콕과 파타야가 대표적인 지역입니다. 방콕은 수쿰빗을 중심으로 다양한 업소를
-        찾아볼 수 있으며, 파타야는 여행과 함께 유흥을 즐기려는 분들이 많이 찾는 지역입니다.
+        방콕과 파타야가 대표적인 지역입니다.
+         <br />
+        방콕은 수쿰빗을 중심으로 다양한 업소를 찾아볼 수 있으며, 파타야는 여행과 함께 유흥을 즐기려는 분들이 많이 찾는 지역입니다.
+         <br />
         제 개인적인 생각으로는 파타야가 가성비도 좋고 유흥을 즐기기에는 더 최적화 되어있는것 같습니다.
       </div>
     </details>
@@ -317,8 +319,10 @@ export default function Home() {
       </summary>
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-        마사지 종류와 지역, 업소에 따라 가격이 다릅니다. 방문 전 가격과 이용시간,
-        추가 비용 여부를 확인하는 것이 좋습니다.
+        마사지 종류와 지역, 업소에 따라 가격이 다릅니다. 
+         <br />
+        방문 전 가격과 이용시간, 추가 비용 여부를 확인하는 것이 좋습니다.
+         <br />
         가라오케 및 마사지가 완전 처음이시라면 눈탱이 방지 위원회의 서실장이 실패 없는 곳으로 추천해드리겠습니다.
       </div>
     </details>
@@ -335,9 +339,13 @@ export default function Home() {
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
         태국 가라오케 및 영업시간은 방콕, 파타야 업소의 종류와 지역에 따라 다릅니다.
+         <br />
         요일, 현지 상황, 업소 사정에 따라 영업시간이 변경 될 수 있고
+         <br />
         일반적으로 저녁 시간부터 영업을 시작해 늦은 새벽까지 영업하는 곳이 있고 오후 10시에 마감하는 곳도 있습니다
-        방문 전 해당 업소에 운영시간을 문의주시면 감사합니다.
+         <br />
+        방문 전 해당 업소에 운영시간을 문의주시면 감사드리고
+         <br />
         무작정 찾아가서 헛걸음 하시는 일이 없도록 준비 해 드리겠습니다.
       </div>
     </details>
@@ -354,8 +362,11 @@ export default function Home() {
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
         방문 전에 업소의 위치와 가격 정보를 미리 확인하고, 현장에서 제시되는
+         <br />
         가격과 조건도 이용 전에 다시 확인하는 것이 좋습니다.
+         <br />
         저희 눈탱이 방지 위원회에서는 절대로 고객에게 바가지를 씌우는 일이 없으므로 걱정안하셔도 됩니다.
+         <br />
         또한 가격 정찰제와 투명한 가격으로 태국에 여행온 여러분에게 많은 신뢰를 얻고 있습니다.
       </div>
     </details>
@@ -370,9 +381,11 @@ export default function Home() {
       </summary>
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-        업소를 이용하기 전 이용요금, 이용시간, 포함된 서비스 및 추가 비용 여부를 미리 눈탱이 방지위원회에서
-        확인하시는 것이 좋습니다. 업소마다 이용 조건이 다를 수 있으므로 예약이나 방문 전에 안내 받은 내용을 정확하게
-        확인하시기 바랍니다. 또한 눈탱이 방지 위원회에서 검증된 곳만을 추천 및 예약해 드리기 때문에 
+        업소를 이용하기 전 이용요금, 이용시간, 포함된 서비스 및 추가 비용 여부를 미리 눈탱이 방지위원회에서 확인하시는 것이 좋습니다. 
+         <br />
+        업소마다 이용 조건이 다를 수 있으므로 예약이나 방문 전에 안내 받은 내용을 정확하게 확인하시기 바랍니다. 
+         <br />
+        또한 눈탱이 방지 위원회에서 검증된 곳만을 추천 및 예약해 드리기 때문에 
         개인 소지품 관리 및 원하시는 서비스등을 유도리있게 이용하실 수 있는 장점이 있습니다.
       </div>
     </details>
@@ -388,7 +401,9 @@ export default function Home() {
 
       <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
         업소 예약 및 이용에 관한 문의는 카카오톡 또는 텔레그램을 통해 문의를 하실 수 있습니다.
+         <br />
         방문 예정일, 인원, 원하시는 업소 등을 같이 알려주시면 보다 빠르게 안내 받으실 수 있으며,
+         <br />
         업소별 코스 및 이용시간, 요금 예약 가능 여부가 다를 수 있으므로 방문 전 미리 확인하시는 것을 권장합니다!
       </div>
     </details>
