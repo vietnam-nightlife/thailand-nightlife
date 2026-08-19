@@ -43,17 +43,41 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 grid max-w-3xl grid-cols-3 gap-3">
-            {[
-              ["김민진", "주요 지역"], ["김종서", "주요 카테고리"], ["김민규", "정보 확인"]
-            ].map(([n, label]) => (
-              <div key={label} className="rounded-2xl border border-white/10 bg-white/[.03] p-5">
-                <div className="text-2xl font-black">{n}</div>
-                <div className="mt-1 text-xs text-zinc-600">{label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+<div className="mt-20 grid max-w-4xl grid-cols-2 gap-3">
+
+  <a
+    href="/bangkok/karaoke"
+    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+  >
+    <div className="text-2xl font-black">방콕 가라오케</div>
+    <div className="mt-1 text-xs text-zinc-600">가라오케 보기 →</div>
+  </a>
+
+  <a
+    href="/bangkok/massage"
+    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+  >
+    <div className="text-2xl font-black">방콕 불건마</div>
+    <div className="mt-1 text-xs text-zinc-600">마사지 보기 →</div>
+  </a>
+
+  <a
+    href="/pattaya/karaoke"
+    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+  >
+    <div className="text-2xl font-black">파타야 가라오케</div>
+    <div className="mt-1 text-xs text-zinc-600">가라오케 보기 →</div>
+  </a>
+
+  <a
+    href="/pattaya/massage"
+    className="rounded-2xl border border-white/10 bg-white/[.03] p-5 transition hover:bg-white/[.08]"
+  >
+    <div className="text-2xl font-black">파타야 불건마</div>
+    <div className="mt-1 text-xs text-zinc-600">마사지 보기 →</div>
+  </a>
+
+</div>
       </section>
 
       <section id="cities" className="container py-24">
