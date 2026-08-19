@@ -282,6 +282,96 @@ export default function Home() {
             <ContactButtons className="mt-8" />
           </div>
 
+          <div className="mx-auto mt-16 max-w-4xl text-left">
+
+  <h3 className="text-2xl font-black text-white">
+    태국 유흥 자주 묻는 질문
+  </h3>
+
+  <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[.03]">
+
+    <details className="group border-b border-white/10">
+      <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+        <span className="mr-4 text-sm text-red-400">Q</span>
+        <span className="flex-1">태국 한인 유흥은 어느 도시가 좋나요?</span>
+        <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
+        방콕과 파타야가 대표적인 지역입니다. 방콕은 수쿰빗을 중심으로 다양한 업소를
+        찾아볼 수 있으며, 파타야는 여행과 함께 유흥을 즐기려는 분들이 많이 찾는 지역입니다.
+      </div>
+    </details>
+
+
+    <details className="group border-b border-white/10">
+      <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+        <span className="mr-4 text-sm text-red-400">Q</span>
+        <span className="flex-1">태국 마사지 가격은 보통 얼마인가요?</span>
+        <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
+        마사지 종류와 지역, 업소에 따라 가격이 다릅니다. 방문 전 가격과 이용시간,
+        추가 비용 여부를 확인하는 것이 좋습니다.
+      </div>
+    </details>
+
+
+    <details className="group border-b border-white/10">
+      <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+        <span className="mr-4 text-sm text-red-400">Q</span>
+        <span className="flex-1">한국어 가능한 곳을 어떻게 찾나요?</span>
+        <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
+        업소 상세 페이지에서 직원 언어와 이용 가능한 서비스를 확인해 보세요.
+        방문 전에 전화나 상담 채널을 통해 한국어 응대가 가능한지도 확인하는 것을 추천합니다.
+      </div>
+    </details>
+
+
+    <details className="group border-b border-white/10">
+      <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+        <span className="mr-4 text-sm text-red-400">Q</span>
+        <span className="flex-1">호객 행위를 피하려면 어떻게 해야 하나요?</span>
+        <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
+        방문 전에 업소의 위치와 가격 정보를 미리 확인하고, 현장에서 제시되는
+        가격과 조건도 이용 전에 다시 확인하는 것이 좋습니다.
+      </div>
+    </details>
+
+
+    <details className="group">
+      <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+        <span className="mr-4 text-sm text-red-400">Q</span>
+        <span className="flex-1">태국 한인 유흥 업소는 어떻게 등록하나요?</span>
+        <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
+        업소 등록을 원하시는 경우 아래 상담 채널을 통해 업소명, 위치, 연락처,
+        영업시간 및 대표 이미지 등의 정보를 보내주세요. 확인 후 등록 절차를 안내해 드립니다.
+      </div>
+    </details>
+
+  </div>
+</div>
+
         </div>
       </section>
     </main>
