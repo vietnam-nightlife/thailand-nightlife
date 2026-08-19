@@ -79,10 +79,10 @@ export default function Home() {
 
 </div>
 
-          </div>
-  
-      </section>
+</div>
 
+</section>
+      
       <section id="cities" className="container py-24">
         <div className="text-xs font-black tracking-[.3em] red">DESTINATIONS</div>
         <h2 className="mt-3 text-4xl font-black">어느 지역을 찾으세요?</h2>
