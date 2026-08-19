@@ -7,96 +7,105 @@ export default function BackToTop() {
         position: "fixed",
         right: "20px",
         bottom: "20px",
-        width: "94px",
-        padding: "16px 8px",
-        background: "#ffffff",
-        border: "1px solid #e5e5e5",
-        borderRadius: "20px",
-        boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
         zIndex: 9999,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "18px",
+        gap: "14px",
       }}
     >
       {/* 카카오톡 */}
       <a
-        href="https://open.kakao.com/o/snvQKD4h"
+        href="여기에_카카오톡_상담링크"
         target="_blank"
         rel="noopener noreferrer"
         style={{
           textDecoration: "none",
-          color: "#444",
-          textAlign: "center",
-          fontSize: "13px",
-          fontWeight: "600",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        <div
+        <img
+          src="/kakaotalk.webp"
+          alt="카카오톡 상담"
           style={{
-            width: "48px",
-            height: "48px",
-            borderRadius: "50%",
-            background: "#FEE500",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "0 auto 7px",
-            fontSize: "12px",
-            fontWeight: "800",
+            width: "52px",
+            height: "52px",
+            objectFit: "contain",
+          }}
+        />
+
+        <span
+          style={{
+            marginTop: "5px",
+            color: "#ffffff",
+            fontSize: "13px",
+            fontWeight: "600",
+            whiteSpace: "nowrap",
+            textShadow: "0 1px 3px rgba(0,0,0,0.8)",
           }}
         >
-          TALK
-        </div>
-        카카오 상담
+          카카오 상담
+        </span>
       </a>
 
       {/* 텔레그램 */}
       <a
-        href="https://t.me/boom3230"
+        href="여기에_텔레그램_상담링크"
         target="_blank"
         rel="noopener noreferrer"
         style={{
           textDecoration: "none",
-          color: "#444",
-          textAlign: "center",
-          fontSize: "13px",
-          fontWeight: "600",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        <div
+        <img
+          src="/telegram.webp"
+          alt="텔레그램 상담"
           style={{
-            width: "48px",
-            height: "48px",
-            borderRadius: "50%",
-            background: "#229ED9",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "0 auto 7px",
-            fontSize: "24px",
-            color: "#fff",
+            width: "52px",
+            height: "52px",
+            objectFit: "contain",
+          }}
+        />
+
+        <span
+          style={{
+            marginTop: "5px",
+            color: "#ffffff",
+            fontSize: "13px",
+            fontWeight: "600",
+            whiteSpace: "nowrap",
+            textShadow: "0 1px 3px rgba(0,0,0,0.8)",
           }}
         >
-          ➤
-        </div>
-        텔레그램
+          텔레그램
+        </span>
       </a>
 
       {/* TOP */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          })
+        }
+        aria-label="맨 위로 이동"
         style={{
-          width: "50px",
-          height: "50px",
+          width: "52px",
+          height: "52px",
           borderRadius: "50%",
           border: "none",
-          background: "#00bfae",
-          color: "#fff",
+          background: "#00bfa5",
+          color: "#ffffff",
           fontSize: "13px",
           fontWeight: "800",
           cursor: "pointer",
+          boxShadow: "0 3px 12px rgba(0,0,0,0.25)",
         }}
       >
         TOP
