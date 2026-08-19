@@ -78,6 +78,9 @@ export default function Home() {
   </a>
 
 </div>
+
+          </div>
+  
       </section>
 
       <section id="cities" className="container py-24">
