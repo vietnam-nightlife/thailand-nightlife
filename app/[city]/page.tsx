@@ -35,6 +35,14 @@ export async function generateMetadata({
       "태국 불건마",
       "태국 가라오케",
     ],
+        alternates: {
+      canonical: `/${city.slug}`,
+    },
+    openGraph: {
+      title: `${city.name} 밤문화 가이드 | 불건마 & 가라오케`,
+      description: `${city.name}의 밤문화와 불건마, 가라오케 정보를 확인하세요.`,
+      type: "website",
+    },
   };
 }
 
