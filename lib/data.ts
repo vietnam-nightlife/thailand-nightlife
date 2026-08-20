@@ -71,7 +71,7 @@ export const places: Place[] = [
   hours: "19:00 - 05:00",
 
   // 대표 이미지
-  image: "/방콕 코리아나 가라오케 메인.png",
+  image: "/방콕 코리아나 가라오케 메인.webp",
 
   // 상세페이지 룸 갤러리
   gallery: [
