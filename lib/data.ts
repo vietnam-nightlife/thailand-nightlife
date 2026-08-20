@@ -86,9 +86,11 @@ export const places: Place[] = [
     // 상세페이지 갤러리
     gallery: [
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업2.webp`,
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸.webp`,
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸2.webp`,
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸3.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸4.webp`,
     ],
 
     featured: true,
