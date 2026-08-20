@@ -148,7 +148,9 @@ export default async function PlaceDetail({
         placeSlug={place.slug}
       />
 
-      {/* 업소 메인 이미지 */}
+      {/* =========================
+          메인 이미지
+      ========================== */}
       <section className="relative h-[520px] overflow-hidden">
         <img
           src={place.image}
@@ -169,76 +171,111 @@ export default async function PlaceDetail({
             </h1>
 
             <div className="mt-4 text-sm text-zinc-300">
-              ★ {place.rating} · 리뷰 {place.reviews}개 · {place.district}
+              ★ {place.rating} · 리뷰 {place.reviews}개 ·{" "}
+              {place.district}
             </div>
           </div>
         </div>
       </section>
 
-      {/* 업소 정보 */}
-      <section className="container py-20">
-        <div className="grid gap-10 lg:grid-cols-[1fr_360px]">
+      {/* =========================
+          업소 설명
+      ========================== */}
+      <section className="container py-16">
+        <div className="text-xs font-black tracking-[.3em] red">
+          ABOUT
+        </div>
 
-          {/* 설명 */}
-          <div>
-            <div className="text-xs font-black tracking-[.3em] red">
-              ABOUT
-            </div>
+        <h2 className="mt-3 text-3xl font-black">
+          업소 정보
+        </h2>
 
-            <h2 className="mt-3 text-3xl font-black">
-              업소 정보
-            </h2>
+        <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
+          {place.description}
+        </p>
+      </section>
 
-            <p className="mt-6 leading-8 text-zinc-400">
-              {place.description}
-            </p>
+      {/* =========================
+          룸 & 시설 갤러리
+      ========================== */}
+      {place.gallery && place.gallery.length > 0 && (
+        <section className="container pb-20">
+          <div className="text-xs font-black tracking-[.3em] red">
+            GALLERY
           </div>
 
-          {/* 기본 정보 */}
-          <aside className="rounded-3xl border border-white/10 bg-[#111] p-7">
-            <div className="text-sm font-black">
-              기본 정보
+          <h2 className="mt-3 text-3xl font-black">
+            룸 & 시설 사진
+          </h2>
+
+          <p className="mt-3 text-sm text-zinc-500">
+            실제 업소의 룸과 시설을 사진으로 확인해보세요.
+          </p>
+
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {place.gallery.map((image, index) => (
+              <div
+                key={`${image}-${index}`}
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-[#111]"
+              >
+                <img
+                  src={image}
+                  alt={`${place.name} 룸 및 시설 사진 ${index + 1}`}
+                  className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* =========================
+          기본 정보
+      ========================== */}
+      <section className="container pb-20">
+        <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+          <div className="text-sm font-black">
+            기본 정보
+          </div>
+
+          <dl className="mt-6 grid gap-6 md:grid-cols-3 text-sm">
+            <div>
+              <dt className="text-zinc-600">
+                주소
+              </dt>
+
+              <dd className="mt-2 text-zinc-300">
+                {place.address}
+              </dd>
             </div>
 
-            <dl className="mt-6 space-y-5 text-sm">
-              <div>
-                <dt className="text-zinc-600">
-                  주소
-                </dt>
+            <div>
+              <dt className="text-zinc-600">
+                영업시간
+              </dt>
 
-                <dd className="mt-1 text-zinc-300">
-                  {place.address}
-                </dd>
-              </div>
+              <dd className="mt-2 text-zinc-300">
+                {place.hours}
+              </dd>
+            </div>
 
-              <div>
-                <dt className="text-zinc-600">
-                  영업시간
-                </dt>
+            <div>
+              <dt className="text-zinc-600">
+                평점
+              </dt>
 
-                <dd className="mt-1 text-zinc-300">
-                  {place.hours}
-                </dd>
-              </div>
+              <dd className="mt-2 text-zinc-300">
+                ★ {place.rating} ({place.reviews})
+              </dd>
+            </div>
+          </dl>
 
-              <div>
-                <dt className="text-zinc-600">
-                  평점
-                </dt>
-
-                <dd className="mt-1 text-zinc-300">
-                  ★ {place.rating} ({place.reviews})
-                </dd>
-              </div>
-            </dl>
-
-            <Link
-              href={`/${city}/${category}`}
-              className="mt-7 block rounded-xl bg-red-600 px-5 py-3 text-center text-sm font-black hover:bg-red-500"
-            >
-              목록으로 돌아가기
-            </Link>
-          </aside>
+          <Link
+            href={`/${city}/${category}`}
+            className="mt-8 block rounded-xl bg-red-600 px-5 py-3 text-center text-sm font-black hover:bg-red-500"
+          >
+            목록으로 돌아가기
+          </Link>
         </div>
       </section>
     </main>
