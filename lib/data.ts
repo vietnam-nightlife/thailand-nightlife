@@ -21,6 +21,7 @@ export type Place = {
   address: string;
   hours: string;
   image: string;
+  gallery?: string[];
   featured?: boolean;
 };
 
@@ -56,20 +57,33 @@ export const places: Place[] = [
     image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1400&auto=format&fit=crop",
     featured: true
   },
-  {
-    slug: "bangkok-karaoke-01",
-    name: "방콕 스타 가라오케",
-    city: "bangkok",
-    category: "karaoke",
-    district: "수쿰빗",
-    rating: 4.8,
-    reviews: 96,
-    description: "방콕 수쿰빗 지역의 가라오케 정보 예시입니다. 가격, 룸 정보, 영업시간은 실제 업소 정보로 교체하세요.",
-    address: "방콕 수쿰빗",
-    hours: "19:00 - 05:00",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1400&auto=format&fit=crop",
-    featured: true
-  },
+{
+  slug: "bangkok-karaoke-01",
+  name: "방콕 코리아나 가라오케",
+  city: "bangkok",
+  category: "karaoke",
+  district: "수쿰빗",
+  rating: 4.8,
+  reviews: 96,
+  description:
+    "방콕 수쿰빗에서 이용할 수 있는 코리아나 가라오케입니다. 룸 분위기와 시설을 직접 확인할 수 있도록 실제 룸 사진을 함께 제공합니다.",
+  address: "방콕 수쿰빗",
+  hours: "19:00 - 05:00",
+
+  // 대표 이미지
+  image: "/방콕 코리아나 가라오케 메인.png",
+
+  // 상세페이지 룸 갤러리
+  gallery: [
+    "/방콕 코리아나 가라오케 메인.png",
+    "/방콕 코리아나 가라오케 룸.png",
+    "/방콕 코리아나 가라오케 룸2.png",
+    "/방콕 코리아나 가라오케 룸3.png",
+    "/방콕 코리아나 가라오케 쇼업.png",
+  ],
+
+  featured: true
+},
   {
     slug: "pattaya-massage-01",
     name: "파타야 오션 마사지",
