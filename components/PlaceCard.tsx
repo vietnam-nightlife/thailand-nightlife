@@ -53,10 +53,16 @@ export default function PlaceCard({ place }: { place: Place }) {
               </span>
             </div>
 
-            {/* 한국어 응대 가능 */}
-            <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
-              💬 한국어 응대가능
-            </span>
+            {/* 한국어 응대 */}
+{place.koreanSupport ? (
+  <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
+    💬 한국어 응대가능
+  </span>
+) : (
+  <span className="rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-black text-zinc-400">
+    ❌ 한국어 응대 X
+  </span>
+)}
 
             {/* 재방문 추천 */}
             <span className="rounded-md bg-red-600/20 px-3 py-1.5 text-xs font-black text-red-400">
