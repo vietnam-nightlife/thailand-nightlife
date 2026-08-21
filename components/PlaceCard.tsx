@@ -38,11 +38,11 @@ export default function PlaceCard({ place }: { place: Place }) {
   </span>
 
   <span className="inline-block rounded-md bg-blue-600/20 px-2.5 py-1 text-[11px] font-black text-blue-400">
-    [💬 한국어 응대가능]
+    💬 한국어 응대가능
   </span>
 
   <span className="inline-block rounded-md bg-red-600/20 px-2.5 py-1 text-[11px] font-black text-red-400">
-    [🔥 재방문 추천]
+    🔥 재방문 추천
   </span>
 </div>
 
