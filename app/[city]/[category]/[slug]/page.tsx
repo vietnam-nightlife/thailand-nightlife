@@ -179,7 +179,7 @@ function KoreanaBusinessJsonLd() {
       addressCountry: "TH",
     },
     telephone: "+66 82 223 2929",
-    openingHours: "Mo-Su 18:00-03:00",
+    openingHours: "Mo-Su 19:00-03:00",
     priceRange: "฿฿",
     aggregateRating: {
       "@type": "AggregateRating",
@@ -408,7 +408,7 @@ export default async function PlaceDetail({
               </span>
 
               <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                18:00 - 03:00
+                19:00 - 03:00
               </span>
             </div>
           </div>
@@ -443,16 +443,16 @@ export default async function PlaceDetail({
               영업시간
             </div>
             <div className="mt-2 font-bold">
-              18:00 - 03:00
+              19:00 - 03:00
             </div>
           </div>
 
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
             <div className="text-xs text-zinc-500">
-              전화
+              인기시간 필수 예약
             </div>
             <div className="mt-2 font-bold">
-              +66 82 223 2929
+              8시부터 매우 혼잡
             </div>
           </div>
         </div>
@@ -587,12 +587,12 @@ export default async function PlaceDetail({
             </h2>
 
             <div className="mt-8 text-3xl font-black">
-              18:00 - 03:00
+              19:00 - 03:00
             </div>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
               현재 확인되는 업체 정보 기준으로
-              매일 18:00부터 다음날 03:00까지
+              매일 19:00부터 다음날 03:00까지
               운영되는 것으로 안내되고 있습니다.
             </p>
 
@@ -838,7 +838,7 @@ export default async function PlaceDetail({
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
               현재 확인되는 업체 정보 기준으로
-              매일 18:00부터 03:00까지 운영되는
+              매일 19:00부터 03:00까지 운영되는
               것으로 안내되고 있습니다.
             </p>
           </details>
@@ -871,12 +871,13 @@ export default async function PlaceDetail({
 
           <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
             <summary className="cursor-pointer font-bold">
-              전화번호는 어떻게 되나요?
+              문의는 어떻게 하나요?
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 업체 전화번호는
-              +66 82 223 2929입니다.
+              업소 이용 및 예약에 관한 문의는 문의하기를 통해
+              카카오톡 또는 텔레그램으로 확인하실 수 있습니다.
+              방문 전 영업 여부와 이용 조건을 미리 확인하는 것을 권장합니다!
             </p>
           </details>
 
@@ -917,10 +918,10 @@ export default async function PlaceDetail({
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
-              href="tel:+66822232929"
+              href="/contact"
               className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black hover:bg-red-500"
             >
-              전화 문의
+              문의하기
             </a>
 
             <Link
