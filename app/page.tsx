@@ -346,35 +346,6 @@ export default function Home() {
 
       </section>
 
-
-      {/* =====================================================
-          CONTACT + FAQ
-      ====================================================== */}
-      <section
-        id="contact"
-        className="border-t border-white/10 bg-[#0c0c0c]"
-      >
-
-        <div className="container py-16 text-center">
-
-          <div className="text-xs font-black tracking-[.3em] red">
-            CONTACT
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black">
-            업소 등록 및 정보 수정 문의
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
-            사이트에 업소를 등록하거나 가격·주소·영업시간 등의 정보 수정이
-            필요한 경우 문의 채널을 이용하세요.
-          </p>
-
-          <div className="flex justify-center">
-            <ContactButtons className="mt-6" />
-          </div>
-
-
           {/* =================================================
               FAQ
           ================================================== */}
@@ -585,6 +556,33 @@ export default function Home() {
                   있으므로 방문 전 미리 확인하시는 것을 권장합니다!
                 </div>
 
+      {/* =====================================================
+          CONTACT + FAQ
+      ====================================================== */}
+      <section
+        id="contact"
+        className="border-t border-white/10 bg-[#0c0c0c]"
+      >
+
+        <div className="container py-16 text-center">
+
+          <div className="text-xs font-black tracking-[.3em] red">
+            CONTACT
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black">
+            업소 등록 및 정보 수정 문의
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
+            사이트에 업소를 등록하거나 가격·주소·영업시간 등의 정보 수정이
+            필요한 경우 문의 채널을 이용하세요.
+          </p>
+
+          <div className="flex justify-center">
+            <ContactButtons className="mt-6" />
+          </div>
+                
               </details>
 
             </div>
