@@ -612,12 +612,12 @@ export default async function PlaceDetail({
             </h2>
 
             <div className="mt-8 text-2xl font-black">
-              +66 82 223 2929
+              오른쪽 카카오톡, 텔레그램을 이용하여 문의해주세요!
             </div>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              주말이나 사람이 몰리는 시간대에는
-              방문 전에 업소에 직접 연락해
+              주말이나 사람이 몰리는 첫타임 시간대에는
+              방문 전에 카카오톡 및 텔레그램으로 미리 연락해
               영업 여부와 룸 이용 가능 여부를
               확인하는 것을 권장합니다.
             </p>
