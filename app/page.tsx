@@ -42,72 +42,80 @@ export default function Home() {
 
         <div className="container relative z-10 py-12 md:py-16">
           <div className="max-w-4xl">
+            {/* 상단 라벨 */}
             <div className="inline-flex rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-xs font-black tracking-widest text-red-400">
               THAILAND TRAVEL & NIGHTLIFE
             </div>
 
+            {/* 메인 제목 */}
             <h1 className="mt-5 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-8xl">
               태국 밤문화
               <br />
               <span className="red">눈탱이 맞지 마세요.</span>
             </h1>
 
+            {/* 설명 */}
             <p className="mt-5 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
               방콕과 파타야에서 이용할 수 있는 마사지와 가라오케 정보를
               지역별로 확인하세요.
             </p>
 
-            {/* 지역 바로가기 */}
+            {/* =========================
+                지역 추천 네온 버튼
+            ========================== */}
             <div className="mt-7 flex flex-wrap gap-4">
-  {/* 방콕 */}
-  <a
-    href="/bangkok"
-    className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-red-500/70 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_10px_rgba(239,68,68,0.35),inset_0_0_18px_rgba(239,68,68,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-red-400 hover:bg-red-500/5 hover:shadow-[0_0_18px_rgba(239,68,68,0.65),0_0_40px_rgba(239,68,68,0.25),inset_0_0_22px_rgba(239,68,68,0.1)]"
-  >
-    <div className="relative z-10">
-      <div className="text-[10px] font-black tracking-[0.25em] text-red-300">
-        BANGKOK
-      </div>
+              {/* 방콕 */}
+              <a
+                href="/bangkok"
+                className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-red-500/80 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_8px_rgba(239,68,68,0.45),0_0_20px_rgba(239,68,68,0.15),inset_0_0_14px_rgba(239,68,68,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-red-400 hover:bg-red-500/5 hover:shadow-[0_0_12px_rgba(239,68,68,0.7),0_0_32px_rgba(239,68,68,0.28),inset_0_0_20px_rgba(239,68,68,0.1)]"
+              >
+                <div className="relative z-10">
+                  <div className="text-[10px] font-black tracking-[0.25em] text-red-300">
+                    BANGKOK
+                  </div>
 
-      <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(239,68,68,0.55)]">
-        방콕 추천 업소
-      </div>
+                  <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">
+                    방콕 추천 업소
+                  </div>
 
-      <div className="mt-1 text-xs font-medium text-zinc-300">
-        마사지 · 가라오케 →
-      </div>
-    </div>
+                  <div className="mt-1 text-xs font-medium text-zinc-300">
+                    마사지 · 가라오케 →
+                  </div>
+                </div>
 
-    <div className="pointer-events-none absolute inset-0 rounded-2xl border border-red-400/20" />
-  </a>
+                <div className="pointer-events-none absolute inset-0 rounded-2xl border border-red-400/20" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-red-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
+              </a>
 
-  {/* 파타야 */}
-  <a
-    href="/pattaya"
-    className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-blue-500/70 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_10px_rgba(59,130,246,0.35),inset_0_0_18px_rgba(59,130,246,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/5 hover:shadow-[0_0_18px_rgba(59,130,246,0.65),0_0_40px_rgba(59,130,246,0.25),inset_0_0_22px_rgba(59,130,246,0.1)]"
-  >
-    <div className="relative z-10">
-      <div className="text-[10px] font-black tracking-[0.25em] text-blue-300">
-        PATTAYA
-      </div>
+              {/* 파타야 */}
+              <a
+                href="/pattaya"
+                className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-blue-500/80 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_8px_rgba(59,130,246,0.45),0_0_20px_rgba(59,130,246,0.15),inset_0_0_14px_rgba(59,130,246,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/5 hover:shadow-[0_0_12px_rgba(59,130,246,0.7),0_0_32px_rgba(59,130,246,0.28),inset_0_0_20px_rgba(59,130,246,0.1)]"
+              >
+                <div className="relative z-10">
+                  <div className="text-[10px] font-black tracking-[0.25em] text-blue-300">
+                    PATTAYA
+                  </div>
 
-      <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(59,130,246,0.55)]">
-        파타야 추천 업소
-      </div>
+                  <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(59,130,246,0.6)]">
+                    파타야 추천 업소
+                  </div>
 
-      <div className="mt-1 text-xs font-medium text-zinc-300">
-        마사지 · 가라오케 →
-      </div>
-    </div>
+                  <div className="mt-1 text-xs font-medium text-zinc-300">
+                    마사지 · 가라오케 →
+                  </div>
+                </div>
 
-    <div className="pointer-events-none absolute inset-0 rounded-2xl border border-blue-400/20" />
-  </a>
-</div>
+                <div className="pointer-events-none absolute inset-0 rounded-2xl border border-blue-400/20" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ==================================================
           1. 추천 업소
-          ★ 가장 먼저 표시
       ================================================== */}
       <section
         id="popular"
@@ -381,7 +389,6 @@ export default function Home() {
 
       {/* ==================================================
           5. 문의
-          ★ FAQ 바로 아래
       ================================================== */}
       <section
         id="contact"
