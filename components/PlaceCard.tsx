@@ -21,7 +21,7 @@ export default function PlaceCard({ place }: { place: Place }) {
           {/* 인기 업소 */}
           {place.featured && (
             <span className="absolute left-4 top-4 rounded-md bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg">
-              추천 인기 업소
+              🔥 인기 업소
             </span>
           )}
         </div>
@@ -36,12 +36,14 @@ export default function PlaceCard({ place }: { place: Place }) {
             {place.district}
           </div>
 
-          {/* 업소명 - 한 번만 출력 */}
-          <h3 className="mt-2 text-lg font-black">
+          {/* 업소명 */}
+          <h3 className="mt-2 text-lg font-black text-white">
             {place.name}
           </h3>
 
-          {/* 평점 + 한국어 응대 + 재방문 추천 */}
+          {/* =========================
+              평점 + 한국어 응대 + 재방문
+          ========================== */}
           <div className="mt-4 flex flex-wrap items-center gap-2">
 
             {/* 별점 */}
@@ -53,16 +55,16 @@ export default function PlaceCard({ place }: { place: Place }) {
               </span>
             </div>
 
-            {/* 한국어 응대 */}
-{place.koreanSupport ? (
-  <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
-    💬 한국어 응대가능
-  </span>
-) : (
-  <span className="rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-black text-zinc-400">
-    ❌ 한국어 응대 X
-  </span>
-)}
+            {/* 한국어 응대 여부 */}
+            {place.koreanSupport ? (
+              <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
+                💬 한국어 응대가능
+              </span>
+            ) : (
+              <span className="rounded-md bg-zinc-800 px-3 py-1.5 text-xs font-black text-zinc-400">
+                ❌ 한국어 응대 X
+              </span>
+            )}
 
             {/* 재방문 추천 */}
             <span className="rounded-md bg-red-600/20 px-3 py-1.5 text-xs font-black text-red-400">
