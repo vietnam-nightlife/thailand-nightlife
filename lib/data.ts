@@ -57,49 +57,34 @@ export const places: Place[] = [
      ========================================================= */
 
   {
-    slug: "bangkok-barbie18-massage",
-    name: "방콕 바비 마사지",
-    city: "bangkok",
-    category: "massage",
+  slug: "bangkok-massage-01",
+  name: "방콕 바비 마사지",
+  city: "bangkok",
+  category: "massage",
+  district: "수쿰빗 소이 18",
+  rating: 4.6,
+  reviews: 0,
+  description:
+    "방콕 수쿰빗 소이 18에 위치한 Barbie18 Nuru Massage입니다. 실제 업소 사진을 바탕으로 매장 분위기와 룸 시설을 확인할 수 있습니다.",
+  address: "Sukhumvit Soi 18, Bangkok",
+  hours: "문의 후 확인",
 
-    district: "수쿰빗 소이 18",
+  // 메인 사진
+  image:
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
 
-    rating: 4.6,
-    reviews: 0,
+  // 상세페이지 사진
+  gallery: [
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20느낌.webp`,
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸1.webp`,
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸2.webp`,
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸3.webp`,
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20카운터.webp`,
+  ],
 
-    description:
-      "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 프롬퐁과 아속 사이의 수쿰빗 지역에서 방문하기 좋은 마사지 업소로, 여행 중 마사지샵을 찾는 분들이 위치와 영업시간, 이용 조건을 확인하기 편리합니다. 방문 전 최신 영업시간과 이용 가능 여부를 확인하는 것을 권장합니다.",
-
-    address:
-      "39 Soi Sukhumvit 18, Khwaeng Khlong Tan, Khet Khlong Toei, Bangkok 10110, Thailand",
-
-    hours:
-      "11:00 - 01:00 (방문 전 영업시간 확인 권장)",
-
-    /*
-     * 현재는 임시 이미지입니다.
-     *
-     * 바비 마사지 사진을 GitHub에 업로드한 뒤
-     * 아래 image 주소를 실제 파일명으로 변경하면 됩니다.
-     */
-    image:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1400&auto=format&fit=crop",
-
-    /*
-     * 실제 바비 마사지 사진을 GitHub에 업로드하면
-     * 아래처럼 gallery를 추가할 수 있습니다.
-     *
-     * gallery: [
-     *   `${GITHUB_IMAGE}/바비마사지1.webp`,
-     *   `${GITHUB_IMAGE}/바비마사지2.webp`,
-     *   `${GITHUB_IMAGE}/바비마사지3.webp`,
-     *   `${GITHUB_IMAGE}/바비마사지4.webp`,
-     * ],
-     */
-
-    featured: true,
-  },
-
+  featured: true,
+},
+  
   /* =========================================================
      방콕 코리아나 가라오케
      ========================================================= */
