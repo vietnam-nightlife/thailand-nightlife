@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { places, getPlace } from "@/lib/data";
+import ImageGallery from "@/components/ImageGallery";
 
 export function generateStaticParams() {
   return places.map((p) => ({
@@ -253,21 +254,11 @@ export default async function PlaceDetail({
 
           {/* 갤러리 */}
           {place.gallery && place.gallery.length > 0 && (
-            <div className="mt-3 grid grid-cols-3 gap-3 md:grid-cols-6">
-              {place.gallery.slice(0, 6).map((image, index) => (
-                <div
-                  key={`${image}-${index}`}
-                  className="overflow-hidden rounded-xl border border-white/10 bg-[#111]"
-                >
-                  <img
-                    src={image}
-                    alt={`${place.name} 사진 ${index + 1}`}
-                    className="h-24 w-full object-cover transition duration-300 hover:scale-105 md:h-28"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+  <ImageGallery
+    images={place.gallery.slice(0, 6)}
+    name={place.name}
+  />
+)}
         </div>
       </section>
 
