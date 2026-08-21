@@ -55,25 +55,6 @@ export const cities: City[] = [
 ];
 
 export const places: Place[] = [
-  // =========================================================
-  // 방콕 마사지
-  // =========================================================
-  {
-    slug: "bangkok-massage-01",
-    name: "방콕 프리미엄 마사지",
-    city: "bangkok",
-    category: "massage",
-    district: "아속",
-    rating: 4.9,
-    reviews: 128,
-    description:
-      "방콕 아속 지역에서 편안하게 이용할 수 있는 마사지샵 예시입니다. 실제 운영 정보와 메뉴는 등록 후 수정하세요.",
-    address: "방콕 아속",
-    hours: "10:00 - 02:00",
-    image:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1400&auto=format&fit=crop",
-    featured: true,
-  },
 
   // =========================================================
   // 방콕 바비 마사지
