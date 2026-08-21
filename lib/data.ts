@@ -75,11 +75,12 @@ export const places: Place[] = [
 
   // 상세페이지 사진
   gallery: [
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20카운터.webp`,
+    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20휴게실.webp`,
     `${GITHUB_IMAGE}/방콕%20바비%20마사지%20느낌.webp`,
     `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸1.webp`,
     `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸2.webp`,
     `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸3.webp`,
-    `${GITHUB_IMAGE}/방콕%20바비%20마사지%20카운터.webp`,
   ],
 
   featured: true,
