@@ -19,7 +19,6 @@ export default function Home() {
 
   return (
     <main id="top">
-
       {/* =========================
           HERO
       ========================== */}
@@ -41,27 +40,24 @@ export default function Home() {
 
         <div className="absolute left-1/2 top-0 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[120px]" />
 
-        <div className="container relative z-10 py-24 md:py-32">
-
+        <div className="container relative z-10 py-12 md:py-16">
           <div className="max-w-4xl">
-
             <div className="inline-flex rounded-full border border-red-500/20 bg-red-500/10 px-4 py-2 text-xs font-black tracking-widest text-red-400">
               THAILAND TRAVEL & NIGHTLIFE
             </div>
 
-            <h1 className="mt-7 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-8xl">
+            <h1 className="mt-5 text-5xl font-black leading-[1.02] tracking-tight sm:text-6xl md:text-8xl">
               태국 밤문화
               <br />
               <span className="red">눈탱이 맞지 마세요.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
               방콕과 파타야에서 이용할 수 있는 마사지와 가라오케 정보를
               지역별로 확인하세요.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-
+            <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href="#popular"
                 className="rounded-xl bg-red-600 px-7 py-4 text-sm font-black hover:bg-red-500"
@@ -75,12 +71,10 @@ export default function Home() {
               >
                 지역 선택하기
               </a>
-
             </div>
           </div>
         </div>
       </section>
-
 
       {/* ==================================================
           1. 추천 업소
@@ -88,29 +82,25 @@ export default function Home() {
       ================================================== */}
       <section
         id="popular"
-        className="container py-16 md:py-20"
+        className="container py-8 md:py-10"
       >
-
         <div className="text-xs font-black tracking-[.3em] red">
           FEATURED
         </div>
 
-        <h2 className="mt-3 text-3xl font-black md:text-4xl">
+        <h2 className="mt-2 text-3xl font-black md:text-4xl">
           추천 업소
         </h2>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((place) => (
             <PlaceCard
               key={place.slug}
               place={place}
             />
           ))}
-
         </div>
       </section>
-
 
       {/* ==================================================
           2. 어느 지역을 찾으세요?
@@ -119,9 +109,7 @@ export default function Home() {
         id="cities"
         className="border-y border-white/10 bg-[#0c0c0c]"
       >
-
-        <div className="container py-16 md:py-20">
-
+        <div className="container py-12 md:py-16">
           <div className="text-xs font-black tracking-[.3em] red">
             DESTINATIONS
           </div>
@@ -134,25 +122,21 @@ export default function Home() {
             방콕과 파타야 정보를 지역별로 확인하세요.
           </p>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-
+          <div className="mt-7 grid gap-4 md:grid-cols-2">
             {cities.map((city) => (
               <CityCard
                 key={city.slug}
                 city={city}
               />
             ))}
-
           </div>
         </div>
       </section>
 
-
       {/* ==================================================
           3. 무엇을 찾으세요?
       ================================================== */}
-      <section className="container py-16 md:py-20">
-
+      <section className="container py-12 md:py-16">
         <div className="text-xs font-black tracking-[.3em] red">
           CATEGORIES
         </div>
@@ -161,8 +145,7 @@ export default function Home() {
           무엇을 찾으세요?
         </h2>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
-
+        <div className="mt-7 grid gap-4 md:grid-cols-2">
           {/* 마사지 */}
           <a
             href="/bangkok/massage"
@@ -185,7 +168,6 @@ export default function Home() {
             </div>
           </a>
 
-
           {/* 가라오케 */}
           <a
             href="/bangkok/karaoke"
@@ -207,10 +189,8 @@ export default function Home() {
               가라오케 보기 →
             </div>
           </a>
-
         </div>
       </section>
-
 
       {/* ==================================================
           4. FAQ
@@ -219,11 +199,8 @@ export default function Home() {
         id="faq"
         className="border-t border-white/10 bg-[#0c0c0c]"
       >
-
-        <div className="container py-16 md:py-20">
-
+        <div className="container py-12 md:py-16">
           <div className="mx-auto max-w-4xl">
-
             <div className="text-xs font-black tracking-[.3em] red">
               FAQ
             </div>
@@ -233,12 +210,9 @@ export default function Home() {
             </h2>
 
             <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[.03]">
-
               {/* FAQ 1 */}
               <details className="group border-b border-white/10">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -250,26 +224,19 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   방콕과 파타야가 대표적인 지역입니다.
                   <br />
                   방콕은 수쿰빗을 중심으로 다양한 업소를 찾아볼 수 있으며,
                   파타야는 여행과 함께 유흥을 즐기려는 분들이 많이 찾는 지역입니다.
-
                 </div>
-
               </details>
-
 
               {/* FAQ 2 */}
               <details className="group border-b border-white/10">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -281,25 +248,18 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   방문 전 가격과 이용시간, 추가 비용 여부를 확인하는 것이 좋습니다.
                   <br />
                   처음 이용하시는 경우 문의를 통해 안내받으실 수 있습니다.
-
                 </div>
-
               </details>
-
 
               {/* FAQ 3 */}
               <details className="group border-b border-white/10">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -311,25 +271,18 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   업소와 지역에 따라 영업시간이 다릅니다.
                   <br />
                   방문 전 해당 업소에 운영시간을 확인하시는 것을 권장합니다.
-
                 </div>
-
               </details>
-
 
               {/* FAQ 4 */}
               <details className="group border-b border-white/10">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -341,24 +294,17 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   방문 전에 업소의 가격과 이용 조건을 확인하고,
                   현장에서 추가 비용이 있는지도 이용 전에 확인하는 것이 좋습니다.
-
                 </div>
-
               </details>
-
 
               {/* FAQ 5 */}
               <details className="group border-b border-white/10">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -370,24 +316,17 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   업소를 이용하기 전 이용요금, 이용시간,
                   포함된 서비스 및 추가 비용 여부를 미리 확인하시기 바랍니다.
-
                 </div>
-
               </details>
-
 
               {/* FAQ 6 */}
               <details className="group">
-
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
-
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -399,23 +338,17 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
-
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
-
                   업소 예약 및 이용 관련 문의는
                   카카오톡 또는 텔레그램을 통해 문의하실 수 있습니다.
-
                 </div>
-
               </details>
-
             </div>
           </div>
         </div>
       </section>
-
 
       {/* ==================================================
           5. 문의
@@ -425,9 +358,7 @@ export default function Home() {
         id="contact"
         className="border-t border-white/10 bg-[#0c0c0c]"
       >
-
-        <div className="container py-16 text-center md:py-20">
-
+        <div className="container py-12 text-center md:py-16">
           <div className="text-xs font-black tracking-[.3em] red">
             CONTACT
           </div>
@@ -444,10 +375,8 @@ export default function Home() {
           <div className="flex justify-center">
             <ContactButtons className="mt-8" />
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }
