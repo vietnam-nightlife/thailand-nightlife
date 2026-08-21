@@ -21,7 +21,7 @@ export default function PlaceCard({ place }: { place: Place }) {
           {/* 인기 업소 */}
           {place.featured && (
             <span className="absolute left-4 top-4 rounded-md bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg">
-              🔥 인기 업소
+              추 인기 업소
             </span>
           )}
         </div>
