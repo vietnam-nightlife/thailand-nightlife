@@ -126,7 +126,7 @@ export default async function CategoryPage({
 
       {/* 페이지 상단 */}
       <section className="border-b border-white/10">
-        <div className="container py-12">
+        <div className="container py-7">
           <Link
             href={`/${city.slug}`}
             className="text-sm text-zinc-600 hover:text-white"
@@ -134,22 +134,22 @@ export default async function CategoryPage({
             ← {city.name}
           </Link>
 
-          <div className="mt-6 text-xs font-black tracking-[.3em] red">
+          <div className="mt-4 text-xs font-black tracking-[.3em] red">
             {city.english} {category.toUpperCase()}
           </div>
 
-          <h1 className="mt-3 text-5xl font-black">
+          <h1 className="mt-2 text-3xl font-black md:text-4xl">
             {city.name} {title}
           </h1>
 
-          <p className="mt-4 max-w-2xl text-zinc-500">
+          <p className="mt-3 max-w-2xl text-sm text-zinc-500 md:text-base">
             {city.name} 지역의 {title} 정보를 확인하세요.
           </p>
         </div>
       </section>
 
       {/* 업소 목록 */}
-      <section className="container py-8">
+      <section className="container py-5">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
             <PlaceCard key={p.slug} place={p} />
