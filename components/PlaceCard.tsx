@@ -21,7 +21,7 @@ export default function PlaceCard({ place }: { place: Place }) {
           {/* 추천 인기 업소 */}
           {place.featured && (
             <span className="absolute left-4 top-4 rounded-md bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg">
-              🔥 추천 인기 업소
+              추천 인기 업소
             </span>
           )}
         </div>
@@ -58,14 +58,14 @@ export default function PlaceCard({ place }: { place: Place }) {
             {/* 한국어 응대 가능 */}
             {place.koreanSupport !== false && (
               <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
-                💬 한국어 응대가능
+                🔵 한국어 응대 가능
               </span>
             )}
 
             {/* 한국어 응대 불가 */}
             {place.koreanSupport === false && (
               <span className="rounded-md bg-zinc-700/40 px-3 py-1.5 text-xs font-black text-zinc-400">
-                ❌ 한국어 응대 X
+                ❌ 한국어 응대 안됨
               </span>
             )}
 
