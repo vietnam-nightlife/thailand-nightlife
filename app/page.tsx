@@ -59,52 +59,50 @@ export default function Home() {
 
             {/* 지역 바로가기 */}
             <div className="mt-7 flex flex-wrap gap-4">
-              {/* 방콕 */}
-              <a
-                href="/bangkok"
-                className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-red-400/40 bg-red-600 px-7 py-5 text-center shadow-[0_10px_35px_rgba(239,68,68,0.25)] transition-all duration-300 hover:-translate-y-1 hover:bg-red-500 hover:shadow-[0_15px_45px_rgba(239,68,68,0.38)]"
-              >
-                <div className="relative z-10">
-                  <div className="text-[10px] font-black tracking-[0.25em] text-red-100">
-                    BANGKOK
-                  </div>
+  {/* 방콕 */}
+  <a
+    href="/bangkok"
+    className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-red-500/70 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_10px_rgba(239,68,68,0.35),inset_0_0_18px_rgba(239,68,68,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-red-400 hover:bg-red-500/5 hover:shadow-[0_0_18px_rgba(239,68,68,0.65),0_0_40px_rgba(239,68,68,0.25),inset_0_0_22px_rgba(239,68,68,0.1)]"
+  >
+    <div className="relative z-10">
+      <div className="text-[10px] font-black tracking-[0.25em] text-red-300">
+        BANGKOK
+      </div>
 
-                  <div className="mt-1 text-lg font-black text-white">
-                    방콕 추천 업소
-                  </div>
+      <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(239,68,68,0.55)]">
+        방콕 추천 업소
+      </div>
 
-                  <div className="mt-1 text-xs font-medium text-red-100">
-                    마사지 · 가라오케 →
-                  </div>
-                </div>
+      <div className="mt-1 text-xs font-medium text-zinc-300">
+        마사지 · 가라오케 →
+      </div>
+    </div>
 
-                <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-white/10 blur-2xl transition-transform duration-300 group-hover:scale-125" />
-              </a>
+    <div className="pointer-events-none absolute inset-0 rounded-2xl border border-red-400/20" />
+  </a>
 
-              {/* 파타야 */}
-              <a
-                href="/pattaya"
-                className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-blue-400/40 bg-blue-600 px-7 py-5 text-center shadow-[0_10px_35px_rgba(37,99,235,0.25)] transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-[0_15px_45px_rgba(37,99,235,0.38)]"
-              >
-                <div className="relative z-10">
-                  <div className="text-[10px] font-black tracking-[0.25em] text-blue-100">
-                    PATTAYA
-                  </div>
+  {/* 파타야 */}
+  <a
+    href="/pattaya"
+    className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-blue-500/70 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_10px_rgba(59,130,246,0.35),inset_0_0_18px_rgba(59,130,246,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:bg-blue-500/5 hover:shadow-[0_0_18px_rgba(59,130,246,0.65),0_0_40px_rgba(59,130,246,0.25),inset_0_0_22px_rgba(59,130,246,0.1)]"
+  >
+    <div className="relative z-10">
+      <div className="text-[10px] font-black tracking-[0.25em] text-blue-300">
+        PATTAYA
+      </div>
 
-                  <div className="mt-1 text-lg font-black text-white">
-                    파타야 추천 업소
-                  </div>
+      <div className="mt-1 text-lg font-black text-white drop-shadow-[0_0_8px_rgba(59,130,246,0.55)]">
+        파타야 추천 업소
+      </div>
 
-                  <div className="mt-1 text-xs font-medium text-blue-100">
-                    마사지 · 가라오케 →
-                  </div>
-                </div>
+      <div className="mt-1 text-xs font-medium text-zinc-300">
+        마사지 · 가라오케 →
+      </div>
+    </div>
 
-                <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-white/10 blur-2xl transition-transform duration-300 group-hover:scale-125" />
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="pointer-events-none absolute inset-0 rounded-2xl border border-blue-400/20" />
+  </a>
+</div>
       </section>
 
       {/* ==================================================
