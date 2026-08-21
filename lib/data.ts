@@ -68,7 +68,7 @@ export const places: Place[] = [
     reviews: 0,
 
     description:
-      "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 프로ム퐁과 아속 사이의 수쿰빗 지역에서 방문하기 좋은 마사지 업소로, 여행 중 마사지샵을 찾는 분들이 위치와 영업시간, 이용 조건을 확인하기 편리합니다. 방문 전 최신 영업시간과 이용 가능 여부를 확인하는 것을 권장합니다.",
+      "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 프롬퐁과 아속 사이의 수쿰빗 지역에서 방문하기 좋은 마사지 업소로, 여행 중 마사지샵을 찾는 분들이 위치와 영업시간, 이용 조건을 확인하기 편리합니다. 방문 전 최신 영업시간과 이용 가능 여부를 확인하는 것을 권장합니다.",
 
     address:
       "39 Soi Sukhumvit 18, Khwaeng Khlong Tan, Khet Khlong Toei, Bangkok 10110, Thailand",
@@ -99,34 +99,6 @@ export const places: Place[] = [
 
     featured: true,
   },
-
-
-  /* =========================================================
-     기존 방콕 프리미엄 마사지
-     ========================================================= */
-
-  {
-    slug: "bangkok-massage-01",
-    name: "방콕 프리미엄 마사지",
-    city: "bangkok",
-    category: "massage",
-    district: "아속",
-    rating: 4.9,
-    reviews: 128,
-
-    description:
-      "방콕 아속 지역에서 편안하게 이용할 수 있는 마사지샵 예시입니다. 실제 운영 정보와 메뉴는 등록 후 수정하세요.",
-
-    address: "방콕 아속",
-
-    hours: "10:00 - 02:00",
-
-    image:
-      "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1400&auto=format&fit=crop",
-
-    featured: true,
-  },
-
 
   /* =========================================================
      방콕 코리아나 가라오케
