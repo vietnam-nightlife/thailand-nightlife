@@ -640,7 +640,7 @@ export default async function PlaceDetail({
 
           <div className="mt-8 flex flex-wrap items-end gap-3">
             <span className="text-4xl font-black">
-              약 600 - 1,000
+              약 4,000 ~ 9,000
             </span>
 
             <span className="pb-1 text-zinc-400">
@@ -650,7 +650,7 @@ export default async function PlaceDetail({
 
           <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
             현재 공개된 외부 자료에서는 코리아나의
-            이용 가격을 약 600~1,000바트/인 수준으로
+            이용 가격을 약 4,000~9,000바트/인 수준으로
             소개하고 있습니다.
           </p>
 
@@ -849,7 +849,7 @@ export default async function PlaceDetail({
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              공개된 외부 자료에서는 약 600~1,000바트/인
+              공개된 외부 자료에서는 약 4,000~9,000바트/인
               수준으로 소개되고 있습니다. 다만 실제
               결제금액은 룸과 이용시간, 음식 및 주류 등에
               따라 달라질 수 있으므로 방문 전에
@@ -863,7 +863,7 @@ export default async function PlaceDetail({
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              네. 외부 자료에서는 20개 이상의
+              네. 코리아나 가라오케는 20개 이상의
               프라이빗룸을 갖춘 대형 KTV로
               소개되고 있습니다.
             </p>
@@ -887,8 +887,8 @@ export default async function PlaceDetail({
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              피크타임이나 주말에는 대기할 수 있다는
-              외부 정보가 있어, 여러 명이 방문하거나
+              피크타임이나 주말에는 풀방이거나 대기를 해야하는
+              경우가 많기 때문에 여러 명이 방문하거나
               특정 룸을 원하는 경우 사전 문의를
               권장합니다.
             </p>
