@@ -58,7 +58,7 @@ export const places: Place[] = [
 
   {
     slug: "bangkok-barbie18-massage",
-    name: "바비 마사지",
+    name: "방콕 바비 마사지",
     city: "bangkok",
     category: "massage",
 
