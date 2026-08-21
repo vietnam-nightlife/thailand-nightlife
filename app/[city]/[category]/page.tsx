@@ -138,7 +138,7 @@ export default async function CategoryPage({
             {city.english} {category.toUpperCase()}
           </div>
 
-          <h1 className="mt-2 text-3xl font-black md:text-3xl">
+          <h1 className="mt-2 text-3xl font-black md:text-4xl">
             {city.name} {title}
           </h1>
 
