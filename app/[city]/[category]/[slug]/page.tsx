@@ -824,7 +824,7 @@ export default async function PlaceDetail({
         </div>
       </div>
     </div>
-
+   </div>    
   </div>
 </section>
 
