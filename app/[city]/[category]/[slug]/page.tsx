@@ -575,92 +575,173 @@ export default async function PlaceDetail({
         </section>
 
 
-        {/* =================================================
-            PRICE
-        ================================================== */}
-        <section className="border-b border-white/10">
+        {/* =========================================================
+    CUBE NURU MASSAGE 가격표
+========================================================= */}
+<section className="mt-10">
+  <div className="mb-5">
+    <h2 className="text-2xl font-bold text-white">
+      CUBE Nuru Massage 가격표
+    </h2>
+    <p className="mt-2 text-sm text-gray-400">
+      코스와 이용 시간에 따른 가격을 확인해보세요.
+    </p>
+  </div>
 
-          <div className="container py-10 md:py-12">
+  <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#151515]">
+    {/* 테이블 헤더 */}
+    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10 bg-[#202020]">
+      <div className="px-4 py-4 text-sm font-bold text-white">
+        코스
+      </div>
 
-            <div className="mb-6">
+      <div className="px-4 py-4 text-center text-sm font-bold text-white">
+        60분
+      </div>
 
-              <div className="text-[10px] font-black tracking-[.3em] text-red-500">
-                PRICE MENU
-              </div>
+      <div className="px-4 py-4 text-center text-sm font-bold text-white">
+        90분
+      </div>
+    </div>
 
-              <h2 className="mt-2 text-2xl font-black md:text-3xl">
-                큐브 마사지 가격 정보
-              </h2>
+    {/* 스탠다드 코스 */}
+    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
+      <div className="px-4 py-5">
+        <div className="font-bold text-white">
+          스탠다드 코스
+        </div>
+        <div className="mt-1 text-xs text-gray-400">
+          기본 코스
+        </div>
+      </div>
 
-              <p className="mt-2 text-sm leading-7 text-zinc-500">
-                공개 자료에서 확인되는 CUBE 마사지의
-                가격대입니다.
-              </p>
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          3,100B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          4,100B
+        </span>
+      </div>
 
-            </div>
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          3,700B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          4,700B
+        </span>
+      </div>
+    </div>
 
+    {/* 일본식 누르메트 */}
+    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
+      <div className="px-4 py-5">
+        <div className="font-bold text-white">
+          일본식 누르메트
+        </div>
+        <div className="mt-1 text-xs text-gray-400">
+          HOT 인기 코스
+        </div>
+      </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          3,900B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          4,900B
+        </span>
+      </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          4,500B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          5,500B
+        </span>
+      </div>
+    </div>
 
-                <h3 className="text-lg font-black">
-                  기본 마사지
-                </h3>
+    {/* VIP 자쿠지 룸 */}
+    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
+      <div className="px-4 py-5">
+        <div className="font-bold text-white">
+          VIP 자쿠지 룸
+        </div>
+        <div className="mt-1 text-xs text-gray-400">
+          프라이빗 룸
+        </div>
+      </div>
 
-                <div className="mt-4 flex items-center justify-between border-b border-white/5 pb-4">
-                  <span className="text-sm text-zinc-300">
-                    기본 코스
-                  </span>
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          3,500B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          4,500B
+        </span>
+      </div>
 
-                  <span className="font-black text-amber-400">
-                    약 2,000 B부터
-                  </span>
-                </div>
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          4,300B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          5,300B
+        </span>
+      </div>
+    </div>
 
-                <p className="mt-4 text-xs leading-6 text-zinc-600">
-                  ※ 실제 가격은 코스와 룸,
-                  이용시간 등에 따라 달라질 수 있습니다.
-                </p>
+    {/* VIP 자쿠지 일본식 누르메트 */}
+    <div className="grid grid-cols-[1.4fr_1fr_1fr]">
+      <div className="px-4 py-5">
+        <div className="font-bold text-white">
+          VIP 자쿠지 일본식 누르메트
+        </div>
+        <div className="mt-1 text-xs text-gray-400">
+          VIP 코스
+        </div>
+      </div>
 
-              </div>
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          4,300B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          5,300B
+        </span>
+      </div>
 
+      <div className="flex items-center justify-center px-2 py-5 text-center">
+        <span className="font-semibold text-white">
+          5,100B
+        </span>
+        <span className="mx-1 text-gray-500">/</span>
+        <span className="font-semibold text-white">
+          6,100B
+        </span>
+      </div>
+    </div>
+  </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-
-                <h3 className="text-lg font-black">
-                  상위 룸 / VVIP
-                </h3>
-
-                <div className="mt-4 flex items-center justify-between border-b border-white/5 pb-4">
-                  <span className="text-sm text-zinc-300">
-                    상위 가격대
-                  </span>
-
-                  <span className="font-black text-amber-400">
-                    최대 약 8,500 B
-                  </span>
-                </div>
-
-                <p className="mt-4 text-xs leading-6 text-zinc-600">
-                  ※ 공개된 최신 자료 기준 가격 범위이며
-                  실제 현장 가격과 다를 수 있습니다.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <p className="mt-5 text-[11px] leading-5 text-zinc-600">
-              ※ 가격 및 코스 구성은 현장 상황에 따라
-              변경될 수 있으므로 방문 전 최신 가격을
-              확인하시기 바랍니다.
-            </p>
-
-          </div>
-        </section>
-
+  {/* 가격 안내 */}
+  <div className="mt-4 rounded-xl border border-white/10 bg-[#111111] p-4">
+    <p className="text-xs leading-6 text-gray-400">
+      ※ 가격은 현장 상황에 따라 변경될 수 있습니다.
+      <br />
+      ※ 방문 전 최신 가격과 이용 가능 코스를 확인해주세요.
+    </p>
+  </div>
+</section>
 
         {/* =================================================
             FACILITIES
