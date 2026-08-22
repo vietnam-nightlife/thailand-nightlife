@@ -272,6 +272,261 @@ export default async function PlaceDetail({
     notFound();
   }
 
+  // =========================================================
+  // 방콕 CUBE 마사지 전용 상세페이지
+  // =========================================================
+  if (slug === "bangkok-cube-massage") {
+    return (
+      <main className="min-h-screen bg-[#0b0b0d] text-white">
+        {/* 상단 메인 이미지 */}
+        <section className="relative overflow-hidden">
+          <div className="mx-auto max-w-6xl">
+            <div className="relative aspect-[3/2] overflow-hidden rounded-b-2xl">
+              <img
+                src={place.image}
+                alt={place.name}
+                className="h-full w-full object-cover"
+              />
+
+              {/* 이미지 어두운 그라데이션 */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              {/* 상단 지역/카테고리 */}
+              <div className="absolute left-5 top-5">
+                <span className="rounded-full bg-black/60 px-4 py-2 text-sm font-medium backdrop-blur-sm">
+                  방콕 · 마사지
+                </span>
+              </div>
+
+              {/* 메인 제목 */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                <p className="mb-2 text-sm font-medium text-white/70">
+                  CUBE Nuru Massage
+                </p>
+
+                <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
+                  방콕 큐브 마사지
+                </h1>
+
+                <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+                  <span className="flex items-center gap-1">
+                    <span className="text-yellow-400">★</span>
+                    {place.rating}
+                  </span>
+
+                  <span className="h-1 w-1 rounded-full bg-white/40" />
+
+                  <span>{place.district}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 본문 */}
+        <section className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-12">
+          <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
+            {/* 왼쪽 본문 */}
+            <div className="min-w-0">
+              {/* 소개 */}
+              <section className="rounded-2xl border border-white/10 bg-[#111114] p-5 md:p-7">
+                <div className="mb-5">
+                  <span className="text-sm font-semibold text-red-400">
+                    CUBE MASSAGE
+                  </span>
+
+                  <h2 className="mt-2 text-2xl font-bold">
+                    방콕 큐브 마사지
+                  </h2>
+                </div>
+
+                <p className="leading-8 text-white/65">
+                  {place.description}
+                </p>
+
+                <p className="mt-4 leading-8 text-white/65">
+                  매장 내부와 객실 분위기는 실제 사진을 통해 확인할 수
+                  있으며, 방문 전 운영시간과 이용 가능 여부를 확인하는
+                  것이 좋습니다.
+                </p>
+              </section>
+
+              {/* 기본 정보 */}
+              <section className="mt-6 rounded-2xl border border-white/10 bg-[#111114] p-5 md:p-7">
+                <h2 className="text-xl font-bold">기본 정보</h2>
+
+                <div className="mt-5 divide-y divide-white/10">
+                  <div className="flex gap-4 py-4">
+                    <div className="w-20 shrink-0 text-sm text-white/40">
+                      위치
+                    </div>
+                    <div className="text-sm text-white/80">
+                      {place.address}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 py-4">
+                    <div className="w-20 shrink-0 text-sm text-white/40">
+                      운영시간
+                    </div>
+                    <div className="text-sm text-white/80">
+                      {place.hours}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 py-4">
+                    <div className="w-20 shrink-0 text-sm text-white/40">
+                      지역
+                    </div>
+                    <div className="text-sm text-white/80">
+                      {place.district}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 py-4">
+                    <div className="w-20 shrink-0 text-sm text-white/40">
+                      한국어
+                    </div>
+                    <div className="text-sm text-white/80">
+                      {place.koreanSupport === false
+                        ? "한국어 응대 불가"
+                        : "한국어 응대 가능"}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* 매장 사진 */}
+              {place.gallery && place.gallery.length > 0 && (
+                <section className="mt-6 rounded-2xl border border-white/10 bg-[#111114] p-5 md:p-7">
+                  <div className="mb-5">
+                    <h2 className="text-xl font-bold">매장 사진</h2>
+                    <p className="mt-1 text-sm text-white/40">
+                      실제 매장과 룸 분위기를 사진으로 확인하세요.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                    {place.gallery.map((image, index) => (
+                      <div
+                        key={`${image}-${index}`}
+                        className="group relative aspect-[3/2] overflow-hidden rounded-xl bg-white/5"
+                      >
+                        <img
+                          src={image}
+                          alt={`방콕 큐브 마사지 ${index + 1}`}
+                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+
+                        {/* 워터마크 */}
+                        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                          <span className="rotate-[-12deg] text-center text-sm font-semibold tracking-wider text-white/25 md:text-base">
+                            태국 눈탱이 방지위원회
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* 이용 전 확인사항 */}
+              <section className="mt-6 rounded-2xl border border-white/10 bg-[#111114] p-5 md:p-7">
+                <h2 className="text-xl font-bold">방문 전 확인사항</h2>
+
+                <div className="mt-5 space-y-3 text-sm leading-7 text-white/60">
+                  <p>
+                    • 방문 전 운영시간 및 이용 가능 여부를 확인해 주세요.
+                  </p>
+                  <p>
+                    • 현장에서 안내되는 이용 조건과 비용을 이용 전에
+                    확인하는 것이 좋습니다.
+                  </p>
+                  <p>
+                    • 사진은 매장 분위기와 시설을 확인하기 위한 참고용으로
+                    이용해 주세요.
+                  </p>
+                  <p>
+                    • 매장 운영 상황에 따라 이용 가능한 시설이나 시간이
+                    달라질 수 있습니다.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            {/* 오른쪽 정보 카드 */}
+            <aside className="lg:sticky lg:top-6 lg:h-fit">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111114]">
+                {/* 카드 이미지 */}
+                <div className="relative aspect-[3/2]">
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="h-full w-full object-cover"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="text-lg font-bold">
+                      CUBE Nuru Massage
+                    </div>
+                    <div className="mt-1 text-sm text-white/60">
+                      {place.district}
+                    </div>
+                  </div>
+                </div>
+
+                {/* 카드 정보 */}
+                <div className="p-5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-white/50">
+                      이용자 평점
+                    </span>
+
+                    <span className="font-semibold">
+                      <span className="text-yellow-400">★</span>{" "}
+                      {place.rating}
+                    </span>
+                  </div>
+
+                  <div className="mt-4 rounded-xl bg-white/5 p-4">
+                    <div className="text-xs text-white/40">
+                      운영시간
+                    </div>
+                    <div className="mt-1 font-medium">
+                      {place.hours}
+                    </div>
+                  </div>
+
+                  {/* 문의하기 */}
+                  <a
+                    href="/contact"
+                    className="mt-4 flex w-full items-center justify-center rounded-xl bg-red-500 px-5 py-3.5 text-sm font-bold text-white transition hover:bg-red-400"
+                  >
+                    문의하기
+                  </a>
+
+                  <p className="mt-3 text-center text-xs leading-5 text-white/35">
+                    문의하기를 누르면 사이트 내 문의 페이지로 이동합니다.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        {/* 하단 */}
+        <div className="border-t border-white/10">
+          <div className="mx-auto max-w-6xl px-4 py-8 text-center text-xs text-white/30">
+            방콕 큐브 마사지 · CUBE Nuru Massage
+          </div>
+        </div>
+      </main>
+    );
+  }
+  
   const cityName =
     city === "bangkok" ? "방콕" : "파타야";
 
