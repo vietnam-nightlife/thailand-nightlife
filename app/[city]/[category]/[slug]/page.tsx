@@ -568,65 +568,164 @@ export default async function PlaceDetail({
           </div>
         </section>
 
-        {/* =================================================
-            PRICE
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-          <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
-            <div className="text-xs font-black tracking-[.3em] text-red-500">
-              PRICE GUIDE
-            </div>
+        {/* =========================================
+    바비18 마사지 가격표
+========================================= */}
+<section className="border-b border-white/10">
+  <div className="container py-8 md:py-10">
 
-            <h2 className="mt-3 text-3xl font-black">
-              바비18 마사지 가격
-            </h2>
+    <div className="mb-6">
+      <div className="text-[10px] font-black tracking-[.3em] red">
+        PRICE MENU
+      </div>
 
-            <p className="mt-4 max-w-4xl text-sm leading-7 text-zinc-400">
-              공개된 외부 자료에서 확인되는 오일 마사지
-              가격은 아래와 같습니다.
-            </p>
+      <h2 className="mt-2 text-xl font-black md:text-2xl">
+        바비18 마사지 가격표
+      </h2>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-                <div className="text-sm text-zinc-500">
-                  30분
-                </div>
+      <p className="mt-2 text-xs text-zinc-500 md:text-sm">
+        바비18 마사지에서 확인할 수 있는 마사지 코스 및 이용 요금입니다.
+      </p>
+    </div>
 
-                <div className="mt-3 text-3xl font-black">
-                  ฿1,800
-                </div>
-              </div>
+    <div className="grid gap-4 md:grid-cols-2">
 
-              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-                <div className="text-sm text-zinc-500">
-                  60분
-                </div>
+      {/* 오일 마사지 */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <h3 className="text-lg font-black">
+          오일 마사지
+        </h3>
 
-                <div className="mt-3 text-3xl font-black">
-                  ฿2,300
-                </div>
-              </div>
+        <div className="mt-4 space-y-3">
 
-              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-                <div className="text-sm text-zinc-500">
-                  90분
-                </div>
-
-                <div className="mt-3 text-3xl font-black">
-                  ฿3,000
-                </div>
-              </div>
-            </div>
-
-            <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-500">
-              ※ 위 가격은 외부 공개 자료를 기준으로
-              작성한 참고용 정보입니다. 실제 가격과
-              이용 조건은 방문 시점에 달라질 수 있으므로
-              결제 전 최종 금액을 확인하세요.
-            </p>
+          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+            <span className="text-sm text-zinc-300">
+              30분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              1,800 B
+            </span>
           </div>
-        </section>
 
+          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+            <span className="text-sm text-zinc-300">
+              60분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              2,300 B
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-zinc-300">
+              90분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              3,000 B <span className="text-xs text-zinc-500">(2번)</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* 누루 마사지 */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <h3 className="text-lg font-black">
+          누루 마사지
+        </h3>
+
+        <div className="mt-4 space-y-3">
+
+          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+            <span className="text-sm text-zinc-300">
+              60분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              3,000 B
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-zinc-300">
+              90분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              3,700 B <span className="text-xs text-zinc-500">(2번)</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* 누루 마사지 자쿠지 VIP */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <h3 className="text-lg font-black">
+          누루 마사지 <span className="text-amber-400">(자쿠지 VIP)</span>
+        </h3>
+
+        <div className="mt-4 space-y-3">
+
+          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+            <span className="text-sm text-zinc-300">
+              60분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              3,500 B
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-zinc-300">
+              90분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              4,000 B <span className="text-xs text-zinc-500">(2번)</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+
+      {/* 누루 마사지 2:1 */}
+      <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+        <h3 className="text-lg font-black">
+          누루 마사지 <span className="text-amber-400">(2:1)</span>
+        </h3>
+
+        <div className="mt-4 space-y-3">
+
+          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+            <span className="text-sm text-zinc-300">
+              60분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              5,500 B
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-sm text-zinc-300">
+              90분 코스
+            </span>
+            <span className="font-black text-amber-400">
+              6,500 B <span className="text-xs text-zinc-500">(2번)</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <p className="mt-5 text-[11px] leading-5 text-zinc-600">
+      ※ 가격 및 코스 구성은 현장 상황에 따라 변경될 수 있으므로 방문 전 확인하시기 바랍니다.
+    </p>
+
+  </div>
+</section>
         {/* =================================================
             FACILITIES
         ================================================== */}
