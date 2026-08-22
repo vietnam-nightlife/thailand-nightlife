@@ -1166,11 +1166,11 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[520px] overflow-hidden md:h-[560px]">
+        <section className="relative h-[430px] overflow-hidden sm:h-[480px] md:h-[560px]">
           <img
             src={place.image}
             alt="방콕 바비18 마사지 메인"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -1181,11 +1181,11 @@ export default async function PlaceDetail({
                 BANGKOK · MASSAGE
               </div>
 
-              <h1 className="mt-3 text-4xl font-black md:text-6xl">
+              <h1 className="mt-3 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 방콕 바비18 마사지
               </h1>
 
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-300 md:text-base">
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
                 방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다.
                 위치와 영업시간, 내부 시설, 룸 분위기 및
                 방문 전 확인사항을 한곳에서 확인할 수 있습니다.
@@ -2012,11 +2012,11 @@ export default async function PlaceDetail({
           placeSlug={place.slug}
         />
 
-        <section className="relative h-[520px] overflow-hidden">
+        <section className="relative h-[430px] overflow-hidden sm:h-[480px] md:h-[560px]">
           <img
             src={place.image}
             alt={place.name}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
@@ -2027,7 +2027,7 @@ export default async function PlaceDetail({
                 {cityName} · {categoryName}
               </div>
 
-              <h1 className="mt-3 text-4xl font-black md:text-6xl">
+              <h1 className="mt-3 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 {place.name}
               </h1>
 
