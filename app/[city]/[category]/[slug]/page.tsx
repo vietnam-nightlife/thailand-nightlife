@@ -2094,20 +2094,259 @@ export default async function PlaceDetail({
       <section className="container py-12">
         <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
-            PRICE GUIDE
+            {/* =====================================================
+    KOREANA PRICE GUIDE
+===================================================== */}
+<section className="w-full px-4 sm:px-6 lg:px-8 py-12">
+  <div className="mx-auto w-full max-w-6xl">
+
+    {/* TITLE */}
+    <div className="text-center mb-10">
+      <p className="text-xs sm:text-sm font-black tracking-[.35em] text-amber-400">
+        PRICE GUIDE
+      </p>
+
+      <h2 className="mt-3 text-3xl sm:text-4xl font-black text-white">
+        코리아나 가라오케 가격
+      </h2>
+
+      <p className="mt-4 text-sm sm:text-base leading-7 text-zinc-400">
+        룸 이용료와 주류 세트, 레이디 차지 안내입니다.
+      </p>
+    </div>
+
+
+    {/* =================================================
+        ROOM PRICE
+    ================================================== */}
+    <div className="mb-12">
+
+      <div className="text-center mb-6">
+        <p className="text-xs font-black tracking-[.3em] text-amber-400">
+          ROOM PRICE
+        </p>
+
+        <h3 className="mt-2 text-2xl sm:text-3xl font-black text-white">
+          룸 이용 요금
+        </h3>
+
+        <p className="mt-3 text-sm text-zinc-400">
+          Small Room부터 VIP Room까지 룸 타입에 따라 이용 요금이 달라집니다.
+        </p>
+      </div>
+
+
+      <div className="flex justify-center">
+        <div className="w-full max-w-3xl rounded-3xl border border-amber-500/30 bg-zinc-950 p-7 sm:p-10 text-center">
+
+          <div className="text-sm font-bold text-zinc-400">
+            Small ~ VIP Room
           </div>
 
-          <h2 className="mt-3 text-3xl font-black">
-            코리아나 가라오케 가격
-          </h2>
+          <div className="mt-4 text-4xl sm:text-5xl font-black text-amber-400">
+            500B ~ 2,000B
+          </div>
 
-          <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
-            실제 이용금액은 룸, 이용시간, 음식,
-            주류 및 기타 조건에 따라 달라질 수
-            있으므로 방문 전에 확인하세요.
+          <p className="mt-4 text-sm text-zinc-500">
+            룸 타입 및 이용 조건에 따라 달라질 수 있습니다.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    {/* =================================================
+        DRINK SET MENU
+    ================================================== */}
+    <div className="mb-12">
+
+      <div className="text-center mb-6">
+        <p className="text-xs font-black tracking-[.3em] text-amber-400">
+          DRINK SET
+        </p>
+
+        <h3 className="mt-2 text-2xl sm:text-3xl font-black text-white">
+          주류 세트
+        </h3>
+      </div>
+
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        {/* SOJU */}
+        <div className="rounded-3xl border border-amber-500/20 bg-zinc-950 p-6 text-center">
+          <div className="text-xl font-black text-white">
+            소주 세트
+          </div>
+
+          <div className="mt-3 text-3xl font-black text-amber-400">
+            4,200B
+          </div>
+
+          <p className="mt-4 text-sm leading-7 text-zinc-400">
+            소주 6병 + 기본 안주
           </p>
         </div>
-      </section>
+
+
+        {/* SOMAEK */}
+        <div className="rounded-3xl border border-amber-500/20 bg-zinc-950 p-6 text-center">
+          <div className="text-xl font-black text-white">
+            소맥 세트
+          </div>
+
+          <div className="mt-3 text-3xl font-black text-amber-400">
+            4,200B
+          </div>
+
+          <p className="mt-4 text-sm leading-7 text-zinc-400">
+            소주 3병 + 맥주 5병 + 기본 안주
+          </p>
+        </div>
+
+
+        {/* BEER */}
+        <div className="rounded-3xl border border-amber-500/20 bg-zinc-950 p-6 text-center">
+          <div className="text-xl font-black text-white">
+            맥주 세트
+          </div>
+
+          <div className="mt-3 text-3xl font-black text-amber-400">
+            4,200B
+          </div>
+
+          <p className="mt-4 text-sm leading-7 text-zinc-400">
+            맥주 8병 + 기본 안주
+          </p>
+        </div>
+
+
+        {/* LIQUOR */}
+        <div className="rounded-3xl border border-amber-500/20 bg-zinc-950 p-6 text-center">
+          <div className="text-xl font-black text-white">
+            양주 세트
+          </div>
+
+          <div className="mt-3 text-3xl font-black text-amber-400">
+            5,100B
+          </div>
+
+          <p className="mt-4 text-sm leading-7 text-zinc-400">
+            골든블루 1병 + 기본 안주 2개
+          </p>
+        </div>
+
+      </div>
+
+
+      {/* PREMIUM WHISKY */}
+      <div className="mt-5 rounded-3xl border border-amber-500/30 bg-zinc-950 p-7 sm:p-10 text-center">
+
+        <div className="text-xl sm:text-2xl font-black text-white">
+          프리미엄 위스키 세트
+        </div>
+
+        <div className="mt-3 text-3xl sm:text-4xl font-black text-amber-400">
+          9,750B
+        </div>
+
+        <p className="mt-4 text-sm sm:text-base leading-7 text-zinc-400">
+          골드라벨 또는 헤네시
+          <br />
+          위스키 1병 + 기본 안주 2개 + 믹서 10
+        </p>
+
+      </div>
+
+    </div>
+
+
+    {/* =================================================
+        LADY CHARGE
+    ================================================== */}
+    <div>
+
+      <div className="text-center mb-6">
+        <p className="text-xs font-black tracking-[.3em] text-amber-400">
+          LADY CHARGE
+        </p>
+
+        <h3 className="mt-2 text-2xl sm:text-3xl font-black text-white">
+          Lady 차지
+        </h3>
+      </div>
+
+
+      <div className="mx-auto w-full max-w-4xl rounded-3xl border border-amber-500/30 bg-zinc-950 p-6 sm:p-10">
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-center">
+
+          {/* TC */}
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-lg font-black text-white">
+              TC
+            </div>
+
+            <div className="mt-3 text-3xl font-black text-amber-400">
+              600B
+            </div>
+
+            <div className="mt-2 text-sm text-zinc-400">
+              1시간
+            </div>
+          </div>
+
+
+          {/* ST */}
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-lg font-black text-white">
+              ST
+            </div>
+
+            <div className="mt-3 text-3xl font-black text-amber-400">
+              4,000B
+            </div>
+
+            <div className="mt-2 text-sm text-zinc-400">
+              2시간
+            </div>
+          </div>
+
+
+          {/* LT */}
+          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+            <div className="text-lg font-black text-white">
+              LT
+            </div>
+
+            <div className="mt-3 text-3xl font-black text-amber-400">
+              6,000B
+            </div>
+
+            <div className="mt-2 text-sm text-zinc-400">
+              6시간
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    {/* NOTICE */}
+    <div className="mt-8 text-center">
+      <p className="text-xs sm:text-sm leading-6 text-zinc-500">
+        ※ 실제 이용금액은 룸, 이용시간, 주문 메뉴 및 현지 이용조건에 따라
+        달라질 수 있으므로 방문 전 확인해주세요.
+      </p>
+    </div>
+
+  </div>
+</section>
       <section className="container py-12">
         <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
