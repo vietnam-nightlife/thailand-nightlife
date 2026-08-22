@@ -2094,20 +2094,342 @@ export default async function PlaceDetail({
       <section className="container py-12">
         <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
-            PRICE GUIDE
-          </div>
+            {/* =========================================================
+    KOREANA KARAOKE PRICE MENU
+========================================================= */}
+<section className="mt-16">
+  <div className="mb-8">
+    <p className="text-xs font-bold tracking-[0.35em] text-amber-400">
+      PRICE MENU
+    </p>
 
-          <h2 className="mt-3 text-3xl font-black">
-            코리아나 가라오케 가격
-          </h2>
+    <h2 className="mt-2 text-3xl font-black text-white md:text-4xl">
+      코리아나 가라오케 가격표
+    </h2>
 
-          <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
-            실제 이용금액은 룸, 이용시간, 음식,
-            주류 및 기타 조건에 따라 달라질 수
-            있으므로 방문 전에 확인하세요.
+    <p className="mt-3 text-sm leading-7 text-gray-400 md:text-base">
+      코리아나 가라오케에서 확인할 수 있는 주류 세트 및 이용 요금입니다.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+
+    {/* 소주세트 */}
+    <div
+      className="
+        group rounded-2xl border border-amber-500/30
+        bg-[#101010] p-6
+        shadow-[0_0_20px_rgba(245,158,11,0.06)]
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-amber-400
+        hover:shadow-[0_0_30px_rgba(245,158,11,0.18)]
+      "
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          소주세트
+        </h3>
+
+        <span
+          className="
+            rounded-full border border-amber-400/50
+            px-3 py-1 text-xs font-bold
+            text-amber-300
+            transition group-hover:bg-amber-400
+            group-hover:text-black
+          "
+        >
+          4,200 B
+        </span>
+      </div>
+
+      <div className="mt-6 space-y-4">
+        <div className="flex items-center justify-between border-b border-white/10 pb-4">
+          <span className="text-gray-300">소주 6병</span>
+          <span className="font-bold text-amber-300">
+            기본안주
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* 소맥세트 */}
+    <div
+      className="
+        group rounded-2xl border border-cyan-500/30
+        bg-[#101010] p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-cyan-300
+        hover:shadow-[0_0_30px_rgba(34,211,238,0.16)]
+      "
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          소맥세트
+        </h3>
+
+        <span
+          className="
+            rounded-full border border-cyan-400/50
+            px-3 py-1 text-xs font-bold
+            text-cyan-300
+            transition group-hover:bg-cyan-400
+            group-hover:text-black
+          "
+        >
+          4,200 B
+        </span>
+      </div>
+
+      <div className="mt-6 space-y-4">
+        <div className="border-b border-white/10 pb-4">
+          <p className="text-gray-300">
+            소주 3병 + 맥주 5병
+          </p>
+          <p className="mt-1 text-sm text-gray-500">
+            기본안주
           </p>
         </div>
-      </section>
+      </div>
+    </div>
+
+
+    {/* 맥주세트 */}
+    <div
+      className="
+        group rounded-2xl border border-green-500/30
+        bg-[#101010] p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-green-300
+        hover:shadow-[0_0_30px_rgba(34,197,94,0.15)]
+      "
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          맥주세트
+        </h3>
+
+        <span
+          className="
+            rounded-full border border-green-400/50
+            px-3 py-1 text-xs font-bold
+            text-green-300
+            transition group-hover:bg-green-400
+            group-hover:text-black
+          "
+        >
+          4,200 B
+        </span>
+      </div>
+
+      <div className="mt-6">
+        <p className="text-gray-300">
+          맥주 8병
+        </p>
+
+        <p className="mt-2 text-sm leading-6 text-gray-500">
+          사이공 · 하이네켄 · 레오
+        </p>
+
+        <p className="mt-1 text-sm text-gray-500">
+          기본안주
+        </p>
+      </div>
+    </div>
+
+
+    {/* 양주세트 */}
+    <div
+      className="
+        group rounded-2xl border border-blue-500/30
+        bg-[#101010] p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-blue-300
+        hover:shadow-[0_0_30px_rgba(59,130,246,0.18)]
+      "
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          양주세트
+        </h3>
+
+        <span
+          className="
+            rounded-full border border-blue-400/50
+            px-3 py-1 text-xs font-bold
+            text-blue-300
+            transition group-hover:bg-blue-400
+            group-hover:text-black
+          "
+        >
+          5,100 B
+        </span>
+      </div>
+
+      <div className="mt-6">
+        <p className="text-gray-300">
+          골든블루 1병
+        </p>
+
+        <p className="mt-2 text-sm text-gray-500">
+          기본안주 2
+        </p>
+      </div>
+    </div>
+
+
+    {/* 프리미엄 위스키 */}
+    <div
+      className="
+        group rounded-2xl border border-yellow-500/40
+        bg-[#101010] p-6
+        md:col-span-2
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-yellow-300
+        hover:shadow-[0_0_35px_rgba(234,179,8,0.16)]
+      "
+    >
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="text-xs font-bold tracking-[0.25em] text-yellow-400">
+            PREMIUM
+          </p>
+
+          <h3 className="mt-2 text-2xl font-black text-white">
+            프리미엄 위스키세트
+          </h3>
+
+          <p className="mt-2 text-gray-400">
+            골드라벨 or 헤네시
+          </p>
+        </div>
+
+        <div className="text-left md:text-right">
+          <p className="text-3xl font-black text-yellow-300">
+            9,750 B
+          </p>
+
+          <p className="mt-1 text-sm text-gray-500">
+            골드라벨 or 헤네시
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-3 border-t border-white/10 pt-5 sm:grid-cols-2">
+        <div className="rounded-xl bg-white/[0.03] p-4">
+          <p className="text-sm text-gray-400">
+            위스키
+          </p>
+          <p className="mt-1 font-bold text-white">
+            1병
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-white/[0.03] p-4">
+          <p className="text-sm text-gray-400">
+            기본안주
+          </p>
+          <p className="mt-1 font-bold text-white">
+            2
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-white/[0.03] p-4 sm:col-span-2">
+          <p className="text-sm text-gray-400">
+            믹서
+          </p>
+          <p className="mt-1 font-bold text-white">
+            10
+          </p>
+        </div>
+      </div>
+
+      <p className="mt-5 text-center text-xs text-gray-500">
+        모든 금액은 팁 포함된 금액입니다.
+      </p>
+    </div>
+
+
+    {/* Lady 차지 */}
+    <div
+      className="
+        group rounded-2xl border border-pink-500/30
+        bg-[#101010] p-6
+        md:col-span-2
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-pink-300
+        hover:shadow-[0_0_35px_rgba(236,72,153,0.16)]
+      "
+    >
+      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+        <div>
+          <p className="text-xs font-bold tracking-[0.25em] text-pink-400">
+            LADY CHARGE
+          </p>
+
+          <h3 className="mt-2 text-2xl font-black text-white">
+            Lady 차지
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+
+          <div className="min-w-[140px] rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-center">
+            <p className="text-sm text-gray-500">
+              TC
+            </p>
+
+            <p className="mt-1 text-xl font-black text-pink-300">
+              600 B
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              1시간
+            </p>
+          </div>
+
+          <div className="min-w-[140px] rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-center">
+            <p className="text-sm text-gray-500">
+              ST
+            </p>
+
+            <p className="mt-1 text-xl font-black text-pink-300">
+              4,000 B
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              2시간
+            </p>
+          </div>
+
+          <div className="min-w-[140px] rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4 text-center">
+            <p className="text-sm text-gray-500">
+              LT
+            </p>
+
+            <p className="mt-1 text-xl font-black text-pink-300">
+              6,000 B
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              6시간
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
       <section className="container py-12">
         <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
