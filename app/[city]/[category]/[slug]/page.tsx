@@ -690,7 +690,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          4,100B
+          4,100B(2번)
         </span>
       </div>
 
@@ -704,7 +704,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          4,700B
+          4,700B(2번)
         </span>
       </div>
     </div>
@@ -774,7 +774,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          4,900B
+          4,900B(2번)
         </span>
       </div>
 
@@ -788,7 +788,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          5,500B
+          5,500B(2번)
         </span>
       </div>
     </div>
@@ -855,7 +855,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          4,500B
+          4,500B(2번)
         </span>
       </div>
 
@@ -869,7 +869,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          5,300B
+          5,300B(2번)
         </span>
       </div>
     </div>
@@ -962,7 +962,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          5,300B
+          5,300B(2번)
         </span>
       </div>
 
@@ -983,7 +983,7 @@ export default async function PlaceDetail({
         </span>
 
         <span className="text-lg font-bold text-white">
-          6,100B
+          6,100B(2번)
         </span>
       </div>
     </div>
