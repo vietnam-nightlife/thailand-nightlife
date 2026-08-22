@@ -26,31 +26,60 @@ export async function generateMetadata({
 
   if (!place || place.city !== city || place.category !== category) {
     return {
-      title: "태국 가라오케 정보 | 태국 눈탱이 방지 위원회",
+      title: "태국 마사지 정보 | 태국 눈탱이 방지 위원회",
       description:
-        "방콕과 파타야의 가라오케와 KTV 정보를 확인하세요.",
+        "방콕과 파타야의 마사지 및 여행 정보를 확인하세요.",
     };
   }
 
-  const cityName = city === "bangkok" ? "방콕" : "파타야";
-  const categoryName =
-    category === "massage" ? "마사지" : "가라오케";
+  const isKoreana = slug === "bangkok-karaoke-01";
+  const isBarbie18 = slug === "bangkok-barbie18-massage";
 
-  const isKoreana =
-    slug === "bangkok-karaoke-01";
+  if (isBarbie18) {
+    return {
+      title:
+        "방콕 바비18 마사지 | Sukhumvit Soi 18 | 태국 눈탱이 방지 위원회",
+      description:
+        "방콕 바비18 마사지의 위치, 영업시간, 룸과 시설, 가격 및 방문 전 참고사항을 확인하세요.",
+      keywords: [
+        "방콕 바비18 마사지",
+        "방콕 Barbie18 Massage",
+        "Barbie18 Massage Bangkok",
+        "방콕 마사지",
+        "수쿰빗 마사지",
+        "수쿰빗 소이18 마사지",
+        "아속 마사지",
+        "프롬퐁 마사지",
+        "방콕 마사지 가격",
+        "방콕 마사지샵",
+      ],
+      alternates: {
+        canonical: `/${city}/${category}/${slug}`,
+      },
+      openGraph: {
+        title: "방콕 바비18 마사지 | Sukhumvit Soi 18",
+        description:
+          "방콕 바비18 마사지 위치, 시설, 가격 및 방문 정보를 확인하세요.",
+        type: "website",
+        images: [
+          {
+            url: place.image,
+            alt: "방콕 바비18 마사지",
+          },
+        ],
+      },
+    };
+  }
 
   if (isKoreana) {
     return {
       title:
         "방콕 코리아나 가라오케 | 수쿰빗 소이11 KTV | 태국 눈탱이 방지 위원회",
-
       description:
-        "방콕 코리아나 가라오케 위치, 영업시간, 룸과 시설, 이용요금 및 방문 정보를 확인하세요. 수쿰빗 소이 11에 위치한 한국식 KTV입니다.",
-
+        "방콕 코리아나 가라오케 위치, 영업시간, 룸과 시설, 이용요금 및 방문 정보를 확인하세요.",
       alternates: {
         canonical: `/${city}/${category}/${slug}`,
       },
-
       keywords: [
         "방콕 코리아나 가라오케",
         "방콕 코리아나",
@@ -60,18 +89,12 @@ export async function generateMetadata({
         "방콕 한국식 가라오케",
         "수쿰빗 가라오케",
         "수쿰빗 KTV",
-        "방콕 나나 가라오케",
-        "방콕 아속 가라오케",
-        "Koreana KTV Bangkok",
-        "Koreana Karaoke Bangkok",
-        "Club Koreana Bangkok",
       ],
-
       openGraph: {
         title:
           "방콕 코리아나 가라오케 | 수쿰빗 소이11 KTV",
         description:
-          "방콕 코리아나 가라오케의 위치, 영업시간, 룸, 시설, 이용요금 및 방문 정보를 확인하세요.",
+          "방콕 코리아나 가라오케의 위치, 영업시간, 룸, 시설 및 이용 정보를 확인하세요.",
         type: "website",
         images: [
           {
@@ -82,6 +105,10 @@ export async function generateMetadata({
       },
     };
   }
+
+  const cityName = city === "bangkok" ? "방콕" : "파타야";
+  const categoryName =
+    category === "massage" ? "마사지" : "가라오케";
 
   return {
     title: `${place.name} | ${cityName} ${categoryName} | 태국 눈탱이 방지 위원회`,
@@ -172,8 +199,7 @@ function KoreanaBusinessJsonLd() {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "Soi Sukhumvit 11",
+      streetAddress: "Soi Sukhumvit 11",
       addressLocality: "Bangkok",
       postalCode: "10110",
       addressCountry: "TH",
@@ -181,12 +207,38 @@ function KoreanaBusinessJsonLd() {
     telephone: "+66 82 223 2929",
     openingHours: "Mo-Su 19:00-03:00",
     priceRange: "฿฿",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.4",
-      reviewCount: "57",
-      bestRating: "5",
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
+    />
+  );
+}
+
+function Barbie18BusinessJsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    name: "Barbie18 Massage",
+    alternateName: [
+      "Barbie18 Massage",
+      "Barbie18 Nuru Massage",
+      "방콕 바비18 마사지",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sukhumvit Soi 18",
+      addressLocality: "Bangkok",
+      postalCode: "10110",
+      addressCountry: "TH",
     },
+    url: "https://barbie18massage.com/",
+    telephone: "+66 98 685 4108",
+    priceRange: "฿฿",
   };
 
   return (
@@ -231,9 +283,606 @@ export default async function PlaceDetail({
   const isKoreana =
     slug === "bangkok-karaoke-01";
 
+  const isBarbie18 =
+    slug === "bangkok-barbie18-massage";
+
   /*
-   * 일반 업소 페이지
+   * =====================================================
+   * 방콕 바비18 마사지
+   * =====================================================
    */
+
+  if (isBarbie18) {
+    const barbieImages = place.gallery ?? [];
+
+    return (
+      <main>
+        <PlaceBreadcrumbJsonLd
+          cityName="방콕"
+          citySlug="bangkok"
+          category="massage"
+          categoryName="마사지"
+          placeName="방콕 바비18 마사지"
+          placeSlug="bangkok-barbie18-massage"
+        />
+
+        <Barbie18BusinessJsonLd />
+
+        {/* =================================================
+            HERO
+        ================================================== */}
+        <section className="relative h-[520px] overflow-hidden md:h-[560px]">
+          <img
+            src={place.image}
+            alt="방콕 바비18 마사지 메인"
+            className="h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+          <div className="absolute bottom-0 left-0 right-0">
+            <div className="container pb-10 md:pb-12">
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                BANGKOK · MASSAGE
+              </div>
+
+              <h1 className="mt-3 text-4xl font-black md:text-6xl">
+                방콕 바비18 마사지
+              </h1>
+
+              <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-300 md:text-base">
+                방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다.
+                위치와 영업시간, 내부 시설, 룸 분위기 및
+                방문 전 확인사항을 한곳에서 확인할 수 있습니다.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-3 text-sm">
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  Barbie18 Massage
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  Sukhumvit Soi 18
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  방콕 수쿰빗
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  마사지
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =================================================
+            QUICK INFO
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="grid gap-4 md:grid-cols-4">
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                업종
+              </div>
+
+              <div className="mt-2 font-bold">
+                마사지샵
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                위치
+              </div>
+
+              <div className="mt-2 font-bold">
+                수쿰빗 소이 18
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                운영시간
+              </div>
+
+              <div className="mt-2 font-bold">
+                12:00 - 00:00
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                주변 지역
+              </div>
+
+              <div className="mt-2 font-bold">
+                아속 · 프롬퐁
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* =================================================
+            ABOUT
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            ABOUT BARBIE18
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 바비18 마사지
+          </h2>
+
+          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
+            <p>
+              방콕 바비18 마사지(Barbie18 Massage)는
+              수쿰빗 소이 18에 위치한 마사지샵으로
+              안내되고 있습니다.
+            </p>
+
+            <p>
+              외부 업소 정보에서는 프롬퐁 또는 아속
+              생활권에서 접근할 수 있는 곳으로 소개되고
+              있으며, 수쿰빗 주요 호텔과 식당을 함께
+              이용하기 좋은 위치에 있습니다.
+            </p>
+
+            <p>
+              매장 내부는 리셉션 공간과 개별 룸으로
+              구성되어 있으며, 외부 공개 사진을 통해
+              일반 룸과 욕조가 있는 룸 등의 시설을
+              확인할 수 있습니다.
+            </p>
+
+            <p>
+              방문 전에는 당일 운영시간과 이용 가능한
+              코스 및 가격을 확인하는 것이 좋습니다.
+              온라인에 등록된 정보는 시기에 따라
+              변경될 수 있습니다.
+            </p>
+          </div>
+        </section>
+
+        {/* =================================================
+            GALLERY
+        ================================================== */}
+        {barbieImages.length > 0 && (
+          <section className="container py-10 md:py-12">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              GALLERY
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">
+              바비18 마사지 룸 & 시설 사진
+            </h2>
+
+            <p className="mt-3 text-sm leading-7 text-zinc-500">
+              바비18 마사지의 리셉션과 휴게공간,
+              룸 및 내부 시설 분위기를 사진으로 확인해보세요.
+              사진을 클릭하면 크게 볼 수 있습니다.
+            </p>
+
+            <ImageGallery
+              images={barbieImages}
+              name="방콕 바비18 마사지"
+            />
+          </section>
+        )}
+
+        {/* =================================================
+            LOCATION
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              LOCATION
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              방콕 바비18 마사지 위치
+            </h2>
+
+            <p className="mt-6 leading-8 text-zinc-400">
+              바비18 마사지는 방콕 수쿰빗 소이 18
+              인근에 위치한 것으로 안내되고 있습니다.
+              아속과 프롬퐁 사이의 수쿰빗 지역에서
+              이동하기 좋은 위치입니다.
+            </p>
+
+            <div className="mt-8 rounded-2xl bg-black/40 p-6">
+              <div className="text-sm text-zinc-500">
+                주소
+              </div>
+
+              <div className="mt-2 text-lg font-bold">
+                Sukhumvit Soi 18
+              </div>
+
+              <div className="mt-1 text-sm leading-6 text-zinc-400">
+                Khlong Toei, Bangkok 10110, Thailand
+              </div>
+            </div>
+
+            <p className="mt-6 text-sm leading-7 text-zinc-500">
+              공개된 외부 자료에는 상세 번지가
+              서로 다르게 표기되는 경우가 있으므로,
+              처음 방문한다면 지도 위치를 확인하거나
+              업소에 정확한 위치를 문의하는 것이 좋습니다.
+            </p>
+          </div>
+        </section>
+
+        {/* =================================================
+            HOURS
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                OPENING HOURS
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                영업시간
+              </h2>
+
+              <div className="mt-8 text-3xl font-black">
+                12:00 - 00:00
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                최근 확인되는 외부 자료에서는
+                정오부터 자정까지 운영되는 정보가
+                확인됩니다.
+              </p>
+
+              <p className="mt-4 text-xs leading-6 text-zinc-600">
+                ※ 다른 외부 자료에는 11:00 - 01:00으로
+                표기된 경우도 있으므로 방문 당일
+                정확한 운영시간을 확인하세요.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                VISIT
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                방문 전 확인
+              </h2>
+
+              <div className="mt-8 text-2xl font-black">
+                당일 운영 여부 확인
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                영업시간이나 이용 가능한 룸,
+                당일 가격은 변동될 수 있으므로
+                방문 전에 확인하는 것을 권장합니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* =================================================
+            PRICE
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              PRICE GUIDE
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              바비18 마사지 가격
+            </h2>
+
+            <p className="mt-4 max-w-4xl text-sm leading-7 text-zinc-400">
+              공개된 외부 자료에서 확인되는 오일 마사지
+              가격은 아래와 같습니다.
+            </p>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+                <div className="text-sm text-zinc-500">
+                  30분
+                </div>
+
+                <div className="mt-3 text-3xl font-black">
+                  ฿1,800
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+                <div className="text-sm text-zinc-500">
+                  60분
+                </div>
+
+                <div className="mt-3 text-3xl font-black">
+                  ฿2,300
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+                <div className="text-sm text-zinc-500">
+                  90분
+                </div>
+
+                <div className="mt-3 text-3xl font-black">
+                  ฿3,000
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-500">
+              ※ 위 가격은 외부 공개 자료를 기준으로
+              작성한 참고용 정보입니다. 실제 가격과
+              이용 조건은 방문 시점에 달라질 수 있으므로
+              결제 전 최종 금액을 확인하세요.
+            </p>
+          </div>
+        </section>
+
+        {/* =================================================
+            FACILITIES
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            FACILITIES
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            룸 및 시설
+          </h2>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-3xl">
+                🛋️
+              </div>
+
+              <h3 className="mt-4 font-black">
+                개인 룸
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                외부 공개 사진을 통해 개인적으로
+                이용할 수 있는 룸 구성을 확인할 수 있습니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-3xl">
+                🛁
+              </div>
+
+              <h3 className="mt-4 font-black">
+                욕조 시설
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                일부 룸에는 욕조가 포함된 형태의
+                시설이 확인됩니다.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-3xl">
+                ✨
+              </div>
+
+              <h3 className="mt-4 font-black">
+                깔끔한 실내 분위기
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                공개된 내부 사진에서는 리셉션과
+                룸이 비교적 정돈된 형태로 확인됩니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* =================================================
+            TRANSPORT
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              TRANSPORT
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              찾아가는 방법
+            </h2>
+
+            <div className="mt-8 space-y-5 text-sm leading-8 text-zinc-400">
+              <p>
+                바비18 마사지는 수쿰빗 소이 18에
+                위치한 것으로 안내되고 있습니다.
+              </p>
+
+              <p>
+                아속 지역에서 이동하는 경우
+                수쿰빗 소이 18 방향으로 이동한 뒤
+                지도 앱에서 업소명을 검색하는 방법이
+                가장 편리합니다.
+              </p>
+
+              <p>
+                BTS Asok 및 MRT Sukhumvit 인근에서
+                이동할 경우 도보 또는 현지 교통수단을
+                이용할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* =================================================
+            GOOD TO KNOW
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            GOOD TO KNOW
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방문 전 체크사항
+          </h2>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              "방문 당일 영업시간 확인",
+              "정확한 매장 위치 확인",
+              "이용 가능한 코스와 가격 확인",
+              "원하는 룸 이용 가능 여부 확인",
+              "추가 비용이 있는지 사전 확인",
+              "최종 결제금액 확인",
+              "주말 및 저녁 시간대 방문 전 문의",
+              "온라인에 표시된 정보와 현장 안내 비교",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-xl border border-white/10 bg-[#111] p-5 text-sm text-zinc-300"
+              >
+                <span className="mr-3 text-red-500">
+                  ✓
+                </span>
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* =================================================
+            FAQ
+        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            FAQ
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 바비18 마사지 자주 묻는 질문
+          </h2>
+
+          <div className="mt-8 space-y-4">
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                바비18 마사지는 어디에 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                방콕 수쿰빗 소이 18에 위치한 것으로
+                안내되고 있습니다. 아속과 프롬퐁
+                사이의 수쿰빗 지역에서 접근할 수 있습니다.
+              </p>
+            </details>
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                영업시간은 언제인가요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                최근 확인되는 외부 자료에서는
+                12:00부터 00:00까지 운영되는 정보가
+                확인됩니다. 다른 자료에는 11:00~01:00으로
+                표시되기도 하므로 방문 전 확인하세요.
+              </p>
+            </details>
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                마사지 가격은 얼마인가요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                공개 자료 기준 오일 마사지 30분
+                ฿1,800, 60분 ฿2,300, 90분 ฿3,000으로
+                안내된 가격이 있습니다. 실제 가격은
+                방문 전에 확인하는 것이 좋습니다.
+              </p>
+            </details>
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                룸 사진을 볼 수 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                네. 이 페이지의 갤러리에서 현재 등록된
+                바비18 마사지의 리셉션과 룸,
+                내부 시설 사진을 확인할 수 있습니다.
+              </p>
+            </details>
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                방문 전에 확인할 사항이 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                영업시간, 정확한 위치, 당일 이용 가능
+                여부와 최신 가격을 방문 전에 확인하는
+                것을 권장합니다.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        {/* =================================================
+            FINAL INFO
+        ================================================== */}
+        <section className="container py-14 md:py-16">
+          <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              BARBIE18 MASSAGE BANGKOK
+            </div>
+
+            <h2 className="mt-4 text-3xl font-black md:text-4xl">
+              방콕 바비18 마사지
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
+              수쿰빗 소이 18에 위치한 바비18 마사지의
+              위치, 시설, 가격 및 방문 전 체크사항을
+              확인해보세요.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a
+                href="https://barbie18massage.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black hover:bg-red-500"
+              >
+                공식 사이트
+              </a>
+
+              <Link
+                href="/bangkok/massage"
+                className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-black hover:bg-white/10"
+              >
+                방콕 마사지 더보기
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
+  /*
+   * =====================================================
+   * 일반 업소 페이지
+   * =====================================================
+   */
+
   if (!isKoreana) {
     return (
       <main>
@@ -316,6 +965,7 @@ export default async function PlaceDetail({
                 <dt className="text-sm text-zinc-500">
                   주소
                 </dt>
+
                 <dd className="mt-2">
                   {place.address}
                 </dd>
@@ -325,6 +975,7 @@ export default async function PlaceDetail({
                 <dt className="text-sm text-zinc-500">
                   영업시간
                 </dt>
+
                 <dd className="mt-2">
                   {place.hours}
                 </dd>
@@ -334,6 +985,7 @@ export default async function PlaceDetail({
                 <dt className="text-sm text-zinc-500">
                   평점
                 </dt>
+
                 <dd className="mt-2">
                   ★ {place.rating} ({place.reviews})
                 </dd>
@@ -346,9 +998,10 @@ export default async function PlaceDetail({
   }
 
   /*
-   * ===============================
+   * =====================================================
    * 방콕 코리아나 상세페이지
-   * ===============================
+   * 기존 페이지 유지
+   * =====================================================
    */
 
   const koreanaImages = place.gallery ?? [];
@@ -366,9 +1019,6 @@ export default async function PlaceDetail({
 
       <KoreanaBusinessJsonLd />
 
-      {/* =========================
-          HERO
-      ========================== */}
       <section className="relative h-[560px] overflow-hidden">
         <img
           src={place.image}
@@ -391,7 +1041,7 @@ export default async function PlaceDetail({
             <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-300 md:text-base">
               방콕 수쿰빗 소이 11에 위치한 한국식 KTV.
               코리아나 가라오케의 위치, 영업시간,
-              룸과 시설, 이용요금 및 방문 정보를 확인하세요.
+              룸과 시설 및 방문 정보를 확인하세요.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3 text-sm">
@@ -415,15 +1065,13 @@ export default async function PlaceDetail({
         </div>
       </section>
 
-      {/* =========================
-          QUICK INFO
-      ========================== */}
       <section className="container py-12">
         <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
             <div className="text-xs text-zinc-500">
               업종
             </div>
+
             <div className="mt-2 font-bold">
               한국식 KTV · 가라오케
             </div>
@@ -433,6 +1081,7 @@ export default async function PlaceDetail({
             <div className="text-xs text-zinc-500">
               위치
             </div>
+
             <div className="mt-2 font-bold">
               수쿰빗 소이 11
             </div>
@@ -442,6 +1091,7 @@ export default async function PlaceDetail({
             <div className="text-xs text-zinc-500">
               영업시간
             </div>
+
             <div className="mt-2 font-bold">
               19:00 - 03:00
             </div>
@@ -449,18 +1099,16 @@ export default async function PlaceDetail({
 
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
             <div className="text-xs text-zinc-500">
-              인기시간 필수 예약
+              방문 전 확인
             </div>
+
             <div className="mt-2 font-bold">
-              8시부터 매우 혼잡
+              운영시간 및 이용조건 확인
             </div>
           </div>
         </div>
       </section>
 
-      {/* =========================
-          ABOUT
-      ========================== */}
       <section className="container py-12">
         <div className="text-xs font-black tracking-[.3em] text-red-500">
           ABOUT KOREANA
@@ -477,23 +1125,15 @@ export default async function PlaceDetail({
           </p>
 
           <p>
-            나나와 아속 사이에 위치한 수쿰빗 소이 11은
-            방콕에서 호텔과 레스토랑, 바와 야간
-            엔터테인먼트 시설이 밀집한 지역으로,
-            여행객이 저녁 시간에 이동하기 편리한 곳입니다.
+            나나와 아속 사이의 수쿰빗 소이 11은
+            호텔과 레스토랑, 바와 야간 엔터테인먼트
+            시설이 밀집한 지역입니다.
           </p>
 
           <p>
             코리아나는 프라이빗 룸을 이용하면서
             한국 노래와 가라오케를 즐길 수 있는
             형태로 소개되고 있습니다.
-          </p>
-
-          <p>
-            외부 공개 자료에서는 3층 규모의 공간과
-            20개 이상의 프라이빗룸, 좋은 음향과
-            현대적인 인테리어, 한국 음식 등을
-            특징으로 소개하고 있습니다.
           </p>
 
           <p>
@@ -504,9 +1144,6 @@ export default async function PlaceDetail({
         </div>
       </section>
 
-      {/* =========================
-          GALLERY
-      ========================== */}
       {koreanaImages.length > 0 && (
         <section className="container py-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -517,11 +1154,6 @@ export default async function PlaceDetail({
             코리아나 룸 & 시설 사진
           </h2>
 
-          <p className="mt-3 text-sm text-zinc-500">
-            실제 업소의 룸과 시설 분위기를 사진으로
-            확인해보세요. 사진을 클릭하면 크게 볼 수 있습니다.
-          </p>
-
           <ImageGallery
             images={koreanaImages}
             name="방콕 코리아나 가라오케"
@@ -529,9 +1161,6 @@ export default async function PlaceDetail({
         </section>
       )}
 
-      {/* =========================
-          LOCATION
-      ========================== */}
       <section className="container py-12">
         <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -554,7 +1183,7 @@ export default async function PlaceDetail({
             </div>
 
             <div className="mt-2 text-lg font-bold">
-              ชั้น 3-4 Soi Sukhumvit 11
+              Soi Sukhumvit 11
             </div>
 
             <div className="mt-1 text-sm text-zinc-400">
@@ -562,19 +1191,9 @@ export default async function PlaceDetail({
               Bangkok 10110, Thailand
             </div>
           </div>
-
-          <p className="mt-6 text-sm leading-7 text-zinc-500">
-            수쿰빗 소이 11은 나나와 아속 지역 사이에
-            위치해 있어 주변 호텔이나 관광지에서
-            택시, Grab 또는 BTS를 이용해 접근하기
-            편리한 지역입니다.
-          </p>
         </div>
       </section>
 
-      {/* =========================
-          HOURS
-      ========================== */}
       <section className="container py-12">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
@@ -591,14 +1210,8 @@ export default async function PlaceDetail({
             </div>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 업체 정보 기준으로
-              매일 19:00부터 다음날 03:00까지
-              운영되는 것으로 안내되고 있습니다.
-            </p>
-
-            <p className="mt-4 text-xs leading-6 text-zinc-600">
-              ※ 현지 업소의 영업시간은 변경될 수 있으므로
-              방문 당일 확인을 권장합니다.
+              방문 당일 영업시간을 확인하는 것을
+              권장합니다.
             </p>
           </div>
 
@@ -608,26 +1221,18 @@ export default async function PlaceDetail({
             </div>
 
             <h2 className="mt-3 text-3xl font-black">
-              문의 및 예약
+              문의 및 방문
             </h2>
 
-            <div className="mt-8 text-2xl font-black">
-              오른쪽 카카오톡, 텔레그램을 이용하여 문의해주세요!
-            </div>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              주말이나 사람이 몰리는 첫타임 시간대에는
-              방문 전에 카카오톡 및 텔레그램으로 미리 연락해
-              영업 여부와 룸 이용 가능 여부를
-              확인하는 것을 권장합니다.
+            <p className="mt-8 text-sm leading-7 text-zinc-500">
+              주말이나 사람이 몰리는 시간대에는
+              방문 전에 영업 여부와 이용 조건을
+              확인하는 것이 좋습니다.
             </p>
           </div>
         </div>
       </section>
 
-      {/* =========================
-          PRICE
-      ========================== */}
       <section className="container py-12">
         <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -638,141 +1243,14 @@ export default async function PlaceDetail({
             코리아나 가라오케 가격
           </h2>
 
-          <div className="mt-8 flex flex-wrap items-end gap-3">
-            <span className="text-4xl font-black">
-              약 4,000 ~ 9,000
-            </span>
-
-            <span className="pb-1 text-zinc-400">
-              THB / 1인
-            </span>
-          </div>
-
           <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
-            현재 공개된 외부 자료에서는 코리아나의
-            이용 가격을 약 4,000~9,000바트/인 수준으로
-            소개하고 있습니다.
-          </p>
-
-          <p className="mt-4 max-w-4xl text-sm leading-7 text-zinc-400">
-            다만 실제 결제금액은 룸, 이용시간,
-            주문하는 음식과 주류 및 기타 이용조건에
-            따라 달라질 수 있습니다.
-          </p>
-
-          <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5">
-            <div className="font-bold text-white">
-              ⚠️ 방문 전 반드시 확인
-            </div>
-
-            <ul className="mt-3 space-y-2 text-sm leading-7 text-zinc-500">
-              <li>• 룸 이용료 포함 여부</li>
-              <li>• 음식 및 주류 가격</li>
-              <li>• 이용시간 및 추가시간 요금</li>
-              <li>• 서비스 비용 및 기타 추가비용</li>
-              <li>• 최종 결제금액</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================
-          ROOMS & FACILITIES
-      ========================== */}
-      <section className="container py-12">
-        <div className="text-xs font-black tracking-[.3em] text-red-500">
-          ROOMS & FACILITIES
-        </div>
-
-        <h2 className="mt-3 text-3xl font-black md:text-4xl">
-          룸 및 시설
-        </h2>
-
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-3xl">
-              🎤
-            </div>
-
-            <h3 className="mt-4 font-black">
-              한국식 KTV
-            </h3>
-
-            <p className="mt-3 text-sm leading-7 text-zinc-500">
-              한국 노래를 중심으로 가라오케를
-              즐길 수 있는 KTV 형태의 공간입니다.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-3xl">
-              🛋️
-            </div>
-
-            <h3 className="mt-4 font-black">
-              프라이빗 룸
-            </h3>
-
-            <p className="mt-3 text-sm leading-7 text-zinc-500">
-              외부 자료에서는 20개 이상의
-              프라이빗룸을 갖춘 대형 KTV로
-              소개되고 있습니다.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-3xl">
-              🔊
-            </div>
-
-            <h3 className="mt-4 font-black">
-              음향 및 시설
-            </h3>
-
-            <p className="mt-3 text-sm leading-7 text-zinc-500">
-              공개된 리뷰와 소개 자료에서
-              음향시설과 룸 분위기가 장점으로
-              언급되고 있습니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================
-          FOOD
-      ========================== */}
-      <section className="container py-12">
-        <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            FOOD & DRINK
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black">
-            음식 및 주류
-          </h2>
-
-          <p className="mt-6 max-w-4xl leading-8 text-zinc-400">
-            코리아나는 가라오케뿐 아니라 음식과
-            주류를 함께 이용할 수 있는 한국식
-            KTV 형태로 소개되고 있습니다.
-          </p>
-
-          <p className="mt-4 max-w-4xl leading-8 text-zinc-400">
-            공개된 리뷰에서는 음식의 신선도와
-            한국식 메뉴에 대한 긍정적인 평가가
-            확인됩니다.
-          </p>
-
-          <p className="mt-4 text-sm leading-7 text-zinc-600">
-            ※ 메뉴와 가격은 방문 시점에 따라
-            변경될 수 있으므로 주문 전에 확인하세요.
+            실제 이용금액은 룸, 이용시간, 음식,
+            주류 및 기타 조건에 따라 달라질 수
+            있으므로 방문 전에 확인하세요.
           </p>
         </div>
       </section>
 
-      {/* =========================
-          GOOD TO KNOW
-      ========================== */}
       <section className="container py-12">
         <div className="text-xs font-black tracking-[.3em] text-red-500">
           GOOD TO KNOW
@@ -786,12 +1264,10 @@ export default async function PlaceDetail({
           {[
             "방문 전 당일 영업시간 확인",
             "룸 이용료와 포함 항목 확인",
-            "주류 및 음식 가격 확인",
+            "음식 및 주류 가격 확인",
             "추가시간 요금 확인",
             "서비스 비용 확인",
             "최종 결제금액 확인",
-            "주말 및 피크타임 예약 권장",
-            "원하는 룸이 있다면 사전 문의",
           ].map((item) => (
             <div
               key={item}
@@ -806,99 +1282,6 @@ export default async function PlaceDetail({
         </div>
       </section>
 
-      {/* =========================
-          FAQ
-      ========================== */}
-      <section className="container py-12">
-        <div className="text-xs font-black tracking-[.3em] text-red-500">
-          FAQ
-        </div>
-
-        <h2 className="mt-3 text-3xl font-black md:text-4xl">
-          방콕 코리아나 가라오케 자주 묻는 질문
-        </h2>
-
-        <div className="mt-8 space-y-4">
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              방콕 코리아나 가라오케는 어디에 있나요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              방콕 수쿰빗 소이 11에 위치한 것으로
-              안내되고 있습니다. 나나와 아속 지역에서
-              접근하기 편리한 위치입니다.
-            </p>
-          </details>
-
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              코리아나 가라오케 영업시간은 언제인가요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 업체 정보 기준으로
-              매일 19:00부터 03:00까지 운영되는
-              것으로 안내되고 있습니다.
-            </p>
-          </details>
-
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              코리아나 가라오케 가격은 얼마인가요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              공개된 외부 자료에서는 약 4,000~9,000바트/인
-              수준으로 소개되고 있습니다. 다만 실제
-              결제금액은 룸과 이용시간, 음식 및 주류 등에
-              따라 달라질 수 있으므로 방문 전에
-              확인하는 것이 좋습니다.
-            </p>
-          </details>
-
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              프라이빗룸이 있나요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              네. 코리아나 가라오케는 20개 이상의
-              프라이빗룸을 갖춘 대형 KTV로
-              소개되고 있습니다.
-            </p>
-          </details>
-
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              문의는 어떻게 하나요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              업소 이용 및 예약에 관한 문의는 문의하기를 통해
-              카카오톡 또는 텔레그램으로 확인하실 수 있습니다.
-              방문 전 영업 여부와 이용 조건을 미리 확인하는 것을 권장합니다!
-            </p>
-          </details>
-
-          <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
-            <summary className="cursor-pointer font-bold">
-              예약을 해야 하나요?
-            </summary>
-
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
-              피크타임이나 주말에는 풀방이거나 대기를 해야하는
-              경우가 많기 때문에 여러 명이 방문하거나
-              특정 룸을 원하는 경우 사전 문의를
-              권장합니다.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      {/* =========================
-          FINAL INFO
-      ========================== */}
       <section className="container py-16">
         <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -910,10 +1293,9 @@ export default async function PlaceDetail({
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
-            수쿰빗 소이 11에서 한국식 KTV와
-            프라이빗룸을 찾는다면 방문 전 위치,
-            영업시간, 이용요금과 룸 조건을
-            확인해보세요.
+            수쿰빗 소이 11에 위치한 코리아나
+            가라오케의 위치와 영업시간,
+            이용조건을 확인해보세요.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
