@@ -578,7 +578,9 @@ export default async function PlaceDetail({
         {/* =========================================================
     CUBE NURU MASSAGE 가격표
 ========================================================= */}
-<section className="mt-12">
+<section className="mt-12 w-full">
+  <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+
   {/* 제목 */}
   <div className="mb-7">
     <p className="text-[12px] font-bold tracking-[0.35em] text-fuchsia-400 uppercase">
