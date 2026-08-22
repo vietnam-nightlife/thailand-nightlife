@@ -275,7 +275,7 @@ export default async function PlaceDetail({
   // =========================================================
   // 방콕 CUBE 마사지 전용 상세페이지
   // =========================================================
-  if (slug === "bangkok-cube-massage") {
+  if (slug === "bangkok-cube-nuru-massage") {
     return (
       <main className="min-h-screen bg-[#0b0b0d] text-white">
         {/* 상단 메인 이미지 */}
