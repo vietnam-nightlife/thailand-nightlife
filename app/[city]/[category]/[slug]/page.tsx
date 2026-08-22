@@ -711,7 +711,7 @@ export default async function PlaceDetail({
 
 
     {/* ================================================= */}
-    {/* 일본식 누르메트 - HOT */}
+    {/* 일본식 누루매트 - HOT */}
     {/* ================================================= */}
     <div
       className="
@@ -756,7 +756,7 @@ export default async function PlaceDetail({
 
       <div>
         <h3 className="text-base font-bold text-white">
-          일본식 누르메트
+          일본식 누루매트
         </h3>
 
         <p className="mt-1 text-xs text-pink-300/70">
@@ -876,7 +876,7 @@ export default async function PlaceDetail({
 
 
     {/* ================================================= */}
-    {/* VIP 자쿠지 일본식 누르메트 - PREMIUM */}
+    {/* VIP 자쿠지 일본식 누루매트 - PREMIUM */}
     {/* ================================================= */}
     <div
       className="
@@ -937,7 +937,7 @@ export default async function PlaceDetail({
 
       <div>
         <h3 className="text-base font-bold text-white">
-          VIP 자쿠지 일본식 누르메트
+          VIP 자쿠지 일본식 누루매트
         </h3>
 
         <p className="mt-1 text-xs text-fuchsia-300/70">
