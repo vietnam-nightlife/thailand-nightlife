@@ -903,7 +903,9 @@ export default async function PlaceDetail({
               <p className="mt-4 text-sm leading-7 text-zinc-500">
                 공개 자료 기준 오일 마사지 30분
                 ฿1,800, 60분 ฿2,300, 90분 ฿3,000으로
-                안내된 가격이 있습니다. 실제 가격은
+                안내된 가격이 있습니다. 
+                누루 추가 금액은 따로 있으니 
+                실제 가격은
                 방문 전에 확인하는 것이 좋습니다.
               </p>
             </details>
@@ -955,12 +957,12 @@ export default async function PlaceDetail({
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
-                href="https://barbie18massage.com/"
+                href="https://open.kakao.com/o/snvQKD4h"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black hover:bg-red-500"
               >
-                공식 사이트
+                문의 하기
               </a>
 
               <Link
