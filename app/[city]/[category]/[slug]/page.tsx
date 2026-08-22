@@ -823,7 +823,6 @@ export default async function PlaceDetail({
           </span>
         </div>
       </div>
-      </div>
     </div>
    </div>    
   </div>
