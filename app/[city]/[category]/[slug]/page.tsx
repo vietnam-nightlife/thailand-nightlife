@@ -204,7 +204,6 @@ function KoreanaBusinessJsonLd() {
       postalCode: "10110",
       addressCountry: "TH",
     },
-    telephone: "+66 82 223 2929",
     openingHours: "Mo-Su 19:00-03:00",
     priceRange: "฿฿",
   };
@@ -237,7 +236,6 @@ function Barbie18BusinessJsonLd() {
       addressCountry: "TH",
     },
     url: "https://barbie18massage.com/",
-    telephone: "+66 98 685 4108",
     priceRange: "฿฿",
   };
 
@@ -281,17 +279,17 @@ export default async function PlaceDetail({
     const cubeImages = place.gallery ?? [];
 
     return (
-      <main className="min-h-screen bg-[#0b0b0d] text-white">
+      <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0b0b0d] text-white">
 
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[430px] overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
           <img
-  src={place.image}
-  alt="방콕 큐브 마사지 CUBE Nuru Massage"
-  className="h-full w-full object-cover object-center"
-/>
+            src={place.image}
+            alt="방콕 큐브 마사지 CUBE Nuru Massage"
+            className="h-full w-full max-w-full object-cover object-center"
+          />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
@@ -302,11 +300,11 @@ export default async function PlaceDetail({
                 BANGKOK · MASSAGE
               </div>
 
-              <h1 className="mt-3 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 방콕 큐브 마사지
               </h1>
 
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
+              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
                 방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다.
                 매장 위치와 운영시간, 내부 시설, 룸 분위기와
                 방문 전 확인사항을 한곳에서 확인할 수 있습니다.
@@ -334,113 +332,6 @@ export default async function PlaceDetail({
             </div>
           </div>
         </section>
-
-
-        {/* =================================================
-            QUICK INFO
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-
-          <div className="grid gap-4 md:grid-cols-4">
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                업종
-              </div>
-
-              <div className="mt-2 font-bold">
-                마사지샵 · Nuru Massage
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                위치
-              </div>
-
-              <div className="mt-2 font-bold">
-                수쿰빗 소이 22
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                운영시간
-              </div>
-
-              <div className="mt-2 font-bold">
-                11:00 - 02:00
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                평점
-              </div>
-
-              <div className="mt-2 font-bold">
-                ★ 4.7 · Google 리뷰
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-
-        {/* =================================================
-            ABOUT
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            ABOUT CUBE
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black md:text-4xl">
-            방콕 큐브 마사지
-          </h2>
-
-          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
-
-            <p>
-              방콕 큐브 마사지(CUBE Nuru Massage)는
-              방콕 수쿰빗 소이 22에 위치한 마사지샵으로
-              알려져 있습니다.
-            </p>
-
-            <p>
-              수쿰빗 소이 22는 BTS 프롬퐁과 가까운
-              수쿰빗 지역에 위치해 있어 주변 호텔이나
-              식당과 함께 방문 일정을 구성하기 좋은 지역입니다.
-            </p>
-
-            <p>
-              CUBE는 누루 마사지와 오일 마사지 등을
-              제공하는 형태로 소개되고 있으며,
-              공개된 매장 사진에서는 리셉션 공간과
-              개별 룸, 다양한 내부 시설을 확인할 수 있습니다.
-            </p>
-
-            <p>
-              특히 객실별 분위기와 시설 구성이 서로 다를 수
-              있으므로 방문 전에 이용 가능한 룸과
-              당일 운영 여부를 확인하는 것이 좋습니다.
-            </p>
-
-            <p>
-              온라인에 등록된 가격과 운영시간은 변경될 수
-              있으므로 실제 방문 전 최신 정보를 확인하는 것을
-              권장합니다.
-            </p>
-
-          </div>
-        </section>
-
-
-        {/* =================================================
-            GALLERY
-        ================================================== */}
-        {cubeImages.length > 0 && (
           <section className="container py-10 md:py-12">
 
             <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -463,122 +354,7 @@ export default async function PlaceDetail({
             />
 
           </section>
-        )}
-
-
-        {/* =================================================
-            LOCATION
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-
-          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-
-            <div className="text-xs font-black tracking-[.3em] text-red-500">
-              LOCATION
-            </div>
-
-            <h2 className="mt-3 text-3xl font-black">
-              방콕 큐브 마사지 위치
-            </h2>
-
-            <p className="mt-6 leading-8 text-zinc-400">
-              CUBE Nuru Massage는 방콕 수쿰빗
-              소이 22(Sukhumvit Soi 22) 인근에
-              위치한 것으로 확인됩니다.
-            </p>
-
-            <div className="mt-8 rounded-2xl bg-black/40 p-6">
-
-              <div className="text-sm text-zinc-500">
-                주소
-              </div>
-
-              <div className="mt-2 text-lg font-bold">
-                20/2 Sukhumvit Soi 22
-              </div>
-
-              <div className="mt-1 text-sm leading-6 text-zinc-400">
-                Khlong Tan, Khlong Toei,
-                Bangkok 10110, Thailand
-              </div>
-
-            </div>
-
-            <p className="mt-6 text-sm leading-7 text-zinc-500">
-              수쿰빗 소이 22 방향으로 이동한 뒤
-              지도에서 CUBE Massage를 검색하면
-              위치를 확인할 수 있습니다.
-            </p>
-
-          </div>
-        </section>
-
-
-        {/* =================================================
-            HOURS
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-
-          <div className="grid gap-6 md:grid-cols-2">
-
-            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                OPENING HOURS
-              </div>
-
-              <h2 className="mt-3 text-3xl font-black">
-                영업시간
-              </h2>
-
-              <div className="mt-8 text-3xl font-black">
-                11:00 - 02:00
-              </div>
-
-              <p className="mt-4 text-sm leading-7 text-zinc-500">
-                공개된 최근 자료에서는 오전 11시부터
-                새벽 시간대까지 운영되는 것으로 확인됩니다.
-              </p>
-
-              <p className="mt-4 text-xs leading-6 text-zinc-600">
-                ※ 요일에 따라 마감시간이 다르게 표시되는
-                자료도 있으므로 방문 당일 정확한 운영시간을
-                확인하세요.
-              </p>
-
-            </div>
-
-
-            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                VISIT
-              </div>
-
-              <h2 className="mt-3 text-3xl font-black">
-                방문 전 확인
-              </h2>
-
-              <div className="mt-8 text-2xl font-black">
-                당일 운영 여부 확인
-              </div>
-
-              <p className="mt-4 text-sm leading-7 text-zinc-500">
-                운영시간과 이용 가능한 룸,
-                당일 가격 및 이용 조건은 변경될 수 있으므로
-                방문 전에 확인하는 것을 권장합니다.
-              </p>
-
-            </div>
-
-          </div>
-        </section>
-
-
-        {/* =========================================================
-    CUBE NURU MASSAGE 가격표
-========================================================= */}
-<section className="mt-12 w-full">
+<section className="mt-10 w-full max-w-full overflow-hidden sm:mt-12">
   <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
 
   {/* 제목 */}
@@ -827,10 +603,196 @@ export default async function PlaceDetail({
    </div>    
   </div>
 </section>
+        <section className="container py-10 md:py-12">
 
-        {/* =================================================
-            FACILITIES
-        ================================================== */}
+          <div className="grid gap-4 md:grid-cols-4">
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                업종
+              </div>
+
+              <div className="mt-2 font-bold">
+                마사지샵 · Nuru Massage
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                위치
+              </div>
+
+              <div className="mt-2 font-bold">
+                수쿰빗 소이 22
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                운영시간
+              </div>
+
+              <div className="mt-2 font-bold">
+                11:00 - 02:00
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                평점
+              </div>
+
+              <div className="mt-2 font-bold">
+                ★ 4.7 · Google 리뷰
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            ABOUT CUBE
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 큐브 마사지
+          </h2>
+
+          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
+
+            <p>
+              방콕 큐브 마사지(CUBE Nuru Massage)는
+              방콕 수쿰빗 소이 22에 위치한 마사지샵으로
+              알려져 있습니다.
+            </p>
+
+            <p>
+              수쿰빗 소이 22는 BTS 프롬퐁과 가까운
+              수쿰빗 지역에 위치해 있어 주변 호텔이나
+              식당과 함께 방문 일정을 구성하기 좋은 지역입니다.
+            </p>
+
+            <p>
+              CUBE는 누루 마사지와 오일 마사지 등을
+              제공하는 형태로 소개되고 있으며,
+              공개된 매장 사진에서는 리셉션 공간과
+              개별 룸, 다양한 내부 시설을 확인할 수 있습니다.
+            </p>
+
+            <p>
+              특히 객실별 분위기와 시설 구성이 서로 다를 수
+              있으므로 방문 전에 이용 가능한 룸과
+              당일 운영 여부를 확인하는 것이 좋습니다.
+            </p>
+
+            <p>
+              온라인에 등록된 가격과 운영시간은 변경될 수
+              있으므로 실제 방문 전 최신 정보를 확인하는 것을
+              권장합니다.
+            </p>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              LOCATION
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              방콕 큐브 마사지 위치
+            </h2>
+
+            <p className="mt-6 leading-8 text-zinc-400">
+              CUBE Nuru Massage는 방콕 수쿰빗
+              소이 22(Sukhumvit Soi 22) 인근에
+              위치한 것으로 확인됩니다.
+            </p>
+
+            <div className="mt-8 rounded-2xl bg-black/40 p-6">
+
+              <div className="text-sm text-zinc-500">
+                주소
+              </div>
+
+              <div className="mt-2 text-lg font-bold">
+                20/2 Sukhumvit Soi 22
+              </div>
+
+              <div className="mt-1 text-sm leading-6 text-zinc-400">
+                Khlong Tan, Khlong Toei,
+                Bangkok 10110, Thailand
+              </div>
+
+            </div>
+
+            <p className="mt-6 text-sm leading-7 text-zinc-500">
+              수쿰빗 소이 22 방향으로 이동한 뒤
+              지도에서 CUBE Massage를 검색하면
+              위치를 확인할 수 있습니다.
+            </p>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="grid gap-6 md:grid-cols-2">
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                OPENING HOURS
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                영업시간
+              </h2>
+
+              <div className="mt-8 text-3xl font-black">
+                11:00 - 02:00
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                공개된 최근 자료에서는 오전 11시부터
+                새벽 시간대까지 운영되는 것으로 확인됩니다.
+              </p>
+
+              <p className="mt-4 text-xs leading-6 text-zinc-600">
+                ※ 요일에 따라 마감시간이 다르게 표시되는
+                자료도 있으므로 방문 당일 정확한 운영시간을
+                확인하세요.
+              </p>
+
+            </div>
+
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                VISIT
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                방문 전 확인
+              </h2>
+
+              <div className="mt-8 text-2xl font-black">
+                당일 운영 여부 확인
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                운영시간과 이용 가능한 룸,
+                당일 가격 및 이용 조건은 변경될 수 있으므로
+                방문 전에 확인하는 것을 권장합니다.
+              </p>
+
+            </div>
+
+          </div>
+        </section>
         <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -900,11 +862,6 @@ export default async function PlaceDetail({
 
           </div>
         </section>
-
-
-        {/* =================================================
-            TRANSPORT
-        ================================================== */}
         <section className="container py-10 md:py-12">
 
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
@@ -947,11 +904,6 @@ export default async function PlaceDetail({
 
           </div>
         </section>
-
-
-        {/* =================================================
-            GOOD TO KNOW
-        ================================================== */}
         <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -991,11 +943,6 @@ export default async function PlaceDetail({
           </div>
 
         </section>
-
-
-        {/* =================================================
-            FAQ
-        ================================================== */}
         <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -1078,11 +1025,6 @@ export default async function PlaceDetail({
           </div>
 
         </section>
-
-
-        {/* =================================================
-            FINAL INFO
-        ================================================== */}
         <section className="container py-14 md:py-16">
 
           <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
@@ -1104,7 +1046,7 @@ export default async function PlaceDetail({
             <div className="mt-8 flex flex-wrap justify-center gap-3">
 
               <a
-                href="/contact"
+                href="https://open.kakao.com/o/snvQKD4h"
                 className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black hover:bg-red-500"
               >
                 문의하기
@@ -1151,7 +1093,7 @@ export default async function PlaceDetail({
     const barbieImages = place.gallery ?? [];
 
     return (
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <PlaceBreadcrumbJsonLd
           cityName="방콕"
           citySlug="bangkok"
@@ -1166,11 +1108,11 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[430px] overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
           <img
             src={place.image}
             alt="방콕 바비18 마사지 메인"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full max-w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -1181,11 +1123,11 @@ export default async function PlaceDetail({
                 BANGKOK · MASSAGE
               </div>
 
-              <h1 className="mt-3 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 방콕 바비18 마사지
               </h1>
 
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
+              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
                 방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다.
                 위치와 영업시간, 내부 시설, 룸 분위기 및
                 방문 전 확인사항을 한곳에서 확인할 수 있습니다.
@@ -1211,100 +1153,6 @@ export default async function PlaceDetail({
             </div>
           </div>
         </section>
-
-        {/* =================================================
-            QUICK INFO
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-          <div className="grid gap-4 md:grid-cols-4">
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                업종
-              </div>
-
-              <div className="mt-2 font-bold">
-                마사지샵
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                위치
-              </div>
-
-              <div className="mt-2 font-bold">
-                수쿰빗 소이 18
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                운영시간
-              </div>
-
-              <div className="mt-2 font-bold">
-                12:00 - 00:00
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-              <div className="text-xs text-zinc-500">
-                주변 지역
-              </div>
-
-              <div className="mt-2 font-bold">
-                아속 · 프롬퐁
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* =================================================
-            ABOUT
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            ABOUT BARBIE18
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black md:text-4xl">
-            방콕 바비18 마사지
-          </h2>
-
-          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
-            <p>
-              방콕 바비18 마사지(Barbie18 Massage)는
-              수쿰빗 소이 18에 위치한 마사지샵으로
-              안내되고 있습니다.
-            </p>
-
-            <p>
-              외부 업소 정보에서는 프롬퐁 또는 아속
-              생활권에서 접근할 수 있는 곳으로 소개되고
-              있으며, 수쿰빗 주요 호텔과 식당을 함께
-              이용하기 좋은 위치에 있습니다.
-            </p>
-
-            <p>
-              매장 내부는 리셉션 공간과 개별 룸으로
-              구성되어 있으며, 외부 공개 사진을 통해
-              일반 룸과 욕조가 있는 룸 등의 시설을
-              확인할 수 있습니다.
-            </p>
-
-            <p>
-              방문 전에는 당일 운영시간과 이용 가능한
-              코스 및 가격을 확인하는 것이 좋습니다.
-              온라인에 등록된 정보는 시기에 따라
-              변경될 수 있습니다.
-            </p>
-          </div>
-        </section>
-
-        {/* =================================================
-            GALLERY
-        ================================================== */}
-        {barbieImages.length > 0 && (
           <section className="container py-10 md:py-12">
             <div className="text-xs font-black tracking-[.3em] text-red-500">
               GALLERY
@@ -1325,108 +1173,7 @@ export default async function PlaceDetail({
               name="방콕 바비18 마사지"
             />
           </section>
-        )}
-
-        {/* =================================================
-            LOCATION
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-            <div className="text-xs font-black tracking-[.3em] text-red-500">
-              LOCATION
-            </div>
-
-            <h2 className="mt-3 text-3xl font-black">
-              방콕 바비18 마사지 위치
-            </h2>
-
-            <p className="mt-6 leading-8 text-zinc-400">
-              바비18 마사지는 방콕 수쿰빗 소이 18
-              인근에 위치한 것으로 안내되고 있습니다.
-              아속과 프롬퐁 사이의 수쿰빗 지역에서
-              이동하기 좋은 위치입니다.
-            </p>
-
-            <div className="mt-8 rounded-2xl bg-black/40 p-6">
-              <div className="text-sm text-zinc-500">
-                주소
-              </div>
-
-              <div className="mt-2 text-lg font-bold">
-                Sukhumvit Soi 18
-              </div>
-
-              <div className="mt-1 text-sm leading-6 text-zinc-400">
-                Khlong Toei, Bangkok 10110, Thailand
-              </div>
-            </div>
-
-            <p className="mt-6 text-sm leading-7 text-zinc-500">
-              공개된 외부 자료에는 상세 번지가
-              서로 다르게 표기되는 경우가 있으므로,
-              처음 방문한다면 지도 위치를 확인하거나
-              업소에 정확한 위치를 문의하는 것이 좋습니다.
-            </p>
-          </div>
-        </section>
-
-        {/* =================================================
-            HOURS
-        ================================================== */}
-        <section className="container py-10 md:py-12">
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                OPENING HOURS
-              </div>
-
-              <h2 className="mt-3 text-3xl font-black">
-                영업시간
-              </h2>
-
-              <div className="mt-8 text-3xl font-black">
-                12:00 - 00:00
-              </div>
-
-              <p className="mt-4 text-sm leading-7 text-zinc-500">
-                최근 확인되는 외부 자료에서는
-                정오부터 자정까지 운영되는 정보가
-                확인됩니다.
-              </p>
-
-              <p className="mt-4 text-xs leading-6 text-zinc-600">
-                ※ 다른 외부 자료에는 11:00 - 01:00으로
-                표기된 경우도 있으므로 방문 당일
-                정확한 운영시간을 확인하세요.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                VISIT
-              </div>
-
-              <h2 className="mt-3 text-3xl font-black">
-                방문 전 확인
-              </h2>
-
-              <div className="mt-8 text-2xl font-black">
-                당일 운영 여부 확인
-              </div>
-
-              <p className="mt-4 text-sm leading-7 text-zinc-500">
-                영업시간이나 이용 가능한 룸,
-                당일 가격은 변동될 수 있으므로
-                방문 전에 확인하는 것을 권장합니다.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* =========================================================
-    BARBIE18 PRICE MENU
-========================================================= */}
-<section className="mt-12 w-full">
+<section className="mt-10 w-full max-w-full overflow-hidden sm:mt-12">
   <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
 
     {/* PRICE MENU 제목 */}
@@ -1742,10 +1489,175 @@ export default async function PlaceDetail({
     </div>
   </div>
 </section>
-        
-        {/* =================================================
-            FACILITIES
-        ================================================== */}
+        <section className="container py-10 md:py-12">
+          <div className="grid gap-4 md:grid-cols-4">
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                업종
+              </div>
+
+              <div className="mt-2 font-bold">
+                마사지샵
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                위치
+              </div>
+
+              <div className="mt-2 font-bold">
+                수쿰빗 소이 18
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                운영시간
+              </div>
+
+              <div className="mt-2 font-bold">
+                12:00 - 00:00
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                주변 지역
+              </div>
+
+              <div className="mt-2 font-bold">
+                아속 · 프롬퐁
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            ABOUT BARBIE18
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 바비18 마사지
+          </h2>
+
+          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
+            <p>
+              방콕 바비18 마사지(Barbie18 Massage)는
+              수쿰빗 소이 18에 위치한 마사지샵으로
+              안내되고 있습니다.
+            </p>
+
+            <p>
+              외부 업소 정보에서는 프롬퐁 또는 아속
+              생활권에서 접근할 수 있는 곳으로 소개되고
+              있으며, 수쿰빗 주요 호텔과 식당을 함께
+              이용하기 좋은 위치에 있습니다.
+            </p>
+
+            <p>
+              매장 내부는 리셉션 공간과 개별 룸으로
+              구성되어 있으며, 외부 공개 사진을 통해
+              일반 룸과 욕조가 있는 룸 등의 시설을
+              확인할 수 있습니다.
+            </p>
+
+            <p>
+              방문 전에는 당일 운영시간과 이용 가능한
+              코스 및 가격을 확인하는 것이 좋습니다.
+              온라인에 등록된 정보는 시기에 따라
+              변경될 수 있습니다.
+            </p>
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              LOCATION
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              방콕 바비18 마사지 위치
+            </h2>
+
+            <p className="mt-6 leading-8 text-zinc-400">
+              바비18 마사지는 방콕 수쿰빗 소이 18
+              인근에 위치한 것으로 안내되고 있습니다.
+              아속과 프롬퐁 사이의 수쿰빗 지역에서
+              이동하기 좋은 위치입니다.
+            </p>
+
+            <div className="mt-8 rounded-2xl bg-black/40 p-6">
+              <div className="text-sm text-zinc-500">
+                주소
+              </div>
+
+              <div className="mt-2 text-lg font-bold">
+                Sukhumvit Soi 18
+              </div>
+
+              <div className="mt-1 text-sm leading-6 text-zinc-400">
+                Khlong Toei, Bangkok 10110, Thailand
+              </div>
+            </div>
+
+            <p className="mt-6 text-sm leading-7 text-zinc-500">
+              공개된 외부 자료에는 상세 번지가
+              서로 다르게 표기되는 경우가 있으므로,
+              처음 방문한다면 지도 위치를 확인하거나
+              업소에 정확한 위치를 문의하는 것이 좋습니다.
+            </p>
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                OPENING HOURS
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                영업시간
+              </h2>
+
+              <div className="mt-8 text-3xl font-black">
+                12:00 - 00:00
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                최근 확인되는 외부 자료에서는
+                정오부터 자정까지 운영되는 정보가
+                확인됩니다.
+              </p>
+
+              <p className="mt-4 text-xs leading-6 text-zinc-600">
+                ※ 다른 외부 자료에는 11:00 - 01:00으로
+                표기된 경우도 있으므로 방문 당일
+                정확한 운영시간을 확인하세요.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                VISIT
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                방문 전 확인
+              </h2>
+
+              <div className="mt-8 text-2xl font-black">
+                당일 운영 여부 확인
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                영업시간이나 이용 가능한 룸,
+                당일 가격은 변동될 수 있으므로
+                방문 전에 확인하는 것을 권장합니다.
+              </p>
+            </div>
+          </div>
+        </section>
         <section className="container py-10 md:py-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             FACILITIES
@@ -1802,10 +1714,6 @@ export default async function PlaceDetail({
             </div>
           </div>
         </section>
-
-        {/* =================================================
-            TRANSPORT
-        ================================================== */}
         <section className="container py-10 md:py-12">
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
             <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -1836,10 +1744,6 @@ export default async function PlaceDetail({
             </div>
           </div>
         </section>
-
-        {/* =================================================
-            GOOD TO KNOW
-        ================================================== */}
         <section className="container py-10 md:py-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             GOOD TO KNOW
@@ -1872,10 +1776,6 @@ export default async function PlaceDetail({
             ))}
           </div>
         </section>
-
-        {/* =================================================
-            FAQ
-        ================================================== */}
         <section className="container py-10 md:py-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             FAQ
@@ -1951,10 +1851,6 @@ export default async function PlaceDetail({
             </details>
           </div>
         </section>
-
-        {/* =================================================
-            FINAL INFO
-        ================================================== */}
         <section className="container py-14 md:py-16">
           <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
             <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -2002,7 +1898,7 @@ export default async function PlaceDetail({
 
   if (!isKoreana) {
     return (
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <PlaceBreadcrumbJsonLd
           cityName={cityName}
           citySlug={city}
@@ -2012,11 +1908,11 @@ export default async function PlaceDetail({
           placeSlug={place.slug}
         />
 
-        <section className="relative h-[430px] overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[520px] overflow-hidden">
           <img
             src={place.image}
             alt={place.name}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full max-w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
@@ -2027,7 +1923,7 @@ export default async function PlaceDetail({
                 {cityName} · {categoryName}
               </div>
 
-              <h1 className="mt-3 text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 {place.name}
               </h1>
 
@@ -2124,7 +2020,7 @@ export default async function PlaceDetail({
   const koreanaImages = place.gallery ?? [];
 
   return (
-    <main>
+    <main className="w-full max-w-full overflow-x-hidden">
       <PlaceBreadcrumbJsonLd
         cityName="방콕"
         citySlug="bangkok"
@@ -2136,11 +2032,11 @@ export default async function PlaceDetail({
 
       <KoreanaBusinessJsonLd />
 
-      <section className="relative h-[560px] overflow-hidden">
+      <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
         <img
           src={place.image}
           alt="방콕 코리아나 가라오케 메인"
-          className="h-full w-full object-cover"
+          className="h-full w-full max-w-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -2151,11 +2047,11 @@ export default async function PlaceDetail({
               BANGKOK · KOREAN KTV
             </div>
 
-            <h1 className="mt-4 text-4xl font-black md:text-6xl">
+            <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
               방콕 코리아나 가라오케
             </h1>
 
-            <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-300 md:text-base">
+            <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
               방콕 수쿰빗 소이 11에 위치한 한국식 KTV.
               코리아나 가라오케의 위치, 영업시간,
               룸과 시설 및 방문 정보를 확인하세요.
@@ -2181,7 +2077,37 @@ export default async function PlaceDetail({
           </div>
         </div>
       </section>
+        <section className="container py-12">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            GALLERY
+          </div>
 
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            코리아나 룸 & 시설 사진
+          </h2>
+
+          <ImageGallery
+            images={koreanaImages}
+            name="방콕 코리아나 가라오케"
+          />
+        </section>
+      <section className="container py-12">
+        <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            PRICE GUIDE
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black">
+            코리아나 가라오케 가격
+          </h2>
+
+          <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
+            실제 이용금액은 룸, 이용시간, 음식,
+            주류 및 기타 조건에 따라 달라질 수
+            있으므로 방문 전에 확인하세요.
+          </p>
+        </div>
+      </section>
       <section className="container py-12">
         <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
@@ -2225,7 +2151,6 @@ export default async function PlaceDetail({
           </div>
         </div>
       </section>
-
       <section className="container py-12">
         <div className="text-xs font-black tracking-[.3em] text-red-500">
           ABOUT KOREANA
@@ -2260,24 +2185,6 @@ export default async function PlaceDetail({
           </p>
         </div>
       </section>
-
-      {koreanaImages.length > 0 && (
-        <section className="container py-12">
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            GALLERY
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black md:text-4xl">
-            코리아나 룸 & 시설 사진
-          </h2>
-
-          <ImageGallery
-            images={koreanaImages}
-            name="방콕 코리아나 가라오케"
-          />
-        </section>
-      )}
-
       <section className="container py-12">
         <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -2310,7 +2217,6 @@ export default async function PlaceDetail({
           </div>
         </div>
       </section>
-
       <section className="container py-12">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
@@ -2349,25 +2255,6 @@ export default async function PlaceDetail({
           </div>
         </div>
       </section>
-
-      <section className="container py-12">
-        <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            PRICE GUIDE
-          </div>
-
-          <h2 className="mt-3 text-3xl font-black">
-            코리아나 가라오케 가격
-          </h2>
-
-          <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
-            실제 이용금액은 룸, 이용시간, 음식,
-            주류 및 기타 조건에 따라 달라질 수
-            있으므로 방문 전에 확인하세요.
-          </p>
-        </div>
-      </section>
-
       <section className="container py-12">
         <div className="text-xs font-black tracking-[.3em] text-red-500">
           GOOD TO KNOW
@@ -2398,7 +2285,6 @@ export default async function PlaceDetail({
           ))}
         </div>
       </section>
-
       <section className="container py-16">
         <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -2417,7 +2303,7 @@ export default async function PlaceDetail({
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
-              href="/contact"
+              href="https://open.kakao.com/o/snvQKD4h"
               className="rounded-xl bg-red-600 px-6 py-3 text-sm font-black hover:bg-red-500"
             >
               문의하기
