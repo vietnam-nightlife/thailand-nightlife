@@ -55,7 +55,42 @@ export const cities: City[] = [
 ];
 
 export const places: Place[] = [
+  
+  // =========================================================
+  // 방콕 큐브 마사지
+  // =========================================================
+  {
+    slug: "bangkok-cube-nuru-massage",
+    name: "방콕 큐브 마사지",
+    city: "bangkok",
+    category: "massage",
+    district: "수쿰빗 소이 22",
+    rating: 4.6,
+    reviews: 0,
+    description:
+      "방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다. 매장 외관과 내부 공간, 객실 분위기를 실제 사진으로 확인할 수 있습니다.",
+    address: "방콕 수쿰빗 소이 22",
+    hours: "11:00 - 02:00",
 
+    // 메인 이미지
+    image: `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20메인.webp`,
+
+    // 상세페이지 갤러리
+    gallery: [
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20외관.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20카운터.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20휴게실.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸1.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸3.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸4.webp`,
+    ],
+
+    // 인기 업소
+    featured: true,
+
+  },
+  
   // =========================================================
   // 방콕 바비 마사지
   // =========================================================
