@@ -575,172 +575,439 @@ export default async function PlaceDetail({
         </section>
 
 
-        {/* =========================================================
-    CUBE NURU MASSAGE 가격표
-========================================================= */}
+        {/* CUBE 마사지 가격표 */}
 <section className="mt-10">
-  <div className="mb-5">
-    <h2 className="text-2xl font-bold text-white">
-      CUBE Nuru Massage 가격표
-    </h2>
-    <p className="mt-2 text-sm text-gray-400">
-      코스와 이용 시간에 따른 가격을 확인해보세요.
-    </p>
+
+  {/* 제목 */}
+  <div className="mb-6">
+    <div className="flex items-center gap-3">
+      <div className="h-7 w-1 rounded-full bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
+
+      <div>
+        <h2 className="text-2xl font-bold text-white">
+          CUBE 마사지 가격표
+        </h2>
+
+        <p className="mt-1 text-sm text-gray-400">
+          60분 / 90분 코스
+        </p>
+      </div>
+    </div>
   </div>
 
-  <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#151515]">
-    {/* 테이블 헤더 */}
-    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10 bg-[#202020]">
-      <div className="px-4 py-4 text-sm font-bold text-white">
+
+  {/* 가격표 전체 */}
+  <div
+    className="
+      max-w-4xl
+      overflow-hidden
+      rounded-2xl
+      border border-purple-500/40
+      bg-[#111116]
+      shadow-[0_0_25px_rgba(139,92,246,0.18)]
+    "
+  >
+
+    {/* 상단 네온 라인 */}
+    <div
+      className="
+        h-[2px]
+        w-full
+        bg-gradient-to-r
+        from-cyan-400
+        via-purple-500
+        to-pink-500
+        shadow-[0_0_12px_rgba(168,85,247,0.9)]
+      "
+    />
+
+
+    {/* 헤더 */}
+    <div
+      className="
+        grid
+        grid-cols-[1.5fr_1fr_1fr]
+        border-b border-purple-500/20
+        bg-gradient-to-r
+        from-[#191923]
+        via-[#21172c]
+        to-[#191923]
+        px-5
+        py-4
+      "
+    >
+      <div className="text-sm font-bold text-gray-300">
         코스
       </div>
 
-      <div className="px-4 py-4 text-center text-sm font-bold text-white">
+      <div className="text-center text-sm font-bold text-cyan-300">
         60분
       </div>
 
-      <div className="px-4 py-4 text-center text-sm font-bold text-white">
+      <div className="text-center text-sm font-bold text-pink-300">
         90분
       </div>
     </div>
 
-    {/* 스탠다드 코스 */}
-    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
-      <div className="px-4 py-5">
-        <div className="font-bold text-white">
-          스탠다드 코스
+
+    {/* ================================================= */}
+    {/* 스탠다드 */}
+    {/* ================================================= */}
+    <div
+      className="
+        group
+        grid
+        grid-cols-[1.5fr_1fr_1fr]
+        items-center
+        border-b border-white/10
+        px-5
+        py-5
+        transition-all
+        duration-300
+        hover:bg-cyan-400/[0.04]
+        hover:shadow-[inset_3px_0_0_rgba(34,211,238,0.8)]
+      "
+    >
+      <div>
+        <div className="flex items-center gap-2">
+          <h3 className="text-base font-bold text-white">
+            스탠다드 코스
+          </h3>
         </div>
-        <div className="mt-1 text-xs text-gray-400">
+
+        <p className="mt-1 text-xs text-gray-500">
           기본 코스
-        </div>
+        </p>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span className="text-lg font-bold text-cyan-300">
           3,100B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           4,100B
         </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span className="text-lg font-bold text-pink-300">
           3,700B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           4,700B
         </span>
       </div>
     </div>
 
-    {/* 일본식 누르메트 */}
-    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
-      <div className="px-4 py-5">
-        <div className="font-bold text-white">
-          일본식 누르메트
-        </div>
-        <div className="mt-1 text-xs text-gray-400">
-          HOT 인기 코스
-        </div>
+
+    {/* ================================================= */}
+    {/* 일본식 누르메트 - HOT */}
+    {/* ================================================= */}
+    <div
+      className="
+        group
+        relative
+        grid
+        grid-cols-[1.5fr_1fr_1fr]
+        items-center
+        border-b border-purple-500/20
+        bg-gradient-to-r
+        from-purple-500/[0.08]
+        via-pink-500/[0.05]
+        to-purple-500/[0.08]
+        px-5
+        py-5
+        transition-all
+        duration-300
+        hover:bg-purple-500/[0.13]
+        hover:shadow-[inset_3px_0_0_rgba(217,70,239,0.9)]
+      "
+    >
+
+      {/* HOT 뱃지 */}
+      <div className="absolute right-4 top-3">
+        <span
+          className="
+            rounded-full
+            border border-pink-400/50
+            bg-pink-500/10
+            px-2.5
+            py-1
+            text-[10px]
+            font-bold
+            tracking-wide
+            text-pink-300
+            shadow-[0_0_10px_rgba(236,72,153,0.25)]
+          "
+        >
+          HOT
+        </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div>
+        <h3 className="text-base font-bold text-white">
+          일본식 누르메트
+        </h3>
+
+        <p className="mt-1 text-xs text-pink-300/70">
+          HOT 인기 코스
+        </p>
+      </div>
+
+      <div className="text-center">
+        <span className="text-lg font-bold text-pink-300">
           3,900B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           4,900B
         </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span className="text-lg font-bold text-pink-300">
           4,500B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           5,500B
         </span>
       </div>
     </div>
 
+
+    {/* ================================================= */}
     {/* VIP 자쿠지 룸 */}
-    <div className="grid grid-cols-[1.4fr_1fr_1fr] border-b border-white/10">
-      <div className="px-4 py-5">
-        <div className="font-bold text-white">
-          VIP 자쿠지 룸
+    {/* ================================================= */}
+    <div
+      className="
+        group
+        relative
+        grid
+        grid-cols-[1.5fr_1fr_1fr]
+        items-center
+        border-b border-yellow-500/20
+        bg-gradient-to-r
+        from-yellow-500/[0.05]
+        via-purple-500/[0.04]
+        to-yellow-500/[0.05]
+        px-5
+        py-5
+        transition-all
+        duration-300
+        hover:bg-yellow-500/[0.09]
+        hover:shadow-[inset_3px_0_0_rgba(250,204,21,0.8)]
+      "
+    >
+
+      <div>
+        <div className="flex items-center gap-2">
+          <h3 className="text-base font-bold text-white">
+            VIP 자쿠지 룸
+          </h3>
+
+          <span
+            className="
+              rounded-full
+              border border-yellow-400/40
+              bg-yellow-400/10
+              px-2
+              py-0.5
+              text-[9px]
+              font-bold
+              text-yellow-300
+            "
+          >
+            VIP
+          </span>
         </div>
-        <div className="mt-1 text-xs text-gray-400">
+
+        <p className="mt-1 text-xs text-gray-500">
           프라이빗 룸
-        </div>
+        </p>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span className="text-lg font-bold text-yellow-300">
           3,500B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           4,500B
         </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span className="text-lg font-bold text-yellow-300">
           4,300B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           5,300B
         </span>
       </div>
     </div>
 
-    {/* VIP 자쿠지 일본식 누르메트 */}
-    <div className="grid grid-cols-[1.4fr_1fr_1fr]">
-      <div className="px-4 py-5">
-        <div className="font-bold text-white">
-          VIP 자쿠지 일본식 누르메트
-        </div>
-        <div className="mt-1 text-xs text-gray-400">
-          VIP 코스
-        </div>
+
+    {/* ================================================= */}
+    {/* VIP 자쿠지 일본식 누르메트 - PREMIUM */}
+    {/* ================================================= */}
+    <div
+      className="
+        group
+        relative
+        grid
+        grid-cols-[1.5fr_1fr_1fr]
+        items-center
+        overflow-hidden
+        bg-gradient-to-r
+        from-fuchsia-500/[0.10]
+        via-purple-500/[0.12]
+        to-pink-500/[0.10]
+        px-5
+        py-6
+        transition-all
+        duration-300
+        hover:bg-fuchsia-500/[0.16]
+        hover:shadow-[inset_4px_0_0_rgba(232,121,249,1)]
+      "
+    >
+
+      {/* PREMIUM 네온 라인 */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          h-[1px]
+          w-full
+          bg-gradient-to-r
+          from-transparent
+          via-fuchsia-400
+          to-transparent
+          shadow-[0_0_10px_rgba(232,121,249,0.9)]
+        "
+      />
+
+      {/* PREMIUM 뱃지 */}
+      <div className="absolute right-4 top-3">
+        <span
+          className="
+            rounded-full
+            border border-fuchsia-400/50
+            bg-fuchsia-500/10
+            px-2.5
+            py-1
+            text-[10px]
+            font-bold
+            tracking-wide
+            text-fuchsia-300
+            shadow-[0_0_12px_rgba(217,70,239,0.3)]
+          "
+        >
+          PREMIUM
+        </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div>
+        <h3 className="text-base font-bold text-white">
+          VIP 자쿠지 일본식 누르메트
+        </h3>
+
+        <p className="mt-1 text-xs text-fuchsia-300/70">
+          VIP 코스
+        </p>
+      </div>
+
+      <div className="text-center">
+        <span
+          className="
+            text-lg
+            font-extrabold
+            text-fuchsia-300
+            drop-shadow-[0_0_8px_rgba(217,70,239,0.45)]
+          "
+        >
           4,300B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           5,300B
         </span>
       </div>
 
-      <div className="flex items-center justify-center px-2 py-5 text-center">
-        <span className="font-semibold text-white">
+      <div className="text-center">
+        <span
+          className="
+            text-lg
+            font-extrabold
+            text-pink-300
+            drop-shadow-[0_0_8px_rgba(236,72,153,0.45)]
+          "
+        >
           5,100B
         </span>
-        <span className="mx-1 text-gray-500">/</span>
-        <span className="font-semibold text-white">
+
+        <span className="mx-1 text-gray-600">
+          /
+        </span>
+
+        <span className="text-lg font-bold text-white">
           6,100B
         </span>
       </div>
     </div>
+
   </div>
 
+
   {/* 가격 안내 */}
-  <div className="mt-4 rounded-xl border border-white/10 bg-[#111111] p-4">
-    <p className="text-xs leading-6 text-gray-400">
-      ※ 가격은 현장 상황에 따라 변경될 수 있습니다.
-      <br />
-      ※ 방문 전 최신 가격과 이용 가능 코스를 확인해주세요.
+  <div
+    className="
+      mt-4
+      max-w-4xl
+      rounded-xl
+      border border-purple-500/20
+      bg-purple-500/[0.04]
+      px-4
+      py-3
+    "
+  >
+    <p className="text-xs leading-5 text-gray-500">
+      ※ 가격은 현지 사정에 따라 변동될 수 있으니 방문 전 문의해 주세요.
     </p>
   </div>
+
 </section>
 
         {/* =================================================
