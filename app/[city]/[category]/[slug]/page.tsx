@@ -575,439 +575,255 @@ export default async function PlaceDetail({
         </section>
 
 
-        {/* CUBE 마사지 가격표 */}
-<section className="mt-10">
-
+        {/* =========================================================
+    CUBE NURU MASSAGE 가격표
+========================================================= */}
+<section className="mt-12">
   {/* 제목 */}
-  <div className="mb-6">
-    <div className="flex items-center gap-3">
-      <div className="h-7 w-1 rounded-full bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-500 shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
+  <div className="mb-7">
+    <p className="text-[12px] font-bold tracking-[0.35em] text-fuchsia-400 uppercase">
+      PRICE MENU
+    </p>
 
-      <div>
-        <h2 className="text-2xl font-bold text-white">
-          CUBE 마사지 가격표
-        </h2>
+    <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-white">
+      큐브 마사지 가격표
+    </h2>
 
-        <p className="mt-1 text-sm text-gray-400">
-          60분 / 90분 코스
-        </p>
-      </div>
-    </div>
+    <p className="mt-2 text-sm sm:text-base text-gray-400">
+      CUBE Nuru Massage에서 확인할 수 있는 마사지 코스 및 이용 요금입니다.
+    </p>
   </div>
 
+  {/* 가격 카드 */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
 
-  {/* 가격표 전체 */}
-  <div
-    className="
-      max-w-4xl
-      overflow-hidden
-      rounded-2xl
-      border border-purple-500/40
-      bg-[#111116]
-      shadow-[0_0_25px_rgba(139,92,246,0.18)]
-    "
-  >
-
-    {/* 상단 네온 라인 */}
-    <div
-      className="
-        h-[2px]
-        w-full
-        bg-gradient-to-r
-        from-cyan-400
-        via-purple-500
-        to-pink-500
-        shadow-[0_0_12px_rgba(168,85,247,0.9)]
-      "
-    />
-
-
-    {/* 헤더 */}
-    <div
-      className="
-        grid
-        grid-cols-[1.5fr_1fr_1fr]
-        border-b border-purple-500/20
-        bg-gradient-to-r
-        from-[#191923]
-        via-[#21172c]
-        to-[#191923]
-        px-5
-        py-4
-      "
-    >
-      <div className="text-sm font-bold text-gray-300">
-        코스
-      </div>
-
-      <div className="text-center text-sm font-bold text-cyan-300">
-        60분
-      </div>
-
-      <div className="text-center text-sm font-bold text-pink-300">
-        90분
-      </div>
-    </div>
-
-
-    {/* ================================================= */}
     {/* 스탠다드 */}
-    {/* ================================================= */}
     <div
       className="
-        group
-        grid
-        grid-cols-[1.5fr_1fr_1fr]
-        items-center
-        border-b border-white/10
-        px-5
-        py-5
-        transition-all
-        duration-300
-        hover:bg-cyan-400/[0.04]
-        hover:shadow-[inset_3px_0_0_rgba(34,211,238,0.8)]
+        group relative overflow-hidden rounded-2xl
+        border border-cyan-400/30
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-cyan-300
+        hover:shadow-[0_0_28px_rgba(34,211,238,0.22)]
       "
     >
-      <div>
-        <div className="flex items-center gap-2">
-          <h3 className="text-base font-bold text-white">
-            스탠다드 코스
-          </h3>
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-70" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          스탠다드 코스
+        </h3>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
+            3,100 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,100 B</span>
+          </span>
         </div>
 
-        <p className="mt-1 text-xs text-gray-500">
-          기본 코스
-        </p>
-      </div>
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
 
-      <div className="text-center">
-        <span className="text-lg font-bold text-cyan-300">
-          3,100B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          4,100B(2번)
-        </span>
-      </div>
-
-      <div className="text-center">
-        <span className="text-lg font-bold text-pink-300">
-          3,700B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          4,700B(2번)
-        </span>
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
+            3,700 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,700 B</span>
+          </span>
+        </div>
       </div>
     </div>
 
 
-    {/* ================================================= */}
-    {/* 일본식 누루매트 - HOT */}
-    {/* ================================================= */}
+    {/* 일본식 누루매트 */}
     <div
       className="
-        group
-        relative
-        grid
-        grid-cols-[1.5fr_1fr_1fr]
-        items-center
-        border-b border-purple-500/20
-        bg-gradient-to-r
-        from-purple-500/[0.08]
-        via-pink-500/[0.05]
-        to-purple-500/[0.08]
-        px-5
-        py-5
-        transition-all
-        duration-300
-        hover:bg-purple-500/[0.13]
-        hover:shadow-[inset_3px_0_0_rgba(217,70,239,0.9)]
+        group relative overflow-hidden rounded-2xl
+        border border-fuchsia-500/40
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-fuchsia-300
+        hover:shadow-[0_0_30px_rgba(217,70,239,0.28)]
       "
     >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-fuchsia-400 to-transparent" />
 
-      {/* HOT 뱃지 */}
-      <div className="absolute right-4 top-3">
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          일본식 누루매트
+        </h3>
+
         <span
           className="
-            rounded-full
-            border border-pink-400/50
-            bg-pink-500/10
-            px-2.5
-            py-1
-            text-[10px]
-            font-bold
-            tracking-wide
-            text-pink-300
-            shadow-[0_0_10px_rgba(236,72,153,0.25)]
+            shrink-0 rounded-full
+            border border-fuchsia-400/70
+            bg-fuchsia-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-fuchsia-300
           "
         >
           HOT
         </span>
       </div>
 
-      <div>
-        <h3 className="text-base font-bold text-white">
-          일본식 누루매트
-        </h3>
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
 
-        <p className="mt-1 text-xs text-pink-300/70">
-          HOT 인기 코스
-        </p>
-      </div>
-
-      <div className="text-center">
-        <span className="text-lg font-bold text-pink-300">
-          3,900B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          4,900B(2번)
-        </span>
-      </div>
-
-      <div className="text-center">
-        <span className="text-lg font-bold text-pink-300">
-          4,500B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          5,500B(2번)
-        </span>
-      </div>
-    </div>
-
-
-    {/* ================================================= */}
-    {/* VIP 자쿠지 룸 */}
-    {/* ================================================= */}
-    <div
-      className="
-        group
-        relative
-        grid
-        grid-cols-[1.5fr_1fr_1fr]
-        items-center
-        border-b border-yellow-500/20
-        bg-gradient-to-r
-        from-yellow-500/[0.05]
-        via-purple-500/[0.04]
-        to-yellow-500/[0.05]
-        px-5
-        py-5
-        transition-all
-        duration-300
-        hover:bg-yellow-500/[0.09]
-        hover:shadow-[inset_3px_0_0_rgba(250,204,21,0.8)]
-      "
-    >
-
-      <div>
-        <div className="flex items-center gap-2">
-          <h3 className="text-base font-bold text-white">
-            VIP 자쿠지 룸
-          </h3>
-
-          <span
-            className="
-              rounded-full
-              border border-yellow-400/40
-              bg-yellow-400/10
-              px-2
-              py-0.5
-              text-[9px]
-              font-bold
-              text-yellow-300
-            "
-          >
-            VIP
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
+            3,900 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,900 B</span>
           </span>
         </div>
 
-        <p className="mt-1 text-xs text-gray-500">
-          프라이빗 룸
-        </p>
-      </div>
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
 
-      <div className="text-center">
-        <span className="text-lg font-bold text-yellow-300">
-          3,500B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          4,500B(2번)
-        </span>
-      </div>
-
-      <div className="text-center">
-        <span className="text-lg font-bold text-yellow-300">
-          4,300B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          5,300B(2번)
-        </span>
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
+            4,500 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,500 B</span>
+          </span>
+        </div>
       </div>
     </div>
 
 
-    {/* ================================================= */}
-    {/* VIP 자쿠지 일본식 누루매트 - PREMIUM */}
-    {/* ================================================= */}
+    {/* VIP 자쿠지 룸 */}
     <div
       className="
-        group
-        relative
-        grid
-        grid-cols-[1.5fr_1fr_1fr]
-        items-center
-        overflow-hidden
-        bg-gradient-to-r
-        from-fuchsia-500/[0.10]
-        via-purple-500/[0.12]
-        to-pink-500/[0.10]
-        px-5
-        py-6
-        transition-all
-        duration-300
-        hover:bg-fuchsia-500/[0.16]
-        hover:shadow-[inset_4px_0_0_rgba(232,121,249,1)]
+        group relative overflow-hidden rounded-2xl
+        border border-amber-400/40
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-amber-300
+        hover:shadow-[0_0_30px_rgba(251,191,36,0.25)]
       "
     >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
 
-      {/* PREMIUM 네온 라인 */}
-      <div
-        className="
-          absolute
-          bottom-0
-          left-0
-          h-[1px]
-          w-full
-          bg-gradient-to-r
-          from-transparent
-          via-fuchsia-400
-          to-transparent
-          shadow-[0_0_10px_rgba(232,121,249,0.9)]
-        "
-      />
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          VIP 자쿠지 룸
+        </h3>
 
-      {/* PREMIUM 뱃지 */}
-      <div className="absolute right-4 top-3">
         <span
           className="
-            rounded-full
-            border border-fuchsia-400/50
-            bg-fuchsia-500/10
-            px-2.5
-            py-1
-            text-[10px]
-            font-bold
-            tracking-wide
-            text-fuchsia-300
-            shadow-[0_0_12px_rgba(217,70,239,0.3)]
+            shrink-0 rounded-full
+            border border-amber-400/70
+            bg-amber-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-amber-300
+          "
+        >
+          VIP
+        </span>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
+            3,500 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,500 B</span>
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
+            4,300 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* VIP 자쿠지 일본식 누루매트 */}
+    <div
+      className="
+        group relative overflow-hidden rounded-2xl
+        border border-pink-500/50
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-pink-300
+        hover:shadow-[0_0_32px_rgba(236,72,153,0.30)]
+      "
+    >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          VIP 자쿠지 일본식 누루매트
+        </h3>
+
+        <span
+          className="
+            shrink-0 rounded-full
+            border border-pink-400/70
+            bg-pink-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-pink-300
           "
         >
           PREMIUM
         </span>
       </div>
 
-      <div>
-        <h3 className="text-base font-bold text-white">
-          VIP 자쿠지 일본식 누루매트
-        </h3>
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
 
-        <p className="mt-1 text-xs text-fuchsia-300/70">
-          VIP 코스
-        </p>
-      </div>
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
+            4,300 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+          </span>
+        </div>
 
-      <div className="text-center">
-        <span
-          className="
-            text-lg
-            font-extrabold
-            text-fuchsia-300
-            drop-shadow-[0_0_8px_rgba(217,70,239,0.45)]
-          "
-        >
-          4,300B
-        </span>
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
 
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          5,300B(2번)
-        </span>
-      </div>
-
-      <div className="text-center">
-        <span
-          className="
-            text-lg
-            font-extrabold
-            text-pink-300
-            drop-shadow-[0_0_8px_rgba(236,72,153,0.45)]
-          "
-        >
-          5,100B
-        </span>
-
-        <span className="mx-1 text-gray-600">
-          /
-        </span>
-
-        <span className="text-lg font-bold text-white">
-          6,100B(2번)
-        </span>
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
+            5,100 B
+            <span className="text-sm text-gray-500 font-bold"> / 6,100 B</span>
+          </span>
+        </div>
       </div>
     </div>
 
   </div>
-
-
-  {/* 가격 안내 */}
-  <div
-    className="
-      mt-4
-      max-w-4xl
-      rounded-xl
-      border border-purple-500/20
-      bg-purple-500/[0.04]
-      px-4
-      py-3
-    "
-  >
-    <p className="text-xs leading-5 text-gray-500">
-      ※ 가격은 현지 사정에 따라 변동될 수 있으니 방문 전 문의해 주세요.
-    </p>
-  </div>
-
 </section>
 
         {/* =================================================
