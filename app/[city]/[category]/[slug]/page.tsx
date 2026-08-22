@@ -2091,23 +2091,146 @@ export default async function PlaceDetail({
             name="방콕 코리아나 가라오케"
           />
         </section>
-      <section className="container py-12">
-        <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-7 md:p-10">
-          <div className="text-xs font-black tracking-[.3em] text-red-500">
-            PRICE GUIDE
-          </div>
+      {/* ROOM PRICE */}
+<section className="mt-10">
+  <div className="mb-5">
+    <p className="text-xs font-bold tracking-[0.35em] text-amber-400">
+      ROOM PRICE
+    </p>
 
-          <h2 className="mt-3 text-3xl font-black">
-            코리아나 가라오케 가격
-          </h2>
+    <h2 className="mt-2 text-2xl md:text-3xl font-black text-white">
+      룸 이용 요금
+    </h2>
 
-          <p className="mt-6 max-w-4xl text-sm leading-7 text-zinc-400">
-            실제 이용금액은 룸, 이용시간, 음식,
-            주류 및 기타 조건에 따라 달라질 수
-            있으므로 방문 전에 확인하세요.
-          </p>
-        </div>
-      </section>
+    <p className="mt-2 text-sm text-gray-400">
+      Small 룸부터 VIP Big Room까지 룸 크기에 따라 이용 요금이 달라집니다.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+    {/* SMALL */}
+    <div className="group rounded-2xl border border-cyan-500/40 bg-[#111116] p-5
+                    transition-all duration-300
+                    hover:border-cyan-300 hover:bg-cyan-500/10
+                    hover:shadow-[0_0_25px_rgba(34,211,238,0.25)]">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          Small Room
+        </h3>
+        <span className="rounded-full border border-cyan-400/50 px-3 py-1
+                         text-xs font-bold text-cyan-300">
+          SMALL
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-end justify-between">
+        <span className="text-sm text-gray-400">룸 이용료</span>
+        <span className="text-2xl font-black text-cyan-300">
+          500B~
+        </span>
+      </div>
+    </div>
+
+    {/* MEDIUM */}
+    <div className="group rounded-2xl border border-blue-500/40 bg-[#111116] p-5
+                    transition-all duration-300
+                    hover:border-blue-300 hover:bg-blue-500/10
+                    hover:shadow-[0_0_25px_rgba(59,130,246,0.25)]">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          Medium Room
+        </h3>
+        <span className="rounded-full border border-blue-400/50 px-3 py-1
+                         text-xs font-bold text-blue-300">
+          MEDIUM
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-end justify-between">
+        <span className="text-sm text-gray-400">룸 이용료</span>
+        <span className="text-2xl font-black text-blue-300">
+          1,000B~
+        </span>
+      </div>
+    </div>
+
+    {/* LARGE */}
+    <div className="group rounded-2xl border border-purple-500/40 bg-[#111116] p-5
+                    transition-all duration-300
+                    hover:border-purple-300 hover:bg-purple-500/10
+                    hover:shadow-[0_0_25px_rgba(168,85,247,0.25)]">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          Large Room
+        </h3>
+        <span className="rounded-full border border-purple-400/50 px-3 py-1
+                         text-xs font-bold text-purple-300">
+          LARGE
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-end justify-between">
+        <span className="text-sm text-gray-400">룸 이용료</span>
+        <span className="text-2xl font-black text-purple-300">
+          1,500B~
+        </span>
+      </div>
+    </div>
+
+    {/* VIP */}
+    <div className="group rounded-2xl border border-amber-500/50 bg-[#111116] p-5
+                    transition-all duration-300
+                    hover:border-amber-300 hover:bg-amber-500/10
+                    hover:shadow-[0_0_30px_rgba(245,158,11,0.3)]">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl font-black text-white">
+          VIP Room
+        </h3>
+        <span className="rounded-full border border-amber-400/60 px-3 py-1
+                         text-xs font-bold text-amber-300">
+          VIP
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-end justify-between">
+        <span className="text-sm text-gray-400">룸 이용료</span>
+        <span className="text-2xl font-black text-amber-300">
+          2,000B~
+        </span>
+      </div>
+    </div>
+
+    {/* VIP BIG */}
+    <div className="group sm:col-span-2 rounded-2xl border border-pink-500/50
+                    bg-[#111116] p-5
+                    transition-all duration-300
+                    hover:border-pink-300 hover:bg-pink-500/10
+                    hover:shadow-[0_0_35px_rgba(236,72,153,0.3)]">
+      <div className="flex items-center justify-between">
+        <h3 className="text-xl md:text-2xl font-black text-white">
+          VIP Big Room
+        </h3>
+
+        <span className="rounded-full border border-pink-400/60 px-3 py-1
+                         text-xs font-bold text-pink-300">
+          PREMIUM
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-end justify-between">
+        <span className="text-sm text-gray-400">
+          대형 VIP 룸 이용료
+        </span>
+
+        <span className="text-2xl md:text-3xl font-black text-pink-300">
+          3,000B
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
       <section className="container py-12">
         <div className="grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
