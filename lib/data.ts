@@ -261,26 +261,35 @@ export const places: Place[] = [
   // 파타야 가라오케
   // =========================================================
   {
-    slug: "pattaya-karaoke-01",
-    name: "파타야 프리미엄 가라오케",
-    city: "pattaya",
-    category: "karaoke",
-    district: "워킹스트리트",
-    rating: 4.7,
-    reviews: 61,
+  slug: "pattaya-karaoke-01",
+  name: "파타야 모나리자 가라오케",
+  city: "pattaya",
+  category: "karaoke",
+  district: "파타야",
+  rating: 4.0,
+  reviews: 306,
 
-    description:
-      "파타야 워킹스트리트 인근에서 이용할 수 있는 가라오케입니다. 실제 업소 정보와 룸 분위기를 확인할 수 있습니다.",
+  description:
+    "파타야 모나리자 가라오케입니다. 파타야에서 한국식 가라오케를 찾는 여행객들이 이용할 수 있는 곳으로, 외관과 로비, 룸 사진 및 이용정보를 확인할 수 있습니다.",
 
-    address: "파타야 워킹스트리트",
-    hours: "19:00 - 04:00",
+  address: "Pattaya City, Chon Buri 20150",
+  hours: "18:00 - 00:00",
 
-    image:
-      "https://images.unsplash.com/photo-1571266028243-d220c9c3b1d2?q=80&w=1400&auto=format&fit=crop",
+  // 모나리자 메인 이미지
+  image: `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
 
-    featured: true,
-  },
-];
+  // 상세페이지 갤러리
+  gallery: [
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20외관.webp`,
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20로비.webp`,
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸1.webp`,
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸2.webp`,
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸3.webp`,
+    `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20푸잉.webp`,
+  ],
+
+  featured: true,
+},
 
 export function getCity(slug: string) {
   return cities.find((c) => c.slug === slug);
