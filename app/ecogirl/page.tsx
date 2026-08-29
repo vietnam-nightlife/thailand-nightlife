@@ -131,11 +131,76 @@ export default function EcoGirlPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
 
-          {sections.map((section) => (
-            <article
-              key={section.title}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:border-red-500/40"
-            >
+          {sections.map((section) => {
+  const href =
+    section.subtitle === "BANGKOK"
+      ? "/ecogirl/bangkok"
+      : "/ecogirl/pattaya";
+
+  return (
+    <Link
+      key={section.title}
+      href={href}
+      className="group block"
+    >
+      <article className="overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-xl hover:shadow-red-950/20">
+
+        {/* =========================
+            사진 영역
+        ========================== */}
+        <div className="relative h-64 bg-gradient-to-br from-zinc-900 via-[#111] to-black">
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+
+          <div className="absolute bottom-6 left-6">
+            <div className="text-xs font-black tracking-[0.25em] text-red-400">
+              {section.subtitle}
+            </div>
+
+            <h3 className="mt-2 text-2xl font-black text-white">
+              {section.title}
+            </h3>
+          </div>
+
+        </div>
+
+        {/* =========================
+            설명
+        ========================== */}
+        <div className="p-6">
+
+          <p className="text-sm leading-7 text-zinc-400">
+            {section.description}
+          </p>
+
+          <div className="mt-5 grid gap-2 sm:grid-cols-2">
+            {section.places.map((place) => (
+              <div
+                key={place}
+                className="rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3 text-sm font-bold text-zinc-300"
+              >
+                ✓ {place}
+              </div>
+            ))}
+          </div>
+
+          {/* 프로필 보기 */}
+          <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-5">
+            <span className="text-sm font-black text-red-400">
+              프로필 보기
+            </span>
+
+            <span className="text-lg font-black text-red-400 transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </div>
+
+        </div>
+
+      </article>
+    </Link>
+  );
+})}
 
               {/* 사진 영역 - 나중에 이미지 추가 */}
               <div className="relative h-64 bg-gradient-to-br from-zinc-900 via-[#111] to-black">
