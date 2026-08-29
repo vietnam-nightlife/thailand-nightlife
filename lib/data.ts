@@ -171,7 +171,7 @@ export const places: Place[] = [
     ],
 
     featured: true,
-    koreanSupport: true,
+    koreanSupport: false,
   },
 
   // =========================================================
@@ -259,7 +259,7 @@ export const places: Place[] = [
     ],
 
     featured: true,
-    koreanSupport: false,
+    koreanSupport: true,
   },
 
   // =========================================================
