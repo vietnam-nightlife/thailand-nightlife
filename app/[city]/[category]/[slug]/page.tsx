@@ -403,7 +403,7 @@ export default async function PlaceDetail({
 
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-          스탠다드 코스
+          스탠다드 코스 (샤워+B2B+BJ+연애)
         </h3>
       </div>
 
@@ -415,7 +415,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
             3,100 B
-            <span className="text-sm text-gray-500 font-bold"> / 4,100 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 4,100 B(2번)</span>
           </span>
         </div>
 
@@ -426,7 +426,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
             3,700 B
-            <span className="text-sm text-gray-500 font-bold"> / 4,700 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 4,700 B(2번)</span>
           </span>
         </div>
       </div>
@@ -450,7 +450,7 @@ export default async function PlaceDetail({
 
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-          일본식 누루매트
+          일본식 누루매트(HOT 인기)
         </h3>
 
         <span
@@ -475,7 +475,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
             3,900 B
-            <span className="text-sm text-gray-500 font-bold"> / 4,900 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 4,900 B(2번)</span>
           </span>
         </div>
 
@@ -486,7 +486,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
             4,500 B
-            <span className="text-sm text-gray-500 font-bold"> / 5,500 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 5,500 B(2번)</span>
           </span>
         </div>
       </div>
@@ -510,7 +510,7 @@ export default async function PlaceDetail({
 
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-          VIP 자쿠지 룸
+          VIP 자쿠지 룸(샤워+B2B+BJ+연애)
         </h3>
 
         <span
@@ -535,7 +535,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
             3,500 B
-            <span className="text-sm text-gray-500 font-bold"> / 4,500 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 4,500 B(2번)</span>
           </span>
         </div>
 
@@ -546,7 +546,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
             4,300 B
-            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B(2번)</span>
           </span>
         </div>
       </div>
@@ -595,7 +595,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
             4,300 B
-            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B(2번)</span>
           </span>
         </div>
 
@@ -606,7 +606,7 @@ export default async function PlaceDetail({
 
           <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
             5,100 B
-            <span className="text-sm text-gray-500 font-bold"> / 6,100 B</span>
+            <span className="text-sm text-gray-500 font-bold"> / 6,100 B(2번)</span>
           </span>
         </div>
       </div>
