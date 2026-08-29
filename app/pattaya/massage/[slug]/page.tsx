@@ -25,6 +25,8 @@ const eightyEightMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 메인.webp")}`;
 
 const eightyEightImages = [
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 느낌.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 리셉션.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸1.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸3.webp")}`,
