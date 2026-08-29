@@ -112,6 +112,30 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* 에코걸 추천 */}
+<Link
+  href="/ecogirl"
+  className="group relative overflow-hidden rounded-2xl border border-yellow-400/80 bg-black/70 px-7 py-5 shadow-[0_0_12px_rgba(250,204,21,0.7),inset_0_0_15px_rgba(250,204,21,0.08)] transition duration-300 hover:border-yellow-300 hover:shadow-[0_0_22px_rgba(250,204,21,1),inset_0_0_20px_rgba(250,204,21,0.12)]"
+>
+  {/* LED 빛 효과 */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/10 to-transparent opacity-0 transition duration-500 group-hover:translate-x-full group-hover:opacity-100" />
+
+  <div className="relative">
+    <div className="text-[11px] font-black tracking-[0.25em] text-yellow-400">
+      THAILAND
+    </div>
+
+    <div className="mt-1 text-xl font-black text-yellow-300">
+      에코걸 추천
+    </div>
+
+    <div className="mt-2 text-sm font-bold text-white">
+      프로필 보러가기 →
+    </div>
+  </div>
+</Link>
+        
       </section>
 
       {/* ==================================================
