@@ -299,7 +299,7 @@ export default async function PlaceDetail({
           <img
             src={place.image}
             alt="방콕 돈키호테 마사지 Don Quixote Massage"
-            className="h-full w-full max-w-full object-cover object-center"
+            className="h-full w-full object-cover brightness-110"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -1087,7 +1087,7 @@ export default async function PlaceDetail({
           <img
             src={place.image}
             alt="방콕 큐브 마사지 CUBE Nuru Massage"
-            className="h-full w-full max-w-full object-cover object-center"
+            className="h-full w-full object-cover brightness-110"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -1911,7 +1911,7 @@ export default async function PlaceDetail({
           <img
             src={place.image}
             alt="방콕 바비18 마사지 메인"
-            className="h-full w-full max-w-full object-cover object-center"
+            className="h-full w-full object-cover brightness-110"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
@@ -2711,7 +2711,7 @@ export default async function PlaceDetail({
           <img
             src={place.image}
             alt={place.name}
-            className="h-full w-full max-w-full object-cover object-center"
+            className="h-full w-full object-cover brightness-110"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
@@ -2835,7 +2835,7 @@ export default async function PlaceDetail({
         <img
           src={place.image}
           alt="방콕 코리아나 가라오케 메인"
-          className="h-full w-full max-w-full object-cover object-center"
+          className="h-full w-full object-cover brightness-110"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
