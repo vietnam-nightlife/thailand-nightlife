@@ -897,13 +897,11 @@ export default async function PattayaKaraokePage({
           <div className="mt-8 flex flex-wrap justify-center gap-3">
 
             <a
-              href="https://monalizapattaya.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-xl bg-red-600 px-7 py-3 text-sm font-black transition hover:bg-red-500"
-            >
-              공식 예약처 보기
-            </a>
+  href="/contact"
+  className="rounded-xl bg-red-600 px-7 py-3 text-sm font-black transition hover:bg-red-500"
+>
+  문의하기
+</a>
 
             <Link
               href="/pattaya/karaoke"
