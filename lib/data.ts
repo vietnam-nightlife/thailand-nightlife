@@ -29,9 +29,7 @@ export type Place = {
   image: string;
   gallery?: string[];
   featured?: boolean;
-
   priceList?: PriceItem[];
-
   koreanSupport?: boolean;
 };
 
@@ -61,7 +59,6 @@ export const cities: City[] = [
 ];
 
 export const places: Place[] = [
-
   // =========================================================
   // 방콕 돈키호테 마사지
   // =========================================================
@@ -95,26 +92,17 @@ export const places: Place[] = [
       {
         name: "기본 마사지",
         description: "기본 마사지 프로그램",
-        prices: [
-          "60분 3,000B",
-          "90분 4,000B",
-        ],
+        prices: ["60분 3,000B", "90분 4,000B"],
       },
       {
         name: "프리미엄 마사지",
         description: "프리미엄 마사지 프로그램",
-        prices: [
-          "60분 4,000B",
-          "90분 5,000B",
-        ],
+        prices: ["60분 4,000B", "90분 5,000B"],
       },
       {
         name: "VIP 룸",
         description: "프라이빗 VIP 룸 이용",
-        prices: [
-          "60분 4,500B",
-          "90분 5,500B",
-        ],
+        prices: ["60분 4,500B", "90분 5,500B"],
       },
     ],
 
@@ -168,7 +156,7 @@ export const places: Place[] = [
     description:
       "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 매장 분위기와 룸 시설을 실제 사진으로 확인할 수 있습니다.",
 
-    address: "방콕 수쿰밋 소이 18",
+    address: "방콕 수쿰빗 소이 18",
     hours: "12:00 - 02:00",
 
     image: `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
@@ -183,12 +171,11 @@ export const places: Place[] = [
     ],
 
     featured: true,
-
     koreanSupport: true,
   },
 
   // =========================================================
-  // 방콕 가라오케
+  // 방콕 코리아나 가라오케
   // =========================================================
   {
     slug: "bangkok-karaoke-01",
@@ -205,8 +192,7 @@ export const places: Place[] = [
     address: "방콕 수쿰빗",
     hours: "19:00 - 05:00",
 
-    image:
-      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
+    image: `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업2.webp`,
@@ -221,30 +207,26 @@ export const places: Place[] = [
   },
 
   // =========================================================
-// 파타야 바나나 마사지
-// =========================================================
-{
-  slug: "pattaya-massage-01",
-  name: "파타야 바나나 마사지",
-  city: "pattaya",
-  category: "massage",
-  district: "파타야",
-  rating: 4.5,
-  reviews: 17,
+  // 파타야 바나나 마사지
+  // =========================================================
+  {
+    slug: "pattaya-massage-01",
+    name: "파타야 바나나 마사지",
+    city: "pattaya",
+    category: "massage",
+    district: "파타야",
+    rating: 4.5,
+    reviews: 17,
 
-  description:
-    "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
+    description:
+      "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
 
-  address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
-  hours: "11:30 - 23:30",
+    address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
+    hours: "11:30 - 23:30",
 
-  // 사진은 다음 단계에서 바나나 마사지 사진으로 연결합니다.
-  image:
-  `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
+    image: `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
 
-  featured: true,
-},
-
+    featured: true,
   },
 
   // =========================================================
@@ -260,13 +242,12 @@ export const places: Place[] = [
     reviews: 0,
 
     description:
-      "파타야에서 이용할 수 있는 88 마사지입니다. 깔끔한 내부와 편안한 분위기의 마사지 공간으로 실제 매장 사진을 확인할 수 있습니다.",
+      "파타야에서 마사지와 휴식을 원하는 여행객들이 이용할 수 있는 88 Massage입니다. 매장 내부는 깔끔하고 편안한 분위기로 구성되어 있습니다.",
 
-    address: "Pattaya, Chon Buri, Thailand",
-    hours: "11:00 - 00:00",
+    address: "88 Massage and Tour, Pattaya",
+    hours: "영업시간 확인 필요",
 
-    image:
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
+    image: `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸1.webp`,
@@ -276,7 +257,9 @@ export const places: Place[] = [
     ],
 
     featured: true,
+    koreanSupport: false,
   },
+
   // =========================================================
   // 파타야 모나리자 가라오케
   // =========================================================
@@ -295,11 +278,8 @@ export const places: Place[] = [
     address: "Pattaya City, Chon Buri 20150",
     hours: "18:00 - 00:00",
 
-    // 메인 이미지
-    image:
-      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
+    image: `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
 
-    // 상세페이지 갤러리
     gallery: [
       `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20외관.webp`,
       `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20로비.webp`,
