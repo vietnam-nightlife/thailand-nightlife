@@ -173,10 +173,10 @@ export default async function PattayaKaraokePage({
         <img
   src={monalisaMainImage}
   alt="파타야 모나리자 가라오케"
-  className="h-full w-full object-cover"
+  className="h-full w-full object-cover brightness-110"
 />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
         <div className="absolute bottom-0 left-0 right-0">
 
