@@ -63,7 +63,7 @@ export default function Home() {
             {/* =========================
                 지역 추천 네온 버튼
             ========================== */}
-                        <div className="mt-7 flex flex-wrap gap-4">
+            <div className="mt-7 flex flex-wrap gap-4">
 
               {/* 방콕 */}
               <a
@@ -88,7 +88,6 @@ export default function Home() {
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-red-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
               </a>
 
-
               {/* 파타야 */}
               <a
                 href="/pattaya"
@@ -111,7 +110,6 @@ export default function Home() {
                 <div className="pointer-events-none absolute inset-0 rounded-2xl border border-blue-400/20" />
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
               </a>
-
 
               {/* =========================================
                   에코걸 추천
@@ -146,9 +144,12 @@ export default function Home() {
               </a>
 
             </div>
-          </div> 
+          </div>
         </div>
-        
+
+        {/* 중요: 기존 코드에서 빠져 있던 HERO section 닫기 */}
+      </section>
+
       {/* ==================================================
           1. 추천 업소
       ================================================== */}
@@ -218,6 +219,7 @@ export default function Home() {
         </h2>
 
         <div className="mt-7 grid gap-4 md:grid-cols-2">
+
           {/* 마사지 */}
           <a
             href="/bangkok/massage"
@@ -261,6 +263,7 @@ export default function Home() {
               가라오케 보기 →
             </div>
           </a>
+
         </div>
       </section>
 
@@ -273,6 +276,7 @@ export default function Home() {
       >
         <div className="container py-12 md:py-16">
           <div className="mx-auto max-w-4xl">
+
             <div className="text-xs font-black tracking-[.3em] red">
               FAQ
             </div>
@@ -282,9 +286,11 @@ export default function Home() {
             </h2>
 
             <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[.03]">
+
               {/* FAQ 1 */}
               <details className="group border-b border-white/10">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -296,6 +302,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -309,6 +316,7 @@ export default function Home() {
               {/* FAQ 2 */}
               <details className="group border-b border-white/10">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -320,6 +328,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -332,6 +341,7 @@ export default function Home() {
               {/* FAQ 3 */}
               <details className="group border-b border-white/10">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -343,6 +353,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -355,6 +366,7 @@ export default function Home() {
               {/* FAQ 4 */}
               <details className="group border-b border-white/10">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -366,6 +378,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -377,6 +390,7 @@ export default function Home() {
               {/* FAQ 5 */}
               <details className="group border-b border-white/10">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -388,6 +402,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -399,6 +414,7 @@ export default function Home() {
               {/* FAQ 6 */}
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center px-6 py-5 text-base font-bold text-white">
+
                   <span className="mr-4 text-sm text-red-400">
                     Q
                   </span>
@@ -410,6 +426,7 @@ export default function Home() {
                   <span className="ml-4 text-zinc-400 transition-transform duration-300 group-open:rotate-180">
                     ↓
                   </span>
+
                 </summary>
 
                 <div className="border-t border-white/10 px-6 py-5 text-sm leading-7 text-zinc-400">
@@ -417,6 +434,7 @@ export default function Home() {
                   카카오톡 또는 텔레그램을 통해 문의하실 수 있습니다.
                 </div>
               </details>
+
             </div>
           </div>
         </div>
@@ -430,6 +448,7 @@ export default function Home() {
         className="border-t border-white/10 bg-[#0c0c0c]"
       >
         <div className="container py-12 text-center md:py-16">
+
           <div className="text-xs font-black tracking-[.3em] red">
             CONTACT
           </div>
@@ -446,8 +465,10 @@ export default function Home() {
           <div className="flex justify-center">
             <ContactButtons className="mt-8" />
           </div>
+
         </div>
       </section>
+
     </main>
   );
 }
