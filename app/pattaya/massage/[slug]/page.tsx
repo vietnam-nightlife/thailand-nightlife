@@ -249,10 +249,10 @@ export default async function PattayaMassagePage({
         <img
           src={page.mainImage}
           alt={page.name}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover brightness-110"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
         <div className="absolute bottom-0 left-0 right-0">
           <div className="container pb-10 md:pb-14">
