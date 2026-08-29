@@ -5,8 +5,7 @@ const cities = [
     slug: "bangkok",
     english: "BANGKOK",
     name: "방콕 에코걸",
-    image:
-      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B81.webp",
+    image: "",
     description:
       "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
     tags: [
@@ -16,13 +15,12 @@ const cities = [
       "야시장 및 나이트라이프",
     ],
   },
-
   {
     slug: "pattaya",
     english: "PATTAYA",
     name: "파타야 에코걸",
     image:
-      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya/%ED%8C%8C%ED%83%80%E3%82%84%20%EC%97%90%E3%82%B3%E3%82%AC%E3%83%BC%E3%83%AB2.webp",
+      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya/%ED%8C%8C%ED%83%80%EC%95%BC%20%EC%97%90%EC%BD%94%EA%B1%B82.webp",
     description:
       "파타야의 해변과 관광 명소, 야시장, 쇼핑 등 여행 일정에 맞는 다양한 동행 서비스를 확인할 수 있습니다.",
     tags: [
@@ -38,7 +36,9 @@ export default function EcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
-      {/* HERO */}
+      {/* =========================
+          HERO
+      ========================== */}
       <section className="border-b border-white/10 bg-[#090909]">
         <div className="container mx-auto px-5 py-16 text-center sm:py-20">
 
@@ -60,7 +60,9 @@ export default function EcoGirlPage() {
       </section>
 
 
-      {/* CITY CARDS */}
+      {/* =========================
+          CITY CARDS
+      ========================== */}
       <section className="container mx-auto px-5 py-12 sm:py-16">
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -70,19 +72,25 @@ export default function EcoGirlPage() {
             <Link
               key={city.slug}
               href={`/ecogirl/${city.slug}`}
-              className="group block overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:border-red-500/40"
+              className="group block overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:border-red-500/40 hover:bg-[#141414]"
             >
 
-              {/* IMAGE */}
+              {/* =========================
+                  IMAGE
+              ========================== */}
               <div className="relative h-64 overflow-hidden bg-black sm:h-72">
 
-                <img
-                  src={city.image}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+                {city.image ? (
+                  <img
+                    src={city.image}
+                    alt={city.name}
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/40 via-zinc-900/20 to-black" />
+                )}
 
-                {/* 사진 어둡게 */}
+                {/* 사진 위 어두운 그라데이션 */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
                 {/* 제목 */}
@@ -101,7 +109,9 @@ export default function EcoGirlPage() {
               </div>
 
 
-              {/* CONTENT */}
+              {/* =========================
+                  CONTENT
+              ========================== */}
               <div className="p-6">
 
                 <p className="text-sm leading-7 text-zinc-400">
@@ -109,7 +119,9 @@ export default function EcoGirlPage() {
                 </p>
 
 
-                {/* TAGS */}
+                {/* =========================
+                    TAGS
+                ========================== */}
                 <div className="mt-5 grid grid-cols-2 gap-2">
 
                   {city.tags.map((tag) => (
@@ -126,7 +138,9 @@ export default function EcoGirlPage() {
                 </div>
 
 
-                {/* LINK */}
+                {/* =========================
+                    PROFILE LINK
+                ========================== */}
                 <div className="mt-6 text-sm font-black text-red-500 transition group-hover:text-red-400">
                   프로필 보기 →
                 </div>
