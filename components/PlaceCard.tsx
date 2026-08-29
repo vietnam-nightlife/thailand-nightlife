@@ -16,7 +16,7 @@ export default function PlaceCard({ place }: { place: Place }) {
             className="img-cover transition duration-700 hover:scale-105"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
 
           {/* 추천 인기 업소 */}
           {place.featured && (
