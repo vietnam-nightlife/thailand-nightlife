@@ -1,159 +1,164 @@
-import Link from "next/link";
+"use client";
 
-const cities = [
-  {
-    slug: "bangkok",
-    english: "BANGKOK",
-    name: "방콕 에코걸",
-    image: "",
-    description:
-      "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
-    tags: [
-      "방콕 시내 관광",
-      "왕궁 · 왓 아룬 · 왓 포",
-      "쇼핑 및 맛집",
-      "야시장 및 나이트라이프",
-    ],
-  },
-  {
-    slug: "pattaya",
-    english: "PATTAYA",
-    name: "파타야 에코걸",
-    image:
-      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya/%ED%8C%8C%ED%83%80%EC%95%BC%20%EC%97%90%EC%BD%94%EA%B1%B82.webp",
-    description:
-      "파타야의 해변과 관광 명소, 야시장, 쇼핑 등 여행 일정에 맞는 다양한 동행 서비스를 확인할 수 있습니다.",
-    tags: [
-      "파타야 해변",
-      "진리의 성전",
-      "빅 부다",
-      "야시장 · 클럽 · 핫플라",
-    ],
-  },
-];
+import { useState } from "react";
 
-export default function EcoGirlPage() {
+const profiles = Array.from({ length: 11 }, (_, i) => {
+  const number = i + 1;
+
+  return {
+    name: `파타야 에코걸 ${number}`,
+    image: `/ecogirl/pattaya/파타야 에코걸${number}.webp`,
+  };
+});
+
+export default function PattayaEcoGirlPage() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const prevImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      selectedIndex === 0
+        ? profiles.length - 1
+        : selectedIndex - 1
+    );
+  };
+
+  const nextImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      selectedIndex === profiles.length - 1
+        ? 0
+        : selectedIndex + 1
+    );
+  };
+
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
       {/* =========================
-          HERO
+          상단 소개
       ========================== */}
       <section className="border-b border-white/10 bg-[#090909]">
-        <div className="container mx-auto px-5 py-16 text-center sm:py-20">
+        <div className="container mx-auto px-5 py-14 sm:py-20">
 
-          <div className="mb-4 text-xs font-black tracking-[0.3em] text-red-500">
-            THAILAND TRAVEL COMPANION
+          <div className="mb-3 text-sm font-black tracking-[0.25em] text-red-500">
+            PATTAYA
           </div>
 
           <h1 className="text-3xl font-black sm:text-5xl">
-            방콕 · 파타야 에코걸
+            파타야 에코걸
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
-            태국 여행 일정에 맞춰 관광, 식사, 쇼핑, 야시장 등
-            <br className="hidden sm:block" />
-            다양한 여행 일정을 함께 즐길 수 있는 동행 정보를 확인하세요.
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base">
+            파타야 여행 일정에 맞춰 다양한 동행 프로필을 확인할 수 있습니다.
+            원하는 사진을 클릭하면 크게 확인할 수 있습니다.
           </p>
 
         </div>
       </section>
 
-
       {/* =========================
-          CITY CARDS
+          사진 목록
       ========================== */}
-      <section className="container mx-auto px-5 py-12 sm:py-16">
+      <section className="container mx-auto px-5 py-10 sm:py-14">
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="mb-8">
+          <h2 className="text-xl font-black sm:text-2xl">
+            파타야 에코걸
+          </h2>
 
-          {cities.map((city) => (
+          <p className="mt-2 text-sm text-zinc-500">
+            사진을 클릭하면 크게 볼 수 있습니다.
+          </p>
+        </div>
 
-            <Link
-              key={city.slug}
-              href={`/ecogirl/${city.slug}`}
-              className="group block overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:border-red-500/40 hover:bg-[#141414]"
+        {/* =========================
+            사진 그리드
+        ========================== */}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+
+          {profiles.map((profile, index) => (
+            <button
+              key={profile.name}
+              type="button"
+              onClick={() => setSelectedIndex(index)}
+              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010]"
             >
+              <div className="aspect-[3/4] overflow-hidden">
 
-              {/* =========================
-                  IMAGE
-              ========================== */}
-              <div className="relative h-64 overflow-hidden bg-black sm:h-72">
-
-                {city.image ? (
-                  <img
-                    src={city.image}
-                    alt={city.name}
-                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/40 via-zinc-900/20 to-black" />
-                )}
-
-                {/* 사진 위 어두운 그라데이션 */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                {/* 제목 */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-
-                  <div className="mb-2 text-xs font-black tracking-[0.3em] text-red-500">
-                    {city.english}
-                  </div>
-
-                  <h2 className="text-2xl font-black text-white sm:text-3xl">
-                    {city.name}
-                  </h2>
-
-                </div>
+                <img
+                  src={profile.image}
+                  alt={profile.name}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
 
               </div>
-
-
-              {/* =========================
-                  CONTENT
-              ========================== */}
-              <div className="p-6">
-
-                <p className="text-sm leading-7 text-zinc-400">
-                  {city.description}
-                </p>
-
-
-                {/* =========================
-                    TAGS
-                ========================== */}
-                <div className="mt-5 grid grid-cols-2 gap-2">
-
-                  {city.tags.map((tag) => (
-
-                    <div
-                      key={tag}
-                      className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs font-bold text-zinc-300"
-                    >
-                      ✓ {tag}
-                    </div>
-
-                  ))}
-
-                </div>
-
-
-                {/* =========================
-                    PROFILE LINK
-                ========================== */}
-                <div className="mt-6 text-sm font-black text-red-500 transition group-hover:text-red-400">
-                  프로필 보기 →
-                </div>
-
-              </div>
-
-            </Link>
-
+            </button>
           ))}
 
         </div>
 
       </section>
+
+      {/* =========================
+          사진 크게 보기
+      ========================== */}
+      {selectedIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedIndex(null)}
+        >
+
+          {/* 닫기 */}
+          <button
+            type="button"
+            onClick={() => setSelectedIndex(null)}
+            className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-3xl text-white hover:bg-black"
+          >
+            ×
+          </button>
+
+          {/* 왼쪽 화살표 */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:left-6"
+          >
+            ‹
+          </button>
+
+          {/* 큰 사진 */}
+          <img
+            src={profiles[selectedIndex].image}
+            alt={profiles[selectedIndex].name}
+            className="max-h-[90vh] max-w-[85vw] rounded-xl object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* 오른쪽 화살표 */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:right-6"
+          >
+            ›
+          </button>
+
+          {/* 사진 번호 */}
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-4 py-2 text-sm font-bold text-white">
+            {selectedIndex + 1} / {profiles.length}
+          </div>
+
+        </div>
+      )}
 
     </main>
   );
