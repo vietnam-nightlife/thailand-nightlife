@@ -17,6 +17,10 @@ const profiles = Array.from({ length: 11 }, (_, i) => {
 export default function PattayaEcoGirlPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
+  const closeModal = () => {
+    setSelectedIndex(null);
+  };
+
   const prevImage = () => {
     if (selectedIndex === null) return;
 
@@ -40,9 +44,11 @@ export default function PattayaEcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
-      {/* 상단 소개 */}
+      {/* =====================================================
+          HERO
+      ====================================================== */}
       <section className="border-b border-white/10 bg-[#090909]">
-        <div className="container py-14 sm:py-20">
+        <div className="container mx-auto px-5 py-14 sm:py-20">
 
           <div className="mb-3 text-sm font-black tracking-[0.25em] text-red-500">
             PATTAYA
@@ -53,16 +59,20 @@ export default function PattayaEcoGirlPage() {
           </h1>
 
           <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base">
-            파타야 여행 일정에 맞춰 다양한 동행 프로필을 확인할 수 있습니다.
-            원하는 사진을 클릭하면 크게 확인할 수 있습니다.
+            파타야 여행 일정에 맞춰 다양한 동행 프로필을
+            확인할 수 있습니다.
+            <br className="hidden sm:block" />
+            원하는 사진을 클릭하면 큰 화면으로 확인할 수 있습니다.
           </p>
 
         </div>
       </section>
 
 
-      {/* 사진 목록 */}
-      <section className="container py-10 sm:py-14">
+      {/* =====================================================
+          PROFILE LIST
+      ====================================================== */}
+      <section className="container mx-auto px-5 py-10 sm:py-14">
 
         <div className="mb-8">
           <h2 className="text-xl font-black sm:text-2xl">
@@ -75,7 +85,9 @@ export default function PattayaEcoGirlPage() {
         </div>
 
 
-        {/* 사진 카드 */}
+        {/* =================================================
+            PROFILE GRID
+        ================================================== */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
           {profiles.map((profile, index) => (
@@ -83,17 +95,20 @@ export default function PattayaEcoGirlPage() {
               key={profile.name}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010]"
+              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010] text-left transition duration-300 hover:border-red-500/50"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+
+              <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
 
                 <img
                   src={profile.image}
                   alt={profile.name}
+                  loading="lazy"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
               </div>
+
             </button>
           ))}
 
@@ -102,62 +117,84 @@ export default function PattayaEcoGirlPage() {
       </section>
 
 
-      {/* =========================
-          사진 크게 보기
-      ========================== */}
+      {/* =====================================================
+          IMAGE MODAL
+      ====================================================== */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedIndex(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4"
+          onClick={closeModal}
         >
 
-          {/* 닫기 */}
+          {/* =================================================
+              CLOSE BUTTON
+          ================================================== */}
           <button
             type="button"
-            onClick={() => setSelectedIndex(null)}
-            className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-3xl text-white hover:bg-black"
+            aria-label="닫기"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeModal();
+            }}
+            className="absolute right-4 top-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-3xl font-light text-white transition hover:bg-black sm:right-6 sm:top-6"
           >
             ×
           </button>
 
 
-          {/* 왼쪽 화살표 */}
+          {/* =================================================
+              PREVIOUS BUTTON
+          ================================================== */}
           <button
             type="button"
+            aria-label="이전 사진"
             onClick={(e) => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:left-6"
+            className="absolute left-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl font-light text-white transition hover:bg-red-600 sm:left-6 sm:h-14 sm:w-14"
           >
             ‹
           </button>
 
 
-          {/* 큰 사진 */}
-          <img
-            src={profiles[selectedIndex].image}
-            alt={profiles[selectedIndex].name}
-            className="max-h-[90vh] max-w-[85vw] rounded-xl object-contain"
+          {/* =================================================
+              IMAGE
+          ================================================== */}
+          <div
+            className="flex max-h-[92vh] max-w-[85vw] items-center justify-center"
             onClick={(e) => e.stopPropagation()}
-          />
+          >
+
+            <img
+              src={profiles[selectedIndex].image}
+              alt={profiles[selectedIndex].name}
+              className="max-h-[90vh] max-w-[85vw] rounded-xl object-contain shadow-2xl"
+            />
+
+          </div>
 
 
-          {/* 오른쪽 화살표 */}
+          {/* =================================================
+              NEXT BUTTON
+          ================================================== */}
           <button
             type="button"
+            aria-label="다음 사진"
             onClick={(e) => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:right-6"
+            className="absolute right-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl font-light text-white transition hover:bg-red-600 sm:right-6 sm:h-14 sm:w-14"
           >
             ›
           </button>
 
 
-          {/* 사진 번호 */}
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-4 py-2 text-sm font-bold text-white">
+          {/* =================================================
+              IMAGE NUMBER
+          ================================================== */}
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/80 px-4 py-2 text-sm font-bold text-white">
             {selectedIndex + 1} / {profiles.length}
           </div>
 
