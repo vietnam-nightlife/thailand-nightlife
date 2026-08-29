@@ -19,20 +19,27 @@ export default function Header() {
 
         {/* PC 메뉴 */}
         <nav className="hidden shrink-0 items-center gap-5 text-white md:flex lg:gap-8">
-          <Link
-            href="/bangkok"
-            className="whitespace-nowrap text-lg font-black text-white hover:text-red-400 lg:text-xl"
-          >
-            방콕
-          </Link>
+  <Link
+    href="/bangkok"
+    className="whitespace-nowrap text-lg font-black text-white hover:text-red-400 lg:text-xl"
+  >
+    방콕
+  </Link>
 
-          <Link
-            href="/pattaya"
-            className="whitespace-nowrap text-lg font-black text-white hover:text-red-400 lg:text-xl"
-          >
-            파타야
-          </Link>
-        </nav>
+  <Link
+    href="/pattaya"
+    className="whitespace-nowrap text-lg font-black text-white hover:text-red-400 lg:text-xl"
+  >
+    파타야
+  </Link>
+
+  <Link
+    href="/ecogirl"
+    className="whitespace-nowrap text-lg font-black text-white hover:text-red-400 lg:text-xl"
+  >
+    에코걸
+  </Link>
+</nav>
 
         {/* 카카오톡 / 텔레그램 */}
         <div className="hidden min-w-0 max-w-[420px] flex-1 sm:block lg:max-w-[460px]">
