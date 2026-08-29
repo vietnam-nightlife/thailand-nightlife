@@ -1,101 +1,107 @@
 import Link from "next/link";
-import { getEcoGirls } from "@/lib/ecogirl";
+
+const GITHUB_IMAGE =
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya";
+
+const profiles = Array.from({ length: 11 }, (_, i) => {
+  const number = i + 1;
+
+  return {
+    slug: `pattaya-ecogirl-${String(number).padStart(2, "0")}`,
+    name: `파타야 에코걸 ${number}`,
+    image: `${GITHUB_IMAGE}/파타야%20에코걸${number}.webp`,
+  };
+});
 
 export default function PattayaEcoGirlPage() {
-  const girls = getEcoGirls("pattaya");
-
   return (
     <main className="min-h-screen bg-[#070707] text-white">
-      <section className="container py-12">
 
-        {/* 제목 */}
-        <div className="mb-10">
-          <div className="text-xs font-black tracking-[0.3em] text-red-500">
+      {/* 상단 소개 */}
+      <section className="border-b border-white/10 bg-[#090909]">
+        <div className="container py-14 sm:py-20">
+
+          <div className="mb-3 text-sm font-black tracking-[0.25em] text-red-500">
             PATTAYA
           </div>
 
-          <h1 className="mt-2 text-3xl font-black sm:text-4xl">
+          <h1 className="text-3xl font-black sm:text-5xl">
             파타야 에코걸
           </h1>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
-            파타야 여행 일정에 맞춰 해변, 관광, 식사 및 주변 관광지 등을
-            함께할 수 있는 에코걸 프로필을 확인해보세요.
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base">
+            파타야 여행 일정에 맞춰 다양한 동행 프로필을 확인할 수 있습니다.
+            프로필을 선택하면 사진과 기본 정보를 자세히 확인할 수 있습니다.
           </p>
+
+        </div>
+      </section>
+
+
+      {/* 프로필 목록 */}
+      <section className="container py-10 sm:py-14">
+
+        <div className="mb-8 flex items-end justify-between">
+          <div>
+            <h2 className="text-xl font-black sm:text-2xl">
+              파타야 에코걸 프로필
+            </h2>
+
+            <p className="mt-2 text-sm text-zinc-500">
+              원하는 프로필을 선택해 자세히 확인하세요.
+            </p>
+          </div>
+
+          <div className="text-sm font-bold text-zinc-500">
+            총 {profiles.length}명
+          </div>
         </div>
 
-        {/* 프로필 목록 */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-          {girls.map((girl) => (
+        {/* 카드 */}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+
+          {profiles.map((profile) => (
             <Link
-              key={girl.slug}
-              href={`/ecogirl/${girl.city}/${girl.slug}`}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition hover:border-red-500/40"
+              key={profile.slug}
+              href={`/ecogirl/pattaya/${profile.slug}`}
+              className="group"
             >
 
-              {/* 사진 */}
-              <div className="relative h-80 overflow-hidden bg-[#151515]">
+              <article className="overflow-hidden rounded-2xl border border-white/10 bg-[#101010] transition duration-300 hover:-translate-y-1 hover:border-red-500/40">
 
-                {girl.image ? (
+                {/* 사진 */}
+                <div className="relative aspect-[3/4] overflow-hidden bg-zinc-900">
+
                   <img
-                    src={girl.image}
-                    alt={girl.name}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    src={profile.image}
+                    alt={profile.name}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                ) : (
-                  <div className="flex h-full items-center justify-center text-sm text-zinc-700">
-                    사진 준비중
-                  </div>
-                )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-                <div className="absolute bottom-5 left-5">
-                  <div className="text-xs font-black tracking-[0.2em] text-red-400">
+                  <span className="absolute left-3 top-3 rounded-md bg-red-600 px-3 py-1.5 text-[11px] font-black text-white">
                     PATTAYA
-                  </div>
-
-                  <h2 className="mt-1 text-xl font-black">
-                    {girl.name}
-                  </h2>
-                </div>
-
-              </div>
-
-              {/* 정보 */}
-              <div className="p-5">
-
-                <div className="flex gap-2">
-                  <span className="rounded-lg bg-white/5 px-3 py-2 text-xs font-bold text-zinc-300">
-                    {girl.age}세
                   </span>
 
-                  {girl.height && (
-                    <span className="rounded-lg bg-white/5 px-3 py-2 text-xs font-bold text-zinc-300">
-                      {girl.height}
-                    </span>
-                  )}
                 </div>
 
-                {girl.languages && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {girl.languages.map((language) => (
-                      <span
-                        key={language}
-                        className="rounded-md bg-blue-600/10 px-2.5 py-1 text-xs font-bold text-blue-400"
-                      >
-                        {language}
-                      </span>
-                    ))}
+
+                {/* 이름 */}
+                <div className="p-4">
+
+                  <h3 className="text-base font-black text-white">
+                    {profile.name}
+                  </h3>
+
+                  <div className="mt-2 text-xs font-bold text-red-500">
+                    프로필 보기 →
                   </div>
-                )}
 
-                <div className="mt-5 text-sm font-black text-red-500">
-                  프로필 보기 →
                 </div>
 
-              </div>
+              </article>
 
             </Link>
           ))}
@@ -103,6 +109,7 @@ export default function PattayaEcoGirlPage() {
         </div>
 
       </section>
+
     </main>
   );
 }
