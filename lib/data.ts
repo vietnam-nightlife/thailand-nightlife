@@ -92,6 +92,7 @@ export const places: Place[] = [
       `${GITHUB_IMAGE}/방콕%20돈키호테%20외관.webp`,
       `${GITHUB_IMAGE}/방콕%20돈키호테%20리셉션.webp`,
       `${GITHUB_IMAGE}/방콕%20돈키호테%20리셉션2.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20휴게실.webp`,
       `${GITHUB_IMAGE}/방콕%20돈키호테%20룸1.webp`,
       `${GITHUB_IMAGE}/방콕%20돈키호테%20룸2.webp`,
     ],
