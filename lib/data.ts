@@ -290,7 +290,7 @@ export const places: Place[] = [
 
   featured: true,
 },
-
+];
 export function getCity(slug: string) {
   return cities.find((c) => c.slug === slug);
 }
