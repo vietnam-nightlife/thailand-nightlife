@@ -75,7 +75,7 @@ export const places: Place[] = [
     city: "bangkok",
     category: "massage",
     district: "방콕",
-    rating: 0,
+    rating: 4.7,
     reviews: 0,
 
     description:
