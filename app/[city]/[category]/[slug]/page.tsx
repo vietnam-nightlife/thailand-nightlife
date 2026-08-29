@@ -33,7 +33,18 @@ export async function generateMetadata({
   }
 
   const isKoreana = slug === "bangkok-karaoke-01";
+  const isDonQuixote = slug === "bangkok-donquixote-massage";
   const isBarbie18 = slug === "bangkok-barbie18-massage";
+
+  if (isDonQuixote) {
+    return {
+      title: "방콕 돈키호테 마사지 | Don Quixote Massage Bangkok | 태국 눈탱이 방지 위원회",
+      description: "방콕 돈키호테 마사지의 위치, 영업시간, 시설, 룸 사진 및 가격 정보를 확인하세요.",
+      keywords: ["방콕 돈키호테 마사지", "돈키호테 마사지", "Don Quixote Massage Bangkok", "방콕 마사지", "방콕 마사지샵", "방콕 마사지 가격"],
+      alternates: { canonical: `/${city}/${category}/${slug}` },
+      openGraph: { title: "방콕 돈키호테 마사지 | Don Quixote Massage Bangkok", description: "방콕 돈키호테 마사지의 위치, 시설, 룸 사진 및 가격 정보를 확인하세요.", type: "website", images: [{ url: place.image, alt: "방콕 돈키호테 마사지" }] },
+    };
+  }
 
   if (isBarbie18) {
     return {
@@ -274,6 +285,794 @@ export default async function PlaceDetail({
   // 방콕 CUBE 마사지 상세페이지
   // 바비18 마사지와 동일한 상세페이지 구조
   // =========================================================
+
+  if (slug === "bangkok-donquixote-massage") {
+    const donQuixoteImages = place.gallery ?? [];
+
+    return (
+      <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0b0b0d] text-white">
+
+        {/* =================================================
+            HERO
+        ================================================== */}
+        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+          <img
+            src={place.image}
+            alt="방콕 돈키호테 마사지 Don Quixote Massage"
+            className="h-full w-full max-w-full object-cover object-center"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+
+          <div className="absolute bottom-0 left-0 right-0">
+            <div className="container pb-10 md:pb-12">
+
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                BANGKOK · MASSAGE
+              </div>
+
+              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
+                방콕 돈키호테 마사지
+              </h1>
+
+              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
+                방콕 방콕에 위치한 Don Quixote Massage입니다.
+                매장 위치와 운영시간, 내부 시설, 룸 분위기와
+                방문 전 확인사항을 한곳에서 확인할 수 있습니다.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-3 text-sm">
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  Don Quixote Massage
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  Sukhumvit Soi 22
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  방콕 수쿰빗
+                </span>
+
+                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
+                  누루 마사지
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </section>
+          <section className="container py-10 md:py-12">
+
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              GALLERY
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black md:text-4xl">
+              돈키호테 마사지 룸 & 시설 사진
+            </h2>
+
+            <p className="mt-3 text-sm leading-7 text-zinc-500">
+              돈키호테 마사지의 매장과 리셉션,
+              객실 및 내부 시설 분위기를 사진으로 확인해보세요.
+              사진을 클릭하면 크게 볼 수 있습니다.
+            </p>
+
+            <ImageGallery
+              images={donQuixoteImages}
+              name="방콕 돈키호테 마사지"
+            />
+
+          </section>
+<section className="mt-10 w-full max-w-full overflow-hidden sm:mt-12">
+  <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+
+  {/* 제목 */}
+  <div className="mb-7">
+    <p className="text-[12px] font-bold tracking-[0.35em] text-fuchsia-400 uppercase">
+      PRICE MENU
+    </p>
+
+    <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold text-white">
+      돈키호테 마사지 가격표
+    </h2>
+
+    <p className="mt-2 text-sm sm:text-base text-gray-400">
+      Don Quixote Massage에서 확인할 수 있는 마사지 코스 및 이용 요금입니다.
+    </p>
+  </div>
+
+  {/* 가격 카드 */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+
+    {/* 스탠다드 */}
+    <div
+      className="
+        group relative overflow-hidden rounded-2xl
+        border border-cyan-400/30
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-cyan-300
+        hover:shadow-[0_0_28px_rgba(34,211,238,0.22)]
+      "
+    >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-70" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          스탠다드 코스
+        </h3>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
+            3,100 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,100 B</span>
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-cyan-300">
+            3,700 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,700 B</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* 일본식 누루매트 */}
+    <div
+      className="
+        group relative overflow-hidden rounded-2xl
+        border border-fuchsia-500/40
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-fuchsia-300
+        hover:shadow-[0_0_30px_rgba(217,70,239,0.28)]
+      "
+    >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-fuchsia-400 to-transparent" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          일본식 누루매트
+        </h3>
+
+        <span
+          className="
+            shrink-0 rounded-full
+            border border-fuchsia-400/70
+            bg-fuchsia-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-fuchsia-300
+          "
+        >
+          HOT
+        </span>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
+            3,900 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,900 B</span>
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-fuchsia-300">
+            4,500 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,500 B</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* VIP 자쿠지 룸 */}
+    <div
+      className="
+        group relative overflow-hidden rounded-2xl
+        border border-amber-400/40
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-amber-300
+        hover:shadow-[0_0_30px_rgba(251,191,36,0.25)]
+      "
+    >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          VIP 자쿠지 룸
+        </h3>
+
+        <span
+          className="
+            shrink-0 rounded-full
+            border border-amber-400/70
+            bg-amber-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-amber-300
+          "
+        >
+          VIP
+        </span>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
+            3,500 B
+            <span className="text-sm text-gray-500 font-bold"> / 4,500 B</span>
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-amber-300">
+            4,300 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    {/* VIP 자쿠지 일본식 누루매트 */}
+    <div
+      className="
+        group relative overflow-hidden rounded-2xl
+        border border-pink-500/50
+        bg-[#101014]
+        p-5 sm:p-6
+        transition-all duration-300
+        hover:-translate-y-1
+        hover:border-pink-300
+        hover:shadow-[0_0_32px_rgba(236,72,153,0.30)]
+      "
+    >
+      <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent" />
+
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+          VIP 자쿠지 일본식 누루매트
+        </h3>
+
+        <span
+          className="
+            shrink-0 rounded-full
+            border border-pink-400/70
+            bg-pink-500/10
+            px-3 py-1
+            text-[11px] sm:text-xs
+            font-bold text-pink-300
+          "
+        >
+          PREMIUM
+        </span>
+      </div>
+
+      <div className="mt-5 space-y-0">
+        <div className="flex items-center justify-between gap-4 py-4 border-b border-white/10">
+          <span className="text-sm sm:text-base text-gray-300">
+            60분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
+            4,300 B
+            <span className="text-sm text-gray-500 font-bold"> / 5,300 B</span>
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-4 py-4">
+          <span className="text-sm sm:text-base text-gray-300">
+            90분 코스
+          </span>
+
+          <span className="whitespace-nowrap text-lg sm:text-xl font-extrabold text-pink-300">
+            5,100 B
+            <span className="text-sm text-gray-500 font-bold"> / 6,100 B</span>
+          </span>
+        </div>
+      </div>
+    </div>
+   </div>    
+  </div>
+</section>
+        <section className="container py-10 md:py-12">
+
+          <div className="grid gap-4 md:grid-cols-4">
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                업종
+              </div>
+
+              <div className="mt-2 font-bold">
+                마사지샵 · Nuru Massage
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                위치
+              </div>
+
+              <div className="mt-2 font-bold">
+                방콕
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                운영시간
+              </div>
+
+              <div className="mt-2 font-bold">
+                11:00 - 00:00
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+              <div className="text-xs text-zinc-500">
+                평점
+              </div>
+
+              <div className="mt-2 font-bold">
+                ★ 4.7 · Google 리뷰
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            ABOUT CUBE
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 돈키호테 마사지
+          </h2>
+
+          <div className="mt-8 max-w-4xl space-y-5 text-[15px] leading-8 text-zinc-400">
+
+            <p>
+              방콕 돈키호테 마사지(Don Quixote Massage)는
+              방콕 방콕에 위치한 마사지샵으로
+              알려져 있습니다.
+            </p>
+
+            <p>
+              방콕는 BTS 프롬퐁과 가까운
+              수쿰빗 지역에 위치해 있어 주변 호텔이나
+              식당과 함께 방문 일정을 구성하기 좋은 지역입니다.
+            </p>
+
+            <p>
+              CUBE는 누루 마사지와 오일 마사지 등을
+              제공하는 형태로 소개되고 있으며,
+              공개된 매장 사진에서는 리셉션 공간과
+              개별 룸, 다양한 내부 시설을 확인할 수 있습니다.
+            </p>
+
+            <p>
+              특히 객실별 분위기와 시설 구성이 서로 다를 수
+              있으므로 방문 전에 이용 가능한 룸과
+              당일 운영 여부를 확인하는 것이 좋습니다.
+            </p>
+
+            <p>
+              온라인에 등록된 가격과 운영시간은 변경될 수
+              있으므로 실제 방문 전 최신 정보를 확인하는 것을
+              권장합니다.
+            </p>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              LOCATION
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              방콕 돈키호테 마사지 위치
+            </h2>
+
+            <p className="mt-6 leading-8 text-zinc-400">
+              Don Quixote Massage는 방콕 수쿰빗
+              소이 22(Sukhumvit Soi 22) 인근에
+              위치한 것으로 확인됩니다.
+            </p>
+
+            <div className="mt-8 rounded-2xl bg-black/40 p-6">
+
+              <div className="text-sm text-zinc-500">
+                주소
+              </div>
+
+              <div className="mt-2 text-lg font-bold">
+                20/2 Sukhumvit Soi 22
+              </div>
+
+              <div className="mt-1 text-sm leading-6 text-zinc-400">
+                Khlong Tan, Khlong Toei,
+                Bangkok 10110, Thailand
+              </div>
+
+            </div>
+
+            <p className="mt-6 text-sm leading-7 text-zinc-500">
+              방콕 방향으로 이동한 뒤
+              지도에서 CUBE Massage를 검색하면
+              위치를 확인할 수 있습니다.
+            </p>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="grid gap-6 md:grid-cols-2">
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                OPENING HOURS
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                영업시간
+              </h2>
+
+              <div className="mt-8 text-3xl font-black">
+                11:00 - 00:00
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                공개된 최근 자료에서는 오전 11시부터
+                새벽 시간대까지 운영되는 것으로 확인됩니다.
+              </p>
+
+              <p className="mt-4 text-xs leading-6 text-zinc-600">
+                ※ 요일에 따라 마감시간이 다르게 표시되는
+                자료도 있으므로 방문 당일 정확한 운영시간을
+                확인하세요.
+              </p>
+
+            </div>
+
+
+            <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+              <div className="text-xs font-black tracking-[.3em] text-red-500">
+                VISIT
+              </div>
+
+              <h2 className="mt-3 text-3xl font-black">
+                방문 전 확인
+              </h2>
+
+              <div className="mt-8 text-2xl font-black">
+                당일 운영 여부 확인
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                운영시간과 이용 가능한 룸,
+                당일 가격 및 이용 조건은 변경될 수 있으므로
+                방문 전에 확인하는 것을 권장합니다.
+              </p>
+
+            </div>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            FACILITIES
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            돈키호테 마사지 룸 및 시설
+          </h2>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
+              <div className="text-3xl">
+                🛋️
+              </div>
+
+              <h3 className="mt-4 font-black">
+                개별 룸
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                공개된 내부 사진을 통해
+                개별적으로 이용할 수 있는
+                룸 형태의 시설을 확인할 수 있습니다.
+              </p>
+
+            </div>
+
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
+              <div className="text-3xl">
+                🛁
+              </div>
+
+              <h3 className="mt-4 font-black">
+                욕조 및 샤워 시설
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                일부 객실에서는 욕조와 샤워 공간이
+                포함된 형태의 시설을 확인할 수 있습니다.
+              </p>
+
+            </div>
+
+
+            <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
+              <div className="text-3xl">
+                ✨
+              </div>
+
+              <h3 className="mt-4 font-black">
+                다양한 룸 구성
+              </h3>
+
+              <p className="mt-3 text-sm leading-7 text-zinc-500">
+                공개된 사진 기준으로 객실마다
+                분위기와 시설 구성이 다를 수 있어
+                방문 전 원하는 룸을 확인하는 것이 좋습니다.
+              </p>
+
+            </div>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
+
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              TRANSPORT
+            </div>
+
+            <h2 className="mt-3 text-3xl font-black">
+              돈키호테 마사지 찾아가는 방법
+            </h2>
+
+            <div className="mt-8 space-y-5 text-sm leading-8 text-zinc-400">
+
+              <p>
+                돈키호테 마사지는 방콕에
+                위치한 것으로 확인됩니다.
+              </p>
+
+              <p>
+                아속에서 이동하는 경우 BTS를 이용해
+                프롬퐁 방향으로 이동한 뒤 방콕
+                방향으로 이동하는 방법이 편리합니다.
+              </p>
+
+              <p>
+                Grab이나 Bolt를 이용한다면
+                목적지에 CUBE Massage 또는
+                Don Quixote Massage를 검색하면
+                보다 쉽게 이동할 수 있습니다.
+              </p>
+
+              <p>
+                처음 방문한다면 지도에서 주소를 확인하고
+                매장 위치를 미리 확인한 후 이동하는 것을
+                권장합니다.
+              </p>
+
+            </div>
+
+          </div>
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            GOOD TO KNOW
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방문 전 체크사항
+          </h2>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+
+            {[
+              "방문 당일 영업시간 확인",
+              "정확한 매장 위치 확인",
+              "이용 가능한 코스와 가격 확인",
+              "원하는 룸 이용 가능 여부 확인",
+              "추가 비용이 있는지 사전 확인",
+              "최종 결제금액 확인",
+              "주말 및 저녁 시간대 방문 전 문의",
+              "온라인에 표시된 정보와 현장 안내 비교",
+            ].map((item) => (
+
+              <div
+                key={item}
+                className="rounded-xl border border-white/10 bg-[#111] p-5 text-sm text-zinc-300"
+              >
+                <span className="mr-3 text-red-500">
+                  ✓
+                </span>
+
+                {item}
+              </div>
+
+            ))}
+
+          </div>
+
+        </section>
+        <section className="container py-10 md:py-12">
+
+          <div className="text-xs font-black tracking-[.3em] text-red-500">
+            FAQ
+          </div>
+
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            방콕 돈키호테 마사지 자주 묻는 질문
+          </h2>
+
+          <div className="mt-8 space-y-4">
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                돈키호테 마사지는 어디에 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                방콕 방콕에 위치한 것으로
+                확인됩니다. 주소는 20/2 Sukhumvit Soi 22,
+                Bangkok 10110으로 안내되고 있습니다.
+              </p>
+            </details>
+
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                영업시간은 언제인가요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                최근 공개 자료에서는 오전 11시부터
+                새벽 2시 전후까지 운영되는 것으로
+                확인됩니다. 요일별 마감시간이 다르게
+                표시되는 자료도 있으므로 방문 전 확인하세요.
+              </p>
+            </details>
+
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                가격은 얼마인가요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                공개 자료에서는 약 2,000바트부터
+                상위 룸 기준 약 8,500바트까지의
+                가격대가 확인됩니다. 코스와 룸에 따라
+                가격이 달라질 수 있으므로 방문 전에
+                최신 가격을 확인하는 것이 좋습니다.
+              </p>
+            </details>
+
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                룸 사진을 볼 수 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                네. 이 페이지의 갤러리에서 현재 등록된
+                돈키호테 마사지의 리셉션과 룸,
+                내부 시설 사진을 확인할 수 있습니다.
+              </p>
+            </details>
+
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+              <summary className="cursor-pointer font-bold">
+                방문 전에 확인할 사항이 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                영업시간, 정확한 위치, 당일 이용 가능 여부,
+                최신 가격과 이용 조건을 방문 전에
+                확인하는 것을 권장합니다.
+              </p>
+            </details>
+
+          </div>
+
+        </section>
+        <section className="container py-14 md:py-16">
+
+          <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
+
+            <div className="text-xs font-black tracking-[.3em] text-red-500">
+              CUBE NURU MASSAGE BANGKOK
+            </div>
+
+            <h2 className="mt-4 text-3xl font-black md:text-4xl">
+              방콕 돈키호테 마사지
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
+              방콕에 위치한 Don Quixote Massage의
+              위치, 룸과 시설, 가격 정보 및 방문 전
+              체크사항을 확인해보세요.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+
+              <Link
+                href="/bangkok/massage"
+                className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-black hover:bg-white/10"
+              >
+                방콕 마사지 더보기
+              </Link>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+    );
+  }
+  
 
   if (slug === "bangkok-cube-nuru-massage") {
     const cubeImages = place.gallery ?? [];
