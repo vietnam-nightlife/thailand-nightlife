@@ -6,51 +6,7 @@ import ImageGallery from "@/components/ImageGallery";
 /*
  * =====================================================
  * 파타야 모나리자 가라오케 상세페이지
- * =====================================================
- *
- * 사용 이미지
- *
- * 파타야 모나리자 가라오케 메인.webp
- * 파타야 모나리자 가라오케 외관.webp
- * 파타야 모나리자 가라오케 로비.webp
- * 파타야 모나리자 가라오케 룸1.webp
- * 파타야 모나리자 가라오케 룸2.webp
- * 파타야 모나리자 가라오케 룸3.webp
- * 파타야 모나리자 가라오케 푸잉.webp
- *
- * 중요:
- * GITHUB_IMAGE에 실제 GitHub Raw 이미지 기본주소를 입력하세요.
- *
- * 예:
- * https://raw.githubusercontent.com/아이디/저장소/main
- *
- * 이미지가 저장된 폴더가 있다면:
- *
- * https://raw.githubusercontent.com/아이디/저장소/main/public/images
- *
- * =====================================================
- */
-
-
-/*
- * =====================================================
- * GITHUB IMAGE BASE URL
- * =====================================================
- *
- * 기존 프로젝트에서 사용하던 실제 주소를 넣으세요.
- *
- * 예:
- * https://raw.githubusercontent.com/username/repository/main
- *
- */
-
-const GITHUB_IMAGE =
-  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
-
-
-/*
- * =====================================================
- * SLUG
+ * 돈키호테 상세페이지와 동일한 구성
  * =====================================================
  */
 
@@ -58,17 +14,18 @@ const MONALISA_SLUG = "pattaya-monalisa-karaoke";
 const KOREANA_SLUG = "pattaya-koreana-karaoke";
 const XXX_SLUG = "pattaya-xxx-karaoke";
 
-
 /*
  * =====================================================
- * IMAGE URL
+ * GITHUB IMAGE
  * =====================================================
  */
 
-function githubImage(fileName: string) {
-  return `${GITHUB_IMAGE.replace(/\/$/, "")}/${encodeURIComponent(fileName)}`;
-}
+const GITHUB_RAW =
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
+function imageUrl(fileName: string) {
+  return `${GITHUB_RAW}/${encodeURIComponent(fileName)}`;
+}
 
 /*
  * =====================================================
@@ -77,15 +34,14 @@ function githubImage(fileName: string) {
  */
 
 const monalisaImages = [
-  githubImage("파타야 모나리자 가라오케 메인.webp"),
-  githubImage("파타야 모나리자 가라오케 외관.webp"),
-  githubImage("파타야 모나리자 가라오케 로비.webp"),
-  githubImage("파타야 모나리자 가라오케 룸1.webp"),
-  githubImage("파타야 모나리자 가라오케 룸2.webp"),
-  githubImage("파타야 모나리자 가라오케 룸3.webp"),
-  githubImage("파타야 모나리자 가라오케 푸잉.webp"),
+  imageUrl("파타야 모나리자 가라오케 메인.webp"),
+  imageUrl("파타야 모나리자 가라오케 외관.webp"),
+  imageUrl("파타야 모나리자 가라오케 로비.webp"),
+  imageUrl("파타야 모나리자 가라오케 룸1.webp"),
+  imageUrl("파타야 모나리자 가라오케 룸2.webp"),
+  imageUrl("파타야 모나리자 가라오케 룸3.webp"),
+  imageUrl("파타야 모나리자 가라오케 푸잉.webp"),
 ];
-
 
 /*
  * =====================================================
@@ -106,7 +62,6 @@ export function generateStaticParams() {
     },
   ];
 }
-
 
 /*
  * =====================================================
@@ -129,11 +84,12 @@ export async function generateMetadata({
         "파타야 모나리자 가라오케 | Pattaya Mona Lisa Karaoke | 태국 눈탱이 방지 위원회",
 
       description:
-        "파타야 모나리자 가라오케의 위치, 영업시간, Google 평점, 룸과 시설, 이용방법 및 방문 전 체크사항을 확인하세요.",
+        "파타야 모나리자 가라오케의 위치, 영업시간, 룸과 시설, 가격 및 방문 전 확인사항을 한곳에서 확인하세요.",
 
       keywords: [
         "파타야 모나리자 가라오케",
         "파타야 모나리자",
+        "Pattaya Mona Lisa Karaoke",
         "Mona Lisa Karaoke Pattaya",
         "파타야 가라오케",
         "파타야 KTV",
@@ -152,7 +108,7 @@ export async function generateMetadata({
           "파타야 모나리자 가라오케 | Pattaya Mona Lisa Karaoke",
 
         description:
-          "파타야 모나리자 가라오케 위치, 영업시간, 룸과 시설 및 이용 정보를 확인하세요.",
+          "파타야 모나리자 가라오케 위치, 시설, 룸 사진 및 이용 정보를 확인하세요.",
 
         type: "website",
 
@@ -170,7 +126,7 @@ export async function generateMetadata({
     title: "파타야 가라오케 | 태국 눈탱이 방지 위원회",
 
     description:
-      "파타야 가라오케의 위치와 영업시간 및 이용 정보를 확인하세요.",
+      "파타야 가라오케의 위치와 영업시간 및 업소 정보를 확인하세요.",
 
     alternates: {
       canonical: `/pattaya/karaoke/${slug}`,
@@ -178,10 +134,9 @@ export async function generateMetadata({
   };
 }
 
-
 /*
  * =====================================================
- * BREADCRUMB JSON-LD
+ * BREADCRUMB
  * =====================================================
  */
 
@@ -197,21 +152,18 @@ function BreadcrumbJsonLd() {
         name: "홈",
         item: "/",
       },
-
       {
         "@type": "ListItem",
         position: 2,
         name: "파타야",
         item: "/pattaya",
       },
-
       {
         "@type": "ListItem",
         position: 3,
         name: "가라오케",
         item: "/pattaya/karaoke",
       },
-
       {
         "@type": "ListItem",
         position: 4,
@@ -231,7 +183,6 @@ function BreadcrumbJsonLd() {
     />
   );
 }
-
 
 /*
  * =====================================================
@@ -277,10 +228,9 @@ function MonaLisaBusinessJsonLd() {
   );
 }
 
-
 /*
  * =====================================================
- * MAIN PAGE
+ * PAGE
  * =====================================================
  */
 
@@ -293,13 +243,6 @@ export default async function PattayaKaraokePage({
 }) {
   const { slug } = await params;
 
-
-  /*
-   * =====================================================
-   * CHECK SLUG
-   * =====================================================
-   */
-
   if (
     slug !== MONALISA_SLUG &&
     slug !== KOREANA_SLUG &&
@@ -307,7 +250,6 @@ export default async function PattayaKaraokePage({
   ) {
     notFound();
   }
-
 
   /*
    * =====================================================
@@ -317,48 +259,46 @@ export default async function PattayaKaraokePage({
 
   if (slug === MONALISA_SLUG) {
     return (
-      <main className="min-h-screen w-full overflow-x-hidden bg-[#0b0b0d] text-white">
+      <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0b0b0d] text-white">
 
         <BreadcrumbJsonLd />
-
         <MonaLisaBusinessJsonLd />
-
 
         {/* =================================================
             HERO
         ================================================= */}
 
-        <section className="relative h-[430px] w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
 
           <img
             src={monalisaImages[0]}
-            alt="파타야 모나리자 가라오케 메인"
-            className="h-full w-full object-cover object-center"
+            alt="파타야 모나리자 가라오케"
+            className="h-full w-full max-w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
           <div className="absolute bottom-0 left-0 right-0">
 
-            <div className="container pb-12">
+            <div className="container pb-10 md:pb-12">
 
               <div className="text-xs font-black tracking-[.3em] text-red-500">
-                PATTAYA · KOREAN KTV
+                PATTAYA · KARAOKE
               </div>
 
               <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
                 파타야 모나리자 가라오케
               </h1>
 
-              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:text-base sm:leading-7">
-                파타야에서 한국인 여행객들에게 알려진
-                모나리자 가라오케입니다.
-                위치와 영업시간, 룸과 시설,
-                이용방법 및 방문 전 확인사항을
-                한곳에서 확인해보세요.
+              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
+                파타야에서 한국식 KTV를 찾는 여행객들에게
+                알려진 모나리자 가라오케입니다.
+                매장 위치와 영업시간, 룸과 시설,
+                이용요금 및 방문 전 확인사항을
+                한곳에서 확인할 수 있습니다.
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <div className="mt-5 flex flex-wrap gap-3 text-sm">
 
                 <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
                   ★ 4.0
@@ -389,7 +329,7 @@ export default async function PattayaKaraokePage({
             GALLERY
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             GALLERY
@@ -400,8 +340,9 @@ export default async function PattayaKaraokePage({
           </h2>
 
           <p className="mt-3 text-sm leading-7 text-zinc-500">
-            모나리자 가라오케의 외관과 내부,
-            룸 분위기를 사진으로 확인해보세요.
+            모나리자 가라오케의 외관과 로비,
+            룸 및 내부 시설 분위기를 사진으로 확인해보세요.
+            사진을 클릭하면 크게 볼 수 있습니다.
           </p>
 
           <ImageGallery
@@ -413,117 +354,302 @@ export default async function PattayaKaraokePage({
 
 
         {/* =================================================
-            PRICE GUIDE
+            PRICE
         ================================================= */}
 
-        <section className="mt-12 w-full overflow-hidden">
+        <section className="mt-10 w-full max-w-full overflow-hidden sm:mt-12">
 
-          <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+          <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
 
-            <div className="mb-10 text-center">
+            <div className="mb-7">
 
-              <p className="text-xs font-black tracking-[0.35em] text-red-500">
-                PRICE GUIDE
+              <p className="text-[12px] font-bold uppercase tracking-[0.35em] text-fuchsia-400">
+                PRICE MENU
               </p>
 
-              <h2 className="mt-3 text-3xl font-black sm:text-4xl">
+              <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">
                 모나리자 가라오케 가격 안내
               </h2>
 
-              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400">
-                온라인에 공개된 가격은 자료에 따라 차이가
-                있을 수 있어 방문 전 최신 이용조건을
-                확인하는 것을 권장합니다.
+              <p className="mt-2 text-sm text-gray-400 sm:text-base">
+                이용 인원과 룸, 시간에 따라 실제 요금이 달라질 수 있습니다.
               </p>
 
             </div>
 
 
-            <div className="mx-auto max-w-3xl rounded-3xl border border-amber-500/40 bg-[#111] p-7 text-center shadow-[0_0_30px_rgba(245,158,11,0.08)] sm:p-9">
+            <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2">
 
-              <p className="text-xs font-black tracking-[0.3em] text-amber-400">
-                CURRENT PRICE
-              </p>
 
-              <h3 className="mt-3 text-2xl font-black sm:text-3xl">
-                이용요금
-              </h3>
+              {/* STANDARD */}
 
-              <p className="mt-5 text-4xl font-black text-amber-400 sm:text-5xl">
-                최신 가격 문의
-              </p>
+              <div
+                className="
+                  group relative overflow-hidden rounded-2xl
+                  border border-cyan-400/30
+                  bg-[#101014]
+                  p-5 sm:p-6
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-cyan-300
+                  hover:shadow-[0_0_28px_rgba(34,211,238,0.22)]
+                "
+              >
 
-              <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-zinc-400">
-                룸 타입, 인원, 이용시간 및 포함 항목에 따라
-                실제 이용금액이 달라질 수 있습니다.
-                예약 전 총 결제금액과 포함사항을
-                확인하는 것이 좋습니다.
-              </p>
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-70" />
+
+                <div className="flex items-start justify-between gap-3">
+
+                  <h3 className="text-xl font-extrabold text-white sm:text-2xl">
+                    일반 룸
+                  </h3>
+
+                  <span
+                    className="
+                      shrink-0 rounded-full
+                      border border-cyan-400/70
+                      bg-cyan-500/10
+                      px-3 py-1
+                      text-[11px] font-bold text-cyan-300
+                    "
+                  >
+                    BASIC
+                  </span>
+
+                </div>
+
+                <div className="mt-5">
+
+                  <div className="flex items-center justify-between gap-4 border-b border-white/10 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      기본 이용
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-cyan-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      인원별 이용
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-cyan-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              {/* VIP */}
+
+              <div
+                className="
+                  group relative overflow-hidden rounded-2xl
+                  border border-amber-400/40
+                  bg-[#101014]
+                  p-5 sm:p-6
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-amber-300
+                  hover:shadow-[0_0_30px_rgba(251,191,36,0.25)]
+                "
+              >
+
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+
+                <div className="flex items-start justify-between gap-3">
+
+                  <h3 className="text-xl font-extrabold text-white sm:text-2xl">
+                    VIP 룸
+                  </h3>
+
+                  <span
+                    className="
+                      shrink-0 rounded-full
+                      border border-amber-400/70
+                      bg-amber-500/10
+                      px-3 py-1
+                      text-[11px] font-bold text-amber-300
+                    "
+                  >
+                    VIP
+                  </span>
+
+                </div>
+
+                <div className="mt-5">
+
+                  <div className="flex items-center justify-between gap-4 border-b border-white/10 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      기본 이용
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-amber-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      인원별 이용
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-amber-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              {/* DRINK */}
+
+              <div
+                className="
+                  group relative overflow-hidden rounded-2xl
+                  border border-fuchsia-500/40
+                  bg-[#101014]
+                  p-5 sm:p-6
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-fuchsia-300
+                  hover:shadow-[0_0_30px_rgba(217,70,239,0.28)]
+                "
+              >
+
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-fuchsia-400 to-transparent" />
+
+                <div className="flex items-start justify-between gap-3">
+
+                  <h3 className="text-xl font-extrabold text-white sm:text-2xl">
+                    주류 & 음식
+                  </h3>
+
+                  <span
+                    className="
+                      shrink-0 rounded-full
+                      border border-fuchsia-400/70
+                      bg-fuchsia-500/10
+                      px-3 py-1
+                      text-[11px] font-bold text-fuchsia-300
+                    "
+                  >
+                    MENU
+                  </span>
+
+                </div>
+
+                <div className="mt-5">
+
+                  <div className="flex items-center justify-between gap-4 border-b border-white/10 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      주류
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-fuchsia-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      음식
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-fuchsia-300 sm:text-xl">
+                      가격 문의
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              {/* PICKUP */}
+
+              <div
+                className="
+                  group relative overflow-hidden rounded-2xl
+                  border border-pink-500/40
+                  bg-[#101014]
+                  p-5 sm:p-6
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-pink-300
+                  hover:shadow-[0_0_30px_rgba(236,72,153,0.25)]
+                "
+              >
+
+                <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent" />
+
+                <div className="flex items-start justify-between gap-3">
+
+                  <h3 className="text-xl font-extrabold text-white sm:text-2xl">
+                    픽업 서비스
+                  </h3>
+
+                  <span
+                    className="
+                      shrink-0 rounded-full
+                      border border-pink-400/70
+                      bg-pink-500/10
+                      px-3 py-1
+                      text-[11px] font-bold text-pink-300
+                    "
+                  >
+                    PICKUP
+                  </span>
+
+                </div>
+
+                <div className="mt-5">
+
+                  <div className="flex items-center justify-between gap-4 border-b border-white/10 py-4">
+
+                    <span className="text-sm text-gray-300 sm:text-base">
+                      파타야 지역
+                    </span>
+
+                    <span className="whitespace-nowrap text-lg font-extrabold text-pink-300 sm:text-xl">
+                      문의
+                    </span>
+
+                  </div>
+
+                  <div className="py-4 text-sm leading-7 text-gray-400">
+                    예약 시 숙소 위치와
+                    픽업 가능 여부를 확인하세요.
+                  </div>
+
+                </div>
+
+              </div>
 
             </div>
 
-
-            <div className="mt-8 grid gap-5 sm:grid-cols-3">
-
-              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
-
-                <div className="text-xs font-black tracking-[.2em] text-amber-400">
-                  ROOM
-                </div>
-
-                <h3 className="mt-3 text-xl font-black">
-                  프라이빗 룸
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-zinc-500">
-                  인원에 맞는 룸을
-                  사전 확인하는 것을 권장합니다.
-                </p>
-
-              </div>
-
-
-              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
-
-                <div className="text-xs font-black tracking-[.2em] text-amber-400">
-                  DRINK
-                </div>
-
-                <h3 className="mt-3 text-xl font-black">
-                  주류 및 음식
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-zinc-500">
-                  주문 전 주류와 음식 가격,
-                  포함 항목을 확인하세요.
-                </p>
-
-              </div>
-
-
-              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
-
-                <div className="text-xs font-black tracking-[.2em] text-amber-400">
-                  PICKUP
-                </div>
-
-                <h3 className="mt-3 text-xl font-black">
-                  픽업 서비스
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-zinc-500">
-                  공식 예약처에서는
-                  파타야 지역 픽업 서비스를 안내하고 있습니다.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-6 text-zinc-600">
+            <p className="mx-auto mt-7 max-w-3xl text-center text-xs leading-6 text-gray-600">
               ※ 가격 및 이용조건은 변경될 수 있습니다.
-              방문 전 최신 정보를 확인해주세요.
+              방문 전 최신 가격과 포함사항을 확인해주세요.
             </p>
 
           </div>
@@ -535,11 +661,12 @@ export default async function PattayaKaraokePage({
             BASIC INFO
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="grid gap-4 md:grid-cols-4">
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
               <div className="text-xs text-zinc-500">
                 업종
               </div>
@@ -547,21 +674,25 @@ export default async function PattayaKaraokePage({
               <div className="mt-2 font-bold">
                 한국식 KTV · 가라오케
               </div>
+
             </div>
 
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
               <div className="text-xs text-zinc-500">
                 위치
               </div>
 
               <div className="mt-2 font-bold">
-                파타야 · 나끌루아 일대
+                파타야
               </div>
+
             </div>
 
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
               <div className="text-xs text-zinc-500">
                 영업시간
               </div>
@@ -569,17 +700,20 @@ export default async function PattayaKaraokePage({
               <div className="mt-2 font-bold">
                 18:00 - 00:00
               </div>
+
             </div>
 
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
+
               <div className="text-xs text-zinc-500">
-                Google 평점
+                평점
               </div>
 
               <div className="mt-2 font-bold">
-                ★ 4.0 · 306개
+                ★ 4.0 · Google 리뷰
               </div>
+
             </div>
 
           </div>
@@ -591,7 +725,7 @@ export default async function PattayaKaraokePage({
             ABOUT
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             ABOUT MONA LISA
@@ -610,24 +744,22 @@ export default async function PattayaKaraokePage({
             </p>
 
             <p>
-              현재 확인되는 정보에서는 파타야 시내
-              나끌루아(Na Kluea) 및 Pattaya City 일대에
-              위치한 것으로 안내되고 있습니다.
+              파타야 시내에서 이동하기 편리한 위치에 있으며,
+              일행끼리 프라이빗하게 이용할 수 있는
+              룸 형태의 공간을 중심으로 운영됩니다.
             </p>
 
             <p>
-              프라이빗 룸을 이용하면서 노래와 음식,
-              주류 등을 함께 즐길 수 있는 형태이며,
-              단체 방문을 포함한 예약 이용이 가능한 것으로
-              확인됩니다.
+              노래와 함께 주류 및 음식을 즐길 수 있으며,
+              방문 인원과 이용시간에 따라
+              실제 이용조건이 달라질 수 있습니다.
             </p>
 
             <p>
-              공식 예약처에서는 파타야 전 지역
-              픽업 서비스를 안내하고 있어,
-              처음 방문하는 여행객이라면 예약 시
-              숙소 위치와 픽업 가능 여부를 함께
-              확인하는 것이 편리합니다.
+              처음 방문하는 경우에는 예약 전에
+              룸 이용 가능 여부와 가격,
+              주류 및 음식 비용,
+              추가 비용 등을 확인하는 것을 권장합니다.
             </p>
 
           </div>
@@ -639,7 +771,7 @@ export default async function PattayaKaraokePage({
             LOCATION
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
 
@@ -652,32 +784,30 @@ export default async function PattayaKaraokePage({
             </h2>
 
             <p className="mt-6 leading-8 text-zinc-400">
-              현재 공개된 지도·업소 정보에서는
-              Pattaya City, Bang Lamung District,
-              Chon Buri 20150 지역으로 확인됩니다.
+              모나리자 가라오케는 파타야 지역에
+              위치한 것으로 안내되고 있습니다.
+              방문 전 최신 지도 위치를 확인하는 것을 권장합니다.
             </p>
 
             <div className="mt-8 rounded-2xl bg-black/40 p-6">
 
               <div className="text-sm text-zinc-500">
-                위치
+                지역
               </div>
 
               <div className="mt-2 text-lg font-bold">
                 Pattaya City, Chon Buri 20150
               </div>
 
-              <div className="mt-2 text-sm leading-6 text-zinc-400">
-                Pattaya 3rd Road · Soi 2 / Na Kluea 일대
+              <div className="mt-1 text-sm leading-6 text-zinc-400">
+                Pattaya · Na Kluea 일대
               </div>
 
             </div>
 
             <p className="mt-6 text-sm leading-7 text-zinc-500">
-              주소 표기가 자료마다 조금씩 다르게 나타나므로
-              방문 전 Google 지도에서
-              “Mona Lisa Karaoke Pattaya”를 검색해
-              최신 위치를 확인하는 것을 권장합니다.
+              지도에서 “Mona Lisa Karaoke Pattaya”를
+              검색하면 최신 위치를 확인하는 데 도움이 됩니다.
             </p>
 
           </div>
@@ -689,7 +819,7 @@ export default async function PattayaKaraokePage({
             OPENING HOURS
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="grid gap-6 md:grid-cols-2">
 
@@ -708,7 +838,7 @@ export default async function PattayaKaraokePage({
               </div>
 
               <p className="mt-4 text-sm leading-7 text-zinc-500">
-                현재 확인되는 지도 및 공식 안내 기준으로
+                현재 확인되는 정보에서는
                 매일 오후 6시부터 자정까지 운영되는 것으로
                 안내되고 있습니다.
               </p>
@@ -719,18 +849,21 @@ export default async function PattayaKaraokePage({
             <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
 
               <div className="text-xs font-black tracking-[.3em] text-red-500">
-                RESERVATION
+                VISIT
               </div>
 
               <h2 className="mt-3 text-3xl font-black">
-                예약 및 방문
+                방문 전 확인
               </h2>
 
-              <p className="mt-8 text-sm leading-7 text-zinc-500">
-                주말이나 저녁 시간대 방문 예정이라면
-                미리 예약하고 방문하는 것을 권장합니다.
-                예약 시 인원과 방문시간,
-                픽업 여부를 함께 확인하세요.
+              <div className="mt-8 text-2xl font-black">
+                예약 후 방문 권장
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                주말이나 저녁 시간대에는 방문 전
+                예약 및 룸 이용 가능 여부를
+                확인하는 것을 권장합니다.
               </p>
 
             </div>
@@ -744,7 +877,7 @@ export default async function PattayaKaraokePage({
             FACILITIES
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             FACILITIES
@@ -786,7 +919,7 @@ export default async function PattayaKaraokePage({
 
               <p className="mt-3 text-sm leading-7 text-zinc-500">
                 일행끼리 이용할 수 있는
-                프라이빗 룸 형태로 운영됩니다.
+                프라이빗 룸 형태의 공간입니다.
               </p>
 
             </div>
@@ -803,8 +936,8 @@ export default async function PattayaKaraokePage({
               </h3>
 
               <p className="mt-3 text-sm leading-7 text-zinc-500">
-                공식 예약처에서 파타야 지역
-                픽업 서비스를 안내하고 있습니다.
+                예약 시 파타야 지역 픽업 가능 여부를
+                함께 확인하는 것을 권장합니다.
               </p>
 
             </div>
@@ -818,7 +951,7 @@ export default async function PattayaKaraokePage({
             TRANSPORT
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
 
@@ -834,22 +967,19 @@ export default async function PattayaKaraokePage({
 
               <p>
                 파타야 시내에서 이동한다면
-                Grab 또는 Bolt를 이용해
-                “Mona Lisa Karaoke”를 검색하는 방법이
-                편리합니다.
+                Grab이나 Bolt를 이용하는 방법이 편리합니다.
               </p>
 
               <p>
-                공식 예약처에서는 파타야 전 지역
-                무료 픽업 서비스를 안내하고 있으므로
-                예약 시 숙소 위치를 전달하고
-                픽업 가능 여부를 확인하는 것도 좋습니다.
+                차량 호출 앱에서
+                “Mona Lisa Karaoke Pattaya”를 검색하고
+                출발 전에 목적지 위치를 확인하세요.
               </p>
 
               <p>
-                처음 방문하는 경우에는 출발 전에
-                지도상의 위치와 영업 여부를
-                다시 확인하는 것을 권장합니다.
+                픽업 서비스를 이용하는 경우에는
+                예약할 때 숙소 위치를 전달하고
+                픽업 가능 여부를 확인하는 것이 좋습니다.
               </p>
 
             </div>
@@ -863,7 +993,7 @@ export default async function PattayaKaraokePage({
             GOOD TO KNOW
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             GOOD TO KNOW
@@ -876,14 +1006,14 @@ export default async function PattayaKaraokePage({
           <div className="mt-8 grid gap-4 md:grid-cols-2">
 
             {[
-              "방문 전 당일 영업시간 확인",
-              "룸 이용료와 포함 항목 확인",
-              "음식 및 주류 가격 확인",
-              "추가 주문 비용 확인",
-              "픽업 가능 여부 확인",
+              "방문 당일 영업시간 확인",
+              "정확한 매장 위치 확인",
+              "이용 가능한 룸 확인",
+              "룸 이용요금 확인",
+              "주류 및 음식 가격 확인",
+              "추가 비용 여부 확인",
               "최종 결제금액 확인",
               "주말 및 피크타임 예약 확인",
-              "Google 지도에서 최신 위치 확인",
             ].map((item) => (
 
               <div
@@ -910,7 +1040,7 @@ export default async function PattayaKaraokePage({
             FAQ
         ================================================= */}
 
-        <section className="container py-12">
+        <section className="container py-10 md:py-12">
 
           <div className="text-xs font-black tracking-[.3em] text-red-500">
             FAQ
@@ -929,8 +1059,8 @@ export default async function PattayaKaraokePage({
               </summary>
 
               <p className="mt-4 text-sm leading-7 text-zinc-500">
-                현재 확인되는 정보에서는 매일
-                18:00부터 00:00까지 운영되는 것으로
+                현재 확인되는 정보에서는
+                매일 18:00부터 00:00까지 운영되는 것으로
                 안내되고 있습니다.
               </p>
 
@@ -940,15 +1070,13 @@ export default async function PattayaKaraokePage({
             <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
 
               <summary className="cursor-pointer font-bold">
-                위치는 어디인가요?
+                모나리자 가라오케는 어디에 있나요?
               </summary>
 
               <p className="mt-4 text-sm leading-7 text-zinc-500">
-                Pattaya City, Chon Buri 20150 지역으로
-                확인되며, 지도 자료에서는
-                Pattaya 3rd Road 및 Soi 2,
-                Na Kluea 일대가 함께 표시됩니다.
-                방문 전 최신 지도 위치를 확인하세요.
+                파타야 지역에 위치한 것으로 안내되고 있습니다.
+                방문 전 Google 지도에서
+                최신 위치를 확인하는 것을 권장합니다.
               </p>
 
             </details>
@@ -961,10 +1089,24 @@ export default async function PattayaKaraokePage({
               </summary>
 
               <p className="mt-4 text-sm leading-7 text-zinc-500">
-                온라인에 공개된 가격 정보가 서로 다르므로
-                이 페이지에서는 특정 금액을 확정하지 않았습니다.
-                방문 인원과 룸, 이용시간에 따른
-                최신 가격을 예약 전에 확인하는 것을 권장합니다.
+                룸 종류와 이용시간, 인원 및 주문 내용에 따라
+                실제 이용금액이 달라질 수 있습니다.
+                방문 전에 최신 가격과 포함사항을 확인하세요.
+              </p>
+
+            </details>
+
+
+            <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
+
+              <summary className="cursor-pointer font-bold">
+                예약을 하고 방문해야 하나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                저녁 시간대나 주말 방문이라면
+                원하는 룸 이용을 위해 미리 예약하는 것을
+                권장합니다.
               </p>
 
             </details>
@@ -977,10 +1119,8 @@ export default async function PattayaKaraokePage({
               </summary>
 
               <p className="mt-4 text-sm leading-7 text-zinc-500">
-                공식 예약처에서는 파타야 전 지역
-                무료 픽업 서비스를 안내하고 있습니다.
-                예약 시 숙소 위치와 픽업 가능 여부를
-                함께 확인하세요.
+                예약 시 파타야 지역 픽업 가능 여부를
+                확인하는 것을 권장합니다.
               </p>
 
             </details>
@@ -994,7 +1134,7 @@ export default async function PattayaKaraokePage({
             CTA
         ================================================= */}
 
-        <section className="container py-16">
+        <section className="container py-14 md:py-16">
 
           <div className="rounded-3xl border border-red-500/20 bg-red-950/10 p-8 text-center md:p-12">
 
@@ -1008,9 +1148,9 @@ export default async function PattayaKaraokePage({
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
               파타야 모나리자 가라오케의
-              위치와 영업시간, 시설,
-              이용방법 및 방문 전 체크사항을
-              확인해보세요.
+              위치와 영업시간, 룸과 시설,
+              가격 및 방문 전 확인사항을
+              한곳에서 확인해보세요.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">
