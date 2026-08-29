@@ -63,7 +63,8 @@ export default function Home() {
             {/* =========================
                 지역 추천 네온 버튼
             ========================== */}
-            <div className="mt-7 flex flex-wrap gap-4">
+                        <div className="mt-7 flex flex-wrap gap-4">
+
               {/* 방콕 */}
               <a
                 href="/bangkok"
@@ -87,6 +88,7 @@ export default function Home() {
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-red-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
               </a>
 
+
               {/* 파타야 */}
               <a
                 href="/pattaya"
@@ -109,35 +111,42 @@ export default function Home() {
                 <div className="pointer-events-none absolute inset-0 rounded-2xl border border-blue-400/20" />
                 <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-blue-500/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
               </a>
+
+
+              {/* =========================================
+                  에코걸 추천
+              ========================================== */}
+              <a
+                href="/ecogirl"
+                className="group relative min-w-[200px] overflow-hidden rounded-2xl border border-yellow-400/90 bg-black/10 px-7 py-5 text-center backdrop-blur-[2px] shadow-[0_0_8px_rgba(250,204,21,0.65),0_0_22px_rgba(250,204,21,0.25),inset_0_0_14px_rgba(250,204,21,0.08)] transition-all duration-300 hover:-translate-y-1 hover:border-yellow-300 hover:bg-yellow-400/5 hover:shadow-[0_0_14px_rgba(250,204,21,0.9),0_0_35px_rgba(250,204,21,0.4),inset_0_0_20px_rgba(250,204,21,0.12)]"
+              >
+                <div className="relative z-10">
+
+                  <div className="text-[10px] font-black tracking-[0.25em] text-yellow-300">
+                    THAILAND
+                  </div>
+
+                  <div className="mt-1 text-lg font-black text-yellow-300 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">
+                    에코걸 추천
+                  </div>
+
+                  <div className="mt-1 text-xs font-medium text-white">
+                    프로필 보러가기 →
+                  </div>
+
+                </div>
+
+                {/* LED 포인트 */}
+                <div className="pointer-events-none absolute right-3 top-3 h-2.5 w-2.5 rounded-full bg-yellow-300 shadow-[0_0_8px_3px_rgba(250,204,21,0.85)]" />
+
+                <div className="pointer-events-none absolute inset-0 rounded-2xl border border-yellow-300/20" />
+
+                <div className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full bg-yellow-400/10 blur-2xl transition-transform duration-300 group-hover:scale-150" />
+
+              </a>
+
             </div>
-          </div>
-        </div>
-
-        {/* 에코걸 추천 */}
-<Link
-  href="/ecogirl"
-  className="group relative overflow-hidden rounded-2xl border border-yellow-400/80 bg-black/70 px-7 py-5 shadow-[0_0_12px_rgba(250,204,21,0.7),inset_0_0_15px_rgba(250,204,21,0.08)] transition duration-300 hover:border-yellow-300 hover:shadow-[0_0_22px_rgba(250,204,21,1),inset_0_0_20px_rgba(250,204,21,0.12)]"
->
-  {/* LED 빛 효과 */}
-  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/10 to-transparent opacity-0 transition duration-500 group-hover:translate-x-full group-hover:opacity-100" />
-
-  <div className="relative">
-    <div className="text-[11px] font-black tracking-[0.25em] text-yellow-400">
-      THAILAND
-    </div>
-
-    <div className="mt-1 text-xl font-black text-yellow-300">
-      에코걸 추천
-    </div>
-
-    <div className="mt-2 text-sm font-bold text-white">
-      프로필 보러가기 →
-    </div>
-  </div>
-</Link>
-        
-      </section>
-
+            
       {/* ==================================================
           1. 추천 업소
       ================================================== */}
