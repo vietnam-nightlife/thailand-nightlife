@@ -5,45 +5,93 @@ import ImageGallery from "@/components/ImageGallery";
 
 /*
  * =====================================================
- * 파타야 가라오케 전용 상세페이지
- * [slug] 구조
+ * 파타야 모나리자 가라오케 상세페이지
+ * =====================================================
  *
- * /pattaya/karaoke/pattaya-monalisa-karaoke
- * /pattaya/karaoke/pattaya-koreana-karaoke
- * /pattaya/karaoke/pattaya-xxx-karaoke
+ * 사용 이미지
+ *
+ * 파타야 모나리자 가라오케 메인.webp
+ * 파타야 모나리자 가라오케 외관.webp
+ * 파타야 모나리자 가라오케 로비.webp
+ * 파타야 모나리자 가라오케 룸1.webp
+ * 파타야 모나리자 가라오케 룸2.webp
+ * 파타야 모나리자 가라오케 룸3.webp
+ * 파타야 모나리자 가라오케 푸잉.webp
+ *
+ * 중요:
+ * GITHUB_IMAGE에 실제 GitHub Raw 이미지 기본주소를 입력하세요.
+ *
+ * 예:
+ * https://raw.githubusercontent.com/아이디/저장소/main
+ *
+ * 이미지가 저장된 폴더가 있다면:
+ *
+ * https://raw.githubusercontent.com/아이디/저장소/main/public/images
+ *
  * =====================================================
  */
 
-// 기존 프로젝트에서 사용하던 GITHUB_IMAGE 주소를 넣으세요.
-const GITHUB_IMAGE = "기존에 사용하시던 GITHUB_IMAGE 주소";
+
+/*
+ * =====================================================
+ * GITHUB IMAGE BASE URL
+ * =====================================================
+ *
+ * 기존 프로젝트에서 사용하던 실제 주소를 넣으세요.
+ *
+ * 예:
+ * https://raw.githubusercontent.com/username/repository/main
+ *
+ */
+
+const GITHUB_IMAGE =
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
+
+
+/*
+ * =====================================================
+ * SLUG
+ * =====================================================
+ */
 
 const MONALISA_SLUG = "pattaya-monalisa-karaoke";
 const KOREANA_SLUG = "pattaya-koreana-karaoke";
 const XXX_SLUG = "pattaya-xxx-karaoke";
 
+
+/*
+ * =====================================================
+ * IMAGE URL
+ * =====================================================
+ */
+
+function githubImage(fileName: string) {
+  return `${GITHUB_IMAGE.replace(/\/$/, "")}/${encodeURIComponent(fileName)}`;
+}
+
+
+/*
+ * =====================================================
+ * MONA LISA IMAGES
+ * =====================================================
+ */
+
 const monalisaImages = [
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 메인.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 외관.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 로비.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 룸1.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 룸2.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 룸3.webp"
-  )}`,
-  `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 푸잉.webp"
-  )}`,
+  githubImage("파타야 모나리자 가라오케 메인.webp"),
+  githubImage("파타야 모나리자 가라오케 외관.webp"),
+  githubImage("파타야 모나리자 가라오케 로비.webp"),
+  githubImage("파타야 모나리자 가라오케 룸1.webp"),
+  githubImage("파타야 모나리자 가라오케 룸2.webp"),
+  githubImage("파타야 모나리자 가라오케 룸3.webp"),
+  githubImage("파타야 모나리자 가라오케 푸잉.webp"),
 ];
+
+
+/*
+ * =====================================================
+ * STATIC PARAMS
+ * =====================================================
+ */
 
 export function generateStaticParams() {
   return [
@@ -58,6 +106,13 @@ export function generateStaticParams() {
     },
   ];
 }
+
+
+/*
+ * =====================================================
+ * METADATA
+ * =====================================================
+ */
 
 export async function generateMetadata({
   params,
@@ -113,13 +168,22 @@ export async function generateMetadata({
 
   return {
     title: "파타야 가라오케 | 태국 눈탱이 방지 위원회",
+
     description:
       "파타야 가라오케의 위치와 영업시간 및 이용 정보를 확인하세요.",
+
     alternates: {
       canonical: `/pattaya/karaoke/${slug}`,
     },
   };
 }
+
+
+/*
+ * =====================================================
+ * BREADCRUMB JSON-LD
+ * =====================================================
+ */
 
 function BreadcrumbJsonLd() {
   const jsonLd = {
@@ -133,18 +197,21 @@ function BreadcrumbJsonLd() {
         name: "홈",
         item: "/",
       },
+
       {
         "@type": "ListItem",
         position: 2,
         name: "파타야",
         item: "/pattaya",
       },
+
       {
         "@type": "ListItem",
         position: 3,
         name: "가라오케",
         item: "/pattaya/karaoke",
       },
+
       {
         "@type": "ListItem",
         position: 4,
@@ -164,6 +231,13 @@ function BreadcrumbJsonLd() {
     />
   );
 }
+
+
+/*
+ * =====================================================
+ * BUSINESS JSON-LD
+ * =====================================================
+ */
 
 function MonaLisaBusinessJsonLd() {
   const jsonLd = {
@@ -203,6 +277,13 @@ function MonaLisaBusinessJsonLd() {
   );
 }
 
+
+/*
+ * =====================================================
+ * MAIN PAGE
+ * =====================================================
+ */
+
 export default async function PattayaKaraokePage({
   params,
 }: {
@@ -212,9 +293,11 @@ export default async function PattayaKaraokePage({
 }) {
   const { slug } = await params;
 
+
   /*
-   * 지금은 모나리자부터 제작합니다.
-   * 이후 코리아나 / XXX도 같은 구조로 추가합니다.
+   * =====================================================
+   * CHECK SLUG
+   * =====================================================
    */
 
   if (
@@ -225,22 +308,25 @@ export default async function PattayaKaraokePage({
     notFound();
   }
 
+
   /*
    * =====================================================
-   * 현재는 모나리자 페이지
+   * MONA LISA
    * =====================================================
    */
 
   if (slug === MONALISA_SLUG) {
     return (
-      <main className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0b0b0d] text-white">
+      <main className="min-h-screen w-full overflow-x-hidden bg-[#0b0b0d] text-white">
 
         <BreadcrumbJsonLd />
+
         <MonaLisaBusinessJsonLd />
+
 
         {/* =================================================
             HERO
-        ================================================== */}
+        ================================================= */}
 
         <section className="relative h-[430px] w-full overflow-hidden sm:h-[480px] md:h-[560px]">
 
@@ -298,9 +384,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             GALLERY
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -324,9 +411,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             PRICE GUIDE
-        ================================================== */}
+        ================================================= */}
 
         <section className="mt-12 w-full overflow-hidden">
 
@@ -349,6 +437,7 @@ export default async function PattayaKaraokePage({
               </p>
 
             </div>
+
 
             <div className="mx-auto max-w-3xl rounded-3xl border border-amber-500/40 bg-[#111] p-7 text-center shadow-[0_0_30px_rgba(245,158,11,0.08)] sm:p-9">
 
@@ -373,9 +462,11 @@ export default async function PattayaKaraokePage({
 
             </div>
 
+
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
 
               <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
+
                 <div className="text-xs font-black tracking-[.2em] text-amber-400">
                   ROOM
                 </div>
@@ -388,9 +479,12 @@ export default async function PattayaKaraokePage({
                   인원에 맞는 룸을
                   사전 확인하는 것을 권장합니다.
                 </p>
+
               </div>
 
+
               <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
+
                 <div className="text-xs font-black tracking-[.2em] text-amber-400">
                   DRINK
                 </div>
@@ -403,9 +497,12 @@ export default async function PattayaKaraokePage({
                   주문 전 주류와 음식 가격,
                   포함 항목을 확인하세요.
                 </p>
+
               </div>
 
+
               <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center">
+
                 <div className="text-xs font-black tracking-[.2em] text-amber-400">
                   PICKUP
                 </div>
@@ -418,9 +515,11 @@ export default async function PattayaKaraokePage({
                   공식 예약처에서는
                   파타야 지역 픽업 서비스를 안내하고 있습니다.
                 </p>
+
               </div>
 
             </div>
+
 
             <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-6 text-zinc-600">
               ※ 가격 및 이용조건은 변경될 수 있습니다.
@@ -431,9 +530,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             BASIC INFO
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -449,6 +549,7 @@ export default async function PattayaKaraokePage({
               </div>
             </div>
 
+
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
               <div className="text-xs text-zinc-500">
                 위치
@@ -459,6 +560,7 @@ export default async function PattayaKaraokePage({
               </div>
             </div>
 
+
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
               <div className="text-xs text-zinc-500">
                 영업시간
@@ -468,6 +570,7 @@ export default async function PattayaKaraokePage({
                 18:00 - 00:00
               </div>
             </div>
+
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
               <div className="text-xs text-zinc-500">
@@ -483,9 +586,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             ABOUT
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -530,9 +634,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             LOCATION
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -579,9 +684,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             OPENING HOURS
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -609,6 +715,7 @@ export default async function PattayaKaraokePage({
 
             </div>
 
+
             <div className="rounded-3xl border border-white/10 bg-[#111] p-7 md:p-10">
 
               <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -632,9 +739,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             FACILITIES
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -665,6 +773,7 @@ export default async function PattayaKaraokePage({
 
             </div>
 
+
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
 
               <div className="text-3xl">
@@ -681,6 +790,7 @@ export default async function PattayaKaraokePage({
               </p>
 
             </div>
+
 
             <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
 
@@ -703,9 +813,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             TRANSPORT
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -747,9 +858,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             GOOD TO KNOW
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -793,9 +905,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             FAQ
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-12">
 
@@ -823,6 +936,7 @@ export default async function PattayaKaraokePage({
 
             </details>
 
+
             <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
 
               <summary className="cursor-pointer font-bold">
@@ -839,6 +953,7 @@ export default async function PattayaKaraokePage({
 
             </details>
 
+
             <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
 
               <summary className="cursor-pointer font-bold">
@@ -853,6 +968,7 @@ export default async function PattayaKaraokePage({
               </p>
 
             </details>
+
 
             <details className="group rounded-2xl border border-white/10 bg-[#111] p-6">
 
@@ -873,9 +989,10 @@ export default async function PattayaKaraokePage({
 
         </section>
 
+
         {/* =================================================
             CTA
-        ================================================== */}
+        ================================================= */}
 
         <section className="container py-16">
 
@@ -924,31 +1041,44 @@ export default async function PattayaKaraokePage({
     );
   }
 
+
   /*
    * =====================================================
-   * 앞으로 추가할 페이지
+   * KOREANA
    * =====================================================
    */
 
   if (slug === KOREANA_SLUG) {
     return (
-      <main className="min-h-screen bg-[#0b0b0d] text-white p-10">
+      <main className="min-h-screen bg-[#0b0b0d] p-10 text-white">
+
         <h1 className="text-4xl font-black">
           파타야 코리아나 가라오케
         </h1>
+
       </main>
     );
   }
 
+
+  /*
+   * =====================================================
+   * XXX
+   * =====================================================
+   */
+
   if (slug === XXX_SLUG) {
     return (
-      <main className="min-h-screen bg-[#0b0b0d] text-white p-10">
+      <main className="min-h-screen bg-[#0b0b0d] p-10 text-white">
+
         <h1 className="text-4xl font-black">
           파타야 XXX 가라오케
         </h1>
+
       </main>
     );
   }
+
 
   notFound();
 }
