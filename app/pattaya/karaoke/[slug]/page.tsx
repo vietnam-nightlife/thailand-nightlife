@@ -23,19 +23,25 @@ const XXX_SLUG = "pattaya-xxx-karaoke";
 
 const monalisaImages = [
   `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 메인 외관.webp"
+    "파타야 모나리자 가라오케 메인.webp"
   )}`,
   `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 내부 1.webp"
+    "파타야 모나리자 가라오케 외관.webp"
   )}`,
   `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 내부 2.webp"
+    "파타야 모나리자 가라오케 로비.webp"
   )}`,
   `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 내부 3.webp"
+    "파타야 모나리자 가라오케 룸1.webp"
   )}`,
   `${GITHUB_IMAGE}/${encodeURIComponent(
-    "파타야 모나리자 가라오케 내부 4.webp"
+    "파타야 모나리자 가라오케 룸2.webp"
+  )}`,
+  `${GITHUB_IMAGE}/${encodeURIComponent(
+    "파타야 모나리자 가라오케 룸3.webp"
+  )}`,
+  `${GITHUB_IMAGE}/${encodeURIComponent(
+    "파타야 모나리자 가라오케 푸잉.webp"
   )}`,
 ];
 
