@@ -250,6 +250,8 @@ export const places: Place[] = [
     image: `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
 
     gallery: [
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20느낌.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20리셉션.webp`,
       `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸1.webp`,
       `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸2.webp`,
       `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸3.webp`,
