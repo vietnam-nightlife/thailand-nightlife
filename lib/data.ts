@@ -150,7 +150,7 @@ export const places: Place[] = [
       `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸3.webp`,
     ],
 
-    featured: false,
+    featured: true,
   },
 
   // =========================================================
@@ -182,9 +182,9 @@ export const places: Place[] = [
       `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸3.webp`,
     ],
 
-    featured: false,
+    featured: true,
 
-    koreanSupport: false,
+    koreanSupport: true,
   },
 
   // =========================================================
