@@ -15,7 +15,27 @@ const profiles = Array.from({ length: 11 }, (_, i) => {
 });
 
 export default function PattayaEcoGirlPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const prevImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      selectedIndex === 0
+        ? profiles.length - 1
+        : selectedIndex - 1
+    );
+  };
+
+  const nextImage = () => {
+    if (selectedIndex === null) return;
+
+    setSelectedIndex(
+      selectedIndex === profiles.length - 1
+        ? 0
+        : selectedIndex + 1
+    );
+  };
 
   return (
     <main className="min-h-screen bg-[#070707] text-white">
@@ -55,15 +75,15 @@ export default function PattayaEcoGirlPage() {
         </div>
 
 
-        {/* 사진 */}
+        {/* 사진 카드 */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
-          {profiles.map((profile) => (
+          {profiles.map((profile, index) => (
             <button
               key={profile.name}
               type="button"
-              onClick={() => setSelectedImage(profile.image)}
-              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010] text-left"
+              onClick={() => setSelectedIndex(index)}
+              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010]"
             >
               <div className="aspect-[3/4] overflow-hidden">
 
@@ -82,27 +102,64 @@ export default function PattayaEcoGirlPage() {
       </section>
 
 
-      {/* 크게 보기 */}
-      {selectedImage && (
+      {/* =========================
+          사진 크게 보기
+      ========================== */}
+      {selectedIndex !== null && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setSelectedImage(null)}
+          onClick={() => setSelectedIndex(null)}
         >
 
+          {/* 닫기 */}
           <button
             type="button"
-            onClick={() => setSelectedImage(null)}
-            className="absolute right-5 top-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-2xl text-white"
+            onClick={() => setSelectedIndex(null)}
+            className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-3xl text-white hover:bg-black"
           >
             ×
           </button>
 
+
+          {/* 왼쪽 화살표 */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:left-6"
+          >
+            ‹
+          </button>
+
+
+          {/* 큰 사진 */}
           <img
-            src={selectedImage}
-            alt="파타야 에코걸"
-            className="max-h-[92vh] max-w-[95vw] rounded-xl object-contain"
+            src={profiles[selectedIndex].image}
+            alt={profiles[selectedIndex].name}
+            className="max-h-[90vh] max-w-[85vw] rounded-xl object-contain"
             onClick={(e) => e.stopPropagation()}
           />
+
+
+          {/* 오른쪽 화살표 */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-3 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl text-white hover:bg-black sm:right-6"
+          >
+            ›
+          </button>
+
+
+          {/* 사진 번호 */}
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-4 py-2 text-sm font-bold text-white">
+            {selectedIndex + 1} / {profiles.length}
+          </div>
 
         </div>
       )}
