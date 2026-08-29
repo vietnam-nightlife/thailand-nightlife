@@ -8,6 +8,9 @@ const MONALISA_SLUG = "pattaya-karaoke-01";
 const GITHUB_RAW =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
+const monalisaMainImage =
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 모나리자 가라오케 메인.webp")}`;
+
 const monalisaImages = [
   `${GITHUB_RAW}/${encodeURIComponent("파타야 모나리자 가라오케 외관.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 모나리자 가라오케 로비.webp")}`,
