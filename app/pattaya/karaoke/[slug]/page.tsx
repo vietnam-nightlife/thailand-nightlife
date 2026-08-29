@@ -848,7 +848,7 @@ export default async function PattayaKaraokePage({
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
               저녁이나 주말에는 원하는 룸을 이용하기 위해
-              미리 예약하는 것을 권장합니다.
+              미리 예약하는 것을 권장합니다. 예약 없이 방문시에는 자리가 없거나 오래 기다리셔야 할 수 있습니다.
             </p>
 
           </details>
@@ -861,8 +861,7 @@ export default async function PattayaKaraokePage({
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              예약 시 파타야 지역 픽업 가능 여부를
-              확인하시기 바랍니다.
+              3인이상 무료 픽업을 해드리고있습니다. 몇분이신지 말씀하신 후 픽업 원하시는 위치를 말씀주시면 됩니다.
             </p>
 
           </details>
