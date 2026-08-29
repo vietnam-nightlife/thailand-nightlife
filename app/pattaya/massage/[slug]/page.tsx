@@ -16,12 +16,12 @@ const bananaMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 메인.webp")}`;
 
 const bananaImages = [
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 외관.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 로비.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 내부.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 리셉션.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸1.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸3.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸4.webp")}`,
 ];
 
 // =========================================================
