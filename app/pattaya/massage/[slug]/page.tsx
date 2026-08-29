@@ -9,7 +9,7 @@ const GITHUB_RAW =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
 // =========================================================
-// 파타야 바나나 마사지 이미지
+// 이미지
 // =========================================================
 
 const bananaMainImage =
@@ -23,6 +23,10 @@ const bananaImages = [
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸3.webp")}`,
 ];
+
+// =========================================================
+// 정적 경로
+// =========================================================
 
 export function generateStaticParams() {
   return [
@@ -50,20 +54,18 @@ export async function generateMetadata({
   }
 
   return {
-    title:
-      "파타야 바나나 마사지 | Pattaya Banana Massage",
+    title: "파타야 바나나 마사지 | Pattaya Banana Massage",
 
     description:
-      "파타야 바나나 마사지 위치, 영업시간, 이용정보와 매장 사진을 한눈에 확인하세요.",
+      "파타야 바나나 마사지 위치, 영업시간, 마사지 코스와 가격정보를 한눈에 확인하세요.",
 
     keywords: [
       "파타야 바나나 마사지",
       "파타야 마사지",
-      "Pattaya Banana Massage",
-      "Banana Massage Pattaya",
       "파타야 마사지 추천",
       "파타야 마사지샵",
-      "파타야 마사지 위치",
+      "Pattaya Banana Massage",
+      "Banana Massage Pattaya",
     ],
 
     alternates: {
@@ -73,7 +75,7 @@ export async function generateMetadata({
     openGraph: {
       title: "파타야 바나나 마사지",
       description:
-        "파타야 바나나 마사지 위치, 영업시간과 이용정보",
+        "파타야 바나나 마사지 위치, 영업시간, 마사지 코스와 가격정보",
 
       type: "website",
 
@@ -103,21 +105,18 @@ function BreadcrumbJsonLd() {
         name: "홈",
         item: "/",
       },
-
       {
         "@type": "ListItem",
         position: 2,
         name: "파타야",
         item: "/pattaya",
       },
-
       {
         "@type": "ListItem",
         position: 3,
         name: "마사지",
         item: "/pattaya/massage",
       },
-
       {
         "@type": "ListItem",
         position: 4,
@@ -138,54 +137,10 @@ function BreadcrumbJsonLd() {
 }
 
 // =========================================================
-// Business Schema
+// 페이지
 // =========================================================
 
-function BusinessJsonLd() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-
-    name: "Banana Massage Sai3",
-
-    alternateName:
-      "파타야 바나나 마사지",
-
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "345/17-18",
-      addressLocality: "Pattaya",
-      addressRegion: "Chon Buri",
-      postalCode: "20150",
-      addressCountry: "TH",
-    },
-
-    telephone: "+66 92 572 0100",
-
-    openingHours: "Mo-Su 11:30-23:30",
-
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.5",
-      reviewCount: "17",
-    },
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(jsonLd),
-      }}
-    />
-  );
-}
-
-// =========================================================
-// PAGE
-// =========================================================
-
-export default async function PattayaMassagePage({
+export default async function PattayaBananaMassagePage({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -200,7 +155,6 @@ export default async function PattayaMassagePage({
     <main className="min-h-screen overflow-x-hidden bg-[#08080a] text-white">
 
       <BreadcrumbJsonLd />
-      <BusinessJsonLd />
 
       {/* =====================================================
           HERO
@@ -214,7 +168,7 @@ export default async function PattayaMassagePage({
           className="h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
 
         <div className="absolute bottom-0 left-0 right-0">
 
@@ -229,9 +183,9 @@ export default async function PattayaMassagePage({
             </h1>
 
             <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300 sm:text-base">
-              파타야에서 편안하게 마사지를 받을 수 있는
-              바나나 마사지 정보를 한곳에서 확인하세요.
-              위치, 영업시간과 매장 정보를 방문 전에 확인할 수 있습니다.
+              파타야에서 마사지와 휴식을 원하는 여행객을 위한
+              바나나 마사지 정보를 확인해보세요.
+              위치, 영업시간, 마사지 코스와 가격정보를 한곳에서 확인할 수 있습니다.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
@@ -275,8 +229,7 @@ export default async function PattayaMassagePage({
         </h2>
 
         <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-500">
-          매장 외관과 내부 분위기, 마사지 공간을
-          사진으로 확인해보세요.
+          매장 외관과 내부 분위기, 마사지 공간을 사진으로 확인해보세요.
         </p>
 
         <div className="mt-8">
@@ -303,86 +256,216 @@ export default async function PattayaMassagePage({
           </p>
 
           <h2 className="mt-3 text-3xl font-black md:text-4xl">
-            바나나 마사지 가격 안내
+            파타야 바나나 마사지 가격표
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
-            마사지 종류와 이용시간에 따라 실제 가격이
-            달라질 수 있으므로 방문 전 최신 가격을 확인해주세요.
+            바나나 마사지에서 안내하는 코스별 구성과 가격입니다.
           </p>
 
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        {/* =================================================
+            A 코스
+        ================================================= */}
 
-          <div className="rounded-3xl border border-cyan-400/30 bg-[#111114] p-7">
+        <div className="mx-auto mt-10 max-w-5xl space-y-5">
 
-            <span className="text-xs font-black tracking-[0.25em] text-cyan-400">
-              THAI
-            </span>
+          <div className="rounded-3xl border border-white/10 bg-[#111114] p-6 md:p-8">
 
-            <h3 className="mt-3 text-2xl font-black">
-              타이 마사지
-            </h3>
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
 
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              전통적인 타이 마사지 프로그램은
-              방문 전 최신 가격을 확인해주세요.
-            </p>
+              <div>
 
-            <strong className="mt-6 block text-cyan-300">
-              가격 문의
-            </strong>
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  A코스 · 90분
+                </p>
 
-          </div>
+                <h3 className="mt-2 text-2xl font-black">
+                  발 마사지 + 오일 마사지 + 서비스
+                </h3>
 
-          <div className="rounded-3xl border border-amber-400/30 bg-[#111114] p-7">
+              </div>
 
-            <span className="text-xs font-black tracking-[0.25em] text-amber-400">
-              OIL
-            </span>
+              <div className="shrink-0 text-3xl font-black text-white">
+                3,500
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
 
-            <h3 className="mt-3 text-2xl font-black">
-              오일 마사지
-            </h3>
-
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              오일 마사지 이용 가능 여부와
-              최신 가격을 방문 전 확인해주세요.
-            </p>
-
-            <strong className="mt-6 block text-amber-300">
-              가격 문의
-            </strong>
+            </div>
 
           </div>
 
-          <div className="rounded-3xl border border-fuchsia-400/30 bg-[#111114] p-7">
+          {/* =================================================
+              B 코스
+          ================================================= */}
 
-            <span className="text-xs font-black tracking-[0.25em] text-fuchsia-400">
-              OTHER
-            </span>
+          <div className="rounded-3xl border border-white/10 bg-[#111114] p-6 md:p-8">
 
-            <h3 className="mt-3 text-2xl font-black">
-              기타 마사지
-            </h3>
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
 
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              프로그램 및 이용시간은
-              매장에 최신 내용을 확인해주세요.
-            </p>
+              <div>
 
-            <strong className="mt-6 block text-fuchsia-300">
-              가격 문의
-            </strong>
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  B코스 · 120분
+                </p>
+
+                <h3 className="mt-2 text-2xl font-black">
+                  발 마사지 + 바디 스크럽 + 오일 마사지 + 서비스
+                </h3>
+
+              </div>
+
+              <div className="shrink-0 text-3xl font-black text-white">
+                4,000
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              C 코스
+          ================================================= */}
+
+          <div className="rounded-3xl border border-red-500/20 bg-[#111114] p-6 md:p-8">
+
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+
+              <div>
+
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  C코스 · 120분
+                </p>
+
+                <h3 className="mt-2 text-2xl font-black">
+                  발 마사지 + 오일 마사지 30분 (2:1) + 황제 서비스
+                </h3>
+
+                <p className="mt-3 text-sm text-zinc-500">
+                  1명 추가 시 3,000B 추가
+                </p>
+
+              </div>
+
+              <div className="shrink-0 text-3xl font-black text-white">
+                7,000
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              D 코스
+          ================================================= */}
+
+          <div className="rounded-3xl border border-red-500/20 bg-[#111114] p-6 md:p-8">
+
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+
+              <div>
+
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  D코스 · 120분
+                </p>
+
+                <h3 className="mt-2 text-2xl font-black">
+                  발 마사지 + 오일 마사지 30분 + 같이 오신분과 서비스같이
+                </h3>
+
+                <p className="mt-3 text-sm text-zinc-500">
+                  2명부터 가능
+                </p>
+
+              </div>
+
+              <div className="shrink-0 text-3xl font-black text-white">
+                7,000
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              H 코스
+          ================================================= */}
+
+          <div className="rounded-3xl border border-white/10 bg-[#111114] p-6 md:p-8">
+
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+
+              <div>
+
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  H코스 · 60분
+                </p>
+
+                <h3 className="mt-2 text-2xl font-black">
+                  오일 마사지 30분 + 핸드 마무리
+                </h3>
+
+              </div>
+
+              <div className="shrink-0 text-3xl font-black text-white">
+                2,500
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              S 코스
+          ================================================= */}
+
+          <div className="rounded-3xl border border-white/10 bg-[#111114] p-6 md:p-8">
+
+            <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+
+              <div>
+
+                <p className="text-sm font-black tracking-wider text-orange-500">
+                  S코스 · 45분
+                </p>
+
+                <h3 className="mt-2 text-2xl font-black">
+                  숏타임 가성비 서비스 마무리
+                </h3>
+
+              </div>
+
+              <div className="shrink-0 text-3xl font-black text-white">
+                2,700
+                <span className="ml-1 text-lg text-orange-400">
+                  바트
+                </span>
+              </div>
+
+            </div>
 
           </div>
 
         </div>
 
-        <p className="mt-7 text-center text-xs text-zinc-600">
-          ※ 현재 웹에서 확인되는 정확한 마사지별 가격 정보는
-          확인되지 않아 임의로 금액을 기재하지 않았습니다.
+        <p className="mx-auto mt-7 max-w-4xl text-center text-xs leading-6 text-zinc-600">
+          ※ 가격 및 코스 내용은 매장 사정에 따라 변경될 수 있으므로
+          방문 전 최신 정보를 확인해주세요.
         </p>
 
       </section>
@@ -470,16 +553,14 @@ export default async function PattayaMassagePage({
           </p>
 
           <p>
-            현재 확인되는 정보에 따르면
-            파타야 345/17-18 주소에 위치하며,
-            매일 11:30부터 23:30까지 운영되는 것으로
-            안내되고 있습니다.
+            다양한 시간대의 마사지 코스가 있어
+            짧게 이용하려는 여행객부터 여유롭게
+            이용하려는 여행객까지 코스를 비교해볼 수 있습니다.
           </p>
 
           <p>
-            마사지 종류와 이용시간에 따라
-            가격과 이용조건이 달라질 수 있으므로
-            방문 전에 최신 정보를 확인하는 것을 권장합니다.
+            방문 전 원하는 코스와 이용시간,
+            가격 및 이용조건을 확인하는 것을 권장합니다.
           </p>
 
         </div>
@@ -503,9 +584,8 @@ export default async function PattayaMassagePage({
           </h2>
 
           <p className="mt-6 max-w-3xl text-sm leading-8 text-zinc-400">
-            파타야 345/17-18에 위치한 것으로
-            확인됩니다. 방문 전 지도에서
-            최신 위치를 다시 확인해주세요.
+            파타야에서 이용할 수 있는 바나나 마사지입니다.
+            방문 전 지도에서 정확한 위치를 다시 확인해주세요.
           </p>
 
           <div className="mt-8 rounded-2xl bg-black/40 p-6">
@@ -534,49 +614,24 @@ export default async function PattayaMassagePage({
 
       <section className="container py-12">
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
 
-          <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
+          <p className="text-xs font-black tracking-[0.35em] text-red-500">
+            OPENING HOURS
+          </p>
 
-            <p className="text-xs font-black tracking-[0.35em] text-red-500">
-              OPENING HOURS
-            </p>
+          <h2 className="mt-3 text-3xl font-black">
+            영업시간
+          </h2>
 
-            <h2 className="mt-3 text-3xl font-black">
-              영업시간
-            </h2>
+          <p className="mt-8 text-4xl font-black">
+            11:30 - 23:30
+          </p>
 
-            <p className="mt-8 text-4xl font-black">
-              11:30 - 23:30
-            </p>
-
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              현재 확인되는 정보 기준입니다.
-              방문 당일 영업 여부를 다시 확인해주세요.
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
-
-            <p className="text-xs font-black tracking-[0.35em] text-red-500">
-              CONTACT
-            </p>
-
-            <h2 className="mt-3 text-3xl font-black">
-              문의 및 방문
-            </h2>
-
-            <p className="mt-8 text-2xl font-black">
-              +66 92 572 0100
-            </p>
-
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              방문 전 영업시간과 이용 가능한
-              마사지 프로그램을 확인하는 것을 권장합니다.
-            </p>
-
-          </div>
+          <p className="mt-5 text-sm leading-7 text-zinc-500">
+            현재 안내된 영업시간 기준입니다.
+            방문 당일 영업 여부를 다시 확인해주세요.
+          </p>
 
         </div>
 
@@ -609,8 +664,8 @@ export default async function PattayaMassagePage({
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-zinc-500">
-              마사지 프로그램을 이용할 수 있는
-              파타야 마사지 업소입니다.
+              다양한 시간대의 마사지 코스를
+              확인할 수 있습니다.
             </p>
 
           </div>
@@ -622,7 +677,7 @@ export default async function PattayaMassagePage({
             </div>
 
             <h3 className="mt-4 text-xl font-black">
-              늦은 시간까지 운영
+              영업시간
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-zinc-500">
@@ -639,12 +694,12 @@ export default async function PattayaMassagePage({
             </div>
 
             <h3 className="mt-4 text-xl font-black">
-              파타야 위치
+              파타야
             </h3>
 
             <p className="mt-3 text-sm leading-7 text-zinc-500">
-              파타야 345/17-18 주소로
-              안내되고 있습니다.
+              파타야에서 마사지와 휴식을
+              원하는 여행객들이 이용하기 좋습니다.
             </p>
 
           </div>
@@ -677,13 +732,12 @@ export default async function PattayaMassagePage({
             </p>
 
             <p>
-              차량 호출 시 Banana Massage 또는
-              주소 345/17-18을 확인하고
-              목적지를 확인하는 것이 좋습니다.
+              차량 호출 시 매장 이름 또는 정확한
+              주소를 확인하고 목적지를 설정하는 것이 좋습니다.
             </p>
 
             <p>
-              출발 전에 지도에서 현재 영업 위치를
+              출발 전에 지도에서 현재 위치와 영업 여부를
               다시 확인하는 것을 권장합니다.
             </p>
 
@@ -694,7 +748,7 @@ export default async function PattayaMassagePage({
       </section>
 
       {/* =====================================================
-          CHECK
+          GOOD TO KNOW
       ===================================================== */}
 
       <section className="container py-12">
@@ -712,7 +766,7 @@ export default async function PattayaMassagePage({
           {[
             "방문 당일 영업시간 확인",
             "매장 위치 확인",
-            "마사지 프로그램 확인",
+            "원하는 마사지 코스 확인",
             "마사지 이용시간 확인",
             "최신 가격 확인",
             "추가 비용 여부 확인",
@@ -758,9 +812,9 @@ export default async function PattayaMassagePage({
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 정보 기준으로
-              매일 11:30부터 23:30까지 운영됩니다.
-              방문 전 당일 영업 여부를 확인하세요.
+              현재 안내된 영업시간은 매일
+              11:30부터 23:30까지입니다.
+              방문 전 당일 영업 여부를 확인해주세요.
             </p>
 
           </details>
@@ -768,11 +822,11 @@ export default async function PattayaMassagePage({
           <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
 
             <summary className="cursor-pointer font-black">
-              바나나 마사지는 어디에 있나요?
+              바나나 마사지 위치는 어디인가요?
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 주소는
+              현재 안내된 주소는
               345/17-18, Pattaya, Chon Buri 20150입니다.
             </p>
 
@@ -781,14 +835,13 @@ export default async function PattayaMassagePage({
           <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
 
             <summary className="cursor-pointer font-black">
-              마사지 가격은 얼마인가요?
+              마사지 코스는 어떤 것이 있나요?
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              온라인에서 신뢰할 수 있는 최신
-              마사지별 가격표를 확인하지 못했기 때문에
-              임의의 가격은 표시하지 않았습니다.
-              방문 전 최신 가격을 확인해주세요.
+              A코스, B코스, C코스, D코스,
+              H코스, S코스가 안내되어 있습니다.
+              자세한 구성과 가격은 위 가격표에서 확인할 수 있습니다.
             </p>
 
           </details>
@@ -796,12 +849,12 @@ export default async function PattayaMassagePage({
           <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
 
             <summary className="cursor-pointer font-black">
-              전화 문의가 가능한가요?
+              가장 짧은 코스는 무엇인가요?
             </summary>
 
             <p className="mt-4 text-sm leading-7 text-zinc-500">
-              현재 확인되는 전화번호는
-              +66 92 572 0100입니다.
+              S코스가 45분으로 가장 짧은 코스이며
+              가격은 2,700바트로 안내되어 있습니다.
             </p>
 
           </details>
@@ -828,7 +881,7 @@ export default async function PattayaMassagePage({
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
             파타야 바나나 마사지의 위치와
-            영업시간, 이용정보를 확인해보세요.
+            영업시간, 코스 및 가격정보를 확인해보세요.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-3">
