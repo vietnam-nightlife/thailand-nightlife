@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const GITHUB_IMAGE =
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
+
 const cities = [
   {
     slug: "bangkok",
@@ -7,6 +10,7 @@ const cities = [
     name: "방콕 에코걸",
     description:
       "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
+    image: null,
     tags: [
       "방콕 시내 관광",
       "왕궁 · 왓 아룬 · 왓 포",
@@ -20,6 +24,7 @@ const cities = [
     name: "파타야 에코걸",
     description:
       "파타야의 해변과 관광 명소, 야시장, 쇼핑 등 여행 일정에 맞는 다양한 동행 서비스를 확인할 수 있습니다.",
+    image: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EC%97%90%EC%BD%94%EA%B1%B82.webp`,
     tags: [
       "파타야 해변",
       "진리의 성전",
@@ -64,8 +69,25 @@ export default function EcoGirlPage() {
               href={`/ecogirl/${city.slug}`}
               className="group block overflow-hidden rounded-3xl border border-white/10 bg-[#101010] transition duration-300 hover:border-red-500/40 hover:bg-[#141414]"
             >
-              {/* 이미지 자리 */}
+              {/* =========================
+                  이미지
+              ========================== */}
               <div className="relative h-56 overflow-hidden bg-gradient-to-b from-zinc-800/40 to-black">
+                {city.image ? (
+                  <>
+                    <img
+                      src={city.image}
+                      alt={city.name}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-b from-zinc-800/40 to-black" />
+                )}
+
+                {/* 도시명 */}
                 <div className="absolute inset-0 flex items-end p-6">
                   <div>
                     <div className="mb-2 text-xs font-black tracking-[0.3em] text-red-500">
@@ -79,7 +101,9 @@ export default function EcoGirlPage() {
                 </div>
               </div>
 
-              {/* 내용 */}
+              {/* =========================
+                  내용
+              ========================== */}
               <div className="p-6">
                 <p className="text-sm leading-7 text-zinc-400">
                   {city.description}
