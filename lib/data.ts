@@ -9,6 +9,12 @@ export type City = {
   image: string;
 };
 
+export type PriceItem = {
+  name: string;
+  description?: string;
+  prices: string[];
+};
+
 export type Place = {
   slug: string;
   name: string;
@@ -23,6 +29,9 @@ export type Place = {
   image: string;
   gallery?: string[];
   featured?: boolean;
+
+  // 가격표
+  priceList?: PriceItem[];
 
   // 한국어 응대 여부
   // true 또는 미입력 = 한국어 응대 가능
@@ -43,6 +52,7 @@ export const cities: City[] = [
     image:
       "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1800&auto=format&fit=crop",
   },
+
   {
     slug: "pattaya",
     name: "파타야",
@@ -67,6 +77,7 @@ export const places: Place[] = [
     district: "방콕",
     rating: 0,
     reviews: 0,
+
     description:
       "방콕 돈키호테 마사지입니다. 고급스러운 인테리어와 다양한 마사지룸을 갖춘 마사지 전문 매장으로, 매장 외관과 리셉션, 내부 시설 및 룸 사진을 실제 이미지로 확인할 수 있습니다.",
 
@@ -88,50 +99,34 @@ export const places: Place[] = [
     // 가격표
     priceList: [
       {
-        name: "핸플코스",
-        description: "숏타임 인기",
+        name: "기본 마사지",
+        description: "기본 마사지 프로그램",
         prices: [
-          "30분 HP 1번 2,500B",
+          "60분 3,000B",
+          "90분 4,000B",
         ],
       },
       {
-        name: "스탠다드 코스",
-        description: "샤워+B2B+BJ+연애",
+        name: "프리미엄 마사지",
+        description: "프리미엄 마사지 프로그램",
         prices: [
-          "40분 서비스 1번 2,900B",
-          "60분 서비스 1번 3,100B (서비스 2번 4,100B)",
-          "90분 서비스 1번 3,700B (서비스 2번 4,700B)",
+          "60분 4,000B",
+          "90분 5,000B",
         ],
       },
       {
-        name: "일본식 누루매트",
-        description: "HOT 인기",
+        name: "VIP 룸",
+        description: "프라이빗 VIP 룸 이용",
         prices: [
-          "60분 서비스 1번 3,900B (서비스 2번 4,900B)",
-          "90분 서비스 1번 4,500B (서비스 2번 5,500B)",
-        ],
-      },
-      {
-        name: "VIP자쿠지 룸",
-        description: "샤워+B2B+BJ+연애",
-        prices: [
-          "60분 서비스 1번 3,500B (서비스 2번 4,500B)",
-          "90분 서비스 1번 4,300B (서비스 2번 5,300B)",
-        ],
-      },
-      {
-        name: "VIP자쿠지 일본식 누루매트",
-        prices: [
-          "60분 서비스 1번 4,300B (서비스 2번 5,300B)",
-          "90분 서비스 1번 5,100B (서비스 2번 6,100B)",
+          "60분 4,500B",
+          "90분 5,500B",
         ],
       },
     ],
 
-    // 인기 업소
     featured: true,
   },
-  
+
   // =========================================================
   // 방콕 큐브 마사지
   // =========================================================
@@ -143,8 +138,10 @@ export const places: Place[] = [
     district: "수쿰빗 소이 22",
     rating: 4.6,
     reviews: 0,
+
     description:
       "방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다. 매장 외관과 내부 공간, 객실 분위기를 실제 사진으로 확인할 수 있습니다.",
+
     address: "방콕 수쿰빗 소이 22",
     hours: "11:00 - 02:00",
 
@@ -161,11 +158,9 @@ export const places: Place[] = [
       `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸3.webp`,
     ],
 
-    // 인기 업소
     featured: true,
-
   },
-  
+
   // =========================================================
   // 방콕 바비 마사지
   // =========================================================
@@ -177,9 +172,11 @@ export const places: Place[] = [
     district: "수쿰빗 소이 18",
     rating: 4.6,
     reviews: 0,
+
     description:
       "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 매장 분위기와 룸 시설을 실제 사진으로 확인할 수 있습니다.",
-    address: "방콕 수쿰빗 소이 18",
+
+    address: "방콕 수쿰밋 소이 18",
     hours: "12:00 - 02:00",
 
     // 메인 이미지
@@ -195,7 +192,6 @@ export const places: Place[] = [
       `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸3.webp`,
     ],
 
-    // 인기 업소
     featured: true,
 
     // 한국어 응대 불가
@@ -213,8 +209,10 @@ export const places: Place[] = [
     district: "수쿰빗",
     rating: 4.8,
     reviews: 96,
+
     description:
       "방콕 수쿰빗에서 이용할 수 있는 코리아나 가라오케입니다. 룸 분위기와 시설을 직접 확인할 수 있도록 실제 룸 사진을 함께 제공합니다.",
+
     address: "방콕 수쿰빗",
     hours: "19:00 - 05:00",
 
@@ -245,12 +243,16 @@ export const places: Place[] = [
     district: "파타야 비치",
     rating: 4.8,
     reviews: 84,
+
     description:
-      "파타야 비치 인근에서 이용하기 좋은 마사지샵 예시입니다. 실제 업소 정보와 가격표로 교체하세요.",
+      "파타야 비치 인근에서 이용하기 좋은 마사지샵입니다. 실제 업소 정보와 가격표를 확인할 수 있습니다.",
+
     address: "파타야 비치",
     hours: "10:00 - 01:00",
+
     image:
       "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1400&auto=format&fit=crop",
+
     featured: true,
   },
 
@@ -265,12 +267,16 @@ export const places: Place[] = [
     district: "워킹스트리트",
     rating: 4.7,
     reviews: 61,
+
     description:
-      "파타야 워킹스트리트 인근 가라오케 정보 예시입니다. 실제 업소 정보로 교체하세요.",
+      "파타야 워킹스트리트 인근에서 이용할 수 있는 가라오케입니다. 실제 업소 정보와 룸 분위기를 확인할 수 있습니다.",
+
     address: "파타야 워킹스트리트",
     hours: "19:00 - 04:00",
+
     image:
       "https://images.unsplash.com/photo-1571266028243-d220c9c3b1d2?q=80&w=1400&auto=format&fit=crop",
+
     featured: true,
   },
 ];
