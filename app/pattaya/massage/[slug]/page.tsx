@@ -1,203 +1,183 @@
-export type CitySlug = "bangkok" | "pattaya";
-export type CategorySlug = "massage" | "karaoke";
+import { getPlace } from "@/lib/data";
+import { notFound } from "next/navigation";
 
-export type City = {
-  slug: CitySlug;
-  name: string;
-  english: string;
-  description: string;
-  image: string;
+type PageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
 };
 
-export type PriceItem = {
-  name: string;
-  description?: string;
-  prices: string[];
-};
+export default async function MassageDetailPage({
+  params,
+}: PageProps) {
+  const { slug } = await params;
 
-export type Place = {
-  slug: string;
-  name: string;
-  city: CitySlug;
-  category: CategorySlug;
-  district: string;
-  rating: number;
-  reviews: number;
-  description: string;
-  address: string;
-  hours: string;
-  image: string;
-  gallery?: string[];
-  featured?: boolean;
+  const place = getPlace(slug);
 
-  priceList?: PriceItem[];
+  if (!place) {
+    notFound();
+  }
 
-  koreanSupport?: boolean;
-};
+  // 파타야 마사지 페이지만 허용
+  if (place.city !== "pattaya" || place.category !== "massage") {
+    notFound();
+  }
 
-const GITHUB_IMAGE =
-  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
+  return (
+    <main className="min-h-screen bg-[#faf8f5]">
+      {/* 메인 이미지 */}
+      <section className="relative w-full overflow-hidden bg-black">
+        <img
+          src={place.image}
+          alt={place.name}
+          className="h-[420px] w-full object-cover md:h-[520px]"
+        />
 
-export const cities: City[] = [
-  {
-    slug: "bangkok",
-    name: "방콕",
-    english: "BANGKOK",
-    description:
-      "태국 방콕의 마사지와 가라오케 정보를 지역별로 확인하세요.",
-    image:
-      "https://images.unsplash.com/photo-1508009603885-50cf7c579365?q=80&w=1800&auto=format&fit=crop",
-  },
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-  {
-    slug: "pattaya",
-    name: "파타야",
-    english: "PATTAYA",
-    description:
-      "파타야 여행에 필요한 마사지 정보를 한곳에서 확인하세요.",
-    image:
-      "https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=1800&auto=format&fit=crop",
-  },
-];
+        <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-6xl px-5 pb-8">
+          <p className="mb-2 text-sm font-medium text-white/80">
+            PATTAYA · MASSAGE
+          </p>
 
-export const places: Place[] = [
+          <h1 className="text-3xl font-bold text-white md:text-5xl">
+            {place.name}
+          </h1>
 
-  // =========================================================
-  // 파타야 바나나 마사지
-  // =========================================================
-  {
-    slug: "pattaya-massage-01",
-    name: "파타야 바나나 마사지",
-    city: "pattaya",
-    category: "massage",
-    district: "파타야",
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-white">
+            <span>★ {place.rating}</span>
+            <span>리뷰 {place.reviews}</span>
+            <span>{place.district}</span>
+          </div>
+        </div>
+      </section>
 
-    rating: 4.5,
-    reviews: 17,
+      {/* 기본 정보 */}
+      <section className="mx-auto max-w-6xl px-5 py-8">
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-2xl bg-white p-5 shadow-sm">
+            <p className="mb-2 text-sm text-gray-500">위치</p>
+            <p className="font-semibold text-gray-900">
+              {place.address}
+            </p>
+          </div>
 
-    description:
-      "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
+          <div className="rounded-2xl bg-white p-5 shadow-sm">
+            <p className="mb-2 text-sm text-gray-500">영업시간</p>
+            <p className="font-semibold text-gray-900">
+              {place.hours}
+            </p>
+          </div>
 
-    address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
-    hours: "11:30 - 23:30",
+          <div className="rounded-2xl bg-white p-5 shadow-sm">
+            <p className="mb-2 text-sm text-gray-500">평점</p>
+            <p className="font-semibold text-gray-900">
+              ★ {place.rating} / 5.0
+            </p>
+          </div>
+        </div>
+      </section>
 
-    image:
-      `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
+      {/* 소개 */}
+      <section className="mx-auto max-w-6xl px-5 pb-10">
+        <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+          <h2 className="mb-4 text-2xl font-bold text-gray-900">
+            {place.name} 소개
+          </h2>
 
-    featured: true,
-  },
+          <p className="leading-8 text-gray-600">
+            {place.description}
+          </p>
+        </div>
+      </section>
 
+      {/* 가격표 */}
+      {place.priceList && place.priceList.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pb-10">
+          <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+            <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              {place.name} 가격표
+            </h2>
 
-  // =========================================================
-  // 파타야 88 마사지
-  // =========================================================
-  {
-    slug: "pattaya-88-massage",
-    name: "파타야 88 마사지",
-    city: "pattaya",
-    category: "massage",
-    district: "파타야",
+            <div className="space-y-5">
+              {place.priceList.map((item, index) => (
+                <div
+                  key={`${item.name}-${index}`}
+                  className="rounded-xl border border-gray-200 p-5"
+                >
+                  <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        {item.name}
+                      </h3>
 
-    rating: 4.6,
-    reviews: 0,
+                      {item.description && (
+                        <p className="mt-1 text-sm leading-6 text-gray-500">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
 
-    description:
-      "파타야에서 이용할 수 있는 88 마사지입니다. 태국 마사지와 발마사지, 오일 및 아로마 마사지부터 전립선 A코스와 서비스 B코스, 2:1 관리 및 VIP 출장 코스까지 다양한 프로그램을 운영하고 있습니다. 매장 내부와 마사지룸 사진을 통해 실제 분위기를 확인할 수 있습니다.",
+                  <div className="mt-4 grid gap-2">
+                    {item.prices.map((price, priceIndex) => (
+                      <div
+                        key={`${price}-${priceIndex}`}
+                        className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3"
+                      >
+                        <span className="text-gray-700">
+                          {price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
 
-    address: "Pattaya, Chon Buri, Thailand",
-    hours: "11:00 - 00:00",
+            <p className="mt-6 text-center text-sm text-gray-500">
+              ※ 가격 및 코스는 현장 사정에 따라 변경될 수 있습니다.
+            </p>
+          </div>
+        </section>
+      )}
 
-    image:
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.png`,
+      {/* 갤러리 */}
+      {place.gallery && place.gallery.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pb-12">
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">
+            매장 사진
+          </h2>
 
-    gallery: [
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸1.png`,
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸2.png`,
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸3.png`,
-      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸4.png`,
-    ],
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {place.gallery.map((image, index) => (
+              <div
+                key={`${image}-${index}`}
+                className="overflow-hidden rounded-2xl bg-white shadow-sm"
+              >
+                <img
+                  src={image}
+                  alt={`${place.name} 사진 ${index + 1}`}
+                  className="h-64 w-full object-cover transition duration-300 hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
-    priceList: [
-      {
-        name: "타이 / 발마사지",
-        description:
-          "전신 또는 발의 피로를 풀어주는 기본 코스",
-        prices: [
-          "60분 400바트",
-        ],
-      },
+      {/* 하단 안내 */}
+      <section className="border-t bg-white">
+        <div className="mx-auto max-w-6xl px-5 py-10 text-center">
+          <h2 className="text-xl font-bold text-gray-900">
+            {place.name}
+          </h2>
 
-      {
-        name: "오일 / 아로마마사지",
-        description:
-          "아로마 오일을 사용하여 몸과 마음의 긴장을 풀어주는 힐링 코스",
-        prices: [
-          "60분 500바트",
-        ],
-      },
-
-      {
-        name: "전립선 A코스 마사지",
-        description:
-          "전립선 집중 관리와 전신 마사지를 함께 받는 프리미엄 코스",
-        prices: [
-          "90분 2,000바트",
-        ],
-      },
-
-      {
-        name: "서비스 B코스 마사지",
-        description:
-          "섬세한 집중 관리와 특별한 서비스가 포함된 만족도 높은 코스",
-        prices: [
-          "90분 3,000바트",
-        ],
-      },
-
-      {
-        name: "황제 2:1 전립선 A",
-        description:
-          "두 명의 관리사가 동시에 케어하는 스페셜 관리 코스",
-        prices: [
-          "90분 3,000바트",
-        ],
-      },
-
-      {
-        name: "황제 2:1 서비스 B",
-        description:
-          "황제급 서비스와 2:1 관리가 만난 최고급 프리미엄 코스",
-        prices: [
-          "90분 4,000바트",
-        ],
-      },
-
-      {
-        name: "황제 2:1 VIP 출장",
-        description:
-          "최고급 VIP 케어를 원하는 분들을 위한 출장 전용 프리미엄 코스",
-        prices: [
-          "90분 5,800바트",
-        ],
-      },
-    ],
-
-    featured: true,
-
-    koreanSupport: true,
-  },
-];
-
-export function getCity(slug: string) {
-  return cities.find((c) => c.slug === slug);
-}
-
-export function getPlaces(city: string, category?: string) {
-  return places.filter(
-    (p) => p.city === city && (!category || p.category === category)
+          <p className="mt-2 text-sm text-gray-500">
+            방문 전 영업시간과 가격을 다시 확인해주세요.
+          </p>
+        </div>
+      </section>
+    </main>
   );
-}
-
-export function getPlace(slug: string) {
-  return places.find((p) => p.slug === slug);
 }
