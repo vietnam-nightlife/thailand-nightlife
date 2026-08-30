@@ -291,7 +291,6 @@ export const places: Place[] = [
     `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸1.webp`,
     `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸2.webp`,
     `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸3.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸4.webp`,
   ],
 
   priceList: [
