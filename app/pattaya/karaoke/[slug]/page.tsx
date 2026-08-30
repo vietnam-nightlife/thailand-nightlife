@@ -64,6 +64,9 @@ const businesses = {
         "파타야 페가수스 가라오케 외관.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
+        "파타야 페가수스 가라오케 동상.webp"
+      )}`,
+      `${GITHUB_RAW}/${encodeURIComponent(
         "파타야 페가수스 가라오케 로비.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
