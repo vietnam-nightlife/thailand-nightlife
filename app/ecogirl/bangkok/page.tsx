@@ -5,15 +5,150 @@ import { useState } from "react";
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok";
 
-const profiles = Array.from({ length: 39 }, (_, i) => {
-  const number = i + 1;
+const profiles = [
+  {
+    number: 1,
+    name: "방콕 에코걸 1",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸1.webp")}`,
+  },
+  {
+    number: 2,
+    name: "방콕 에코걸 2",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸2.webp")}`,
+  },
+  {
+    number: 3,
+    name: "방콕 에코걸 3",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸3.webp")}`,
+  },
+  {
+    number: 4,
+    name: "방콕 에코걸 4",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸4.webp")}`,
+  },
+  {
+    number: 5,
+    name: "방콕 에코걸 5",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸5.webp")}`,
+  },
+  {
+    number: 6,
+    name: "방콕 에코걸 6",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸6.webp")}`,
+  },
+  {
+    number: 7,
+    name: "방콕 에코걸 7",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸7.webp")}`,
+  },
+  {
+    number: 8,
+    name: "방콕 에코걸 8",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸8.webp")}`,
+  },
+  {
+    number: 9,
+    name: "방콕 에코걸 9",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸9.webp")}`,
+  },
+  {
+    number: 10,
+    name: "방콕 에코걸 10",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸10.webp")}`,
+  },
+  {
+    number: 11,
+    name: "방콕 에코걸 11",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸11.webp")}`,
+  },
+  {
+    number: 12,
+    name: "방콕 에코걸 12",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸12.webp")}`,
+  },
+  {
+    number: 13,
+    name: "방콕 에코걸 13",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸13.webp")}`,
+  },
+  {
+    number: 14,
+    name: "방콕 에코걸 14",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸14.webp")}`,
+  },
+  {
+    number: 15,
+    name: "방콕 에코걸 15",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸15.webp")}`,
+  },
+  {
+    number: 16,
+    name: "방콕 에코걸 16",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸16.webp")}`,
+  },
+  {
+    number: 17,
+    name: "방콕 에코걸 17",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸17.webp")}`,
+  },
+  {
+    number: 18,
+    name: "방콕 에코걸 18",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("방콕 에코걸18.webp")}`,
+  },
 
-  return {
-    number,
-    name: `방콕 에코걸 ${number}`,
-    image: `${GITHUB_IMAGE}/${encodeURIComponent(`에코걸${number}.webp`)}`,
-  };
-});
+  // 실제 GitHub 파일명은 30~39
+  {
+    number: 19,
+    name: "방콕 에코걸 19",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸30.webp")}`,
+  },
+  {
+    number: 20,
+    name: "방콕 에코걸 20",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸31.webp")}`,
+  },
+  {
+    number: 21,
+    name: "방콕 에코걸 21",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸32.webp")}`,
+  },
+  {
+    number: 22,
+    name: "방콕 에코걸 22",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸33.webp")}`,
+  },
+  {
+    number: 23,
+    name: "방콕 에코걸 23",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸34.webp")}`,
+  },
+  {
+    number: 24,
+    name: "방콕 에코걸 24",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸35.webp")}`,
+  },
+  {
+    number: 25,
+    name: "방콕 에코걸 25",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸36.webp")}`,
+  },
+  {
+    number: 26,
+    name: "방콕 에코걸 26",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸37.webp")}`,
+  },
+  {
+    number: 27,
+    name: "방콕 에코걸 27",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸38.webp")}`,
+  },
+  {
+    number: 28,
+    name: "방콕 에코걸 28",
+    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸39.webp")}`,
+  },
+];
 
 export default function BangkokEcoGirlPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -45,9 +180,7 @@ export default function BangkokEcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
-      {/* =====================================================
-          HERO
-      ====================================================== */}
+      {/* HERO */}
       <section className="border-b border-white/10 bg-[#090909]">
         <div className="container mx-auto px-5 py-14 sm:py-20">
 
@@ -70,9 +203,7 @@ export default function BangkokEcoGirlPage() {
       </section>
 
 
-      {/* =====================================================
-          PROFILE LIST
-      ====================================================== */}
+      {/* PROFILE LIST */}
       <section className="container mx-auto px-5 py-10 sm:py-14">
 
         <div className="mb-8">
@@ -86,9 +217,7 @@ export default function BangkokEcoGirlPage() {
         </div>
 
 
-        {/* =================================================
-            PROFILE GRID
-        ================================================== */}
+        {/* PROFILE GRID */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
           {profiles.map((profile, index) => (
@@ -137,9 +266,7 @@ export default function BangkokEcoGirlPage() {
       </section>
 
 
-      {/* =====================================================
-          IMAGE MODAL
-      ====================================================== */}
+      {/* IMAGE MODAL */}
       {selectedIndex !== null && (
 
         <div
@@ -156,9 +283,7 @@ export default function BangkokEcoGirlPage() {
           onClick={closeModal}
         >
 
-          {/* =================================================
-              CLOSE BUTTON
-          ================================================== */}
+          {/* CLOSE */}
           <button
             type="button"
             aria-label="닫기"
@@ -191,9 +316,7 @@ export default function BangkokEcoGirlPage() {
           </button>
 
 
-          {/* =================================================
-              PREVIOUS BUTTON
-          ================================================== */}
+          {/* PREVIOUS */}
           <button
             type="button"
             aria-label="이전 사진"
@@ -228,9 +351,7 @@ export default function BangkokEcoGirlPage() {
           </button>
 
 
-          {/* =================================================
-              IMAGE
-          ================================================== */}
+          {/* IMAGE */}
           <div
             className="
               flex
@@ -257,9 +378,7 @@ export default function BangkokEcoGirlPage() {
           </div>
 
 
-          {/* =================================================
-              NEXT BUTTON
-          ================================================== */}
+          {/* NEXT */}
           <button
             type="button"
             aria-label="다음 사진"
@@ -294,9 +413,7 @@ export default function BangkokEcoGirlPage() {
           </button>
 
 
-          {/* =================================================
-              IMAGE NUMBER
-          ================================================== */}
+          {/* NUMBER */}
           <div
             className="
               absolute
@@ -312,7 +429,7 @@ export default function BangkokEcoGirlPage() {
               text-white
             "
           >
-            {profiles[selectedIndex].number} / {profiles.length}
+            {selectedIndex + 1} / {profiles.length}
           </div>
 
         </div>
