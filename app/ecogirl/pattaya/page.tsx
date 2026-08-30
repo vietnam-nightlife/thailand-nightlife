@@ -5,7 +5,7 @@ import { useState } from "react";
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya";
 
-const profiles = Array.from({ length: 11 }, (_, i) => {
+const profiles = Array.from({ length: 40 }, (_, i) => {
   const number = i + 1;
 
   return {
