@@ -240,38 +240,28 @@ export default function Home() {
       </section>
 
 
-      {/* =================================================
-          3. 무엇을 찾으세요?
-      ================================================== */}
-      <section className="container py-12 md:py-16">
+{/* =================================================
+    3. 무엇을 찾으세요?
+================================================== */}
+<section className="container py-12 md:py-16">
 
-        <div className="text-xs font-black tracking-[.3em] red">
-          CATEGORIES
-        </div>
+  <div className="text-xs font-black tracking-[.3em] red">
+    CATEGORIES
+  </div>
 
-        <h2 className="mt-3 text-3xl font-black md:text-4xl">
-          무엇을 찾으세요?
-        </h2>
+  <h2 className="mt-3 text-3xl font-black md:text-4xl">
+    무엇을 찾으세요?
+  </h2>
 
+  <div className="mt-7 grid gap-4 md:grid-cols-2">
 
-        <div className="mt-7 grid gap-4 md:grid-cols-2">
-
-  {/* =========================
-      방콕
-  ========================== */}
-  <div
-    className="group relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-8
-    shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]
-    transition-all duration-300
-    hover:-translate-y-1
-    hover:border-red-400
-    hover:shadow-[0_0_20px_rgba(239,68,68,0.5),inset_0_0_25px_rgba(239,68,68,0.08)]"
-  >
-
-    {/* 은은한 네온 효과 */}
-    <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-red-500/10 blur-3xl" />
-
-    <div className="relative z-10">
+    {/* =========================
+        방콕
+    ========================== */}
+    <div
+      className="relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-8
+      shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]"
+    >
 
       <div className="text-[10px] font-black tracking-[0.3em] text-red-400">
         BANGKOK
@@ -285,9 +275,9 @@ export default function Home() {
         방콕의 마사지와 가라오케 정보를 확인하세요.
       </p>
 
+      {/* 마사지 / 가라오케 */}
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
 
-        {/* 방콕 마사지 */}
         <a
           href="/bangkok/massage"
           className="rounded-2xl border border-red-500/40 bg-red-500/5 px-5 py-5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
@@ -305,7 +295,6 @@ export default function Home() {
           </div>
         </a>
 
-        {/* 방콕 가라오케 */}
         <a
           href="/bangkok/karaoke"
           className="rounded-2xl border border-red-500/40 bg-red-500/5 px-5 py-5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
@@ -322,46 +311,41 @@ export default function Home() {
             가라오케 보기 →
           </div>
         </a>
-{/* 방콕 에코걸 */}
-<a
-  href="/ecogirl/bangkok"
-  className="w-full sm:w-1/2 rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
->
-  <div className="text-3xl">
-    👩
-  </div>
 
-  <div className="mt-3 text-lg font-black text-white">
-    방콕 에코걸
-  </div>
-
-  <div className="mt-1 text-xs font-bold text-yellow-400">
-    프로필 보기 →
-  </div>
-</a>
-
-        
       </div>
+
+      {/* 방콕 에코걸 */}
+      <div className="mt-4 flex justify-center">
+
+        <a
+          href="/ecogirl/bangkok"
+          className="w-1/2 rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+        >
+          <div className="text-3xl">
+            👩
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            방콕 에코걸
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-yellow-400">
+            프로필 보기 →
+          </div>
+        </a>
+
+      </div>
+
     </div>
-  </div>
 
 
-  {/* =========================
-      파타야
-  ========================== */}
-  <div
-    className="group relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-8
-    shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]
-    transition-all duration-300
-    hover:-translate-y-1
-    hover:border-blue-400
-    hover:shadow-[0_0_20px_rgba(59,130,246,0.5),inset_0_0_25px_rgba(59,130,246,0.08)]"
-  >
-
-    {/* 은은한 네온 효과 */}
-    <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl" />
-
-    <div className="relative z-10">
+    {/* =========================
+        파타야
+    ========================== */}
+    <div
+      className="relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-8
+      shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]"
+    >
 
       <div className="text-[10px] font-black tracking-[0.3em] text-blue-400">
         PATTAYA
@@ -375,9 +359,9 @@ export default function Home() {
         파타야의 마사지와 가라오케 정보를 확인하세요.
       </p>
 
+      {/* 마사지 / 가라오케 */}
       <div className="mt-6 grid gap-3 sm:grid-cols-2">
 
-        {/* 파타야 마사지 */}
         <a
           href="/pattaya/massage"
           className="rounded-2xl border border-blue-500/40 bg-blue-500/5 px-5 py-5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
@@ -395,7 +379,6 @@ export default function Home() {
           </div>
         </a>
 
-        {/* 파타야 가라오케 */}
         <a
           href="/pattaya/karaoke"
           className="rounded-2xl border border-blue-500/40 bg-blue-500/5 px-5 py-5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
@@ -413,31 +396,35 @@ export default function Home() {
           </div>
         </a>
 
-{/* 파타야 에코걸 */}
-<a
-  href="/ecogirl/pattaya"
-  className="w-full sm:w-1/2 rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
->
-  <div className="text-3xl">
-    👩
-  </div>
-
-  <div className="mt-3 text-lg font-black text-white">
-    파타야 에코걸
-  </div>
-
-  <div className="mt-1 text-xs font-bold text-yellow-400">
-    프로필 보기 →
-  </div>
-</a>
-        
       </div>
+
+      {/* 파타야 에코걸 */}
+      <div className="mt-4 flex justify-center">
+
+        <a
+          href="/ecogirl/pattaya"
+          className="w-1/2 rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+        >
+          <div className="text-3xl">
+            👩
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            파타야 에코걸
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-yellow-400">
+            프로필 보기 →
+          </div>
+        </a>
+
+      </div>
+
     </div>
+
   </div>
 
-</div>
-
-      </section>
+</section>
 
 
       {/* =================================================
