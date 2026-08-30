@@ -1,34 +1,32 @@
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/pattaya-dragon-swedish-massage";
 
-const imageUrl = (filename: string) =>
-  `${GITHUB_IMAGE}/${encodeURIComponent(filename)}`;
-
-const mainImage = imageUrl("파타야 드래곤 스웨디시 메인.webp");
+const mainImage =
+  `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%20%EB%A9%94%EC%9D%B8.webp`;
 
 const images = [
   {
-    src: imageUrl("파타야 드래곤 스웨디시 외관.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%20%EC%99%B8%EA%B4%80.webp`,
     alt: "파타야 드래곤 스웨디시 외관",
   },
   {
-    src: imageUrl("파타야 드래곤 스웨디시 리셉션.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%20%EB%A6%AC%EC%85%89%EC%85%98.webp`,
     alt: "파타야 드래곤 스웨디시 리셉션",
   },
   {
-    src: imageUrl("파타야 드래곤 스웨디시 휴게실.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%EC%8B%9C%20%ED%9C%B4%EA%B2%8C%EC%8B%A4.webp`,
     alt: "파타야 드래곤 스웨디시 휴게실",
   },
   {
-    src: imageUrl("파타야 드래곤 스웨디시 룸1.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%EC%8B%9C%20%EB%A3%B81.webp`,
     alt: "파타야 드래곤 스웨디시 룸1",
   },
   {
-    src: imageUrl("파타야 드래곤 스웨디시 룸2.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%EC%8B%9C%20%EB%A3%B82.webp`,
     alt: "파타야 드래곤 스웨디시 룸2",
   },
   {
-    src: imageUrl("파타야 드래곤 스웨디시 룸3.webp"),
+    src: `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%8F%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%EC%8B%9C%20%EB%A3%B83.webp`,
     alt: "파타야 드래곤 스웨디시 룸3",
   },
 ];
@@ -68,36 +66,46 @@ export default function DragonSwedishPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
-      {/* HERO IMAGE */}
-      <section className="relative overflow-hidden border-b border-white/10 bg-black">
+      {/* MAIN IMAGE */}
+      <section className="border-b border-white/10 bg-[#090909]">
 
-        <div className="relative mx-auto h-[320px] max-w-7xl sm:h-[430px] lg:h-[520px]">
+        <div className="mx-auto max-w-6xl px-5 pt-6 sm:pt-8">
 
-          <img
-            src={mainImage}
-            alt="파타야 드래곤 스웨디시 마사지"
-            className="absolute inset-0 h-full w-full object-cover brightness-110"
-          />
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#101010]">
 
-          {/* 이미지 위 어두운 그라데이션 */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+            <div className="relative aspect-[16/8] sm:aspect-[16/7]">
 
-          <div className="absolute bottom-0 left-0 right-0 px-5 pb-8 sm:px-8 sm:pb-10">
+              <img
+                src={mainImage}
+                alt="파타야 드래곤 스웨디시 마사지"
+                className="absolute inset-0 h-full w-full object-cover brightness-110"
+              />
 
-            <div className="text-xs font-black tracking-[0.3em] text-red-500">
-              PATTAYA · MASSAGE
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
+
             </div>
 
-            <h1 className="mt-2 text-3xl font-black drop-shadow-lg sm:text-5xl">
-              파타야 드래곤 스웨디시 마사지
-            </h1>
-
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-200 sm:text-base">
-              파타야 드래곤 스웨디시 마사지의 매장 사진과 가격,
-              기본 정보를 한눈에 확인할 수 있습니다.
-            </p>
-
           </div>
+
+        </div>
+
+        {/* HERO TEXT */}
+        <div className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
+
+          <div className="mb-3 text-xs font-black tracking-[0.3em] text-red-500">
+            PATTAYA · MASSAGE
+          </div>
+
+          <h1 className="text-3xl font-black sm:text-5xl">
+            파타야 드래곤 스웨디시 마사지
+          </h1>
+
+          <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-400 sm:text-base">
+            파타야에서 스웨디시 마사지를 찾는 분들을 위한
+            드래곤 스웨디시 마사지 정보를 정리했습니다.
+            매장 사진과 가격 정보를 함께 확인할 수 있어
+            방문 전에 기본적인 정보를 한눈에 살펴보기 좋습니다.
+          </p>
 
         </div>
 
@@ -107,9 +115,9 @@ export default function DragonSwedishPage() {
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
 
         {/* BASIC INFO */}
-        <section className="mb-14">
+        <section className="mb-12">
 
-          <div className="mb-7">
+          <div className="mb-6">
 
             <div className="text-xs font-black tracking-[0.25em] text-red-500">
               ABOUT
@@ -123,7 +131,7 @@ export default function DragonSwedishPage() {
               파타야 드래곤 스웨디시 마사지입니다.
               매장 외관과 리셉션, 휴게공간, 마사지룸 등의
               실제 사진을 확인할 수 있으며,
-              방문 전 기본적인 매장 정보를 확인할 수 있습니다.
+              방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.
             </p>
 
           </div>
@@ -262,23 +270,23 @@ export default function DragonSwedishPage() {
             </div>
 
             <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              매장 & 시설 사진
+              룸 & 시설 사진
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-zinc-500">
-              파타야 드래곤 스웨디시의 외관과 리셉션,
-              휴게실 및 마사지룸 내부를 확인해보세요.
+            <p className="mt-3 text-sm text-zinc-500">
+              외관, 리셉션, 휴게실과 룸 내부 사진을 확인해보세요.
             </p>
 
           </div>
 
-          {/* 사진은 모두 동일한 비율로 정리 */}
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
 
-            {images.map((image) => (
+            {images.map((image, index) => (
               <div
                 key={image.src}
-                className="group overflow-hidden rounded-2xl border border-white/10 bg-[#101010]"
+                className={`group overflow-hidden rounded-2xl border border-white/10 bg-[#101010] ${
+                  index === 0 ? "col-span-2 sm:col-span-2" : ""
+                }`}
               >
 
                 <div className="relative aspect-[4/3]">
@@ -286,7 +294,6 @@ export default function DragonSwedishPage() {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
 
