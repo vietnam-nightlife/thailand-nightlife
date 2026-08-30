@@ -8,6 +8,7 @@ const GITHUB_RAW =
 
 const BANANA_SLUG = "pattaya-massage-01";
 const EIGHTY_EIGHT_SLUG = "pattaya-88-massage";
+const DRAGON_SLUG = "pattaya-dragon-swedish";
 
 const bananaMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 메인.webp")}`;
@@ -31,6 +32,22 @@ const eightyEightImages = [
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸3.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸4.webp")}`,
+];
+
+/* =========================================================
+   드래곤 스웨디시 이미지
+   ========================================================= */
+
+const dragonMainImage =
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 메인.webp")}`;
+
+const dragonImages = [
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 외관.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 리셉션.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 휴게실.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸1.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸2.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸3.webp")}`,
 ];
 
 const bananaPrice = [
@@ -77,6 +94,33 @@ const eightyEightPrice = [
     "황제 2:1 VIP 출장 · 90분",
     "VIP 출장 프리미엄 코스",
     "5,800",
+  ],
+];
+
+/* =========================================================
+   드래곤 스웨디시 가격표
+   ========================================================= */
+
+const dragonPrice = [
+  [
+    "A코스 · 60분",
+    "드래곤 스웨디시 마사지 코스",
+    "2,500",
+  ],
+  [
+    "B코스 · 60분",
+    "드래곤 스웨디시 마사지 코스",
+    "3,500",
+  ],
+  [
+    "C코스 · 90분",
+    "드래곤 스웨디시 마사지 코스",
+    "3,000",
+  ],
+  [
+    "D코스 · 90분",
+    "드래곤 스웨디시 마사지 코스",
+    "4,000",
   ],
 ];
 
@@ -143,6 +187,41 @@ function getPageData(slug: string) {
     };
   }
 
+  /* =========================================================
+     파타야 드래곤 스웨디시
+     ========================================================= */
+
+  if (slug === DRAGON_SLUG) {
+    return {
+      slug,
+      name: "파타야 드래곤 스웨디시",
+      english: "DRAGON SWEDISH PATTAYA",
+      rating: "4.6",
+      reviews: "0",
+      hours: "영업시간 확인 필요",
+      address: "Pattaya, Chon Buri, Thailand",
+      mainImage: dragonMainImage,
+      images: dragonImages,
+      galleryTitle: "드래곤 스웨디시 사진",
+      galleryDescription:
+        "파타야 드래곤 스웨디시의 외관과 리셉션, 휴게실 및 마사지룸을 사진으로 확인해보세요.",
+      priceTitle: "파타야 드래곤 스웨디시 가격표",
+      priceDescription:
+        "드래곤 스웨디시에서 확인된 코스별 이용시간과 가격입니다. 가격과 코스 내용은 방문 전 다시 확인해주세요.",
+      prices: dragonPrice,
+      aboutTitle: "ABOUT DRAGON SWEDISH",
+      aboutText: [
+        "파타야 드래곤 스웨디시는 파타야에서 스웨디시 마사지를 찾는 여행객들이 참고할 수 있는 마사지 업소입니다.",
+        "매장 외관과 리셉션, 휴게실 및 마사지룸 사진을 통해 방문 전 매장 분위기와 시설을 확인할 수 있습니다.",
+        "마사지 코스는 이용시간에 따라 구분되어 있으며, 방문 전 원하는 코스와 가격 및 이용조건을 확인하는 것을 권장합니다.",
+      ],
+      locationTitle: "드래곤 스웨디시 위치",
+      facilityTitle: "드래곤 스웨디시 이용 정보",
+      ctaTitle: "파타야 드래곤 스웨디시",
+      ctaLabel: "DRAGON SWEDISH PATTAYA",
+    };
+  }
+
   return null;
 }
 
@@ -150,6 +229,7 @@ export function generateStaticParams() {
   return [
     { slug: BANANA_SLUG },
     { slug: EIGHTY_EIGHT_SLUG },
+    { slug: DRAGON_SLUG },
   ];
 }
 
