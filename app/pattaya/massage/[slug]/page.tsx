@@ -1043,7 +1043,7 @@ export default async function PattayaMassagePage({
               주소
             </p>
 
-            <p className="mt-2 text-lg font-black leading-8">
+            <p className="mt-2 text-lg font-black text-black">
               {page.address}
             </p>
 
@@ -1275,7 +1275,7 @@ export default async function PattayaMassagePage({
               {page.name} 위치는 어디인가요?
             </summary>
 
-            <p className="mt-4 text-sm leading-7 text-zinc-500">
+            <p className="mt-2 text-lg font-black text-black">
               {page.address}
             </p>
 
