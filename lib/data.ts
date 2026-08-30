@@ -33,8 +33,24 @@ export type Place = {
   koreanSupport?: boolean;
 };
 
+// =========================================================
+// GitHub 이미지 기본 경로
+// =========================================================
+
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
+
+// =========================================================
+// 파타야 드래곤 스웨디시 전용 이미지 경로
+// GitHub에서 별도 폴더에 들어있기 때문에 경로를 따로 지정
+// =========================================================
+
+const DRAGON_SWEDISH_IMAGE =
+  `${GITHUB_IMAGE}/app/pattaya/massage/dragon-swedish`;
+
+// =========================================================
+// 도시
+// =========================================================
 
 export const cities: City[] = [
   {
@@ -58,10 +74,15 @@ export const cities: City[] = [
   },
 ];
 
+// =========================================================
+// 업소
+// =========================================================
+
 export const places: Place[] = [
   // =========================================================
   // 방콕 돈키호테 마사지
   // =========================================================
+
   {
     slug: "bangkok-donquixote-massage",
     name: "방콕 돈키호테 마사지",
@@ -77,7 +98,8 @@ export const places: Place[] = [
     address: "방콕 돈키호테 마사지",
     hours: "11:00 - 00:00",
 
-    image: `${GITHUB_IMAGE}/방콕%20돈키호테%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/방콕%20돈키호테%20외관.webp`,
@@ -92,17 +114,26 @@ export const places: Place[] = [
       {
         name: "기본 마사지",
         description: "기본 마사지 프로그램",
-        prices: ["60분 3,000B", "90분 4,000B"],
+        prices: [
+          "60분 3,000B",
+          "90분 4,000B",
+        ],
       },
       {
         name: "프리미엄 마사지",
         description: "프리미엄 마사지 프로그램",
-        prices: ["60분 4,000B", "90분 5,000B"],
+        prices: [
+          "60분 4,000B",
+          "90분 5,000B",
+        ],
       },
       {
         name: "VIP 룸",
         description: "프라이빗 VIP 룸 이용",
-        prices: ["60분 4,500B", "90분 5,500B"],
+        prices: [
+          "60분 4,500B",
+          "90분 5,500B",
+        ],
       },
     ],
 
@@ -112,6 +143,7 @@ export const places: Place[] = [
   // =========================================================
   // 방콕 큐브 마사지
   // =========================================================
+
   {
     slug: "bangkok-cube-nuru-massage",
     name: "방콕 큐브 마사지",
@@ -127,7 +159,8 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 22",
     hours: "11:00 - 02:00",
 
-    image: `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20외관.webp`,
@@ -144,6 +177,7 @@ export const places: Place[] = [
   // =========================================================
   // 방콕 바비 마사지
   // =========================================================
+
   {
     slug: "bangkok-barbie18-massage",
     name: "방콕 바비 마사지",
@@ -159,7 +193,8 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 18",
     hours: "12:00 - 02:00",
 
-    image: `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/방콕%20바비%20마사지%20카운터.webp`,
@@ -177,6 +212,7 @@ export const places: Place[] = [
   // =========================================================
   // 방콕 코리아나 가라오케
   // =========================================================
+
   {
     slug: "bangkok-karaoke-01",
     name: "방콕 코리아나 가라오케",
@@ -192,7 +228,8 @@ export const places: Place[] = [
     address: "방콕 수쿰빗",
     hours: "19:00 - 05:00",
 
-    image: `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
+    image:
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업2.webp`,
@@ -209,6 +246,7 @@ export const places: Place[] = [
   // =========================================================
   // 파타야 바나나 마사지
   // =========================================================
+
   {
     slug: "pattaya-massage-01",
     name: "파타야 바나나 마사지",
@@ -221,10 +259,13 @@ export const places: Place[] = [
     description:
       "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
 
-    address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
+    address:
+      "345/17-18, Pattaya, Chon Buri 20150, Thailand",
+
     hours: "11:30 - 23:30",
 
-    image: `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
 
     featured: true,
   },
@@ -232,6 +273,7 @@ export const places: Place[] = [
   // =========================================================
   // 파타야 88 마사지
   // =========================================================
+
   {
     slug: "pattaya-88-massage",
     name: "파타야 88 마사지",
@@ -247,7 +289,8 @@ export const places: Place[] = [
     address: "88 Massage and Tour, Pattaya",
     hours: "영업시간 확인 필요",
 
-    image: `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/파타야%2088%20마사지%20느낌.webp`,
@@ -262,70 +305,10 @@ export const places: Place[] = [
     koreanSupport: true,
   },
 
-// =========================================================
-// 파타야 드래곤 스웨디시
-// =========================================================
-{
-  slug: "pattaya-dragon-swedish",
-  name: "파타야 드래곤 스웨디시",
-  city: "pattaya",
-  category: "massage",
-  district: "파타야",
-  rating: 4.5,
-  reviews: 0,
-
-  description:
-    "파타야 드래곤 스웨디시는 마사지와 휴식을 원하는 여행객을 위한 마사지샵입니다. 매장 외관과 리셉션, 휴게 공간, 마사지룸 등 실제 매장 사진을 확인할 수 있습니다.",
-
-  address: "Pattaya, Chon Buri, Thailand",
-  hours: "11:00 - 00:00",
-
-  image:
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EB%A9%94%EC%9D%B8.webp`,
-
-  gallery: [
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EC%99%B8%EA%B4%80.webp`,
-
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EB%A6%AC%EC%85%89%EC%85%98.webp`,
-
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EB%A3%B81.webp`,
-
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EB%A3%B82.webp`,
-
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%EB%A6%AC%EC%85%89%EC%85%982.webp`,
-
-    `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D/DragonSwedish/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9C%84%EB%94%94%EC%8B%9C%20%ED%9C%B4%EA%B2%8C%EC%8B%A4.webp`,
-  ],
-
-  priceList: [
-    {
-      name: "A 코스",
-      description: "마사지 + 센슈얼 + 핸드",
-      prices: ["60분 2,500B"],
-    },
-    {
-      name: "B 코스",
-      description: "마사지 + 센슈얼 + @",
-      prices: ["60분 3,500B"],
-    },
-    {
-      name: "C 코스",
-      description: "전문 오일마사지 60분 + 센슈얼 + 핸드",
-      prices: ["90분 3,000B"],
-    },
-    {
-      name: "D 코스",
-      description: "전문 오일마사지 60분 + 센슈얼 + @",
-      prices: ["90분 4,000B"],
-    },
-  ],
-
-  featured: true,
-},
-
   // =========================================================
   // 파타야 모나리자 가라오케
   // =========================================================
+
   {
     slug: "pattaya-karaoke-01",
     name: "파타야 모나리자 가라오케",
@@ -341,7 +324,8 @@ export const places: Place[] = [
     address: "Pattaya City, Chon Buri 20150",
     hours: "18:00 - 00:00",
 
-    image: `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
+    image:
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
 
     gallery: [
       `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20외관.webp`,
@@ -354,17 +338,101 @@ export const places: Place[] = [
 
     featured: true,
   },
+
+  // =========================================================
+  // 파타야 드래곤 스웨디시 마사지
+  // =========================================================
+  // ★ 중요:
+  // 이미지가 GitHub의
+  // app/pattaya/massage/dragon-swedish/
+  // 폴더 안에 있으므로 일반 GITHUB_IMAGE가 아니라
+  // DRAGON_SWEDISH_IMAGE를 사용합니다.
+  // =========================================================
+
+  {
+    slug: "pattaya-dragon-swedish-massage",
+    name: "파타야 드래곤 스웨디시 마사지",
+    city: "pattaya",
+    category: "massage",
+    district: "파타야 3rd Road",
+    rating: 4.5,
+    reviews: 0,
+
+    description:
+      "파타야 드래곤 스웨디시 마사지의 매장 외관부터 리셉션, 휴게공간, 마사지룸까지 실제 사진으로 확인할 수 있습니다. 방문 전 위치와 영업시간 및 이용요금을 확인해보세요.",
+
+    address:
+      "245 M.9, Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
+
+    hours: "11:30 - 23:30",
+
+    // ★ 카드 대표 이미지
+    image:
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
+
+    // ★ 상세페이지 갤러리
+    gallery: [
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
+      `${DRAGON_SWEDISH_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
+    ],
+
+    // 가격표는 상세페이지에서 별도로 표시 가능
+    priceList: [
+      {
+        name: "A 코스",
+        description: "60분 코스",
+        prices: ["2,500 바트"],
+      },
+      {
+        name: "B 코스",
+        description: "60분 코스",
+        prices: ["3,500 바트"],
+      },
+      {
+        name: "C 코스",
+        description: "90분 코스",
+        prices: ["3,000 바트"],
+      },
+      {
+        name: "D 코스",
+        description: "90분 코스",
+        prices: ["4,000 바트"],
+      },
+    ],
+
+    featured: true,
+    koreanSupport: true,
+  },
 ];
+
+// =========================================================
+// 도시 조회
+// =========================================================
 
 export function getCity(slug: string) {
   return cities.find((c) => c.slug === slug);
 }
 
+// =========================================================
+// 업소 목록 조회
+// =========================================================
+
 export function getPlaces(city: string, category?: string) {
   return places.filter(
-    (p) => p.city === city && (!category || p.category === category)
+    (p) =>
+      p.city === city &&
+      (!category || p.category === category)
   );
 }
+
+// =========================================================
+// 업소 상세 조회
+// =========================================================
 
 export function getPlace(slug: string) {
   return places.find((p) => p.slug === slug);
