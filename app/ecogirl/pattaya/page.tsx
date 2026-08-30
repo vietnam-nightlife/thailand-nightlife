@@ -5,100 +5,107 @@ import { useState } from "react";
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya";
 
+const getImageUrl = (fileName: string) =>
+  `${GITHUB_IMAGE}/${encodeURIComponent(fileName)}`;
+
 const profiles = [
+  // 파타야 에코걸 1~11
   {
     number: 1,
     name: "파타야 에코걸 1",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸1.webp")}`,
+    fileName: "파타야 에코걸1.webp",
   },
   {
     number: 2,
     name: "파타야 에코걸 2",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸2.webp")}`,
+    fileName: "파타야 에코걸2.webp",
   },
   {
     number: 3,
     name: "파타야 에코걸 3",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸3.webp")}`,
+    fileName: "파타야 에코걸3.webp",
   },
   {
     number: 4,
     name: "파타야 에코걸 4",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸4.webp")}`,
+    fileName: "파타야 에코걸4.webp",
   },
   {
     number: 5,
     name: "파타야 에코걸 5",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸5.webp")}`,
+    fileName: "파타야 에코걸5.webp",
   },
   {
     number: 6,
     name: "파타야 에코걸 6",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸6.webp")}`,
+    fileName: "파타야 에코걸6.webp",
   },
   {
     number: 7,
     name: "파타야 에코걸 7",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸7.webp")}`,
+    fileName: "파타야 에코걸7.webp",
   },
   {
     number: 8,
     name: "파타야 에코걸 8",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸8.webp")}`,
+    fileName: "파타야 에코걸8.webp",
   },
   {
     number: 9,
     name: "파타야 에코걸 9",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸9.webp")}`,
+    fileName: "파타야 에코걸9.webp",
   },
   {
     number: 10,
     name: "파타야 에코걸 10",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸10.webp")}`,
+    fileName: "파타야 에코걸10.webp",
   },
   {
     number: 11,
     name: "파타야 에코걸 11",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("파타야 에코걸11.webp")}`,
+    fileName: "파타야 에코걸11.webp",
   },
 
-  // 새로 추가한 에코걸 40~46
+  // 파일명은 "에코걸40.webp" 그대로 사용
   {
     number: 40,
-    name: "에코걸 40",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸40.webp")}`,
+    name: "파타야 에코걸 40",
+    fileName: "에코걸40.webp",
   },
   {
     number: 41,
-    name: "에코걸 41",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸41.webp")}`,
+    name: "파타야 에코걸 41",
+    fileName: "에코걸41.webp",
   },
   {
     number: 42,
-    name: "에코걸 42",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸42.webp")}`,
+    name: "파타야 에코걸 42",
+    fileName: "에코걸42.webp",
   },
   {
     number: 43,
-    name: "에코걸 43",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸43.webp")}`,
+    name: "파타야 에코걸 43",
+    fileName: "에코걸43.webp",
   },
   {
     number: 44,
-    name: "에코걸 44",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸44.webp")}`,
+    name: "파타야 에코걸 44",
+    fileName: "에코걸44.webp",
   },
   {
     number: 45,
-    name: "에코걸 45",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸45.webp")}`,
+    name: "파타야 에코걸 45",
+    fileName: "에코걸45.webp",
   },
   {
     number: 46,
-    name: "에코걸 46",
-    image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸46.webp")}`,
+    name: "파타야 에코걸 46",
+    fileName: "에코걸46.webp",
   },
-];
+].map((profile) => ({
+  ...profile,
+  image: getImageUrl(profile.fileName),
+}));
 
 export default function PattayaEcoGirlPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -152,6 +159,7 @@ export default function PattayaEcoGirlPage() {
         </div>
       </section>
 
+
       {/* PROFILE LIST */}
       <section className="container mx-auto px-5 py-10 sm:py-14">
 
@@ -165,12 +173,13 @@ export default function PattayaEcoGirlPage() {
           </p>
         </div>
 
+
         {/* PROFILE GRID */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
           {profiles.map((profile, index) => (
             <button
-              key={`${profile.number}-${profile.image}`}
+              key={profile.fileName}
               type="button"
               onClick={() => setSelectedIndex(index)}
               className="
@@ -187,6 +196,7 @@ export default function PattayaEcoGirlPage() {
                 hover:border-red-500/50
               "
             >
+
               <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
 
                 <img
@@ -201,15 +211,25 @@ export default function PattayaEcoGirlPage() {
                     duration-500
                     group-hover:scale-105
                   "
+                  onError={(e) => {
+                    console.error(
+                      "이미지 로딩 실패:",
+                      profile.fileName,
+                      profile.image
+                    );
+                    e.currentTarget.style.display = "none";
+                  }}
                 />
 
               </div>
+
             </button>
           ))}
 
         </div>
 
       </section>
+
 
       {/* IMAGE MODAL */}
       {selectedIndex !== null && (
@@ -259,6 +279,7 @@ export default function PattayaEcoGirlPage() {
             ×
           </button>
 
+
           {/* PREVIOUS */}
           <button
             type="button"
@@ -293,6 +314,7 @@ export default function PattayaEcoGirlPage() {
             ‹
           </button>
 
+
           {/* IMAGE */}
           <div
             className="
@@ -304,6 +326,7 @@ export default function PattayaEcoGirlPage() {
             "
             onClick={(e) => e.stopPropagation()}
           >
+
             <img
               src={profiles[selectedIndex].image}
               alt={profiles[selectedIndex].name}
@@ -315,7 +338,9 @@ export default function PattayaEcoGirlPage() {
                 shadow-2xl
               "
             />
+
           </div>
+
 
           {/* NEXT */}
           <button
@@ -351,6 +376,7 @@ export default function PattayaEcoGirlPage() {
             ›
           </button>
 
+
           {/* NUMBER */}
           <div
             className="
@@ -367,7 +393,7 @@ export default function PattayaEcoGirlPage() {
               text-white
             "
           >
-            {selectedIndex + 1} / {profiles.length}
+            파타야 에코걸 {profiles[selectedIndex].number}
           </div>
 
         </div>
