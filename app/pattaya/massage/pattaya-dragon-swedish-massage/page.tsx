@@ -33,7 +33,8 @@ const page = {
   rating: "4.5",
   reviews: "0",
   hours: "11:00 - 00:00",
-  address: "Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
+  address:
+  "245 M.9, Pattaya 3rd Road, Pattaya City, ตำบลหนองปรือ, Bang Lamung District, 20150, Thailand",
 
   mainImage: dragonMainImage,
   images: dragonImages,
