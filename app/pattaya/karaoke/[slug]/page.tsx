@@ -200,7 +200,7 @@ export default async function PattayaKaraokePage({
             <div className="mt-6 flex flex-wrap gap-2">
 
               <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                ★ 4.0
+                ★ 4.9
               </span>
 
               <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
