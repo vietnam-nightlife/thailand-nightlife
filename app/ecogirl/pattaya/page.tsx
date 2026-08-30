@@ -65,37 +65,37 @@ const profiles = [
   // 새로 추가한 에코걸 40~46
   {
     number: 40,
-    name: "파타야 에코걸 40",
+    name: "에코걸 40",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸40.webp")}`,
   },
   {
     number: 41,
-    name: "파타야 에코걸 41",
+    name: "에코걸 41",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸41.webp")}`,
   },
   {
     number: 42,
-    name: "파타야 에코걸 42",
+    name: "에코걸 42",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸42.webp")}`,
   },
   {
     number: 43,
-    name: "파타야 에코걸 43",
+    name: "에코걸 43",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸43.webp")}`,
   },
   {
     number: 44,
-    name: "파타야 에코걸 44",
+    name: "에코걸 44",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸44.webp")}`,
   },
   {
     number: 45,
-    name: "파타야 에코걸 45",
+    name: "에코걸 45",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸45.webp")}`,
   },
   {
     number: 46,
-    name: "파타야 에코걸 46",
+    name: "에코걸 46",
     image: `${GITHUB_IMAGE}/${encodeURIComponent("에코걸46.webp")}`,
   },
 ];
