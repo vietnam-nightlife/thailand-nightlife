@@ -58,6 +58,7 @@ const page = {
   address: "Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
   mainImage: dragonMainImage,
   images: dragonImages,
+  prices: dragonPrice,
   galleryTitle: "드래곤 스웨디시 매장 사진",
   galleryDescription:
     "파타야 드래곤 스웨디시의 외관, 리셉션, 휴게실과 룸 내부 사진입니다.",
