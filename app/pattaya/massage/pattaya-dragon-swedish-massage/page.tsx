@@ -26,26 +26,6 @@ const dragonPrice = [
   ["D 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + @", "4,000"],
 ] as const;
 
-// 같은 폴더의 실제 이미지 파일을 Next.js가 직접 번들하도록 사용합니다.
-// GitHub raw / jsDelivr 외부 URL을 사용하지 않아 배포 후 이미지가 깨지는 문제를 방지합니다.
-const dragonMainImage = dragonMainImageFile.src;
-
-const dragonImages = [
-  dragonExteriorFile.src,
-  dragonReceptionFile.src,
-  dragonRestFile.src,
-  dragonRoom1File.src,
-  dragonRoom2File.src,
-  dragonRoom3File.src,
-];
-
-const dragonPrice = [
-  ["A 코스 · 60분", "마사지 + 센슈얼 + 핸드", "2,500"],
-  ["B 코스 · 60분", "마사지 + 센슈얼 + @", "3,500"],
-  ["C 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + 핸드", "3,000"],
-  ["D 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + @", "4,000"],
-] as const;
-
 const page = {
   slug: DRAGON_SLUG,
   name: "파타야 드래곤 스웨디시",
@@ -54,21 +34,26 @@ const page = {
   reviews: "0",
   hours: "11:00 - 00:00",
   address: "Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
+
   mainImage: dragonMainImage,
   images: dragonImages,
   prices: dragonPrice,
+
   galleryTitle: "드래곤 스웨디시 매장 사진",
   galleryDescription:
     "파타야 드래곤 스웨디시의 외관, 리셉션, 휴게실과 룸 내부 사진입니다.",
+
   priceTitle: "파타야 드래곤 스웨디시 가격표",
   priceDescription:
     "제공해주신 가격표를 기준으로 정리한 드래곤 스웨디시 이용 코스입니다.",
+
   aboutTitle: "ABOUT DRAGON SWEDISH",
   aboutText: [
     "파타야 드래곤 스웨디시는 파타야 3rd Road 인근에서 스웨디시 및 오일마사지 코스를 이용할 수 있는 마사지샵입니다.",
     "매장 외관과 리셉션, 휴게 공간, 마사지 룸 등의 실제 사진을 확인할 수 있어 방문 전에 매장 분위기를 살펴보기 좋습니다.",
     "코스는 60분과 90분 구성으로 나뉘며 방문 전 원하는 코스와 가격 및 이용 가능 여부를 확인하는 것을 권장합니다.",
   ],
+
   locationTitle: "드래곤 스웨디시 위치",
   facilityTitle: "드래곤 스웨디시 이용 정보",
 };
@@ -160,9 +145,7 @@ export default function PattayaDragonSwedishMassagePage() {
     <main className="min-h-screen overflow-x-hidden bg-[#08080a] text-white">
       <BreadcrumbJsonLd />
 
-      {/* =====================================================
-          1. HERO
-      ===================================================== */}
+      {/* HERO */}
       <section className="relative h-[430px] overflow-hidden sm:h-[500px] md:h-[600px]">
         <img
           src={page.mainImage}
@@ -204,9 +187,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          2. PHOTO
-      ===================================================== */}
+      {/* GALLERY */}
       <section className="container py-12 md:py-16">
         <p className="text-xs font-black tracking-[0.35em] text-red-500">
           GALLERY
@@ -228,9 +209,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          3. PRICE
-      ===================================================== */}
+      {/* PRICE */}
       <section className="container py-12 md:py-16">
         <div className="text-center">
           <p className="text-xs font-black tracking-[0.35em] text-amber-400">
@@ -286,9 +265,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </p>
       </section>
 
-      {/* =====================================================
-          6. LOCATION + GOOGLE MAP
-      ===================================================== */}
+      {/* LOCATION */}
       <section className="container py-12">
         <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
           <p className="text-xs font-black tracking-[0.35em] text-red-500">
@@ -299,7 +276,6 @@ export default function PattayaDragonSwedishMassagePage() {
             {page.locationTitle}
           </h2>
 
-          {/* ADDRESS */}
           <div className="mt-8 rounded-2xl bg-black/40 p-6">
             <p className="text-xs text-zinc-500">주소</p>
 
@@ -308,7 +284,6 @@ export default function PattayaDragonSwedishMassagePage() {
             </p>
           </div>
 
-          {/* GOOGLE MAP */}
           <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black">
             <iframe
               src={getGoogleMapUrl(page.address)}
@@ -322,7 +297,6 @@ export default function PattayaDragonSwedishMassagePage() {
             />
           </div>
 
-          {/* GOOGLE MAP BUTTON */}
           <div className="mt-5">
             <a
               href={getGoogleMapLink(page.address)}
@@ -336,10 +310,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-
-      {/* =====================================================
-          4. BASIC INFO
-      ===================================================== */}
+      {/* BASIC INFO */}
       <section className="container py-12">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
@@ -360,9 +331,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          5. ABOUT
-      ===================================================== */}
+      {/* ABOUT */}
       <section className="container py-12 md:py-16">
         <p className="text-xs font-black tracking-[0.35em] text-red-500">
           {page.aboutTitle}
@@ -379,9 +348,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          7. OPENING HOURS
-      ===================================================== */}
+      {/* OPENING HOURS */}
       <section className="container py-12">
         <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
           <p className="text-xs font-black tracking-[0.35em] text-red-500">
@@ -402,9 +369,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          8. FACILITIES
-      ===================================================== */}
+      {/* FACILITIES */}
       <section className="container py-12 md:py-16">
         <p className="text-xs font-black tracking-[0.35em] text-red-500">
           FACILITIES
@@ -436,9 +401,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          9. TRANSPORT
-      ===================================================== */}
+      {/* TRANSPORT */}
       <section className="container py-12">
         <div className="rounded-3xl border border-white/10 bg-[#111114] p-7 md:p-10">
           <p className="text-xs font-black tracking-[0.35em] text-red-500">
@@ -468,9 +431,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          10. GOOD TO KNOW
-      ===================================================== */}
+      {/* GOOD TO KNOW */}
       <section className="container py-12">
         <p className="text-xs font-black tracking-[0.35em] text-red-500">
           GOOD TO KNOW
@@ -502,9 +463,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          11. FAQ
-      ===================================================== */}
+      {/* FAQ */}
       <section className="container py-12 md:py-16">
         <p className="text-xs font-black tracking-[0.35em] text-red-500">
           FAQ
@@ -549,9 +508,7 @@ export default function PattayaDragonSwedishMassagePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          12. CTA
-      ===================================================== */}
+      {/* CTA */}
       <section className="container py-16 md:py-24">
         <div className="rounded-3xl border border-[#8d6a32]/40 bg-gradient-to-b from-[#17130d] to-[#0d0d0d] p-8 text-center md:p-14">
           <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
