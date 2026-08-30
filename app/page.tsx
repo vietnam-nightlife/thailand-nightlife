@@ -256,56 +256,150 @@ export default function Home() {
 
         <div className="mt-7 grid gap-4 md:grid-cols-2">
 
-          {/* 마사지 */}
-          <a
-            href="/bangkok/massage"
-            className="card-hover rounded-3xl border border-white/10 bg-[#111] p-8"
-          >
+  {/* =========================
+      방콕
+  ========================== */}
+  <div
+    className="group relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-8
+    shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:border-red-400
+    hover:shadow-[0_0_20px_rgba(239,68,68,0.5),inset_0_0_25px_rgba(239,68,68,0.08)]"
+  >
 
-            <div className="text-5xl">
-              💆
-            </div>
+    {/* 은은한 네온 효과 */}
+    <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-red-500/10 blur-3xl" />
 
-            <h3 className="mt-6 text-2xl font-black">
-              마사지
-            </h3>
+    <div className="relative z-10">
 
-            <p className="mt-3 text-sm leading-6 text-zinc-500">
-              방콕과 파타야의 마사지 정보를 확인하세요.
-            </p>
+      <div className="text-[10px] font-black tracking-[0.3em] text-red-400">
+        BANGKOK
+      </div>
 
-            <div className="mt-6 text-sm font-black red">
-              마사지 보기 →
-            </div>
+      <h3 className="mt-2 text-3xl font-black text-white">
+        방콕
+      </h3>
 
-          </a>
+      <p className="mt-2 text-sm text-zinc-500">
+        방콕의 마사지와 가라오케 정보를 확인하세요.
+      </p>
+
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+
+        {/* 방콕 마사지 */}
+        <a
+          href="/bangkok/massage"
+          className="rounded-2xl border border-red-500/40 bg-red-500/5 px-5 py-5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
+        >
+          <div className="text-3xl">
+            💆
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            방콕 마사지
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-red-400">
+            마사지 보기 →
+          </div>
+        </a>
+
+        {/* 방콕 가라오케 */}
+        <a
+          href="/bangkok/karaoke"
+          className="rounded-2xl border border-red-500/40 bg-red-500/5 px-5 py-5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
+        >
+          <div className="text-3xl">
+            🎤
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            방콕 가라오케
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-red-400">
+            가라오케 보기 →
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
 
 
-          {/* 가라오케 */}
-          <a
-            href="/bangkok/karaoke"
-            className="card-hover rounded-3xl border border-white/10 bg-[#111] p-8"
-          >
+  {/* =========================
+      파타야
+  ========================== */}
+  <div
+    className="group relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-8
+    shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:border-blue-400
+    hover:shadow-[0_0_20px_rgba(59,130,246,0.5),inset_0_0_25px_rgba(59,130,246,0.08)]"
+  >
 
-            <div className="text-5xl">
-              🎤
-            </div>
+    {/* 은은한 네온 효과 */}
+    <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl" />
 
-            <h3 className="mt-6 text-2xl font-black">
-              가라오케
-            </h3>
+    <div className="relative z-10">
 
-            <p className="mt-3 text-sm leading-6 text-zinc-500">
-              방콕과 파타야의 가라오케 정보를 확인하세요.
-            </p>
+      <div className="text-[10px] font-black tracking-[0.3em] text-blue-400">
+        PATTAYA
+      </div>
 
-            <div className="mt-6 text-sm font-black red">
-              가라오케 보기 →
-            </div>
+      <h3 className="mt-2 text-3xl font-black text-white">
+        파타야
+      </h3>
 
-          </a>
+      <p className="mt-2 text-sm text-zinc-500">
+        파타야의 마사지와 가라오케 정보를 확인하세요.
+      </p>
 
-        </div>
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+
+        {/* 파타야 마사지 */}
+        <a
+          href="/pattaya/massage"
+          className="rounded-2xl border border-blue-500/40 bg-blue-500/5 px-5 py-5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+        >
+          <div className="text-3xl">
+            💆
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            파타야 마사지
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-blue-400">
+            마사지 보기 →
+          </div>
+        </a>
+
+        {/* 파타야 가라오케 */}
+        <a
+          href="/pattaya/karaoke"
+          className="rounded-2xl border border-blue-500/40 bg-blue-500/5 px-5 py-5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+        >
+          <div className="text-3xl">
+            🎤
+          </div>
+
+          <div className="mt-3 text-lg font-black text-white">
+            파타야 가라오케
+          </div>
+
+          <div className="mt-1 text-xs font-bold text-blue-400">
+            가라오케 보기 →
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</div>
 
       </section>
 
