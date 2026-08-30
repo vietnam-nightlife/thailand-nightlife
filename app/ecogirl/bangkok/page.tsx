@@ -11,7 +11,7 @@ const profiles = Array.from({ length: 39 }, (_, i) => {
   return {
     number,
     name: `방콕 에코걸 ${number}`,
-    image: `${GITHUB_IMAGE}/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B8${number}.webp`,
+    image: `${GITHUB_IMAGE}/${encodeURIComponent(`에코걸${number}.webp`)}`,
   };
 });
 
@@ -93,7 +93,7 @@ export default function BangkokEcoGirlPage() {
 
           {profiles.map((profile, index) => (
             <button
-              key={profile.name}
+              key={profile.number}
               type="button"
               onClick={() => setSelectedIndex(index)}
               className="
@@ -141,6 +141,7 @@ export default function BangkokEcoGirlPage() {
           IMAGE MODAL
       ====================================================== */}
       {selectedIndex !== null && (
+
         <div
           className="
             fixed
@@ -315,6 +316,7 @@ export default function BangkokEcoGirlPage() {
           </div>
 
         </div>
+
       )}
 
     </main>
