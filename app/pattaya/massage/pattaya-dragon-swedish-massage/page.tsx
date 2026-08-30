@@ -30,8 +30,6 @@ const images = [
   },
 ];
 
-const priceImage = `${GITHUB_IMAGE}/%ED%8C%8C%ED%83%80%EC%95%BC%20%EB%93%9C%EB%9E%98%EA%B3%A4%20%EC%8A%A4%EC%9B%A8%EB%94%94%EC%8B%9C%20%EA%B0%80%EA%B2%A9%ED%91%9C.webp`;
-
 const priceList = [
   {
     name: "A",
