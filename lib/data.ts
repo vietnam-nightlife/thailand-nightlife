@@ -329,7 +329,7 @@ export const places: Place[] = [
     city: "pattaya",
     category: "karaoke",
     district: "파타야",
-    rating: 4.0,
+    rating: 4.9,
     reviews: 306,
 
     description:
