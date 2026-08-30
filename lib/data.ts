@@ -351,6 +351,40 @@ export const places: Place[] = [
 
     featured: true,
   },
+
+  // =========================================================
+  // 파타야 페가수스 가라오케
+  // =========================================================
+  {
+    slug: "pattaya-pegasus-karaoke",
+    name: "파타야 페가수스 가라오케",
+    city: "pattaya",
+    category: "karaoke",
+    district: "파타야",
+    rating: 4.8,
+    reviews: 0,
+
+    description:
+      "파타야 페가수스 가라오케입니다. 화려한 외관과 넓은 내부 공간, 프라이빗 룸을 갖춘 가라오케로 매장 외관과 로비, 내부 시설 및 룸 사진을 실제 이미지로 확인할 수 있습니다.",
+
+    address: "Pattaya, Chon Buri 20150, Thailand",
+    hours: "영업시간 확인 필요",
+
+    image:
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20메인.webp`,
+
+    gallery: [
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20외관.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20동상.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20로비.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸1.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸2.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸3.webp`,
+    ],
+
+    featured: true,
+  },
+  
 ];
 
 export function getCity(slug: string) {
