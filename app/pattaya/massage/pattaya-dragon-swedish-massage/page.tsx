@@ -2,13 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
 
-import dragonMainImageFile from "./파타야 드래곤 스웨디시 메인.webp";
-import dragonExteriorFile from "./파타야 드래곤 스웨디시 외관.webp";
-import dragonReceptionFile from "./파타야 드래곤 스웨디시 리셉션.webp";
-import dragonRestFile from "./파타야 드래곤 스웨디시 휴게실.webp";
-import dragonRoom1File from "./파타야 드래곤 스웨디시 룸1.webp";
-import dragonRoom2File from "./파타야 드래곤 스웨디시 룸2.webp";
-import dragonRoom3File from "./파타야 드래곤 스웨디시 룸3.webp";
+const GITHUB_IMAGE =
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
+
+const DRAGON_SLUG = "pattaya-dragon-swedish-massage";
+
+const dragonMainImage =
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`;
+
+const dragonImages = [
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
+  `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
+];
+
+const dragonPrice = [
+  ["A 코스 · 60분", "마사지 + 센슈얼 + 핸드", "2,500"],
+  ["B 코스 · 60분", "마사지 + 센슈얼 + @", "3,500"],
+  ["C 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + 핸드", "3,000"],
+  ["D 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + @", "4,000"],
+] as const;
 
 const DRAGON_SLUG = "pattaya-dragon-swedish-massage";
 
