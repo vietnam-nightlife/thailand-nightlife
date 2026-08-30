@@ -57,26 +57,26 @@ const businesses = {
     englishName: "Pattaya Pegasus Karaoke",
     shortName: "페가수스",
     mainImage: `${GITHUB_RAW}/${encodeURIComponent(
-      "파타야 페가수스 가라오케 메인.webp"
+      "파타야 페가수스 메인.webp"
     )}`,
     images: [
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 외관.webp"
+        "파타야 페가수스 외관.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 동상.webp"
+        "파타야 페가수스 동상.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 로비.webp"
+        "파타야 페가수스 로비.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 룸1.webp"
+        "파타야 페가수스 룸1.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 룸2.webp"
+        "파타야 페가수스 룸2.webp"
       )}`,
       `${GITHUB_RAW}/${encodeURIComponent(
-        "파타야 페가수스 가라오케 룸3.webp"
+        "파타야 페가수스 룸3.webp"
       )}`,
     ],
     rating: "정보 확인 필요",
