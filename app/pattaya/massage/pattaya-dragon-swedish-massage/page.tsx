@@ -2,23 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
 
-const DRAGON_RAW =
-  "https://cdn.jsdelivr.net/gh/vietnam-nightlife/thailand-nightlife@main/app/pattaya/message/pattaya-dragon-swedish-massage";
-
-const dragonImage = (fileName: string) =>
-  `${DRAGON_RAW}/${encodeURIComponent(fileName)}?v=2`;
+import dragonMainImageFile from "./파타야 드래곤 스웨디시 메인.webp";
+import dragonExteriorFile from "./파타야 드래곤 스웨디시 외관.webp";
+import dragonReceptionFile from "./파타야 드래곤 스웨디시 리셉션.webp";
+import dragonRestFile from "./파타야 드래곤 스웨디시 휴게실.webp";
+import dragonRoom1File from "./파타야 드래곤 스웨디시 룸1.webp";
+import dragonRoom2File from "./파타야 드래곤 스웨디시 룸2.webp";
+import dragonRoom3File from "./파타야 드래곤 스웨디시 룸3.webp";
 
 const DRAGON_SLUG = "pattaya-dragon-swedish-massage";
 
-const dragonMainImage = dragonImage("파타야 드래곤 스웨디시 메인.webp");
+// 같은 폴더의 실제 이미지 파일을 Next.js가 직접 번들하도록 사용합니다.
+// GitHub raw / jsDelivr 외부 URL을 사용하지 않아 배포 후 이미지가 깨지는 문제를 방지합니다.
+const dragonMainImage = dragonMainImageFile.src;
 
 const dragonImages = [
-  dragonImage("파타야 드래곤 스웨디시 외관.webp"),
-  dragonImage("파타야 드래곤 스웨디시 리셉션.webp"),
-  dragonImage("파타야 드래곤 스웨디시 휴게실.webp"),
-  dragonImage("파타야 드래곤 스웨디시 룸1.webp"),
-  dragonImage("파타야 드래곤 스웨디시 룸2.webp"),
-  dragonImage("파타야 드래곤 스웨디시 룸3.webp"),
+  dragonExteriorFile.src,
+  dragonReceptionFile.src,
+  dragonRestFile.src,
+  dragonRoom1File.src,
+  dragonRoom2File.src,
+  dragonRoom3File.src,
 ];
 
 const dragonPrice = [
@@ -44,7 +48,6 @@ const page = {
   priceTitle: "파타야 드래곤 스웨디시 가격표",
   priceDescription:
     "제공해주신 가격표를 기준으로 정리한 드래곤 스웨디시 이용 코스입니다.",
-  prices: dragonPrice,
   aboutTitle: "ABOUT DRAGON SWEDISH",
   aboutText: [
     "파타야 드래곤 스웨디시는 파타야 3rd Road 인근에서 스웨디시 및 오일마사지 코스를 이용할 수 있는 마사지샵입니다.",
@@ -269,48 +272,6 @@ export default function PattayaDragonSwedishMassagePage() {
       </section>
 
       {/* =====================================================
-          4. BASIC INFO
-      ===================================================== */}
-      <section className="container py-12">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            ["업종", "마사지"],
-            ["위치", "파타야"],
-            ["영업시간", page.hours],
-            ["평점", `★ ${page.rating}`],
-          ].map(([label, value]) => (
-            <div
-              key={label}
-              className="rounded-2xl border border-white/10 bg-[#111114] p-6"
-            >
-              <p className="text-xs text-zinc-500">{label}</p>
-
-              <p className="mt-2 font-black">{value}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* =====================================================
-          5. ABOUT
-      ===================================================== */}
-      <section className="container py-12 md:py-16">
-        <p className="text-xs font-black tracking-[0.35em] text-red-500">
-          {page.aboutTitle}
-        </p>
-
-        <h2 className="mt-3 text-3xl font-black md:text-4xl">
-          {page.name}
-        </h2>
-
-        <div className="mt-8 max-w-4xl space-y-6 text-[15px] leading-8 text-zinc-400">
-          {page.aboutText.map((text) => (
-            <p key={text}>{text}</p>
-          ))}
-        </div>
-      </section>
-
-      {/* =====================================================
           6. LOCATION + GOOGLE MAP
       ===================================================== */}
       <section className="container py-12">
@@ -357,6 +318,49 @@ export default function PattayaDragonSwedishMassagePage() {
               📍 Google 지도에서 위치 보기
             </a>
           </div>
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          4. BASIC INFO
+      ===================================================== */}
+      <section className="container py-12">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["업종", "마사지"],
+            ["위치", "파타야"],
+            ["영업시간", page.hours],
+            ["평점", `★ ${page.rating}`],
+          ].map(([label, value]) => (
+            <div
+              key={label}
+              className="rounded-2xl border border-white/10 bg-[#111114] p-6"
+            >
+              <p className="text-xs text-zinc-500">{label}</p>
+
+              <p className="mt-2 font-black">{value}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* =====================================================
+          5. ABOUT
+      ===================================================== */}
+      <section className="container py-12 md:py-16">
+        <p className="text-xs font-black tracking-[0.35em] text-red-500">
+          {page.aboutTitle}
+        </p>
+
+        <h2 className="mt-3 text-3xl font-black md:text-4xl">
+          {page.name}
+        </h2>
+
+        <div className="mt-8 max-w-4xl space-y-6 text-[15px] leading-8 text-zinc-400">
+          {page.aboutText.map((text) => (
+            <p key={text}>{text}</p>
+          ))}
         </div>
       </section>
 
