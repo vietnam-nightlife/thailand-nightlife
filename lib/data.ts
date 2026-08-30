@@ -280,15 +280,15 @@ export const places: Place[] = [
     address: "Dragon Swedish & Sensual Massage, Pattaya, Thailand",
     hours: "영업시간 확인 필요",
 
-    image: `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20메인.webp`,
+    image: `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20외관.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20리셉션.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20휴게실.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/message/dragon-swedish/파타야%20드래곤%20스웨디시%20룸3.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20외관.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20룸1.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20룸2.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/message/파타야%20드래곤%20스웨디시%20룸3.webp`,
     ],
 
     priceList: [
