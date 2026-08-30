@@ -26,8 +26,6 @@ const dragonPrice = [
   ["D 코스 · 90분", "전문 오일마사지 60분 + 센슈얼 + @", "4,000"],
 ] as const;
 
-const DRAGON_SLUG = "pattaya-dragon-swedish-massage";
-
 // 같은 폴더의 실제 이미지 파일을 Next.js가 직접 번들하도록 사용합니다.
 // GitHub raw / jsDelivr 외부 URL을 사용하지 않아 배포 후 이미지가 깨지는 문제를 방지합니다.
 const dragonMainImage = dragonMainImageFile.src;
