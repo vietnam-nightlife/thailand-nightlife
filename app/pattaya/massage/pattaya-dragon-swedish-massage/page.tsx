@@ -47,6 +47,7 @@ const page = {
   priceTitle: "파타야 드래곤 스웨디시 가격표",
   priceDescription:
     "제공해주신 가격표를 기준으로 정리한 드래곤 스웨디시 이용 코스입니다.",
+  prices: dragonPrice,
   aboutTitle: "ABOUT DRAGON SWEDISH",
   aboutText: [
     "파타야 드래곤 스웨디시는 파타야 3rd Road 인근에서 스웨디시 및 오일마사지 코스를 이용할 수 있는 마사지샵입니다.",
