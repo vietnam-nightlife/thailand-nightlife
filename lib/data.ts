@@ -287,16 +287,17 @@ export const places: Place[] = [
     hours: "11:00 - 00:00",
 
     // ⭐ 새로 추가한 드래곤 메인 이미지
-    image: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
+    image:
+      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
 
-    // ⭐ 현재 폴더에 있는 이미지 사용
     gallery: [
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
-      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
+      imageUrl("파타야 드래곤 스웨디시 외관.webp"),
+      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
+      imageUrl("파타야 드래곤 스웨디시 리셉션.webp"),
+      imageUrl("파타야 드래곤 스웨디시 휴게실.webp"),
+      imageUrl("파타야 드래곤 스웨디시 룸1.webp"),
+      imageUrl("파타야 드래곤 스웨디시 룸2.webp"),
+      imageUrl("파타야 드래곤 스웨디시 룸3.webp"),
     ],
 
     // ⭐ 가격표
