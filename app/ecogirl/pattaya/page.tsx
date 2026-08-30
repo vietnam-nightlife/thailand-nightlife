@@ -137,50 +137,53 @@ export default function PattayaEcoGirlPage() {
         {/* =================================================
             PROFILE GRID
         ================================================== */}
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
-          {profiles.map((profile, index) => (
-            <button
-              key={profile.number}
-              type="button"
-              onClick={() => setSelectedIndex(index)}
-              className="
-                group
-                block
-                overflow-hidden
-                rounded-2xl
-                border
-                border-white/10
-                bg-[#101010]
-                text-left
-                transition
-                duration-300
-                hover:border-red-500/50
-              "
-            >
+  {profiles.map((profile, index) => (
+    <button
+      key={profile.number}
+      type="button"
+      onClick={() => setSelectedIndex(index)}
+      className="
+        group
+        block
+        overflow-hidden
+        rounded-2xl
+        border
+        border-white/10
+        bg-[#101010]
+        text-left
+        transition
+        duration-300
+        hover:border-red-500/50
+      "
+    >
 
-              <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
 
-                <img
-                  src={profile.image}
-                  alt={profile.name}
-                  loading="lazy"
-                  className="
-                    h-full
-                    w-full
-                    object-cover
-                    transition
-                    duration-500
-                    group-hover:scale-105
-                  "
-                />
+        <img
+          src={profile.image}
+          alt={profile.name}
+          loading="lazy"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            object-center
+            transition
+            duration-500
+            group-hover:scale-105
+          "
+        />
 
-              </div>
+      </div>
 
-            </button>
-          ))}
+    </button>
+  ))}
 
-        </div>
+</div>
 
       </section>
 
