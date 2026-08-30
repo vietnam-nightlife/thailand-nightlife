@@ -93,7 +93,9 @@ export default function PattayaEcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
-      {/* HERO */}
+      {/* =====================================================
+          HERO
+      ====================================================== */}
       <section className="border-b border-white/10 bg-[#090909]">
         <div className="container mx-auto px-5 py-14 sm:py-20">
 
@@ -116,7 +118,9 @@ export default function PattayaEcoGirlPage() {
       </section>
 
 
-      {/* PROFILE LIST */}
+      {/* =====================================================
+          PROFILE LIST
+      ====================================================== */}
       <section className="container mx-auto px-5 py-10 sm:py-14">
 
         <div className="mb-8">
@@ -130,7 +134,9 @@ export default function PattayaEcoGirlPage() {
         </div>
 
 
-        {/* PROFILE GRID */}
+        {/* =================================================
+            PROFILE GRID
+        ================================================== */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
 
           {profiles.map((profile, index) => (
@@ -152,6 +158,7 @@ export default function PattayaEcoGirlPage() {
                 hover:border-red-500/50
               "
             >
+
               <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
 
                 <img
@@ -169,6 +176,7 @@ export default function PattayaEcoGirlPage() {
                 />
 
               </div>
+
             </button>
           ))}
 
@@ -177,7 +185,9 @@ export default function PattayaEcoGirlPage() {
       </section>
 
 
-      {/* IMAGE MODAL */}
+      {/* =====================================================
+          IMAGE MODAL
+      ====================================================== */}
       {selectedIndex !== null && (
 
         <div
@@ -194,7 +204,9 @@ export default function PattayaEcoGirlPage() {
           onClick={closeModal}
         >
 
-          {/* CLOSE */}
+          {/* =================================================
+              CLOSE BUTTON
+          ================================================== */}
           <button
             type="button"
             aria-label="닫기"
@@ -227,7 +239,9 @@ export default function PattayaEcoGirlPage() {
           </button>
 
 
-          {/* PREVIOUS */}
+          {/* =================================================
+              PREVIOUS BUTTON
+          ================================================== */}
           <button
             type="button"
             aria-label="이전 사진"
@@ -262,7 +276,9 @@ export default function PattayaEcoGirlPage() {
           </button>
 
 
-          {/* IMAGE */}
+          {/* =================================================
+              IMAGE
+          ================================================== */}
           <div
             className="
               flex
@@ -289,7 +305,9 @@ export default function PattayaEcoGirlPage() {
           </div>
 
 
-          {/* NEXT */}
+          {/* =================================================
+              NEXT BUTTON
+          ================================================== */}
           <button
             type="button"
             aria-label="다음 사진"
@@ -324,7 +342,9 @@ export default function PattayaEcoGirlPage() {
           </button>
 
 
-          {/* NUMBER */}
+          {/* =================================================
+              IMAGE NUMBER
+          ================================================== */}
           <div
             className="
               absolute
