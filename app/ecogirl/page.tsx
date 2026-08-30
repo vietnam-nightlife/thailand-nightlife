@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 const cities = [
   {
@@ -6,7 +7,7 @@ const cities = [
     english: "BANGKOK",
     name: "방콕 에코걸",
     image:
-    "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
+      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
     description:
       "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
     tags: [
@@ -33,6 +34,69 @@ const cities = [
   },
 ];
 
+/* =====================================================
+   SEO
+===================================================== */
+
+export const metadata: Metadata = {
+  title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+  description:
+    "태국 에코걸 정보를 지역별로 확인하세요. 방콕 에코걸과 파타야 에코걸 프로필을 확인하고 여행 일정에 맞는 동행 서비스를 안내받을 수 있습니다.",
+  keywords: [
+    "태국 에코걸",
+    "방콕 에코걸",
+    "파타야 에코걸",
+    "방콕 에코걸 후기",
+    "파타야 에코걸 후기",
+    "태국 에코걸 추천",
+    "방콕 에코걸 추천",
+    "파타야 에코걸 추천",
+    "태국 여행 동행",
+    "방콕 여행 동행",
+    "파타야 여행 동행",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+    description:
+      "방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인하고 여행 일정에 맞는 동행 서비스를 알아보세요.",
+    type: "website",
+    locale: "ko_KR",
+    siteName: "태국 눈탱이 방지 위원회",
+    images: [
+      {
+        url: "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
+        width: 1200,
+        height: 1600,
+        alt: "방콕 에코걸",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+    description:
+      "방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인하세요.",
+    images: [
+      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
+    ],
+  },
+};
+
+/* =====================================================
+   PAGE
+===================================================== */
+
 export default function EcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
@@ -48,13 +112,14 @@ export default function EcoGirlPage() {
           </div>
 
           <h1 className="text-3xl font-black sm:text-5xl">
-            방콕 · 파타야 에코걸
+            태국 에코걸
           </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
-            태국 여행 일정에 맞춰 관광, 식사, 쇼핑, 야시장 등
+            방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인해보세요.
             <br className="hidden sm:block" />
-            다양한 여행 일정을 함께 즐길 수 있는 동행 정보를 확인하세요.
+            태국 여행 일정에 맞춰 관광, 식사, 쇼핑, 야시장 등
+            다양한 여행 일정을 함께 즐길 수 있는 동행 정보를 안내합니다.
           </p>
 
         </div>
@@ -90,37 +155,24 @@ export default function EcoGirlPage() {
 
               {/* =================================================
                   IMAGE
-                  세로 3:4 비율
               ================================================== */}
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-black">
 
-                {city.image ? (
-                  <img
-                    src={city.image}
-                    alt={city.name}
-                    className="
-                      absolute
-                      inset-0
-                      h-full
-                      w-full
-                      object-cover
-                      transition
-                      duration-500
-                      group-hover:scale-[1.02]
-                    "
-                  />
-                ) : (
-                  <div
-                    className="
-                      absolute
-                      inset-0
-                      bg-gradient-to-b
-                      from-zinc-800/40
-                      via-zinc-900/30
-                      to-black
-                    "
-                  />
-                )}
+                <img
+                  src={city.image}
+                  alt={`${city.name} 프로필`}
+                  loading={city.slug === "bangkok" ? "eager" : "lazy"}
+                  className="
+                    absolute
+                    inset-0
+                    h-full
+                    w-full
+                    object-cover
+                    transition
+                    duration-500
+                    group-hover:scale-[1.02]
+                  "
+                />
 
                 {/* 사진 아래 자연스러운 어두운 그라데이션 */}
                 <div
@@ -213,6 +265,61 @@ export default function EcoGirlPage() {
             </Link>
 
           ))}
+
+        </div>
+
+
+        {/* =====================================================
+            SEO CONTENT
+        ====================================================== */}
+        <div className="mx-auto mt-16 max-w-4xl">
+
+          <div className="border-t border-white/10 pt-10">
+
+            <h2 className="text-2xl font-black text-white sm:text-3xl">
+              태국 에코걸 지역별 안내
+            </h2>
+
+            <div className="mt-6 space-y-6 text-sm leading-8 text-zinc-400">
+
+              <p>
+                태국 여행을 준비하면서 방콕 에코걸 또는 파타야 에코걸
+                정보를 찾고 있다면 여행 목적과 일정에 맞는 지역을 먼저
+                확인하는 것이 좋습니다. 방콕과 파타야는 태국 여행에서
+                많은 여행객들이 방문하는 대표적인 지역으로 각각 다른
+                여행 분위기와 관광 환경을 가지고 있습니다.
+              </p>
+
+              <p>
+                <strong className="font-bold text-zinc-200">
+                  방콕 에코걸
+                </strong>
+                은 방콕 시내 관광과 맛집, 쇼핑, 야시장 등 다양한 일정을
+                함께 계획하기에 적합합니다. 왕궁과 왓 아룬, 왓 포 같은
+                대표적인 관광지를 비롯해 방콕의 다양한 여행 코스를
+                함께 확인할 수 있습니다.
+              </p>
+
+              <p>
+                <strong className="font-bold text-zinc-200">
+                  파타야 에코걸
+                </strong>
+                은 파타야 해변과 시내 관광, 요트 투어, 야시장 및 다양한
+                핫플레이스 등 파타야 여행 일정에 맞춰 정보를 확인할 수
+                있습니다. 방콕과는 또 다른 분위기의 여행을 원하는 경우
+                파타야 지역도 함께 비교해보는 것을 추천합니다.
+              </p>
+
+              <p>
+                태국 에코걸 정보를 확인할 때는 단순히 사진만 확인하기보다
+                실제 여행 일정과 원하는 활동, 방문 지역 등을 함께
+                고려하는 것이 좋습니다. 여행 예정일과 인원, 원하는
+                일정 등을 미리 준비하면 보다 편리하게 안내받을 수 있습니다.
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
