@@ -36,39 +36,6 @@ export type Place = {
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
-/*
-|--------------------------------------------------------------------------
-| GitHub 이미지 경로
-|--------------------------------------------------------------------------
-| 실제 이미지가 있는 위치:
-|
-| app/
-| └─ pattaya/
-|    └─ massage/
-|       └─ [slug]/
-|          ├─ 파타야 드래곤 스웨디시 메인.webp
-|          ├─ 파타야 드래곤 스웨디시 외관.webp
-|          ├─ 파타야 드래곤 스웨디시 리셉션.webp
-|          ├─ 파타야 드래곤 스웨디시 휴게실.webp
-|          ├─ 파타야 드래곤 스웨디시 룸1.webp
-|          ├─ 파타야 드래곤 스웨디시 룸2.webp
-|          └─ 파타야 드래곤 스웨디시 룸3.webp
-|
-| [slug] 폴더의 대괄호는 URL에서 %5Bslug%5D로 표시해야 합니다.
-|--------------------------------------------------------------------------
-*/
-
-const PATTAYA_MASSAGE_IMAGE =
-  `${GITHUB_IMAGE}/app/pattaya/massage/%5Bslug%5D`;
-
-const imageUrl = (fileName: string) =>
-  `${PATTAYA_MASSAGE_IMAGE}/${encodeURIComponent(fileName)}`;
-
-
-/* ========================================================================
-   CITIES
-======================================================================== */
-
 export const cities: City[] = [
   {
     slug: "bangkok",
@@ -91,17 +58,10 @@ export const cities: City[] = [
   },
 ];
 
-
-/* ========================================================================
-   PLACES
-======================================================================== */
-
 export const places: Place[] = [
-
-  // ======================================================================
+  // =========================================================
   // 방콕 돈키호테 마사지
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "bangkok-donquixote-massage",
     name: "방콕 돈키호테 마사지",
@@ -117,53 +77,42 @@ export const places: Place[] = [
     address: "방콕 돈키호테 마사지",
     hours: "11:00 - 00:00",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/방콕%20돈키호테%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20외관.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20리셉션.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20리셉션2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20휴게실.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20돈키호테%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20외관.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20리셉션.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20리셉션2.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20휴게실.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20룸1.webp`,
+      `${GITHUB_IMAGE}/방콕%20돈키호테%20룸2.webp`,
     ],
 
     priceList: [
       {
         name: "기본 마사지",
         description: "기본 마사지 프로그램",
-        prices: [
-          "60분 3,000B",
-          "90분 4,000B",
-        ],
+        prices: ["60분 3,000B", "90분 4,000B"],
       },
       {
         name: "프리미엄 마사지",
         description: "프리미엄 마사지 프로그램",
-        prices: [
-          "60분 4,000B",
-          "90분 5,000B",
-        ],
+        prices: ["60분 4,000B", "90분 5,000B"],
       },
       {
         name: "VIP 룸",
         description: "프라이빗 VIP 룸 이용",
-        prices: [
-          "60분 4,500B",
-          "90분 5,500B",
-        ],
+        prices: ["60분 4,500B", "90분 5,500B"],
       },
     ],
 
     featured: true,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 방콕 큐브 마사지
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "bangkok-cube-nuru-massage",
     name: "방콕 큐브 마사지",
@@ -179,26 +128,24 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 22",
     hours: "11:00 - 02:00",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20외관.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20리셉션.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20휴게실.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20큐브%20마사지%20룸3.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20외관.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20리셉션.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20휴게실.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸1.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20룸3.webp`,
     ],
 
     featured: true,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 방콕 바비 마사지
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "bangkok-barbie18-massage",
     name: "방콕 바비 마사지",
@@ -214,27 +161,25 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 18",
     hours: "12:00 - 02:00",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20카운터.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20휴게실.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20느낌.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/방콕%20바비%20마사지%20룸3.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20카운터.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20휴게실.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20느낌.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸1.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20바비%20마사지%20룸3.webp`,
     ],
 
     featured: true,
     koreanSupport: false,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 방콕 코리아나 가라오케
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "bangkok-karaoke-01",
     name: "방콕 코리아나 가라오케",
@@ -250,26 +195,24 @@ export const places: Place[] = [
     address: "방콕 수쿰빗",
     hours: "19:00 - 05:00",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20쇼업2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20쇼업.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20룸4.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20룸.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/방콕%20코리아나%20가라오케%20룸3.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업2.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20쇼업.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸4.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20룸3.webp`,
     ],
 
     featured: true,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 파타야 바나나 마사지
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "pattaya-massage-01",
     name: "파타야 바나나 마사지",
@@ -282,22 +225,18 @@ export const places: Place[] = [
     description:
       "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
 
-    address:
-      "345/17-18, Pattaya, Chon Buri 20150, Thailand",
-
+    address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
     hours: "11:30 - 23:30",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20바나나%20마사지%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
 
     featured: true,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 파타야 88 마사지
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "pattaya-88-massage",
     name: "파타야 88 마사지",
@@ -313,114 +252,84 @@ export const places: Place[] = [
     address: "88 Massage and Tour, Pattaya",
     hours: "영업시간 확인 필요",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20느낌.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20리셉션.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20룸3.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%2088%20마사지%20룸4.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20느낌.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20리셉션.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸1.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸2.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸3.webp`,
+      `${GITHUB_IMAGE}/파타야%2088%20마사지%20룸4.webp`,
     ],
 
     featured: true,
     koreanSupport: true,
   },
 
-
-  // ======================================================================
-  // ⭐ 파타야 드래곤 스웨디시
-  // ======================================================================
-
+  // =========================================================
+  // ⭐ 파타야 드래곤 스웨디시 마사지
+  // =========================================================
   {
     slug: "pattaya-dragon-swedish",
-
     name: "파타야 드래곤 스웨디시 마사지",
-
     city: "pattaya",
-
     category: "massage",
-
-    district: "파타야 3rd Road",
-
+    district: "파타야",
     rating: 4.5,
-
     reviews: 0,
 
     description:
-      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등의 실제 사진을 확인할 수 있으며, 방문 전 마사지 코스와 가격을 비교해볼 수 있습니다.",
+      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관부터 리셉션, 휴게 공간, 마사지룸 등 실제 매장 사진을 확인할 수 있으며 방문 전 가격과 이용시간을 확인할 수 있습니다.",
 
-    address:
-      "245 M.9, Pattaya 3rd Road, Pattaya City, Chon Buri 20150, Thailand",
+    address: "Pattaya, Chon Buri, Thailand",
+    hours: "11:00 - 00:00",
 
-    hours: "11:30 - 23:30",
+    // ⭐ 새로 추가한 드래곤 메인 이미지
+    image: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
 
-    image:
-      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
-
+    // ⭐ 현재 폴더에 있는 이미지 사용
     gallery: [
-      imageUrl("파타야 드래곤 스웨디시 외관.webp"),
-      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
-      imageUrl("파타야 드래곤 스웨디시 리셉션.webp"),
-      imageUrl("파타야 드래곤 스웨디시 휴게실.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸1.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸2.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸3.webp"),
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
+      `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
     ],
 
-    /*
-     * 사용자가 제공한 드래곤 스웨디시 가격표 기준
-     */
+    // ⭐ 가격표
     priceList: [
       {
         name: "A 코스",
-        description:
-          "마사지 + 센슈얼 + 핸드",
-        prices: [
-          "총 60분 · 2,500바트",
-        ],
+        description: "마사지 + 센슈얼 + 핸드",
+        prices: ["60분 2,500B"],
       },
-
       {
         name: "B 코스",
-        description:
-          "마사지 + 센슈얼 + 추가 서비스",
-        prices: [
-          "총 60분 · 3,500바트",
-        ],
+        description: "마사지 + 센슈얼 + 추가 서비스",
+        prices: ["60분 3,500B"],
       },
-
       {
         name: "C 코스",
-        description:
-          "전문 오일마사지 60분 + 센슈얼 + 핸드",
-        prices: [
-          "총 90분 · 3,000바트",
-        ],
+        description: "전문 오일마사지 60분 + 센슈얼 + 핸드",
+        prices: ["90분 3,000B"],
       },
-
       {
         name: "D 코스",
-        description:
-          "전문 오일마사지 60분 + 센슈얼 + 추가 서비스",
-        prices: [
-          "총 90분 · 4,000바트",
-        ],
+        description: "전문 오일마사지 60분 + 센슈얼 + 추가 서비스",
+        prices: ["90분 4,000B"],
       },
     ],
 
     featured: true,
-
     koreanSupport: true,
   },
 
-
-  // ======================================================================
+  // =========================================================
   // 파타야 모나리자 가라오케
-  // ======================================================================
-
+  // =========================================================
   {
     slug: "pattaya-karaoke-01",
     name: "파타야 모나리자 가라오케",
@@ -436,48 +345,32 @@ export const places: Place[] = [
     address: "Pattaya City, Chon Buri 20150",
     hours: "18:00 - 00:00",
 
-    image:
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20메인.webp`,
+    // 기존 이미지 그대로 유지
+    image: `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20외관.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20로비.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20룸3.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/karaoke/파타야%20모나리자%20가라오케%20푸잉.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20외관.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20로비.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸1.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸2.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20룸3.webp`,
+      `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20푸잉.webp`,
     ],
 
     featured: true,
   },
 ];
 
-
-/* ========================================================================
-   HELPERS
-======================================================================== */
-
 export function getCity(slug: string) {
-  return cities.find(
-    (city) => city.slug === slug
-  );
+  return cities.find((c) => c.slug === slug);
 }
 
-
-export function getPlaces(
-  city: string,
-  category?: string
-) {
+export function getPlaces(city: string, category?: string) {
   return places.filter(
-    (place) =>
-      place.city === city &&
-      (!category || place.category === category)
+    (p) => p.city === city && (!category || p.category === category)
   );
 }
-
 
 export function getPlace(slug: string) {
-  return places.find(
-    (place) => place.slug === slug
-  );
+  return places.find((p) => p.slug === slug);
 }
