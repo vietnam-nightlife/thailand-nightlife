@@ -1,447 +1,284 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 
 const GITHUB_IMAGE =
-  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/%5Bslug%5D";
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
-const getImageUrl = (file: string) =>
-  `${GITHUB_IMAGE}/${encodeURIComponent(file)}`;
-
-export const metadata: Metadata = {
-  title: "파타야 드래곤 스웨디시 마사지 | 드래곤 스웨디시",
-  description:
-    "파타야 드래곤 스웨디시 마사지의 매장 분위기, 룸 및 시설 사진, 위치, 영업시간, 마사지 프로그램 정보를 한눈에 확인하세요.",
-  keywords: [
-    "파타야 드래곤 스웨디시",
-    "파타야 마사지",
-    "파타야 스웨디시 마사지",
-    "파타야 마사지샵",
-    "파타야 마사지 추천",
-    "파타야 3rd Road 마사지",
-  ],
-  openGraph: {
-    title: "파타야 드래곤 스웨디시 마사지",
-    description:
-      "파타야 드래곤 스웨디시 마사지의 시설, 위치, 영업시간 및 프로그램 정보를 확인하세요.",
-    type: "website",
-    images: [
-      {
-        url: getImageUrl("파타야 드래곤 스웨디시 외관.webp"),
-        width: 1200,
-        height: 800,
-        alt: "파타야 드래곤 스웨디시 마사지 외관",
-      },
-    ],
-  },
-};
-
-const gallery = [
+const images = [
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 외관.webp"),
-    alt: "파타야 드래곤 스웨디시 마사지 외관",
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
+    alt: "파타야 드래곤 스웨디시 메인",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 메인.webp"),
-    alt: "파타야 드래곤 스웨디시 마사지 매장",
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
+    alt: "파타야 드래곤 스웨디시 외관",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 리셉션.webp"),
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
     alt: "파타야 드래곤 스웨디시 리셉션",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 휴게실.webp"),
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
     alt: "파타야 드래곤 스웨디시 휴게실",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 룸1.webp"),
-    alt: "파타야 드래곤 스웨디시 마사지룸 1",
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
+    alt: "파타야 드래곤 스웨디시 룸",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 룸2.webp"),
-    alt: "파타야 드래곤 스웨디시 마사지룸 2",
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
+    alt: "파타야 드래곤 스웨디시 룸",
   },
   {
-    src: getImageUrl("파타야 드래곤 스웨디시 룸3.webp"),
-    alt: "파타야 드래곤 스웨디시 마사지룸 3",
+    src: `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
+    alt: "파타야 드래곤 스웨디시 룸",
   },
 ];
 
-const programs = [
+const priceList = [
   {
-    name: "A 프로그램",
+    name: "A 코스",
     time: "60분",
     price: "2,500B",
-    description: "마사지 중심의 기본 프로그램",
   },
   {
-    name: "B 프로그램",
+    name: "B 코스",
     time: "60분",
     price: "3,500B",
-    description: "마사지 중심의 프리미엄 프로그램",
   },
   {
-    name: "C 프로그램",
+    name: "C 코스",
     time: "90분",
     price: "3,000B",
-    description: "전문 오일마사지 60분을 포함한 장시간 프로그램",
   },
   {
-    name: "D 프로그램",
+    name: "D 코스",
     time: "90분",
     price: "4,000B",
-    description: "전문 오일마사지 중심의 프리미엄 프로그램",
   },
 ];
 
 export default function DragonSwedishPage() {
   return (
-    <main className="min-h-screen bg-[#080808] text-white">
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0">
-          <Image
-            src={getImageUrl("파타야 드래곤 스웨디시 외관.webp")}
-            alt="파타야 드래곤 스웨디시 마사지"
-            fill
-            priority
-            className="object-cover opacity-30"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
+    <main className="min-h-screen bg-[#070707] text-white">
 
-        <div className="relative mx-auto max-w-6xl px-5 py-24 md:px-8 md:py-32">
-          <div className="mb-5 text-sm font-bold tracking-[0.35em] text-red-500">
+      {/* HERO */}
+      <section className="border-b border-white/10 bg-[#090909]">
+        <div className="mx-auto max-w-6xl px-5 py-12 sm:py-16">
+
+          <div className="mb-3 text-xs font-black tracking-[0.3em] text-red-500">
             PATTAYA · MASSAGE
           </div>
 
-          <h1 className="text-4xl font-black leading-tight md:text-6xl">
-            파타야 드래곤
-            <br className="md:hidden" /> 스웨디시 마사지
+          <h1 className="text-3xl font-black sm:text-5xl">
+            파타야 드래곤 스웨디시
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-8 text-gray-300 md:text-lg">
-            파타야 3rd Road에서 이용할 수 있는 드래곤 스웨디시 마사지.
-            매장 외관부터 리셉션, 휴게공간과 마사지룸까지 실제 사진으로
-            확인하고 방문해보세요.
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-400 sm:text-base">
+            파타야에서 스웨디시 마사지를 찾는 여행객들을 위한
+            드래곤 스웨디시 정보를 한곳에서 확인하세요.
+            매장 외관부터 리셉션, 휴게 공간과 룸 사진까지
+            실제 매장 분위기를 확인할 수 있습니다.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <span className="rounded-full border border-yellow-500/40 bg-yellow-500/10 px-4 py-2 text-sm font-bold text-yellow-400">
-              ★ 4.5
-            </span>
-
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-              파타야 3rd Road
-            </span>
-
-            <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300">
-              11:00 - 00:00
-            </span>
-          </div>
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-        <div className="mb-10">
-          <div className="mb-3 text-xs font-black tracking-[0.35em] text-red-500">
-            ABOUT
+
+      {/* MAIN */}
+      <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
+
+        {/* 기본 정보 */}
+        <div className="mb-10 grid gap-4 sm:grid-cols-3">
+
+          <div className="rounded-2xl border border-white/10 bg-[#101010] p-5">
+            <div className="text-xs font-bold text-zinc-500">
+              LOCATION
+            </div>
+            <div className="mt-2 font-bold">
+              파타야
+            </div>
           </div>
 
-          <h2 className="text-3xl font-black md:text-4xl">
-            드래곤 스웨디시 마사지
-          </h2>
+          <div className="rounded-2xl border border-white/10 bg-[#101010] p-5">
+            <div className="text-xs font-bold text-zinc-500">
+              CATEGORY
+            </div>
+            <div className="mt-2 font-bold">
+              스웨디시 마사지
+            </div>
+          </div>
 
-          <p className="mt-5 max-w-3xl text-base leading-8 text-gray-400">
-            파타야에서 마사지와 휴식을 원하는 여행객들이 참고할 수 있는
-            드래곤 스웨디시 마사지 정보입니다. 매장의 전체적인 분위기와
-            시설을 사진으로 확인할 수 있으며, 방문 전 위치와 영업시간을
-            확인하는 것을 추천합니다.
-          </p>
+          <div className="rounded-2xl border border-white/10 bg-[#101010] p-5">
+            <div className="text-xs font-bold text-zinc-500">
+              INFORMATION
+            </div>
+            <div className="mt-2 font-bold">
+              가격 및 매장 정보 확인
+            </div>
+          </div>
+
         </div>
 
-        {/* INFO CARDS */}
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-sm text-gray-500">위치</div>
-            <div className="mt-3 text-lg font-bold">
-              Pattaya 3rd Road
-            </div>
-            <div className="mt-2 text-sm text-gray-400">
-              Pattaya, Chon Buri, Thailand
-            </div>
-          </div>
 
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-sm text-gray-500">영업시간</div>
-            <div className="mt-3 text-lg font-bold">
-              11:00 - 00:00
-            </div>
-            <div className="mt-2 text-sm text-gray-400">
-              방문 전 운영시간 확인 권장
-            </div>
-          </div>
+        {/* 가격표 */}
+        <section className="mb-12">
 
-          <div className="rounded-2xl border border-white/10 bg-[#111] p-6">
-            <div className="text-sm text-gray-500">평점</div>
-            <div className="mt-3 text-lg font-bold text-yellow-400">
-              ★ 4.5
-            </div>
-            <div className="mt-2 text-sm text-gray-400">
-              등록 리뷰 0개
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* GALLERY */}
-      <section className="border-y border-white/10 bg-[#050505]">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-          <div className="mb-8">
-            <div className="mb-3 text-xs font-black tracking-[0.35em] text-red-500">
-              GALLERY
+          <div className="mb-6">
+            <div className="text-xs font-black tracking-[0.25em] text-red-500">
+              PRICE
             </div>
 
-            <h2 className="text-3xl font-black md:text-4xl">
-              매장 & 시설 사진
+            <h2 className="mt-2 text-2xl font-black sm:text-3xl">
+              파타야 드래곤 스웨디시 가격표
             </h2>
 
-            <p className="mt-4 text-gray-400">
-              외관, 리셉션, 휴게공간과 마사지룸의 실제 사진을 확인해보세요.
+            <p className="mt-2 text-sm text-zinc-500">
+              방문 전 최신 가격과 이용 가능 코스를 확인해 주세요.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {gallery.map((image, index) => (
+
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#101010]">
+
+            <div className="grid grid-cols-3 border-b border-white/10 bg-white/[0.03] px-5 py-4 text-xs font-black text-zinc-400">
+              <div>코스</div>
+              <div>시간</div>
+              <div className="text-right">가격</div>
+            </div>
+
+            {priceList.map((item) => (
               <div
-                key={image.src}
-                className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-[#111] ${
-                  index === 0
-                    ? "col-span-2 row-span-2"
-                    : ""
-                }`}
+                key={item.name}
+                className="grid grid-cols-3 items-center border-b border-white/5 px-5 py-5 last:border-b-0"
               >
-                <div
-                  className={`relative w-full ${
-                    index === 0
-                      ? "aspect-square md:aspect-auto md:h-full"
-                      : "aspect-[4/3]"
-                  }`}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    sizes={
-                      index === 0
-                        ? "(max-width: 768px) 100vw, 50vw"
-                        : "(max-width: 768px) 50vw, 25vw"
-                    }
-                  />
+                <div className="font-bold">
+                  {item.name}
+                </div>
 
-                  <div className="absolute inset-0 bg-black/0 transition group-hover:bg-black/20" />
+                <div className="text-sm text-zinc-400">
+                  {item.time}
+                </div>
 
-                  <div className="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-xs text-white backdrop-blur">
-                    사진 {index + 1}
-                  </div>
+                <div className="text-right text-lg font-black text-red-500">
+                  {item.price}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
-      {/* PROGRAMS */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-        <div className="mb-10">
-          <div className="mb-3 text-xs font-black tracking-[0.35em] text-red-500">
-            PROGRAM
           </div>
 
-          <h2 className="text-3xl font-black md:text-4xl">
-            마사지 프로그램
-          </h2>
+        </section>
 
-          <p className="mt-4 max-w-2xl leading-7 text-gray-400">
-            프로그램과 가격은 방문 시 변경될 수 있으므로 이용 전 매장에
-            최신 가격을 확인하는 것을 추천합니다.
-          </p>
-        </div>
 
-        <div className="grid gap-5 md:grid-cols-2">
-          {programs.map((program) => (
-            <div
-              key={program.name}
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111] p-7"
-            >
-              <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-red-600/10 blur-2xl" />
+        {/* 가격표 이미지 */}
+        <section className="mb-12">
 
-              <div className="relative">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="text-sm font-bold tracking-widest text-red-500">
-                      {program.name}
-                    </div>
-
-                    <h3 className="mt-3 text-xl font-black">
-                      마사지 프로그램
-                    </h3>
-                  </div>
-
-                  <div className="text-right">
-                    <div className="text-2xl font-black text-yellow-400">
-                      {program.price}
-                    </div>
-
-                    <div className="mt-1 text-xs text-gray-500">
-                      총 {program.time}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 border-t border-white/10 pt-5 text-sm leading-7 text-gray-400">
-                  {program.description}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* HIGHLIGHTS */}
-      <section className="border-y border-white/10 bg-[#0c0c0c]">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-7">
-              <div className="text-3xl">📍</div>
-              <h3 className="mt-5 text-xl font-black">
-                파타야 중심 접근성
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-gray-400">
-                파타야 3rd Road 인근에서 마사지샵을 찾는 여행객들이
-                위치를 확인하고 방문하기 좋습니다.
-              </p>
+          <div className="mb-6">
+            <div className="text-xs font-black tracking-[0.25em] text-red-500">
+              MENU
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-7">
-              <div className="text-3xl">🛏️</div>
-              <h3 className="mt-5 text-xl font-black">
-                다양한 시설
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-gray-400">
-                리셉션과 휴게공간, 마사지룸 등 매장 내부 시설을
-                사진으로 미리 확인할 수 있습니다.
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-white/10 bg-[#111] p-7">
-              <div className="text-3xl">🕐</div>
-              <h3 className="mt-5 text-xl font-black">
-                늦은 시간까지 운영
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-gray-400">
-                영업시간은 11:00부터 00:00까지이며, 방문 전 실제
-                운영 여부를 확인하는 것이 좋습니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* VISIT GUIDE */}
-      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-[#151515] to-[#0c0c0c] p-7 md:p-10">
-          <div className="mb-8">
-            <div className="mb-3 text-xs font-black tracking-[0.35em] text-red-500">
-              VISIT GUIDE
-            </div>
-
-            <h2 className="text-3xl font-black">
-              방문 전 확인사항
+            <h2 className="mt-2 text-2xl font-black">
+              가격표 이미지
             </h2>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl bg-white/[0.03] p-5">
-              <div className="font-bold">01. 영업시간 확인</div>
-              <p className="mt-2 text-sm leading-7 text-gray-400">
-                영업시간은 현지 사정에 따라 변경될 수 있으므로 방문 전에
-                확인하는 것을 추천합니다.
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#101010]">
 
-            <div className="rounded-2xl bg-white/[0.03] p-5">
-              <div className="font-bold">02. 가격 확인</div>
-              <p className="mt-2 text-sm leading-7 text-gray-400">
-                마사지 프로그램 및 가격은 변경될 수 있으므로 실제 이용
-                전에 최신 가격을 확인하세요.
-              </p>
-            </div>
+            <Image
+              src={`${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20가격표.webp`}
+              alt="파타야 드래곤 스웨디시 가격표"
+              width={1200}
+              height={800}
+              className="h-auto w-full object-contain"
+              unoptimized
+            />
 
-            <div className="rounded-2xl bg-white/[0.03] p-5">
-              <div className="font-bold">03. 원하는 프로그램 확인</div>
-              <p className="mt-2 text-sm leading-7 text-gray-400">
-                이용 시간과 마사지 종류를 미리 확인하면 보다 편하게
-                이용할 수 있습니다.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white/[0.03] p-5">
-              <div className="font-bold">04. 현장 안내 확인</div>
-              <p className="mt-2 text-sm leading-7 text-gray-400">
-                매장 이용 규정과 현장 안내사항을 확인한 후 이용하세요.
-              </p>
-            </div>
           </div>
-        </div>
-      </section>
 
-      {/* CONTACT */}
-      <section className="border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-          <div className="rounded-3xl border border-red-500/20 bg-red-500/[0.04] p-8 text-center md:p-12">
-            <div className="text-xs font-black tracking-[0.35em] text-red-500">
-              DRAGON SWEDISH
+        </section>
+
+
+        {/* 매장 사진 */}
+        <section>
+
+          <div className="mb-6">
+
+            <div className="text-xs font-black tracking-[0.25em] text-red-500">
+              GALLERY
             </div>
 
-            <h2 className="mt-4 text-3xl font-black md:text-4xl">
-              파타야 마사지샵을 찾고 있다면
+            <h2 className="mt-2 text-2xl font-black sm:text-3xl">
+              파타야 드래곤 스웨디시 매장 사진
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl leading-8 text-gray-400">
-              매장 사진과 기본정보를 먼저 확인하고 방문 계획을 세워보세요.
-              이용 전 영업시간과 프로그램 가격을 다시 확인하는 것을
-              추천합니다.
+            <p className="mt-2 text-sm text-zinc-500">
+              외관, 리셉션, 휴게실 및 룸 내부 사진입니다.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <div className="rounded-full border border-white/10 bg-black/30 px-5 py-3 text-sm">
-                📍 Pattaya 3rd Road
-              </div>
-
-              <div className="rounded-full border border-white/10 bg-black/30 px-5 py-3 text-sm">
-                🕐 11:00 - 00:00
-              </div>
-
-              <div className="rounded-full border border-white/10 bg-black/30 px-5 py-3 text-sm">
-                ⭐ 4.5
-              </div>
-            </div>
           </div>
-        </div>
+
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+
+            {images.map((image, index) => (
+              <div
+                key={image.src}
+                className={`group overflow-hidden rounded-2xl border border-white/10 bg-[#101010] ${
+                  index === 0
+                    ? "col-span-2 sm:col-span-2"
+                    : ""
+                }`}
+              >
+
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={1200}
+                  height={800}
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+
+              </div>
+            ))}
+
+          </div>
+
+        </section>
+
+
+        {/* 안내 */}
+        <section className="mt-12 rounded-2xl border border-white/10 bg-[#101010] p-6 sm:p-8">
+
+          <div className="text-xs font-black tracking-[0.25em] text-red-500">
+            INFORMATION
+          </div>
+
+          <h2 className="mt-2 text-xl font-black">
+            방문 전 확인사항
+          </h2>
+
+          <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-400">
+
+            <p>
+              • 가격과 이용 가능 코스는 현장 상황에 따라 변경될 수 있습니다.
+            </p>
+
+            <p>
+              • 방문 전 최신 가격과 영업 여부를 확인하는 것을 권장합니다.
+            </p>
+
+            <p>
+              • 사진은 매장 분위기를 확인하기 위한 참고용으로 이용해 주세요.
+            </p>
+
+          </div>
+
+        </section>
+
       </section>
 
-      {/* FOOTER NOTE */}
-      <section className="border-t border-white/5">
-        <div className="mx-auto max-w-6xl px-5 py-8 text-center md:px-8">
-          <p className="text-xs leading-6 text-gray-600">
-            본 페이지의 가격 및 운영정보는 변경될 수 있습니다.
-            실제 방문 전 최신 정보를 확인하시기 바랍니다.
-          </p>
-        </div>
-      </section>
     </main>
   );
 }
