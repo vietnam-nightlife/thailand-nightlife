@@ -105,6 +105,18 @@ function getPageData(slug: string) {
         "방문 전 원하는 코스와 이용시간, 가격 및 이용조건을 확인하는 것을 권장합니다.",
       ],
       locationTitle: "바나나 마사지 위치",
+      <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-[#101010]">
+  <iframe
+    src="https://www.google.com/maps?q=Pattaya%20Banana%20Massage%20Sai3%2C%20345%2F17-18%2C%20Bang%20Lamung%20District%2C%20Chon%20Buri%2020150%2C%20Thailand&output=embed"
+    width="100%"
+    height="400"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    title="바나나 마사지 Google 지도"
+  />
+</div>
       facilityTitle: "바나나 마사지 이용 정보",
       ctaTitle: "파타야 바나나 마사지",
       ctaLabel: "BANANA MASSAGE PATTAYA",
@@ -137,6 +149,18 @@ function getPageData(slug: string) {
         "공개 자료에서는 주소를 249, Soi Chalermphrakiat 6으로 안내하고 있으며, 영업시간은 자료에 따라 11:00~23:00 또는 23:30으로 차이가 있어 방문 전 확인을 권장합니다.",
       ],
       locationTitle: "88 마사지 위치",
+      <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-[#101010]">
+  <iframe
+    src="https://www.google.com/maps?q=249%2C%20Soi%20Chalermphrakiat%206%2C%20Pattaya%20City%2C%20Bang%20Lamung%20District%2C%20Chon%20Buri%2020150%2C%20Thailand&output=embed"
+    width="100%"
+    height="400"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    title="88 마사지 Google 지도"
+  />
+</div>
       facilityTitle: "88 마사지 이용 정보",
       ctaTitle: "파타야 88 마사지",
       ctaLabel: "88 MASSAGE & SPA PATTAYA",
