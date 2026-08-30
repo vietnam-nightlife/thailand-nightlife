@@ -5,7 +5,8 @@ const cities = [
     slug: "bangkok",
     english: "BANGKOK",
     name: "방콕 에코걸",
-    image: "",
+    image:
+    "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
     description:
       "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
     tags: [
