@@ -282,15 +282,15 @@ export const places: Place[] = [
 
   // ★ 중요: 이미지 파일은 [slug] 폴더 바로 안에 있음
   image:
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20메인.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20메인.webp`,
 
   gallery: [
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20외관.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20리셉션.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20휴게실.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸1.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸2.webp`,
-    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸3.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20외관.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸1.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸2.webp`,
+    `${GITHUB_IMAGE}/파타야%20드래곤%20스웨디시%20룸3.webp`,
   ],
 
   priceList: [
