@@ -604,7 +604,7 @@ export default async function PattayaMassagePage({
                 위치
               </h3>
 
-              <p className="mt-4 text-sm leading-7 text-zinc-400">
+              <p className="mt-2 text-lg font-black text-black">
                 {page.address}
               </p>
 
@@ -743,7 +743,7 @@ export default async function PattayaMassagePage({
                 드래곤 스웨디시는 어디에 있나요?
               </summary>
 
-              <p className="mt-4 text-sm leading-7 text-zinc-500">
+              <p className="mt-2 text-lg font-black text-black">
                 {page.address}
               </p>
 
