@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
 
-const GITHUB_BASE =
-  "https://github.com/vietnam-nightlife/thailand-nightlife/raw/refs/heads/main";
-
 const DRAGON_RAW =
-  `${GITHUB_BASE}/app/pattaya/message/pattaya-dragon-swedish-massage`;
+  "https://cdn.jsdelivr.net/gh/vietnam-nightlife/thailand-nightlife@main/app/pattaya/message/pattaya-dragon-swedish-massage";
 
 const dragonImage = (fileName: string) =>
   `${DRAGON_RAW}/${encodeURIComponent(fileName)}?v=2`;
