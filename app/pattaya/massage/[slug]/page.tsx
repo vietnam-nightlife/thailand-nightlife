@@ -1037,13 +1037,13 @@ export default async function PattayaMassagePage({
           </h2>
 
           {/* ADDRESS */}
-          <div className="mt-8 rounded-2xl bg-white p-6">
+          <div className="mt-8 rounded-2xl border border-white/10 bg-black p-6">
 
             <p className="text-xs text-zinc-500">
               주소
             </p>
 
-            <p className="mt-2 text-lg font-black leading-8 text-black">
+            <p className="mt-2 text-lg font-black leading-8 text-white">
               {page.address}
             </p>
 
@@ -1072,7 +1072,7 @@ export default async function PattayaMassagePage({
               href={getGoogleMapLink(page.address)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-black text-black transition hover:bg-zinc-200"
+              className="inline-flex items-center rounded-xl bg-black px-6 py-3 text-sm font-black text-white border border-white/10 transition hover:bg-zinc-900"
             >
               📍 Google 지도에서 위치 보기
             </a>
