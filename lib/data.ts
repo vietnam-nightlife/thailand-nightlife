@@ -36,13 +36,6 @@ export type Place = {
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
-/*
- * 이미지 파일명을 넣으면 GitHub Raw 주소로 만들어줍니다.
- * 기존 이미지 경로는 그대로 유지할 수 있도록 사용합니다.
- */
-const img = (fileName: string) =>
-  `${GITHUB_IMAGE}/${encodeURIComponent(fileName)}`;
-
 export const cities: City[] = [
   {
     slug: "bangkok",
@@ -270,6 +263,68 @@ export const places: Place[] = [
   },
 
   // =========================================================
+  // ★ 파타야 드래곤 스웨디시
+  // ★ 이미지 실제 위치:
+  //   app/pattaya/massage/
+  // ★ dragon-swedish 폴더 안이 아님
+  // =========================================================
+  {
+    slug: "pattaya-dragon-swedish",
+    name: "파타야 드래곤 스웨디시 마사지",
+    city: "pattaya",
+    category: "massage",
+    district: "파타야 3rd Road",
+    rating: 4.5,
+    reviews: 0,
+
+    description:
+      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등 실제 매장 사진을 확인할 수 있으며 방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.",
+
+    address: "245 M.9, Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
+    hours: "11:30 - 23:30",
+
+    // 중요:
+    // 이미지가 dragon-swedish 폴더가 아니라
+    // app/pattaya/massage/ 폴더에 있으므로 이 경로를 사용합니다.
+    image: `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20메인.webp`,
+
+    gallery: [
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20외관.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸1.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸2.webp`,
+      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸3.webp`,
+    ],
+
+    priceList: [
+      {
+        name: "A 코스",
+        description: "기본 마사지 프로그램",
+        prices: ["60분 2,500바트"],
+      },
+      {
+        name: "B 코스",
+        description: "마사지 프로그램",
+        prices: ["60분 3,500바트"],
+      },
+      {
+        name: "C 코스",
+        description: "전문 오일 마사지 프로그램",
+        prices: ["90분 3,000바트"],
+      },
+      {
+        name: "D 코스",
+        description: "전문 오일 마사지 프로그램",
+        prices: ["90분 4,000바트"],
+      },
+    ],
+
+    featured: true,
+    koreanSupport: true,
+  },
+
+  // =========================================================
   // 파타야 모나리자 가라오케
   // =========================================================
   {
@@ -278,7 +333,7 @@ export const places: Place[] = [
     city: "pattaya",
     category: "karaoke",
     district: "파타야",
-    rating: 4.9,
+    rating: 4.0,
     reviews: 306,
 
     description:
@@ -299,71 +354,6 @@ export const places: Place[] = [
     ],
 
     featured: true,
-  },
-
-  // =========================================================
-  // 파타야 드래곤 스웨디시 마사지
-  // =========================================================
-  {
-    slug: "pattaya-dragon-swedish",
-    name: "파타야 드래곤 스웨디시 마사지",
-    city: "pattaya",
-    category: "massage",
-    district: "파타야",
-    rating: 4.5,
-    reviews: 0,
-
-    description:
-      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등의 실제 사진을 확인할 수 있으며 방문 전 위치와 영업시간을 확인할 수 있습니다.",
-
-    address: "Pattaya, Chon Buri, Thailand",
-    hours: "11:00 - 00:00",
-
-    /*
-     * 카드 대표 이미지
-     * 파일은 [slug] 폴더가 아니라
-     * /app/pattaya/massage/ 폴더에 있는 파일을 사용합니다.
-     */
-    image: img("파타야 드래곤 스웨디시 메인.webp"),
-
-    /*
-     * 상세페이지 갤러리
-     * 현재 GitHub 폴더에 업로드한 파일을 그대로 사용합니다.
-     */
-    gallery: [
-      img("파타야 드래곤 스웨디시 외관.webp"),
-      img("파타야 드래곤 스웨디시 리셉션.webp"),
-      img("파타야 드래곤 스웨디시 휴게실.webp"),
-      img("파타야 드래곤 스웨디시 룸1.webp"),
-      img("파타야 드래곤 스웨디시 룸2.webp"),
-      img("파타야 드래곤 스웨디시 룸3.webp"),
-    ],
-
-    featured: true,
-    koreanSupport: true,
-
-    priceList: [
-      {
-        name: "A 코스",
-        description: "기본 마사지 프로그램",
-        prices: ["60분 2,500B"],
-      },
-      {
-        name: "B 코스",
-        description: "마사지 프로그램",
-        prices: ["60분 3,500B"],
-      },
-      {
-        name: "C 코스",
-        description: "오일 마사지 프로그램",
-        prices: ["90분 3,000B"],
-      },
-      {
-        name: "D 코스",
-        description: "오일 마사지 프로그램",
-        prices: ["90분 4,000B"],
-      },
-    ],
   },
 ];
 
