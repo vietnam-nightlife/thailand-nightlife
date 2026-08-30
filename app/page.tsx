@@ -322,7 +322,25 @@ export default function Home() {
             가라오케 보기 →
           </div>
         </a>
+{/* 방콕 에코걸 */}
+<a
+  href="/ecogirl/bangkok"
+  className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+>
+  <div className="text-3xl">
+    👩
+  </div>
 
+  <div className="mt-3 text-lg font-black text-white">
+    방콕 에코걸
+  </div>
+
+  <div className="mt-1 text-xs font-bold text-yellow-400">
+    프로필 보기 →
+  </div>
+</a>
+
+        
       </div>
     </div>
   </div>
@@ -395,6 +413,24 @@ export default function Home() {
           </div>
         </a>
 
+{/* 파타야 에코걸 */}
+<a
+  href="/ecogirl/pattaya"
+  className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-5 py-5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+>
+  <div className="text-3xl">
+    👩
+  </div>
+
+  <div className="mt-3 text-lg font-black text-white">
+    파타야 에코걸
+  </div>
+
+  <div className="mt-1 text-xs font-bold text-yellow-400">
+    프로필 보기 →
+  </div>
+</a>
+        
       </div>
     </div>
   </div>
