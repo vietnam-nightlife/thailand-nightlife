@@ -262,67 +262,64 @@ export const places: Place[] = [
     koreanSupport: true,
   },
 
-  // =========================================================
-  // ★ 파타야 드래곤 스웨디시
-  // ★ 이미지 실제 위치:
-  //   app/pattaya/massage/
-  // ★ dragon-swedish 폴더 안이 아님
-  // =========================================================
-  {
-    slug: "pattaya-dragon-swedish",
-    name: "파타야 드래곤 스웨디시 마사지",
-    city: "pattaya",
-    category: "massage",
-    district: "파타야 3rd Road",
-    rating: 4.5,
-    reviews: 0,
+// =========================================================
+// 파타야 드래곤 스웨디시 마사지
+// =========================================================
+{
+  slug: "pattaya-dragon-swedish-massage",
+  name: "파타야 드래곤 스웨디시 마사지",
+  city: "pattaya",
+  category: "massage",
+  district: "파타야",
+  rating: 4.5,
+  reviews: 0,
 
-    description:
-      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등 실제 매장 사진을 확인할 수 있으며 방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.",
+  description:
+    "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등의 실제 사진을 확인할 수 있으며 방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.",
 
-    address: "245 M.9, Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
-    hours: "11:30 - 23:30",
+  address: "Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
+  hours: "11:00 - 00:00",
 
-    // 중요:
-    // 이미지가 dragon-swedish 폴더가 아니라
-    // app/pattaya/massage/ 폴더에 있으므로 이 경로를 사용합니다.
-    image: `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20메인.webp`,
+  // ★ 중요: 이미지 파일은 [slug] 폴더 바로 안에 있음
+  image:
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20메인.webp`,
 
-    gallery: [
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20외관.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20리셉션.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20휴게실.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸1.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸2.webp`,
-      `${GITHUB_IMAGE}/app/pattaya/massage/파타야%20드래곤%20스웨디시%20룸3.webp`,
-    ],
+  gallery: [
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20외관.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20리셉션.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20휴게실.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸1.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸2.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸3.webp`,
+    `${GITHUB_IMAGE}/app/pattaya/massage/[slug]/파타야%20드래곤%20스웨디시%20룸4.webp`,
+  ],
 
-    priceList: [
-      {
-        name: "A 코스",
-        description: "기본 마사지 프로그램",
-        prices: ["60분 2,500바트"],
-      },
-      {
-        name: "B 코스",
-        description: "마사지 프로그램",
-        prices: ["60분 3,500바트"],
-      },
-      {
-        name: "C 코스",
-        description: "전문 오일 마사지 프로그램",
-        prices: ["90분 3,000바트"],
-      },
-      {
-        name: "D 코스",
-        description: "전문 오일 마사지 프로그램",
-        prices: ["90분 4,000바트"],
-      },
-    ],
+  priceList: [
+    {
+      name: "A 코스",
+      description: "마사지 + 센슈얼 + 핸드",
+      prices: ["60분 2,500B"],
+    },
+    {
+      name: "B 코스",
+      description: "마사지 + 센슈얼 + @",
+      prices: ["60분 3,500B"],
+    },
+    {
+      name: "C 코스",
+      description: "전문 오일마사지 60분 + 센슈얼 + 핸드",
+      prices: ["90분 3,000B"],
+    },
+    {
+      name: "D 코스",
+      description: "전문 오일마사지 60분 + 센슈얼 + @",
+      prices: ["90분 4,000B"],
+    },
+  ],
 
-    featured: true,
-    koreanSupport: true,
-  },
+  featured: true,
+  koreanSupport: true,
+},
 
   // =========================================================
   // 파타야 모나리자 가라오케
