@@ -10,6 +10,10 @@ const BANANA_SLUG = "pattaya-massage-01";
 const EIGHTY_EIGHT_SLUG = "pattaya-88-massage";
 const DRAGON_SLUG = "pattaya-dragon-swedish";
 
+/* =========================================================
+   BANANA
+========================================================= */
+
 const bananaMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 메인.webp")}`;
 
@@ -22,6 +26,31 @@ const bananaImages = [
   `${GITHUB_RAW}/${encodeURIComponent("파타야 바나나 마사지 룸4.webp")}`,
 ];
 
+const bananaPrice = [
+  ["A코스 · 90분", "발 마사지 + 오일 마사지 + 서비스", "3,500"],
+  [
+    "B코스 · 120분",
+    "발 마사지 + 바디 스크럽 + 오일 마사지 + 서비스",
+    "4,000",
+  ],
+  [
+    "C코스 · 120분",
+    "발 마사지 + 오일 마사지 30분 (2:1) + 프리미엄 케어",
+    "7,000",
+  ],
+  [
+    "D코스 · 120분",
+    "발 마사지 + 오일 마사지 30분 + 동반 고객 케어",
+    "7,000",
+  ],
+  ["H코스 · 60분", "오일 마사지 30분 + 핸드 마무리", "2,500"],
+  ["S코스 · 45분", "숏타임 마사지 코스", "2,700"],
+];
+
+/* =========================================================
+   88 MASSAGE
+========================================================= */
+
 const eightyEightMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 메인.webp")}`;
 
@@ -32,31 +61,6 @@ const eightyEightImages = [
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸3.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸4.webp")}`,
-];
-
-/* =========================================================
-   드래곤 스웨디시 이미지
-   ========================================================= */
-
-const dragonMainImage =
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 메인.webp")}`;
-
-const dragonImages = [
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 외관.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 리셉션.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 휴게실.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸1.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸2.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("파타야 드래곤 스웨디시 룸3.webp")}`,
-];
-
-const bananaPrice = [
-  ["A코스 · 90분", "발 마사지 + 오일 마사지 + 서비스", "3,500"],
-  ["B코스 · 120분", "발 마사지 + 바디 스크럽 + 오일 마사지 + 서비스", "4,000"],
-  ["C코스 · 120분", "발 마사지 + 오일 마사지 30분 (2:1) + 프리미엄 케어", "7,000"],
-  ["D코스 · 120분", "발 마사지 + 오일 마사지 30분 + 동반 고객 케어", "7,000"],
-  ["H코스 · 60분", "오일 마사지 30분 + 핸드 마무리", "2,500"],
-  ["S코스 · 45분", "숏타임 마사지 코스", "2,700"],
 ];
 
 const eightyEightPrice = [
@@ -98,31 +102,67 @@ const eightyEightPrice = [
 ];
 
 /* =========================================================
-   드래곤 스웨디시 가격표
-   ========================================================= */
+   DRAGON SWEDISH
+========================================================= */
+
+/*
+  실제 GitHub 폴더:
+
+  app/pattaya/message/[slug]/DragonSwedish/
+
+  [slug] 폴더명까지 URL에 포함되므로
+  %5Bslug%5D 로 인코딩합니다.
+*/
+
+const DRAGON_RAW =
+  `${GITHUB_RAW}/app/pattaya/message/%5Bslug%5D/DragonSwedish`;
+
+const dragonImage = (fileName: string) =>
+  `${DRAGON_RAW}/${encodeURIComponent(fileName)}`;
+
+const dragonMainImage = dragonImage(
+  "파타야 드래곤 스웨디시 메인.webp"
+);
+
+const dragonImages = [
+  dragonImage("파타야 드래곤 스웨디시 외관.webp"),
+  dragonImage("파타야 드래곤 스웨디시 리셉션.webp"),
+  dragonImage("파타야 드래곤 스웨디시 휴게실.webp"),
+  dragonImage("파타야 드래곤 스웨디시 룸1.webp"),
+  dragonImage("파타야 드래곤 스웨디시 룸2.webp"),
+  dragonImage("파타야 드래곤 스웨디시 룸3.webp"),
+];
 
 const dragonPrice = [
   [
-    "A코스 · 60분",
-    "드래곤 스웨디시 마사지 코스",
+    "A 코스 · 60분",
+    "마사지 + 센슈얼 + 핸드",
     "2,500",
   ],
   [
-    "B코스 · 60분",
-    "드래곤 스웨디시 마사지 코스",
+    "B 코스 · 60분",
+    "마사지 + 센슈얼 + @",
     "3,500",
   ],
   [
-    "C코스 · 90분",
-    "드래곤 스웨디시 마사지 코스",
+    "C 코스 · 90분",
+    "전문 오일마사지 60분 + 센슈얼 + 핸드",
     "3,000",
   ],
   [
-    "D코스 · 90분",
-    "드래곤 스웨디시 마사지 코스",
+    "D 코스 · 90분",
+    "전문 오일마사지 60분 + 센슈얼 + @",
     "4,000",
   ],
 ];
+
+const dragonPriceImage = dragonImage(
+  "파타야 드래곤 스웨디시 가격표.webp"
+);
+
+/* =========================================================
+   PAGE DATA
+========================================================= */
 
 function getPageData(slug: string) {
   if (slug === BANANA_SLUG) {
@@ -140,7 +180,8 @@ function getPageData(slug: string) {
       galleryDescription:
         "매장 외관과 내부 분위기, 마사지 공간을 사진으로 확인해보세요.",
       priceTitle: "파타야 바나나 마사지 가격표",
-      priceDescription: "바나나 마사지에서 안내하는 코스별 구성과 가격입니다.",
+      priceDescription:
+        "바나나 마사지에서 안내하는 코스별 구성과 가격입니다.",
       prices: bananaPrice,
       aboutTitle: "ABOUT BANANA MASSAGE",
       aboutText: [
@@ -188,42 +229,46 @@ function getPageData(slug: string) {
   }
 
   /* =========================================================
-     파타야 드래곤 스웨디시
-     ========================================================= */
+     DRAGON
+  ========================================================= */
 
   if (slug === DRAGON_SLUG) {
     return {
       slug,
       name: "파타야 드래곤 스웨디시",
-      english: "DRAGON SWEDISH PATTAYA",
-      rating: "4.6",
+      english: "DRAGON SWEDISH & SENSUAL MASSAGE",
+      rating: "4.5",
       reviews: "0",
-      hours: "영업시간 확인 필요",
-      address: "Pattaya, Chon Buri, Thailand",
+      hours: "11:00 - 00:00",
+      address: "Pattaya 3rd Road, Pattaya, Chon Buri, Thailand",
       mainImage: dragonMainImage,
       images: dragonImages,
-      galleryTitle: "드래곤 스웨디시 사진",
+      galleryTitle: "드래곤 스웨디시 매장 사진",
       galleryDescription:
-        "파타야 드래곤 스웨디시의 외관과 리셉션, 휴게실 및 마사지룸을 사진으로 확인해보세요.",
+        "파타야 드래곤 스웨디시의 외관, 리셉션, 휴게실과 룸 내부 사진입니다.",
       priceTitle: "파타야 드래곤 스웨디시 가격표",
       priceDescription:
-        "드래곤 스웨디시에서 확인된 코스별 이용시간과 가격입니다. 가격과 코스 내용은 방문 전 다시 확인해주세요.",
+        "제공해주신 가격표를 기준으로 정리한 드래곤 스웨디시 이용 코스입니다.",
       prices: dragonPrice,
       aboutTitle: "ABOUT DRAGON SWEDISH",
       aboutText: [
-        "파타야 드래곤 스웨디시는 파타야에서 스웨디시 마사지를 찾는 여행객들이 참고할 수 있는 마사지 업소입니다.",
-        "매장 외관과 리셉션, 휴게실 및 마사지룸 사진을 통해 방문 전 매장 분위기와 시설을 확인할 수 있습니다.",
-        "마사지 코스는 이용시간에 따라 구분되어 있으며, 방문 전 원하는 코스와 가격 및 이용조건을 확인하는 것을 권장합니다.",
+        "파타야 드래곤 스웨디시는 파타야 3rd Road 인근에서 스웨디시 및 오일마사지 코스를 이용할 수 있는 마사지샵입니다.",
+        "매장 외관과 리셉션, 휴게 공간, 마사지 룸 등의 실제 사진을 확인할 수 있어 방문 전에 매장 분위기를 살펴보기 좋습니다.",
+        "코스는 60분과 90분 구성으로 나뉘며, 방문 전 원하는 코스와 가격 및 이용 가능 여부를 확인하는 것을 권장합니다.",
       ],
       locationTitle: "드래곤 스웨디시 위치",
       facilityTitle: "드래곤 스웨디시 이용 정보",
       ctaTitle: "파타야 드래곤 스웨디시",
-      ctaLabel: "DRAGON SWEDISH PATTAYA",
+      ctaLabel: "DRAGON SWEDISH & SENSUAL MASSAGE",
     };
   }
 
   return null;
 }
+
+/* =========================================================
+   STATIC PARAMS
+========================================================= */
 
 export function generateStaticParams() {
   return [
@@ -232,6 +277,10 @@ export function generateStaticParams() {
     { slug: DRAGON_SLUG },
   ];
 }
+
+/* =========================================================
+   METADATA
+========================================================= */
 
 export async function generateMetadata({
   params,
@@ -242,7 +291,9 @@ export async function generateMetadata({
   const page = getPageData(slug);
 
   if (!page) {
-    return { title: "파타야 마사지" };
+    return {
+      title: "파타야 마사지",
+    };
   }
 
   return {
@@ -260,7 +311,8 @@ export async function generateMetadata({
     },
     openGraph: {
       title: page.name,
-      description: `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
+      description:
+        `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
       type: "website",
       images: [
         {
@@ -271,6 +323,10 @@ export async function generateMetadata({
     },
   };
 }
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
 
 function BreadcrumbJsonLd({
   page,
@@ -283,8 +339,18 @@ function BreadcrumbJsonLd({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "홈", item: "/" },
-      { "@type": "ListItem", position: 2, name: "파타야", item: "/pattaya" },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "홈",
+        item: "/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "파타야",
+        item: "/pattaya",
+      },
       {
         "@type": "ListItem",
         position: 3,
@@ -303,10 +369,16 @@ function BreadcrumbJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
     />
   );
 }
+
+/* =========================================================
+   PAGE
+========================================================= */
 
 export default async function PattayaMassagePage({
   params,
@@ -319,6 +391,378 @@ export default async function PattayaMassagePage({
   if (!page) {
     notFound();
   }
+
+  /* =======================================================
+     DRAGON 전용 페이지
+     기존 바나나 / 88 페이지와 완전히 다른 디자인
+  ======================================================= */
+
+  if (slug === DRAGON_SLUG) {
+    return (
+      <main className="min-h-screen overflow-x-hidden bg-[#070707] text-white">
+        <BreadcrumbJsonLd page={page} />
+
+        {/* DRAGON HERO */}
+        <section className="relative h-[480px] overflow-hidden sm:h-[560px] md:h-[650px]">
+          <img
+            src={page.mainImage}
+            alt={page.name}
+            className="h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-black/40 to-black/10" />
+
+          <div className="absolute inset-x-0 bottom-0">
+            <div className="container pb-10 md:pb-16">
+              <p className="text-xs font-black tracking-[0.4em] text-[#d2a24c]">
+                PATTAYA · DRAGON SWEDISH
+              </p>
+
+              <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
+                파타야 드래곤 스웨디시
+              </h1>
+
+              <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base">
+                파타야 드래곤 스웨디시의 매장 정보와
+                이용 코스, 가격, 시설 사진을 한곳에서 확인하세요.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-2">
+                <span className="rounded-full border border-[#c99a4a]/40 bg-[#c99a4a]/10 px-4 py-2 text-sm font-bold text-[#e0b866]">
+                  ★ {page.rating}
+                </span>
+
+                <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm">
+                  Pattaya 3rd Road
+                </span>
+
+                <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm">
+                  {page.hours}
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="container py-16 md:py-20">
+          <div className="max-w-4xl">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              DRAGON SWEDISH
+            </p>
+
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+              파타야 드래곤 스웨디시
+            </h2>
+
+            <p className="mt-7 text-[15px] leading-8 text-zinc-400 md:text-base">
+              파타야 3rd Road 인근에서 스웨디시 및 오일마사지
+              코스를 이용할 수 있는 마사지샵입니다.
+              실제 매장 사진과 코스별 가격을 함께 확인할 수 있도록
+              정리했습니다.
+            </p>
+          </div>
+        </section>
+
+        {/* PRICE */}
+        <section className="container py-14 md:py-20">
+          <div className="mb-10">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              PRICE GUIDE
+            </p>
+
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+              이용 코스 & 가격
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-zinc-500">
+              제공해주신 가격표를 기준으로 정리했습니다.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {dragonPrice.map(([course, description, price]) => (
+              <div
+                key={course}
+                className="relative overflow-hidden rounded-3xl border border-[#8d6a32]/50 bg-gradient-to-br from-[#17130c] to-[#0d0d0d] p-7 md:p-9"
+              >
+                <div className="absolute -right-2 -top-8 text-[130px] font-black leading-none text-[#d2a24c]/5">
+                  {course.charAt(0)}
+                </div>
+
+                <div className="relative">
+                  <p className="text-xs font-black tracking-[0.3em] text-[#d2a24c]">
+                    {course}
+                  </p>
+
+                  <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+                    <h3 className="max-w-md text-xl font-black leading-8 md:text-2xl">
+                      {description}
+                    </h3>
+
+                    <div className="shrink-0">
+                      <span className="text-3xl font-black text-[#dfb766]">
+                        {price}
+                      </span>
+
+                      <span className="ml-1 text-sm font-bold text-zinc-500">
+                        바트
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-[#8d6a32]/30 bg-[#11100c] p-5 text-sm leading-7 text-zinc-400">
+            전문 마사지사 1명 + 센슈얼 아가씨 1명
+            릴레이 시스템
+          </div>
+        </section>
+
+        {/* PRICE IMAGE */}
+        <section className="container py-14 md:py-20">
+          <div className="mb-8">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              MENU
+            </p>
+
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+              공식 가격표
+            </h2>
+          </div>
+
+          <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-[#8d6a32]/40 bg-[#0d0d0d] shadow-2xl">
+            <img
+              src={dragonPriceImage}
+              alt="파타야 드래곤 스웨디시 가격표"
+              className="h-auto w-full"
+            />
+          </div>
+        </section>
+
+        {/* GALLERY */}
+        <section className="container py-14 md:py-20">
+          <div className="mb-9">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              GALLERY
+            </p>
+
+            <h2 className="mt-4 text-3xl font-black md:text-5xl">
+              매장 & 시설 사진
+            </h2>
+
+            <p className="mt-4 text-sm leading-7 text-zinc-500">
+              외관, 리셉션, 휴게실과 마사지 룸 내부를 확인해보세요.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+            {dragonImages.map((image, index) => (
+              <div
+                key={image}
+                className={`group overflow-hidden rounded-2xl border border-white/10 bg-[#111] ${
+                  index === 0
+                    ? "col-span-2 row-span-2 min-h-[400px]"
+                    : "min-h-[200px]"
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`파타야 드래곤 스웨디시 시설 ${index + 1}`}
+                  className="h-full min-h-[200px] w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* BASIC INFO */}
+        <section className="container py-14 md:py-20">
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="rounded-3xl border border-[#8d6a32]/30 bg-[#11110f] p-7">
+              <p className="text-xs font-black tracking-[0.3em] text-[#d2a24c]">
+                LOCATION
+              </p>
+
+              <h3 className="mt-4 text-xl font-black">
+                위치
+              </h3>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-400">
+                {page.address}
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-[#8d6a32]/30 bg-[#11110f] p-7">
+              <p className="text-xs font-black tracking-[0.3em] text-[#d2a24c]">
+                HOURS
+              </p>
+
+              <h3 className="mt-4 text-xl font-black">
+                영업시간
+              </h3>
+
+              <p className="mt-4 text-2xl font-black text-[#dfb766]">
+                {page.hours}
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-[#8d6a32]/30 bg-[#11110f] p-7">
+              <p className="text-xs font-black tracking-[0.3em] text-[#d2a24c]">
+                RATING
+              </p>
+
+              <h3 className="mt-4 text-xl font-black">
+                평점
+              </h3>
+
+              <p className="mt-4 text-2xl font-black text-[#dfb766]">
+                ★ {page.rating}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section className="container py-14 md:py-20">
+          <div className="rounded-3xl border border-white/10 bg-[#101010] p-7 md:p-10">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              ABOUT
+            </p>
+
+            <h2 className="mt-4 text-3xl font-black md:text-4xl">
+              드래곤 스웨디시 이용 안내
+            </h2>
+
+            <div className="mt-7 space-y-5 text-[15px] leading-8 text-zinc-400">
+              {page.aboutText.map((text) => (
+                <p key={text}>{text}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CHECK */}
+        <section className="container py-14 md:py-20">
+          <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+            INFORMATION
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black md:text-4xl">
+            방문 전 확인사항
+          </h2>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              "방문 전 최신 가격 확인",
+              "원하는 코스 및 이용시간 확인",
+              "당일 영업 여부 확인",
+              "매장 위치 확인",
+              "현장 이용 가능 여부 확인",
+              "추가 비용 여부 확인",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-[#111114] p-5 text-sm text-zinc-300"
+              >
+                <span className="mr-3 text-[#d2a24c]">
+                  ✓
+                </span>
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="container py-14 md:py-20">
+          <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+            FAQ
+          </p>
+
+          <h2 className="mt-4 text-3xl font-black md:text-4xl">
+            자주 묻는 질문
+          </h2>
+
+          <div className="mt-8 space-y-4">
+            <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
+              <summary className="cursor-pointer font-black">
+                드래곤 스웨디시 영업시간은?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                현재 안내된 영업시간은 {page.hours}입니다.
+                방문 전 당일 영업 여부를 확인해주세요.
+              </p>
+            </details>
+
+            <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
+              <summary className="cursor-pointer font-black">
+                드래곤 스웨디시는 어디에 있나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                {page.address}
+              </p>
+            </details>
+
+            <details className="rounded-2xl border border-white/10 bg-[#111114] p-6">
+              <summary className="cursor-pointer font-black">
+                이용 코스와 가격은 어떻게 되나요?
+              </summary>
+
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
+                A, B 코스는 60분이며 C, D 코스는
+                90분 구성입니다. 자세한 가격은 위 가격표를
+                확인해주세요.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="container py-16 md:py-24">
+          <div className="rounded-3xl border border-[#8d6a32]/40 bg-gradient-to-b from-[#17130d] to-[#0d0d0d] p-8 text-center md:p-14">
+            <p className="text-xs font-black tracking-[0.35em] text-[#d2a24c]">
+              DRAGON SWEDISH
+            </p>
+
+            <h2 className="mt-5 text-3xl font-black md:text-5xl">
+              파타야 드래곤 스웨디시
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400">
+              매장 위치와 영업시간, 이용 코스 및 가격,
+              실제 시설 사진을 확인해보세요.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a
+                href="/contact"
+                className="rounded-xl bg-[#b7893e] px-7 py-3 text-sm font-black text-black transition hover:bg-[#d2a24c]"
+              >
+                문의하기
+              </a>
+
+              <Link
+                href="/pattaya/massage"
+                className="rounded-xl border border-white/10 bg-white/5 px-7 py-3 text-sm font-black transition hover:bg-white/10"
+              >
+                파타야 마사지 더보기
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    );
+  }
+
+  /* =======================================================
+     기존 바나나 / 88 페이지
+     기존 디자인 그대로 유지
+  ======================================================= */
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#08080a] text-white">
@@ -385,7 +829,10 @@ export default async function PattayaMassagePage({
         </p>
 
         <div className="mt-8">
-          <ImageGallery images={page.images} name={page.name} />
+          <ImageGallery
+            images={page.images}
+            name={page.name}
+          />
         </div>
       </section>
 
@@ -424,6 +871,7 @@ export default async function PattayaMassagePage({
 
                 <div className="shrink-0 text-3xl font-black text-white">
                   {price}
+
                   <span className="ml-1 text-lg text-orange-400">
                     바트
                   </span>
@@ -452,8 +900,13 @@ export default async function PattayaMassagePage({
               key={label}
               className="rounded-2xl border border-white/10 bg-[#111114] p-6"
             >
-              <p className="text-xs text-zinc-500">{label}</p>
-              <p className="mt-2 font-black">{value}</p>
+              <p className="text-xs text-zinc-500">
+                {label}
+              </p>
+
+              <p className="mt-2 font-black">
+                {value}
+              </p>
             </div>
           ))}
         </div>
@@ -488,7 +941,9 @@ export default async function PattayaMassagePage({
           </h2>
 
           <div className="mt-8 rounded-2xl bg-black/40 p-6">
-            <p className="text-xs text-zinc-500">주소</p>
+            <p className="text-xs text-zinc-500">
+              주소
+            </p>
 
             <p className="mt-2 text-lg font-black">
               {page.address}
@@ -530,17 +985,33 @@ export default async function PattayaMassagePage({
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {[
-            ["💆", "마사지", "다양한 마사지 코스를 확인할 수 있습니다."],
-            ["🕐", "영업시간", `현재 안내된 영업시간은 ${page.hours}입니다.`],
-            ["📍", "파타야", "파타야 시내에서 이용할 수 있는 마사지 업소입니다."],
+            [
+              "💆",
+              "마사지",
+              "다양한 마사지 코스를 확인할 수 있습니다.",
+            ],
+            [
+              "🕐",
+              "영업시간",
+              `현재 안내된 영업시간은 ${page.hours}입니다.`,
+            ],
+            [
+              "📍",
+              "파타야",
+              "파타야 시내에서 이용할 수 있는 마사지 업소입니다.",
+            ],
           ].map(([icon, title, text]) => (
             <div
               key={title}
               className="rounded-2xl border border-white/10 bg-[#111114] p-7"
             >
-              <div className="text-3xl">{icon}</div>
+              <div className="text-3xl">
+                {icon}
+              </div>
 
-              <h3 className="mt-4 text-xl font-black">{title}</h3>
+              <h3 className="mt-4 text-xl font-black">
+                {title}
+              </h3>
 
               <p className="mt-3 text-sm leading-7 text-zinc-500">
                 {text}
@@ -563,8 +1034,8 @@ export default async function PattayaMassagePage({
 
           <div className="mt-8 space-y-5 text-sm leading-8 text-zinc-400">
             <p>
-              파타야 시내에서는 Grab 또는 Bolt를 이용하면 편리하게
-              이동할 수 있습니다.
+              파타야 시내에서는 Grab 또는 Bolt를 이용하면
+              편리하게 이동할 수 있습니다.
             </p>
 
             <p>
@@ -573,8 +1044,8 @@ export default async function PattayaMassagePage({
             </p>
 
             <p>
-              출발 전에 지도에서 현재 위치와 영업 여부를 다시 확인하는
-              것을 권장합니다.
+              출발 전에 지도에서 현재 위치와 영업 여부를
+              다시 확인하는 것을 권장합니다.
             </p>
           </div>
         </div>
@@ -605,7 +1076,10 @@ export default async function PattayaMassagePage({
               key={item}
               className="rounded-xl border border-white/10 bg-[#111114] p-5 text-sm text-zinc-300"
             >
-              <span className="mr-3 text-red-500">✓</span>
+              <span className="mr-3 text-red-500">
+                ✓
+              </span>
+
               {item}
             </div>
           ))}
