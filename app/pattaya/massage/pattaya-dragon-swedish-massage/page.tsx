@@ -1,7 +1,5 @@
-import Image from "next/image";
-
 const GITHUB_IMAGE =
-  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/%5Bslug%5D";
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/pattaya-dragon-swedish-massage";
 
 const images = [
   {
@@ -80,7 +78,7 @@ export default function DragonSwedishPage() {
           <p className="mt-5 max-w-3xl text-sm leading-8 text-zinc-400 sm:text-base">
             파타야에서 스웨디시 마사지를 찾는 분들을 위한
             드래곤 스웨디시 마사지 정보를 정리했습니다.
-            매장 사진과 가격표를 함께 확인할 수 있어
+            매장 사진과 가격 정보를 함께 확인할 수 있어
             방문 전에 기본적인 정보를 한눈에 살펴보기 좋습니다.
           </p>
 
@@ -94,6 +92,7 @@ export default function DragonSwedishPage() {
         <section className="mb-12">
 
           <div className="mb-6">
+
             <div className="text-xs font-black tracking-[0.25em] text-red-500">
               ABOUT
             </div>
@@ -108,11 +107,14 @@ export default function DragonSwedishPage() {
               실제 사진을 확인할 수 있으며,
               방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.
             </p>
+
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
 
+            {/* LOCATION */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
+
               <div className="text-xs font-black tracking-wider text-zinc-500">
                 LOCATION
               </div>
@@ -124,9 +126,12 @@ export default function DragonSwedishPage() {
               <p className="mt-2 text-sm text-zinc-500">
                 Pattaya, Chon Buri, Thailand
               </p>
+
             </div>
 
+            {/* CATEGORY */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
+
               <div className="text-xs font-black tracking-wider text-zinc-500">
                 CATEGORY
               </div>
@@ -138,9 +143,12 @@ export default function DragonSwedishPage() {
               <p className="mt-2 text-sm text-zinc-500">
                 Swedish Massage
               </p>
+
             </div>
 
+            {/* OPENING HOURS */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
+
               <div className="text-xs font-black tracking-wider text-zinc-500">
                 OPENING HOURS
               </div>
@@ -152,6 +160,7 @@ export default function DragonSwedishPage() {
               <p className="mt-2 text-sm text-zinc-500">
                 방문 전 영업 여부 확인 권장
               </p>
+
             </div>
 
           </div>
@@ -162,6 +171,7 @@ export default function DragonSwedishPage() {
         <section className="mb-14">
 
           <div className="mb-7">
+
             <div className="text-xs font-black tracking-[0.25em] text-red-500">
               PRICE
             </div>
@@ -174,6 +184,7 @@ export default function DragonSwedishPage() {
               아래 가격은 제공받은 가격표를 기준으로 정리한 내용입니다.
               현장 상황에 따라 변경될 수 있으니 방문 전 확인을 권장합니다.
             </p>
+
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -187,6 +198,7 @@ export default function DragonSwedishPage() {
                 <div className="flex items-start justify-between gap-4">
 
                   <div>
+
                     <div className="text-4xl font-black text-[#d5a94f]">
                       {item.name}
                     </div>
@@ -194,6 +206,7 @@ export default function DragonSwedishPage() {
                     <div className="mt-3 text-base font-bold">
                       {item.description}
                     </div>
+
                   </div>
 
                   <div className="whitespace-nowrap rounded-lg border border-[#8b6a32] px-3 py-2 text-sm font-black text-[#e2bc68]">
@@ -203,9 +216,11 @@ export default function DragonSwedishPage() {
                 </div>
 
                 <div className="mt-4 border-t border-white/10 pt-4">
+
                   <p className="text-sm leading-6 text-zinc-400">
                     {item.detail}
                   </p>
+
                 </div>
 
                 <div className="mt-5 text-2xl font-black text-[#e2bc68]">
@@ -214,34 +229,6 @@ export default function DragonSwedishPage() {
 
               </div>
             ))}
-
-          </div>
-
-        </section>
-
-        {/* PRICE IMAGE */}
-        <section className="mb-14">
-
-          <div className="mb-7">
-            <div className="text-xs font-black tracking-[0.25em] text-red-500">
-              MENU
-            </div>
-
-            <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              공식 가격표 이미지
-            </h2>
-          </div>
-
-          <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[#8b6a32]/40 bg-[#0b0b0b]">
-
-            <Image
-              src={priceImage}
-              alt="파타야 드래곤 스웨디시 가격표"
-              width={1024}
-              height={1536}
-              className="h-auto w-full"
-              unoptimized
-            />
 
           </div>
 
@@ -278,13 +265,10 @@ export default function DragonSwedishPage() {
 
                 <div className="relative aspect-[4/3]">
 
-                  <Image
+                  <img
                     src={image.src}
                     alt={image.alt}
-                    fill
-                    sizes="(max-width: 640px) 50vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    unoptimized
+                    className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
 
                 </div>
