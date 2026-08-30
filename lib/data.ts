@@ -36,6 +36,13 @@ export type Place = {
 const GITHUB_IMAGE =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
+/*
+ * 이미지 파일명을 넣으면 GitHub Raw 주소로 만들어줍니다.
+ * 기존 이미지 경로는 그대로 유지할 수 있도록 사용합니다.
+ */
+const img = (fileName: string) =>
+  `${GITHUB_IMAGE}/${encodeURIComponent(fileName)}`;
+
 export const cities: City[] = [
   {
     slug: "bangkok",
@@ -77,7 +84,6 @@ export const places: Place[] = [
     address: "방콕 돈키호테 마사지",
     hours: "11:00 - 00:00",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/방콕%20돈키호테%20메인.webp`,
 
     gallery: [
@@ -128,7 +134,6 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 22",
     hours: "11:00 - 02:00",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/방콕%20큐브%20마사지%20메인.webp`,
 
     gallery: [
@@ -161,7 +166,6 @@ export const places: Place[] = [
     address: "방콕 수쿰빗 소이 18",
     hours: "12:00 - 02:00",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/방콕%20바비%20마사지%20메인.webp`,
 
     gallery: [
@@ -195,7 +199,6 @@ export const places: Place[] = [
     address: "방콕 수쿰빗",
     hours: "19:00 - 05:00",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/방콕%20코리아나%20가라오케%20메인%20외관.webp`,
 
     gallery: [
@@ -228,7 +231,6 @@ export const places: Place[] = [
     address: "345/17-18, Pattaya, Chon Buri 20150, Thailand",
     hours: "11:30 - 23:30",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/파타야%20바나나%20마사지%20메인.webp`,
 
     featured: true,
@@ -252,7 +254,6 @@ export const places: Place[] = [
     address: "88 Massage and Tour, Pattaya",
     hours: "영업시간 확인 필요",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/파타야%2088%20마사지%20메인.webp`,
 
     gallery: [
@@ -269,66 +270,6 @@ export const places: Place[] = [
   },
 
   // =========================================================
-  // ⭐ 파타야 드래곤 스웨디시 마사지
-  // =========================================================
-  {
-    slug: "pattaya-dragon-swedish",
-    name: "파타야 드래곤 스웨디시 마사지",
-    city: "pattaya",
-    category: "massage",
-    district: "파타야",
-    rating: 4.5,
-    reviews: 0,
-
-    description:
-      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관부터 리셉션, 휴게 공간, 마사지룸 등 실제 매장 사진을 확인할 수 있으며 방문 전 가격과 이용시간을 확인할 수 있습니다.",
-
-    address: "Pattaya, Chon Buri, Thailand",
-    hours: "11:00 - 00:00",
-
-    // ⭐ 새로 추가한 드래곤 메인 이미지
-    image:
-      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
-
-    gallery: [
-      imageUrl("파타야 드래곤 스웨디시 외관.webp"),
-      imageUrl("파타야 드래곤 스웨디시 메인.webp"),
-      imageUrl("파타야 드래곤 스웨디시 리셉션.webp"),
-      imageUrl("파타야 드래곤 스웨디시 휴게실.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸1.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸2.webp"),
-      imageUrl("파타야 드래곤 스웨디시 룸3.webp"),
-    ],
-
-    // ⭐ 가격표
-    priceList: [
-      {
-        name: "A 코스",
-        description: "마사지 + 센슈얼 + 핸드",
-        prices: ["60분 2,500B"],
-      },
-      {
-        name: "B 코스",
-        description: "마사지 + 센슈얼 + 추가 서비스",
-        prices: ["60분 3,500B"],
-      },
-      {
-        name: "C 코스",
-        description: "전문 오일마사지 60분 + 센슈얼 + 핸드",
-        prices: ["90분 3,000B"],
-      },
-      {
-        name: "D 코스",
-        description: "전문 오일마사지 60분 + 센슈얼 + 추가 서비스",
-        prices: ["90분 4,000B"],
-      },
-    ],
-
-    featured: true,
-    koreanSupport: true,
-  },
-
-  // =========================================================
   // 파타야 모나리자 가라오케
   // =========================================================
   {
@@ -337,7 +278,7 @@ export const places: Place[] = [
     city: "pattaya",
     category: "karaoke",
     district: "파타야",
-    rating: 4.0,
+    rating: 4.9,
     reviews: 306,
 
     description:
@@ -346,7 +287,6 @@ export const places: Place[] = [
     address: "Pattaya City, Chon Buri 20150",
     hours: "18:00 - 00:00",
 
-    // 기존 이미지 그대로 유지
     image: `${GITHUB_IMAGE}/파타야%20모나리자%20가라오케%20메인.webp`,
 
     gallery: [
@@ -359,6 +299,71 @@ export const places: Place[] = [
     ],
 
     featured: true,
+  },
+
+  // =========================================================
+  // 파타야 드래곤 스웨디시 마사지
+  // =========================================================
+  {
+    slug: "pattaya-dragon-swedish",
+    name: "파타야 드래곤 스웨디시 마사지",
+    city: "pattaya",
+    category: "massage",
+    district: "파타야",
+    rating: 4.5,
+    reviews: 0,
+
+    description:
+      "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등의 실제 사진을 확인할 수 있으며 방문 전 위치와 영업시간을 확인할 수 있습니다.",
+
+    address: "Pattaya, Chon Buri, Thailand",
+    hours: "11:00 - 00:00",
+
+    /*
+     * 카드 대표 이미지
+     * 파일은 [slug] 폴더가 아니라
+     * /app/pattaya/massage/ 폴더에 있는 파일을 사용합니다.
+     */
+    image: img("파타야 드래곤 스웨디시 메인.webp"),
+
+    /*
+     * 상세페이지 갤러리
+     * 현재 GitHub 폴더에 업로드한 파일을 그대로 사용합니다.
+     */
+    gallery: [
+      img("파타야 드래곤 스웨디시 외관.webp"),
+      img("파타야 드래곤 스웨디시 리셉션.webp"),
+      img("파타야 드래곤 스웨디시 휴게실.webp"),
+      img("파타야 드래곤 스웨디시 룸1.webp"),
+      img("파타야 드래곤 스웨디시 룸2.webp"),
+      img("파타야 드래곤 스웨디시 룸3.webp"),
+    ],
+
+    featured: true,
+    koreanSupport: true,
+
+    priceList: [
+      {
+        name: "A 코스",
+        description: "기본 마사지 프로그램",
+        prices: ["60분 2,500B"],
+      },
+      {
+        name: "B 코스",
+        description: "마사지 프로그램",
+        prices: ["60분 3,500B"],
+      },
+      {
+        name: "C 코스",
+        description: "오일 마사지 프로그램",
+        prices: ["90분 3,000B"],
+      },
+      {
+        name: "D 코스",
+        description: "오일 마사지 프로그램",
+        prices: ["90분 4,000B"],
+      },
+    ],
   },
 ];
 
