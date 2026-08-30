@@ -1,5 +1,5 @@
 const GITHUB_IMAGE =
-  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/pattaya-dragon-swedish-massage";
+  "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/pattaya/massage/%5Bslug%5D";
 
 const images = [
   {
@@ -59,34 +59,6 @@ const priceList = [
   },
 ];
 
-const faqList = [
-  {
-    question: "파타야 드래곤 스웨디시는 어떤 곳인가요?",
-    answer:
-      "파타야에서 스웨디시 마사지를 이용하려는 여행객들이 참고할 수 있도록 매장 정보와 코스, 시설 사진 등을 정리한 마사지샵입니다.",
-  },
-  {
-    question: "영업시간은 어떻게 되나요?",
-    answer:
-      "현재 안내 기준 영업시간은 11:00부터 00:00까지입니다. 방문 당일에는 영업 여부와 이용 가능 여부를 확인하는 것을 권장합니다.",
-  },
-  {
-    question: "가격은 어떻게 확인할 수 있나요?",
-    answer:
-      "페이지에 A, B, C, D 코스별 가격을 정리해 두었습니다. 가격은 현장 상황에 따라 변경될 수 있으므로 방문 전 최신 가격을 확인하는 것이 좋습니다.",
-  },
-  {
-    question: "매장 사진을 볼 수 있나요?",
-    answer:
-      "네. 외관, 리셉션, 휴게실과 룸 내부 사진을 페이지 하단 갤러리에서 확인할 수 있습니다.",
-  },
-  {
-    question: "예약 전에 확인할 사항이 있나요?",
-    answer:
-      "방문 전 영업시간, 이용 가능한 코스와 가격을 확인하는 것을 권장합니다. 특히 여행 일정에 맞춰 방문한다면 당일 이용 가능 여부를 미리 확인하는 것이 좋습니다.",
-  },
-];
-
 export default function DragonSwedishPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
@@ -99,7 +71,7 @@ export default function DragonSwedishPage() {
             PATTAYA · MASSAGE
           </div>
 
-          <h1 className="text-3xl font-black leading-tight sm:text-5xl">
+          <h1 className="text-3xl font-black sm:text-5xl">
             파타야 드래곤 스웨디시 마사지
           </h1>
 
@@ -116,29 +88,31 @@ export default function DragonSwedishPage() {
       {/* CONTENT */}
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
 
-        {/* ABOUT */}
-        <section className="mb-14">
+        {/* BASIC INFO */}
+        <section className="mb-12">
 
-          <div className="mb-7">
+          <div className="mb-6">
 
             <div className="text-xs font-black tracking-[0.25em] text-red-500">
               ABOUT
             </div>
 
             <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              파타야 드래곤 스웨디시
+              업체 정보
             </h2>
 
             <p className="mt-4 max-w-4xl text-sm leading-8 text-zinc-400 sm:text-base">
-              파타야 드래곤 스웨디시 마사지 정보를 한곳에서 확인할 수 있도록
-              정리했습니다. 매장 외관부터 리셉션, 휴게공간과 마사지룸까지
-              시설 사진을 확인할 수 있으며 코스별 가격도 함께 살펴볼 수 있습니다.
+              파타야 드래곤 스웨디시 마사지입니다.
+              매장 외관과 리셉션, 휴게공간, 마사지룸 등의
+              실제 사진을 확인할 수 있으며,
+              방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.
             </p>
 
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
 
+            {/* LOCATION */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
 
               <div className="text-xs font-black tracking-wider text-zinc-500">
@@ -149,12 +123,13 @@ export default function DragonSwedishPage() {
                 파타야
               </div>
 
-              <p className="mt-2 text-sm leading-6 text-zinc-500">
+              <p className="mt-2 text-sm text-zinc-500">
                 Pattaya, Chon Buri, Thailand
               </p>
 
             </div>
 
+            {/* CATEGORY */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
 
               <div className="text-xs font-black tracking-wider text-zinc-500">
@@ -165,12 +140,13 @@ export default function DragonSwedishPage() {
                 스웨디시 마사지
               </div>
 
-              <p className="mt-2 text-sm leading-6 text-zinc-500">
+              <p className="mt-2 text-sm text-zinc-500">
                 Swedish Massage
               </p>
 
             </div>
 
+            {/* OPENING HOURS */}
             <div className="rounded-2xl border border-white/10 bg-[#101010] p-6">
 
               <div className="text-xs font-black tracking-wider text-zinc-500">
@@ -181,7 +157,7 @@ export default function DragonSwedishPage() {
                 11:00 - 00:00
               </div>
 
-              <p className="mt-2 text-sm leading-6 text-zinc-500">
+              <p className="mt-2 text-sm text-zinc-500">
                 방문 전 영업 여부 확인 권장
               </p>
 
@@ -206,7 +182,7 @@ export default function DragonSwedishPage() {
 
             <p className="mt-3 text-sm leading-7 text-zinc-500">
               아래 가격은 제공받은 가격표를 기준으로 정리한 내용입니다.
-              현장 상황에 따라 변경될 수 있으니 방문 전 최신 가격을 확인해 주세요.
+              현장 상황에 따라 변경될 수 있으니 방문 전 확인을 권장합니다.
             </p>
 
           </div>
@@ -221,19 +197,19 @@ export default function DragonSwedishPage() {
 
                 <div className="flex items-start justify-between gap-4">
 
-                  <div className="min-w-0">
+                  <div>
 
                     <div className="text-4xl font-black text-[#d5a94f]">
                       {item.name}
                     </div>
 
-                    <div className="mt-3 text-base font-bold leading-6">
+                    <div className="mt-3 text-base font-bold">
                       {item.description}
                     </div>
 
                   </div>
 
-                  <div className="shrink-0 whitespace-nowrap rounded-lg border border-[#8b6a32] px-3 py-2 text-sm font-black text-[#e2bc68]">
+                  <div className="whitespace-nowrap rounded-lg border border-[#8b6a32] px-3 py-2 text-sm font-black text-[#e2bc68]">
                     {item.time}
                   </div>
 
@@ -268,10 +244,10 @@ export default function DragonSwedishPage() {
             </div>
 
             <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              드래곤 스웨디시 매장 사진
+              룸 & 시설 사진
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-zinc-500">
+            <p className="mt-3 text-sm text-zinc-500">
               외관, 리셉션, 휴게실과 룸 내부 사진을 확인해보세요.
             </p>
 
@@ -292,119 +268,12 @@ export default function DragonSwedishPage() {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
                     className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
 
                 </div>
 
               </div>
-            ))}
-
-          </div>
-
-        </section>
-
-        {/* LOCATION */}
-        <section className="mb-14">
-
-          <div className="mb-7">
-
-            <div className="text-xs font-black tracking-[0.25em] text-red-500">
-              LOCATION
-            </div>
-
-            <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              찾아가는 방법
-            </h2>
-
-          </div>
-
-          <div className="rounded-2xl border border-white/10 bg-[#101010] p-6 sm:p-8">
-
-            <div className="grid gap-6 sm:grid-cols-2">
-
-              <div>
-
-                <div className="text-xs font-black tracking-wider text-zinc-500">
-                  AREA
-                </div>
-
-                <div className="mt-3 text-lg font-black">
-                  Pattaya, Chon Buri
-                </div>
-
-                <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  파타야 여행 중 스웨디시 마사지를 찾는 경우
-                  방문 전 정확한 위치와 영업 여부를 확인하는 것을 권장합니다.
-                </p>
-
-              </div>
-
-              <div>
-
-                <div className="text-xs font-black tracking-wider text-zinc-500">
-                  VISIT
-                </div>
-
-                <div className="mt-3 text-lg font-black">
-                  방문 전 확인 권장
-                </div>
-
-                <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  영업시간과 이용 가능한 코스는 현장 상황에 따라
-                  달라질 수 있으므로 방문 전에 확인해 주세요.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-
-        {/* FAQ */}
-        <section className="mb-14">
-
-          <div className="mb-7">
-
-            <div className="text-xs font-black tracking-[0.25em] text-red-500">
-              FAQ
-            </div>
-
-            <h2 className="mt-2 text-2xl font-black sm:text-3xl">
-              파타야 드래곤 스웨디시 자주 묻는 질문
-            </h2>
-
-          </div>
-
-          <div className="space-y-3">
-
-            {faqList.map((item, index) => (
-              <details
-                key={item.question}
-                className="group rounded-2xl border border-white/10 bg-[#101010]"
-                open={index === 0}
-              >
-
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-bold sm:p-6">
-
-                  <span className="text-sm sm:text-base">
-                    {item.question}
-                  </span>
-
-                  <span className="shrink-0 text-xl text-zinc-500 transition group-open:rotate-45">
-                    +
-                  </span>
-
-                </summary>
-
-                <div className="border-t border-white/10 px-5 pb-5 pt-4 text-sm leading-7 text-zinc-400 sm:px-6 sm:pb-6">
-                  {item.answer}
-                </div>
-
-              </details>
             ))}
 
           </div>
