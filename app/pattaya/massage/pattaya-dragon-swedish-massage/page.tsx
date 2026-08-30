@@ -302,7 +302,7 @@ export default function PattayaDragonSwedishMassagePage() {
               href={getGoogleMapLink(page.address)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-black text-black transition hover:bg-zinc-200"
+              className="inline-flex items-center rounded-xl bg-white px-6 py-3 text-sm font-black !text-black transition hover:bg-zinc-200"
             >
               📍 Google 지도에서 위치 보기
             </a>
