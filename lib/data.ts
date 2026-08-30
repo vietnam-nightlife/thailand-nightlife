@@ -371,15 +371,15 @@ export const places: Place[] = [
     hours: "영업시간 확인 필요",
 
     image:
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20메인.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20메인.webp`,
 
     gallery: [
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20외관.webp`,
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20동상.webp`,
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20로비.webp`,
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸1.webp`,
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸2.webp`,
-      `${GITHUB_IMAGE}/파타야%20페가수스%20가라오케%20룸3.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20외관.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20동상.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20로비.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20룸1.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20룸2.webp`,
+      `${GITHUB_IMAGE}/파타야%20페가수스%20룸3.webp`,
     ],
 
     featured: true,
