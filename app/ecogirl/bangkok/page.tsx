@@ -9,8 +9,9 @@ const profiles = Array.from({ length: 18 }, (_, i) => {
   const number = i + 1;
 
   return {
+    number,
     name: `방콕 에코걸 ${number}`,
-    image: `${GITHUB_IMAGE}/방콕%20에코걸${number}.webp`,
+    image: `${GITHUB_IMAGE}/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B8${number}.webp`,
   };
 });
 
@@ -95,7 +96,19 @@ export default function BangkokEcoGirlPage() {
               key={profile.name}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className="group block overflow-hidden rounded-2xl border border-white/10 bg-[#101010] text-left transition duration-300 hover:border-red-500/50"
+              className="
+                group
+                block
+                overflow-hidden
+                rounded-2xl
+                border
+                border-white/10
+                bg-[#101010]
+                text-left
+                transition
+                duration-300
+                hover:border-red-500/50
+              "
             >
 
               <div className="relative aspect-[3/4] overflow-hidden bg-[#111]">
@@ -103,8 +116,15 @@ export default function BangkokEcoGirlPage() {
                 <img
                   src={profile.image}
                   alt={profile.name}
-                  loading={profile.number === 8 ? "eager" : "lazy"}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    transition
+                    duration-500
+                    group-hover:scale-105
+                  "
                 />
 
               </div>
@@ -122,7 +142,16 @@ export default function BangkokEcoGirlPage() {
       ====================================================== */}
       {selectedIndex !== null && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4"
+          className="
+            fixed
+            inset-0
+            z-[100]
+            flex
+            items-center
+            justify-center
+            bg-black/95
+            p-4
+          "
           onClick={closeModal}
         >
 
@@ -136,7 +165,26 @@ export default function BangkokEcoGirlPage() {
               e.stopPropagation();
               closeModal();
             }}
-            className="absolute right-4 top-4 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-3xl font-light text-white transition hover:bg-black sm:right-6 sm:top-6"
+            className="
+              absolute
+              right-4
+              top-4
+              z-30
+              flex
+              h-11
+              w-11
+              items-center
+              justify-center
+              rounded-full
+              bg-black/70
+              text-3xl
+              font-light
+              text-white
+              transition
+              hover:bg-black
+              sm:right-6
+              sm:top-6
+            "
           >
             ×
           </button>
@@ -152,7 +200,28 @@ export default function BangkokEcoGirlPage() {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl font-light text-white transition hover:bg-red-600 sm:left-6 sm:h-14 sm:w-14"
+            className="
+              absolute
+              left-3
+              top-1/2
+              z-30
+              flex
+              h-12
+              w-12
+              -translate-y-1/2
+              items-center
+              justify-center
+              rounded-full
+              bg-black/70
+              text-4xl
+              font-light
+              text-white
+              transition
+              hover:bg-red-600
+              sm:left-6
+              sm:h-14
+              sm:w-14
+            "
           >
             ‹
           </button>
@@ -162,14 +231,26 @@ export default function BangkokEcoGirlPage() {
               IMAGE
           ================================================== */}
           <div
-            className="flex max-h-[92vh] max-w-[85vw] items-center justify-center"
+            className="
+              flex
+              max-h-[92vh]
+              max-w-[85vw]
+              items-center
+              justify-center
+            "
             onClick={(e) => e.stopPropagation()}
           >
 
             <img
               src={profiles[selectedIndex].image}
               alt={profiles[selectedIndex].name}
-              className="max-h-[90vh] max-w-[85vw] rounded-xl object-contain shadow-2xl"
+              className="
+                max-h-[90vh]
+                max-w-[85vw]
+                rounded-xl
+                object-contain
+                shadow-2xl
+              "
             />
 
           </div>
@@ -185,7 +266,28 @@ export default function BangkokEcoGirlPage() {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 text-4xl font-light text-white transition hover:bg-red-600 sm:right-6 sm:h-14 sm:w-14"
+            className="
+              absolute
+              right-3
+              top-1/2
+              z-30
+              flex
+              h-12
+              w-12
+              -translate-y-1/2
+              items-center
+              justify-center
+              rounded-full
+              bg-black/70
+              text-4xl
+              font-light
+              text-white
+              transition
+              hover:bg-red-600
+              sm:right-6
+              sm:h-14
+              sm:w-14
+            "
           >
             ›
           </button>
@@ -194,8 +296,22 @@ export default function BangkokEcoGirlPage() {
           {/* =================================================
               IMAGE NUMBER
           ================================================== */}
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/80 px-4 py-2 text-sm font-bold text-white">
-            {selectedIndex + 1} / {profiles.length}
+          <div
+            className="
+              absolute
+              bottom-5
+              left-1/2
+              -translate-x-1/2
+              rounded-full
+              bg-black/80
+              px-4
+              py-2
+              text-sm
+              font-bold
+              text-white
+            "
+          >
+            {profiles[selectedIndex].number} / {profiles.length}
           </div>
 
         </div>
