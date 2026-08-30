@@ -25,6 +25,8 @@ const eightyEightMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 메인.webp")}`;
 
 const eightyEightImages = [
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 느낌.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 리셉션.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸1.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("파타야 88 마사지 룸3.webp")}`,
@@ -41,8 +43,41 @@ const bananaPrice = [
 ];
 
 const eightyEightPrice = [
-  ["타이 / 발마사지 · 60분", "기본 타이 마사지 또는 발마사지", "400"],
-  ["오일 / 아로마마사지 · 60분", "오일을 이용한 릴랙싱 마사지", "500"],
+  [
+    "타이 / 발마사지 · 60분",
+    "기본 타이 마사지 또는 발마사지",
+    "400",
+  ],
+  [
+    "오일 / 아로마마사지 · 60분",
+    "오일을 이용한 릴랙싱 마사지",
+    "500",
+  ],
+  [
+    "전립선 A코스 마사지 · 90분",
+    "전립선 A코스 마사지",
+    "2,000",
+  ],
+  [
+    "서비스 B코스 마사지 · 90분",
+    "서비스 B코스 마사지",
+    "3,000",
+  ],
+  [
+    "황제 2:1 전립선 A · 90분",
+    "2:1 프리미엄 마사지 코스",
+    "3,000",
+  ],
+  [
+    "황제 2:1 서비스 B · 90분",
+    "2:1 프리미엄 서비스 코스",
+    "4,000",
+  ],
+  [
+    "황제 2:1 VIP 출장 · 90분",
+    "VIP 출장 프리미엄 코스",
+    "5,800",
+  ],
 ];
 
 function getPageData(slug: string) {
