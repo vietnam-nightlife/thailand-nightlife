@@ -33,13 +33,17 @@ export const metadata: Metadata = {
     "아속 가라오케",
   ],
   alternates: {
-    canonical: "/bangkok/karaoke/bangkok-palace-karaoke",
-  },
+  canonical:
+    "https://thailandnightlifetravel.com/bangkok/karaoke/bangkok-palace-karaoke",
+},
   openGraph: {
     title: "방콕 궁전 가라오케",
     description:
       "방콕 수쿰빗 코리아타운에 위치한 궁전 KTV의 위치, 룸, 시설과 이용정보",
     type: "website",
+    url: "https://thailandnightlifetravel.com/bangkok/karaoke/bangkok-palace-karaoke",
+locale: "ko_KR",
+siteName: "태국 밤문화 가이드",
     images: [
       {
         url: gungjeonMainImage,
@@ -50,6 +54,8 @@ export const metadata: Metadata = {
 };
 
 function BreadcrumbJsonLd() {
+  const baseUrl = "https://thailandnightlifetravel.com";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -58,25 +64,25 @@ function BreadcrumbJsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: baseUrl,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "방콕",
-        item: "/bangkok",
+        item: `${baseUrl}/bangkok`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "가라오케",
-        item: "/bangkok/karaoke",
+        item: `${baseUrl}/bangkok/karaoke`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "방콕 궁전 가라오케",
-        item: "/bangkok/karaoke/bangkok-palace-karaoke",
+        item: `${baseUrl}/bangkok/karaoke/bangkok-palace-karaoke`,
       },
     ],
   };
@@ -84,32 +90,9 @@ function BreadcrumbJsonLd() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
-  );
-}
-
-function BusinessJsonLd() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "EntertainmentBusiness",
-    name: "궁전 KTV",
-    alternateName: "Kung Jeon KTV",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Sukhumvit Plaza 3F, 9, 20 Suk Chai Alley",
-      addressLocality: "Khlong Toei",
-      addressRegion: "Bangkok",
-      postalCode: "10110",
-      addressCountry: "TH",
-    },
-    openingHours: "Mo-Su 19:00-04:00",
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
     />
   );
 }
