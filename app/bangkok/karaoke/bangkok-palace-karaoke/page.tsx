@@ -9,12 +9,12 @@ const gungjeonMainImage =
   `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 메인.webp")}`;
 
 const gungjeonImages = [
-  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 외관.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 로비.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 입구.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 초이스1.webp")}`,
+  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 초이스2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 룸1.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 룸2.webp")}`,
   `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 룸3.webp")}`,
-  `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 룸4.webp")}`,
 ];
 
 export const metadata: Metadata = {
