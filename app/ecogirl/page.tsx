@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const baseUrl = "https://thailandnightlifetravel.com";
+
 const cities = [
   {
     slug: "bangkok",
@@ -40,8 +42,10 @@ const cities = [
 
 export const metadata: Metadata = {
   title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+
   description:
-    "태국 에코걸 정보를 지역별로 확인하세요. 방콕 에코걸과 파타야 에코걸 프로필을 확인하고 여행 일정에 맞는 동행 서비스를 안내받을 수 있습니다.",
+    "태국 에코걸 정보를 지역별로 확인하세요. 방콕 에코걸과 파타야 에코걸 정보를 확인하고 여행 일정에 맞는 동행 서비스를 안내받을 수 있습니다.",
+
   keywords: [
     "태국 에코걸",
     "방콕 에코걸",
@@ -55,9 +59,11 @@ export const metadata: Metadata = {
     "방콕 여행 동행",
     "파타야 여행 동행",
   ],
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -66,32 +72,97 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
+  alternates: {
+    canonical: `${baseUrl}/ecogirl`,
+  },
+
   openGraph: {
+    type: "website",
+    url: `${baseUrl}/ecogirl`,
+    locale: "ko_KR",
+    siteName: "태국 밤문화 가이드",
+
     title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+
     description:
       "방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인하고 여행 일정에 맞는 동행 서비스를 알아보세요.",
-    type: "website",
-    locale: "ko_KR",
-    siteName: "태국 눈탱이 방지 위원회",
+
     images: [
       {
-        url: "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
+        url: cities[0].image,
         width: 1200,
         height: 1600,
         alt: "방콕 에코걸",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
+
     title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+
     description:
-      "방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인하세요.",
-    images: [
-      "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
-    ],
+      "태국 에코걸 정보를 지역별로 확인하고 여행 일정에 맞는 동행 서비스를 알아보세요.",
+
+    images: [cities[0].image],
   },
 };
+
+/* =====================================================
+   JSON-LD
+===================================================== */
+
+function EcoGirlJsonLd() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+
+    name: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
+
+    description:
+      "태국 에코걸 정보를 지역별로 확인하고 방콕과 파타야 여행 일정에 맞는 동행 서비스를 안내하는 페이지입니다.",
+
+    url: `${baseUrl}/ecogirl`,
+
+    inLanguage: "ko-KR",
+
+    isPartOf: {
+      "@type": "WebSite",
+      name: "태국 밤문화 가이드",
+      url: baseUrl,
+    },
+
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "홈",
+          item: baseUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "태국 에코걸",
+          item: `${baseUrl}/ecogirl`,
+        },
+      ],
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(jsonLd),
+      }}
+    />
+  );
+}
 
 /* =====================================================
    PAGE
@@ -101,9 +172,12 @@ export default function EcoGirlPage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white">
 
+      <EcoGirlJsonLd />
+
       {/* =====================================================
           HERO
       ====================================================== */}
+
       <section className="border-b border-white/10 bg-[#090909]">
         <div className="container mx-auto px-5 py-14 text-center sm:py-20">
 
@@ -125,10 +199,10 @@ export default function EcoGirlPage() {
         </div>
       </section>
 
-
       {/* =====================================================
           CITY CARDS
-      ====================================================== */}
+      ===================================================== */}
+
       <section className="container mx-auto px-5 py-12 sm:py-16">
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -153,14 +227,13 @@ export default function EcoGirlPage() {
               "
             >
 
-              {/* =================================================
-                  IMAGE
-              ================================================== */}
+              {/* IMAGE */}
+
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-black">
 
                 <img
                   src={city.image}
-                  alt={`${city.name} 프로필`}
+                  alt={`${city.name} 여행 동행 정보`}
                   loading={city.slug === "bangkok" ? "eager" : "lazy"}
                   className="
                     absolute
@@ -174,7 +247,6 @@ export default function EcoGirlPage() {
                   "
                 />
 
-                {/* 사진 아래 자연스러운 어두운 그라데이션 */}
                 <div
                   className="
                     pointer-events-none
@@ -189,7 +261,6 @@ export default function EcoGirlPage() {
                   "
                 />
 
-                {/* 사진 위 제목 */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
 
                   <div className="mb-2 text-xs font-black tracking-[0.3em] text-red-500">
@@ -204,20 +275,16 @@ export default function EcoGirlPage() {
 
               </div>
 
+              {/* CONTENT */}
 
-              {/* =================================================
-                  CONTENT
-              ================================================== */}
               <div className="p-6 sm:p-7">
 
                 <p className="text-sm leading-7 text-zinc-400">
                   {city.description}
                 </p>
 
+                {/* TAGS */}
 
-                {/* =================================================
-                    TAGS
-                ================================================== */}
                 <div className="mt-5 grid grid-cols-2 gap-2">
 
                   {city.tags.map((tag) => (
@@ -243,10 +310,8 @@ export default function EcoGirlPage() {
 
                 </div>
 
+                {/* LINK */}
 
-                {/* =================================================
-                    PROFILE LINK
-                ================================================== */}
                 <div
                   className="
                     mt-6
@@ -268,10 +333,10 @@ export default function EcoGirlPage() {
 
         </div>
 
-
         {/* =====================================================
             SEO CONTENT
         ====================================================== */}
+
         <div className="mx-auto mt-16 max-w-4xl">
 
           <div className="border-t border-white/10 pt-10">
