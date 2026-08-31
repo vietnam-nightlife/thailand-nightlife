@@ -246,158 +246,218 @@ export default function BangkokGungjeonKaraokePage() {
         </div>
       </section>
 
-      {/* =====================================================
-          PRICE
+            {/* =====================================================
+          KOREANA STYLE PRICE GUIDE
       ===================================================== */}
 
-      <section className="container py-12 md:py-16">
-        <div className="text-center">
-          <p className="text-xs font-black tracking-[0.35em] text-amber-400">
-            PRICE GUIDE
-          </p>
+      <section className="mt-12 w-full overflow-hidden">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
 
-          <h2 className="mt-3 text-3xl font-black md:text-4xl">
-            궁전 가라오케 가격 안내
-          </h2>
+          <div className="mb-10 text-center">
+            <p className="text-xs font-black tracking-[0.35em] text-red-500">
+              PRICE GUIDE
+            </p>
 
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-500">
-            공식 홈페이지에 공개된 주류 세트 가격을 기준으로 정리했습니다.
-            룸 이용료와 실제 총액은 인원, 이용시간 및 주문내용에 따라
-            달라질 수 있으므로 방문 전 확인하세요.
-          </p>
-        </div>
+            <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl">
+              궁전 가라오케 가격표
+            </h2>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <div className="rounded-3xl border border-cyan-400/30 bg-[#111114] p-7">
-            <span className="text-xs font-black tracking-[0.25em] text-cyan-400">
-              WHISKY
-            </span>
-
-            <h3 className="mt-3 text-2xl font-black">
-              위스키 세트
-            </h3>
-
-            <div className="mt-7 border-t border-white/10">
-              <div className="flex justify-between border-b border-white/10 py-5">
-                <span className="text-zinc-400">
-                  12년급 세트
-                </span>
-
-                <strong className="text-cyan-300">
-                  3,800 ฿
-                </strong>
-              </div>
-
-              <div className="flex justify-between py-5">
-                <span className="text-zinc-400">
-                  17년급 프리미엄 세트
-                </span>
-
-                <strong className="text-cyan-300">
-                  4,800 ฿
-                </strong>
-              </div>
-            </div>
-
-            <p className="mt-4 text-xs leading-6 text-zinc-600">
-              세트 구성과 재고 브랜드는 방문 시 달라질 수 있습니다.
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-zinc-400">
+              룸 이용료와 주류 세트, 프리미엄 위스키 및 Lady 차지 안내입니다.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-amber-400/30 bg-[#111114] p-7">
-            <span className="text-xs font-black tracking-[0.25em] text-amber-400">
-              SOJU
-            </span>
+          {/* ROOM */}
+          <div className="mx-auto max-w-3xl rounded-3xl border border-amber-500/40 bg-[#111] p-7 text-center shadow-[0_0_30px_rgba(245,158,11,0.08)] sm:p-9">
+            <p className="text-xs font-black tracking-[0.3em] text-amber-400">
+              ROOM PRICE
+            </p>
 
-            <h3 className="mt-3 text-2xl font-black">
-              소주 세트
+            <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+              룸 이용 요금
             </h3>
 
-            <div className="mt-7 border-t border-white/10">
-              <div className="flex justify-between py-5">
-                <span className="text-zinc-400">
-                  소주 5~6병 + 과일 + 안주
-                </span>
+            <p className="mt-4 text-sm text-zinc-400">
+              Small ~ VIP Big Room
+            </p>
 
-                <strong className="text-amber-300">
-                  3,200 ฿
-                </strong>
-              </div>
-            </div>
+            <p className="mt-4 text-4xl font-black text-amber-400 sm:text-5xl">
+              500B ~ 2,000B
+            </p>
 
-            <p className="mt-4 text-xs leading-6 text-zinc-600">
-              공식 홈페이지 공개 가격 기준이며 최신 구성은 방문 전 확인하세요.
+            <p className="mt-3 text-xs text-zinc-500">
+              룸 타입 및 이용 조건에 따라 달라질 수 있습니다.
             </p>
           </div>
 
-          <div className="rounded-3xl border border-fuchsia-400/30 bg-[#111114] p-7">
-            <span className="text-xs font-black tracking-[0.25em] text-fuchsia-400">
-              BEER
-            </span>
+          {/* DRINK SET */}
+          <div className="mx-auto mt-12 max-w-5xl">
 
-            <h3 className="mt-3 text-2xl font-black">
-              맥주 세트
-            </h3>
+            <div className="mb-7 text-center">
+              <p className="text-xs font-black tracking-[0.3em] text-amber-400">
+                DRINK SET
+              </p>
 
-            <div className="mt-7 border-t border-white/10">
-              <div className="flex justify-between py-5">
-                <span className="text-zinc-400">
+              <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+                주류 세트
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center transition hover:border-amber-300">
+                <h4 className="text-xl font-black text-white">
+                  소주 세트
+                </h4>
+
+                <p className="mt-3 text-3xl font-black text-amber-400">
+                  4,200B
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-zinc-400">
+                  소주 6병 + 기본 안주
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center transition hover:border-amber-300">
+                <h4 className="text-xl font-black text-white">
+                  소맥 세트
+                </h4>
+
+                <p className="mt-3 text-3xl font-black text-amber-400">
+                  4,200B
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-zinc-400">
+                  소주 3병 + 맥주 5병 + 기본 안주
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center transition hover:border-amber-300">
+                <h4 className="text-xl font-black text-white">
                   맥주 세트
-                </span>
+                </h4>
 
-                <strong className="text-fuchsia-300">
-                  가격 문의
-                </strong>
+                <p className="mt-3 text-3xl font-black text-amber-400">
+                  4,200B
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-zinc-400">
+                  맥주 8병 + 기본 안주
+                </p>
               </div>
-            </div>
 
-            <p className="mt-4 text-xs leading-6 text-zinc-600">
-              공식 페이지에서 세트 구성은 확인되지만 현재 가격은 명시되어 있지 않습니다.
-            </p>
+              <div className="rounded-2xl border border-amber-500/30 bg-[#111] p-6 text-center transition hover:border-amber-300">
+                <h4 className="text-xl font-black text-white">
+                  양주 세트
+                </h4>
+
+                <p className="mt-3 text-3xl font-black text-amber-400">
+                  5,100B
+                </p>
+
+                <p className="mt-4 text-sm leading-7 text-zinc-400">
+                  골든블루 1병 + 기본 안주 2
+                </p>
+              </div>
+
+            </div>
           </div>
 
-          <div className="rounded-3xl border border-pink-400/30 bg-[#111114] p-7">
-            <span className="text-xs font-black tracking-[0.25em] text-pink-400">
-              ROOM
-            </span>
+          {/* PREMIUM */}
+          <div className="mx-auto mt-10 max-w-5xl rounded-3xl border border-amber-500/40 bg-[#15110a] p-7 text-center sm:p-10">
 
-            <h3 className="mt-3 text-2xl font-black">
-              룸 이용료
+            <p className="text-xs font-black tracking-[0.3em] text-amber-400">
+              PREMIUM WHISKY
+            </p>
+
+            <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+              프리미엄 위스키 세트
             </h3>
 
-            <div className="mt-7 border-t border-white/10">
-              <div className="flex justify-between border-b border-white/10 py-5">
-                <span className="text-zinc-400">
-                  소형 / 중형
-                </span>
+            <p className="mt-4 text-4xl font-black text-amber-400 sm:text-5xl">
+              9,750B
+            </p>
 
-                <strong className="text-pink-300">
-                  문의
-                </strong>
-              </div>
+            <p className="mt-5 text-lg font-bold text-white">
+              골드라벨 or 헤네시
+            </p>
 
-              <div className="flex justify-between py-5">
-                <span className="text-zinc-400">
-                  VIP / VVIP
-                </span>
+            <p className="mt-3 text-sm leading-7 text-zinc-400">
+              위스키 1병 + 기본 안주 2 + 믹서 10
+            </p>
 
-                <strong className="text-pink-300">
-                  문의
-                </strong>
-              </div>
+            <p className="mt-5 text-xs text-zinc-500">
+              모든 금액은 팁 포함된 금액입니다.
+            </p>
+
+          </div>
+
+          {/* LADY CHARGE */}
+          <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-red-500/30 bg-[#120c0c] p-7 sm:p-9">
+
+            <div className="text-center">
+              <p className="text-xs font-black tracking-[0.3em] text-red-400">
+                LADY CHARGE
+              </p>
+
+              <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl">
+                Lady 차지
+              </h3>
             </div>
 
-            <p className="mt-4 text-xs leading-6 text-zinc-600">
-              공식 홈페이지에는 룸 타입은 공개되어 있으나 개별 룸 요금은
-              명시되어 있지 않습니다.
-            </p>
-          </div>
-        </div>
+            <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
 
-        <p className="mt-7 text-center text-xs text-zinc-600">
-          ※ 카드 결제 시 10% 추가 수수료가 적용되며, 별도 서비스 차지가
-          발생할 수 있습니다. 실제 결제 전 총액을 확인하세요.
-        </p>
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                <p className="text-sm font-bold text-zinc-400">
+                  TC
+                </p>
+
+                <p className="mt-2 text-2xl font-black text-amber-400">
+                  600B
+                </p>
+
+                <p className="mt-1 text-xs text-zinc-500">
+                  1시간
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                <p className="text-sm font-bold text-zinc-400">
+                  ST
+                </p>
+
+                <p className="mt-2 text-2xl font-black text-amber-400">
+                  4,000B
+                </p>
+
+                <p className="mt-1 text-xs text-zinc-500">
+                  2시간
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-black/30 p-5 text-center">
+                <p className="text-sm font-bold text-zinc-400">
+                  LT
+                </p>
+
+                <p className="mt-2 text-2xl font-black text-amber-400">
+                  6,000B
+                </p>
+
+                <p className="mt-1 text-xs text-zinc-500">
+                  6시간
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <p className="mx-auto mt-8 max-w-3xl text-center text-xs leading-6 text-zinc-600">
+            ※ 가격 및 이용조건은 현장 상황에 따라 변경될 수 있습니다. 방문 전 최신 정보를 확인해주세요.
+          </p>
+
+        </div>
       </section>
 
       {/* =====================================================
