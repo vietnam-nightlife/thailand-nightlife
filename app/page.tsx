@@ -10,9 +10,9 @@ import mobileBgImage from "../thailand-mobile.webp";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "태국 밤문화 가이드 | 방콕·파타야",
+  title: "태국 밤문화 가이드 | 방콕·파타야·에코걸",
   description:
-    "방콕과 파타야의 마사지와 가라오케 정보를 지역별로 확인하세요.",
+    "방콕과 파타야의 마사지와 가라오케,에코걸 정보를 지역별로 확인하세요.",
 };
 
 export default function Home() {
@@ -65,7 +65,7 @@ export default function Home() {
 
             {/* 설명 */}
             <p className="mt-5 max-w-2xl text-base leading-8 text-white md:text-zinc-400 md:text-lg">
-              방콕과 파타야에서 이용할 수 있는 마사지와 가라오케 정보를
+              방콕과 파타야에서 이용할 수 있는 마사지와 가라오케,에코걸 정보를
               지역별로 확인하세요.
             </p>
 
