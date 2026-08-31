@@ -5,6 +5,10 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
 export const metadata: Metadata = {
+    verification: {
+    google: "<meta name="google-site-verification" content="z5B2EIeaTHQj7oLbstzFJIeKTn77e7QNd3qdHBtVcDo" />",
+  },
+  
   title: {
     default: "태국 밤문화 가이드 | 방콕 파타야 불건마 & 가라오케",
     template: "%s | 태국 밤문화 가이드",
