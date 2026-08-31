@@ -4,8 +4,12 @@ import Link from "next/link";
 import PlaceCard from "@/components/PlaceCard";
 import { cities, getCity, getPlaces } from "@/lib/data";
 
+const baseUrl = "https://thailandnightlifetravel.com";
+
 export function generateStaticParams() {
-  return cities.map((city) => ({ city: city.slug }));
+  return cities.map((city) => ({
+    city: city.slug,
+  }));
 }
 
 export async function generateMetadata({
@@ -24,9 +28,17 @@ export async function generateMetadata({
     };
   }
 
+  const title = `${city.name} 밤문화 가이드 | 불건마 & 가라오케`;
+
+  const description =
+    `${city.name}의 밤문화와 불건마, 가라오케 정보를 지역별로 확인하세요. ` +
+    `위치, 가격, 영업시간 등 여행에 필요한 정보를 비교해보세요.`;
+
   return {
-    title: `${city.name} 밤문화 가이드 | 불건마 & 가라오케`,
-    description: `${city.name}의 밤문화와 불건마, 가라오케 정보를 지역별로 확인하세요. 위치, 가격, 영업시간 등 여행에 필요한 정보를 비교해보세요.`,
+    title,
+
+    description,
+
     keywords: [
       `${city.name} 밤문화`,
       `${city.name} 유흥`,
@@ -34,16 +46,38 @@ export async function generateMetadata({
       `${city.name} 가라오케`,
       `${city.name} 여행`,
       "태국 밤문화",
+      "태국 유흥",
       "태국 불건마",
       "태국 가라오케",
+      "태국 여행",
     ],
-    alternates: {
-      canonical: `/${city.slug}`,
+
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
+
+    alternates: {
+      canonical: `${baseUrl}/${city.slug}`,
+    },
+
     openGraph: {
-      title: `${city.name} 밤문화 가이드 | 불건마 & 가라오케`,
-      description: `${city.name}의 밤문화와 불건마, 가라오케 정보를 확인하세요.`,
       type: "website",
+      url: `${baseUrl}/${city.slug}`,
+      locale: "ko_KR",
+      siteName: "태국 밤문화 가이드",
+      title,
+      description,
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
@@ -63,13 +97,13 @@ function CityBreadcrumbJsonLd({
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: baseUrl,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: cityName,
-        item: `/${citySlug}`,
+        item: `${baseUrl}/${citySlug}`,
       },
     ],
   };
@@ -90,9 +124,12 @@ export default async function CityPage({
   params: Promise<{ city: string }>;
 }) {
   const { city: citySlug } = await params;
+
   const city = getCity(citySlug);
 
-  if (!city) notFound();
+  if (!city) {
+    notFound();
+  }
 
   const massage = getPlaces(citySlug, "massage");
   const karaoke = getPlaces(citySlug, "karaoke");
@@ -107,7 +144,7 @@ export default async function CityPage({
       <section className="relative overflow-hidden border-b border-white/10">
         <img
           src={city.image}
-          alt={city.name}
+          alt={`${city.name} 밤문화 가이드`}
           className="absolute inset-0 h-full w-full object-cover opacity-20"
         />
 
@@ -119,7 +156,7 @@ export default async function CityPage({
           </div>
 
           <h1 className="mt-4 text-6xl font-black">
-            {city.name}
+            {city.name} 밤문화 가이드
           </h1>
 
           <p className="mt-6 max-w-2xl leading-7 text-zinc-400">
@@ -246,11 +283,8 @@ export default async function CityPage({
               </h3>
 
               <p className="mt-2 text-zinc-400">
-                서실장의 추천으로는 당일날은 비행기의 피로를 마사지로 날려버리시고
-                <br />
-                저녁에 예쁜 푸잉들과 저녁을 함께 보내시는걸 추천 드립니다.
                 여행 일정과 영업시간을 확인하여 본인의 일정에 맞게
-                방문 계획을 세워보시면 좋을듯합니다!
+                방문 계획을 세워보세요.
               </p>
             </div>
           </div>
