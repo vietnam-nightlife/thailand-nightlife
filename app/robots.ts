@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
 
+const baseUrl = "https://thailandnightlifetravel.com";
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://thailandboomnightlife.com/sitemap.xml",
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
