@@ -5,10 +5,6 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
 export const metadata: Metadata = {
-  verification: {
-    google: "z5B2EIeaTHQj7oLbstzFJIeKTn77e7QNd3qdHBtVcDo",
-  },
-
   title: {
     default: "태국 밤문화 가이드 | 방콕 파타야 불건마 & 가라오케",
     template: "%s | 태국 밤문화 가이드",
@@ -30,9 +26,9 @@ export const metadata: Metadata = {
     "태국 가라오케",
     "방콕 가라오케",
     "파타야 가라오케",
-    "태국 에코걸",
-    "방콕 에코걸",
-    "파타야 에코걸",
+    "태국 여행",
+    "방콕 여행",
+    "파타야 여행",
   ],
 
   authors: [{ name: "태국 밤문화 가이드" }],
@@ -46,6 +42,15 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,
+    },
+  },
+
+  // Google + Naver 사이트 소유권 인증
+  verification: {
+    google: "z5B2EIeaTHQj7oLbstzFJIeKTn77e7QNd3qdHBtVcDo",
+    other: {
+      "naver-site-verification":
+        "9e6d1bf8040a990b95504cc645ef1ea5ef6151bc",
     },
   },
 
