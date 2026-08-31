@@ -20,6 +20,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
+  const ecoGirlPages = [
+    {
+      url: `${baseUrl}/ecogirl`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/ecogirl/bangkok`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/ecogirl/pattaya`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
   return [
     {
       url: baseUrl,
@@ -45,6 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+
+    ...ecoGirlPages,
     ...cityPages,
     ...categoryPages,
   ];
