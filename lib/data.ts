@@ -207,6 +207,40 @@ export const places: Place[] = [
   },
 
   // =========================================================
+  // 방콕 궁전 가라오케
+  // =========================================================
+  {
+    slug: "bangkok-palace-karaoke",
+    name: "방콕 궁전 가라오케",
+    city: "bangkok",
+    category: "karaoke",
+    district: "수쿰빗",
+
+    rating: 0,
+    reviews: 0,
+
+    description:
+      "방콕 수쿰빗 플라자 코리아타운에 위치한 궁전 가라오케입니다. 입구와 내부 룸 사진을 통해 매장 분위기와 시설을 확인할 수 있습니다.",
+
+    address: "Sukhumvit Plaza, Korea Town, Bangkok",
+    hours: "영업시간 확인 필요",
+
+    image:
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20메인.webp`,
+
+    gallery: [
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20입구.webp`,
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20초이스1.webp`,
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20초이스2.webp`,
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20룸1.webp`,
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20룸2.webp`,
+      `${GITHUB_IMAGE}/방콕%20궁전%20가라오케%20룸3.webp`,
+    ],
+
+    featured: true,
+  },
+  
+  // =========================================================
   // 파타야 바나나 마사지
   // =========================================================
   {
