@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
@@ -22,95 +21,60 @@ const gungjeonImages = [
   `${GITHUB_RAW}/${encodeURIComponent("방콕 궁전 가라오케 룸3.webp")}`,
 ];
 
-export function generateStaticParams() {
-  return [{ slug: GUNGJEON_SLUG }];
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-
-  if (slug !== GUNGJEON_SLUG) {
-    return {
-      title: "방콕 가라오케",
-      description:
-        "방콕 가라오케 위치, 시설, 영업시간과 이용정보를 확인하세요.",
-    };
-  }
-
-  return {
-    title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
-
-    description:
-      "방콕 궁전 가라오케의 위치, 룸, 시설, 영업시간, 가격과 이용정보를 한곳에서 확인하세요.",
-
-    keywords: [
-      "방콕 궁전 가라오케",
-      "방콕 궁전 KTV",
-      "Kung Jeon KTV Bangkok",
-      "Bangkok Kung Jeon KTV",
-      "방콕 가라오케",
-      "방콕 KTV",
-      "방콕 코리아타운 가라오케",
-      "수쿰빗 가라오케",
-      "아속 가라오케",
-    ],
-
-    robots: {
+export const metadata: Metadata = {
+  title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
+  description:
+    "방콕 궁전 가라오케의 위치, 룸, 시설, 영업시간, 가격과 이용정보를 한곳에서 확인하세요.",
+  keywords: [
+    "방콕 궁전 가라오케",
+    "방콕 궁전 KTV",
+    "Kung Jeon KTV Bangkok",
+    "Bangkok Kung Jeon KTV",
+    "방콕 가라오케",
+    "방콕 KTV",
+    "방콕 코리아타운 가라오케",
+    "수쿰빗 가라오케",
+    "아속 가라오케",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
       index: true,
       follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: `${BASE_URL}/bangkok/karaoke/${GUNGJEON_SLUG}`,
+  },
+  openGraph: {
+    title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
+    description:
+      "방콕 수쿰빗 코리아타운에 위치한 궁전 KTV의 위치, 룸, 시설과 이용정보",
+    type: "website",
+    url: `${BASE_URL}/bangkok/karaoke/${GUNGJEON_SLUG}`,
+    locale: "ko_KR",
+    siteName: "태국 밤문화 가이드",
+    images: [
+      {
+        url: gungjeonMainImage,
+        width: 1200,
+        height: 800,
+        alt: "방콕 궁전 가라오케",
       },
-    },
-
-    alternates: {
-      canonical: `${BASE_URL}/bangkok/karaoke/${GUNGJEON_SLUG}`,
-    },
-
-    openGraph: {
-      title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
-
-      description:
-        "방콕 수쿰빗 코리아타운에 위치한 궁전 KTV의 위치, 룸, 시설과 이용정보",
-
-      type: "website",
-
-      url: `${BASE_URL}/bangkok/karaoke/${GUNGJEON_SLUG}`,
-
-      locale: "ko_KR",
-
-      siteName: "태국 밤문화 가이드",
-
-      images: [
-        {
-          url: gungjeonMainImage,
-          width: 1200,
-          height: 800,
-          alt: "방콕 궁전 가라오케",
-        },
-      ],
-    },
-
-    twitter: {
-      card: "summary_large_image",
-
-      title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
-
-      description:
-        "방콕 수쿰빗 코리아타운에 위치한 궁전 KTV의 위치, 룸, 시설과 이용정보",
-
-      images: [gungjeonMainImage],
-    },
-  };
-}
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "방콕 궁전 가라오케 | Bangkok Kung Jeon KTV",
+    description:
+      "방콕 수쿰빗 코리아타운에 위치한 궁전 KTV의 위치, 룸, 시설과 이용정보",
+    images: [gungjeonMainImage],
+  },
+};
 
 function BreadcrumbJsonLd() {
   const jsonLd = {
@@ -199,17 +163,7 @@ function BusinessJsonLd() {
   );
 }
 
-export default async function BangkokGungjeonKaraokePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-
-  if (slug !== GUNGJEON_SLUG) {
-    notFound();
-  }
-
+export default function BangkokGungjeonKaraokePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#08080a] text-white">
       <BreadcrumbJsonLd />
