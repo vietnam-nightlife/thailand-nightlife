@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { cities } from "@/lib/data";
 
-const baseUrl = "https://thailandboomnightlife.com";
+const baseUrl = "https://thailandnightlifetravel.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const cityPages = cities.map((city) => ({
