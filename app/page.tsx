@@ -188,7 +188,7 @@ export default function Home() {
           추천 업소
         </h2>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
 
           {featured.map((place) => (
             <PlaceCard
