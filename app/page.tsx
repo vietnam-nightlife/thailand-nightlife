@@ -253,7 +253,7 @@ export default function Home() {
     무엇을 찾으세요?
   </h2>
 
-  <div className="mt-7 grid gap-4 md:grid-cols-2">
+  <div className="mt-7 w-full">
 
     {/* =========================
     방콕 + 파타야
