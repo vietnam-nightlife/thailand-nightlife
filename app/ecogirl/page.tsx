@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
 
     description:
-      "태국 에코걸 정보를 지역별로 확인하고 여행 일정에 맞는 동행 서비스를 알아보세요.",
+      "태국 에코걸 정보를 지역별로 확인하고 여행 일정에 맞는 동행 서비스를 안내받을 수 있습니다.",
 
     images: [cities[0].image],
   },
@@ -201,11 +201,12 @@ export default function EcoGirlPage() {
 
       {/* =====================================================
           CITY CARDS
-      ===================================================== */}
+      ====================================================== */}
 
       <section className="container mx-auto px-5 py-12 sm:py-16">
 
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-2">
+        {/* PC 2개 / 모바일 2개 */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
 
           {cities.map((city) => (
 
@@ -261,13 +262,14 @@ export default function EcoGirlPage() {
                   "
                 />
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7">
+                {/* 모바일 글씨/여백 축소 */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-7">
 
-                  <div className="mb-2 text-xs font-black tracking-[0.3em] text-red-500">
+                  <div className="mb-1 text-[9px] font-black tracking-[0.2em] text-red-500 sm:mb-2 sm:text-xs sm:tracking-[0.3em]">
                     {city.english}
                   </div>
 
-                  <h2 className="text-2xl font-black text-white sm:text-3xl">
+                  <h2 className="text-base font-black leading-tight text-white sm:text-3xl">
                     {city.name}
                   </h2>
 
@@ -277,15 +279,16 @@ export default function EcoGirlPage() {
 
               {/* CONTENT */}
 
-              <div className="p-6 sm:p-7">
+              <div className="p-3 sm:p-7">
 
-                <p className="text-sm leading-7 text-zinc-400">
+                {/* 모바일 설명 글씨 축소 */}
+                <p className="text-[11px] leading-5 text-zinc-400 sm:text-sm sm:leading-7">
                   {city.description}
                 </p>
 
                 {/* TAGS */}
 
-                <div className="mt-5 grid grid-cols-2 gap-2">
+                <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-5">
 
                   {city.tags.map((tag) => (
 
@@ -296,11 +299,16 @@ export default function EcoGirlPage() {
                         border
                         border-white/10
                         bg-white/[0.03]
-                        px-4
-                        py-3
-                        text-xs
+                        px-2
+                        py-2
+                        text-[10px]
                         font-bold
+                        leading-4
                         text-zinc-300
+                        sm:px-4
+                        sm:py-3
+                        sm:text-xs
+                        sm:leading-normal
                       "
                     >
                       ✓ {tag}
@@ -314,12 +322,14 @@ export default function EcoGirlPage() {
 
                 <div
                   className="
-                    mt-6
-                    text-sm
+                    mt-3
+                    text-xs
                     font-black
                     text-red-500
                     transition
                     group-hover:text-red-400
+                    sm:mt-6
+                    sm:text-sm
                   "
                 >
                   프로필 보기 →
