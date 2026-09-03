@@ -9,7 +9,7 @@ export default function PlaceCard({ place }: { place: Place }) {
         {/* =========================
             이미지
         ========================== */}
-        <div className="relative h-48 overflow-hidden md:h-56">
+        <div className="relative h-40 overflow-hidden sm:h-48 md:h-56">
           <img
             src={place.image}
             alt={place.name}
@@ -20,7 +20,7 @@ export default function PlaceCard({ place }: { place: Place }) {
 
           {/* 추천 인기 업소 */}
           {place.featured && (
-            <span className="absolute left-4 top-4 rounded-md bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg">
+            <span className="absolute left-2 top-2 rounded-md bg-red-600 px-2 py-1 text-[10px] font-black leading-tight text-white shadow-lg sm:left-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-xs md:left-4 md:top-4 md:px-4 md:py-2">
               추천 인기 업소
             </span>
           )}
@@ -29,25 +29,25 @@ export default function PlaceCard({ place }: { place: Place }) {
         {/* =========================
             업소 정보
         ========================== */}
-        <div className="p-6">
+        <div className="p-3 sm:p-4 md:p-6">
 
           {/* 지역 */}
-          <div className="text-xs font-medium text-zinc-500">
+          <div className="text-[10px] font-medium text-zinc-500 sm:text-xs">
             {place.district}
           </div>
 
           {/* 업소명 */}
-          <h3 className="mt-2 text-lg font-black text-white">
+          <h3 className="mt-1 line-clamp-2 text-sm font-black leading-6 text-white sm:text-base md:mt-2 md:text-lg">
             {place.name}
           </h3>
 
           {/* =========================
               평점 + 한국어 응대 + 재방문 추천
           ========================== */}
-          <div className="mt-4 flex flex-wrap items-center gap-2">
+          <div className="mt-2 flex flex-wrap items-center gap-1.5 sm:mt-3 sm:gap-2 md:mt-4">
 
             {/* 별점 */}
-            <div className="flex items-center gap-2 text-sm">
+            <div className="flex items-center gap-1 text-xs sm:gap-2 sm:text-sm">
               <span className="text-yellow-400">★</span>
 
               <span className="font-black text-white">
@@ -57,32 +57,32 @@ export default function PlaceCard({ place }: { place: Place }) {
 
             {/* 한국어 응대 가능 */}
             {place.koreanSupport !== false && (
-              <span className="rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-black text-blue-400">
+              <span className="hidden rounded-md bg-blue-600/20 px-2 py-1 text-[10px] font-black text-blue-400 md:inline-block md:px-3 md:py-1.5 md:text-xs">
                 🔵 한국어 응대 가능
               </span>
             )}
 
             {/* 한국어 응대 불가 */}
             {place.koreanSupport === false && (
-              <span className="rounded-md bg-zinc-700/40 px-3 py-1.5 text-xs font-black text-zinc-400">
+              <span className="hidden rounded-md bg-zinc-700/40 px-2 py-1 text-[10px] font-black text-zinc-400 md:inline-block md:px-3 md:py-1.5 md:text-xs">
                 ❌ 한국어 응대 안됨
               </span>
             )}
 
             {/* 재방문 추천 */}
-            <span className="rounded-md bg-red-600/20 px-3 py-1.5 text-xs font-black text-red-400">
+            <span className="hidden rounded-md bg-red-600/20 px-2 py-1 text-[10px] font-black text-red-400 md:inline-block md:px-3 md:py-1.5 md:text-xs">
               🔥 재방문 추천
             </span>
 
           </div>
 
-          {/* 설명 - 모바일 숨김 / PC 유지 */}
-          <p className="mt-4 hidden text-sm leading-6 text-zinc-500 md:line-clamp-2 md:block">
+          {/* 설명 */}
+          <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-500 sm:mt-3 sm:text-sm sm:leading-6 md:mt-4">
             {place.description}
           </p>
 
           {/* 자세히 보기 */}
-          <div className="mt-5 text-sm font-black red">
+          <div className="mt-3 text-xs font-black red sm:mt-4 sm:text-sm md:mt-5">
             자세히 보기 →
           </div>
 
