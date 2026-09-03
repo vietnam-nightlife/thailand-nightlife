@@ -295,7 +295,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 돈키호테 마사지 Don Quixote Massage"
@@ -1083,7 +1083,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 큐브 마사지 CUBE Nuru Massage"
@@ -1907,7 +1907,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 바비18 마사지 메인"
@@ -2831,7 +2831,7 @@ export default async function PlaceDetail({
 
       <KoreanaBusinessJsonLd />
 
-      <section className="relative h-[430px] w-full max-w-full overflow-hidden sm:h-[480px] md:h-[560px]">
+      <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
         <img
           src={place.image}
           alt="방콕 코리아나 가라오케 메인"
