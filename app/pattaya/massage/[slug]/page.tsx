@@ -412,7 +412,7 @@ export default async function PattayaMassagePage({
         <BreadcrumbJsonLd page={page} />
 
         {/* HERO */}
-        <section className="relative h-[480px] overflow-hidden sm:h-[560px] md:h-[650px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
 
           <img
             src={page.mainImage}
@@ -422,40 +422,40 @@ export default async function PattayaMassagePage({
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#070707] via-black/50 to-black/10" />
 
-          <div className="absolute inset-x-0 bottom-0">
-            <div className="container pb-10 md:pb-16">
+<div className="absolute inset-x-0 bottom-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-              <p className="text-xs font-black tracking-[0.4em] text-[#d2a24c]">
-                PATTAYA · DRAGON SWEDISH
-              </p>
+    <p className="text-[9px] font-black tracking-[.22em] text-[#d2a24c] sm:text-[10px] md:text-xs">
+      PATTAYA · DRAGON SWEDISH
+    </p>
 
-              <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl md:text-7xl">
-                파타야 드래곤 스웨디시
-              </h1>
+    <h1 className="mt-1.5 text-xl font-black tracking-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      파타야 드래곤 스웨디시
+    </h1>
 
-              <p className="mt-5 max-w-3xl text-sm leading-7 text-zinc-300 sm:text-base">
-                파타야 드래곤 스웨디시의 매장 정보와
-                이용 코스, 가격, 시설 사진을 한곳에서 확인하세요.
-              </p>
+    <p className="mt-1.5 max-w-xl text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      파타야 드래곤 스웨디시의 매장 정보와
+      이용 코스, 가격, 시설 사진을 한곳에서 확인하세요.
+    </p>
 
-              <div className="mt-6 flex flex-wrap gap-2">
+    <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
 
-                <span className="rounded-full border border-[#c99a4a]/40 bg-[#c99a4a]/10 px-4 py-2 text-sm font-bold text-[#e0b866]">
-                  ★ {page.rating}
-                </span>
+      <span className="rounded-full border border-[#c99a4a]/40 bg-[#c99a4a]/10 px-2.5 py-1 text-[9px] font-bold text-[#e0b866] sm:text-[10px] md:text-xs">
+        ★ {page.rating}
+      </span>
 
-                <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm">
-                  Pattaya 3rd Road
-                </span>
+      <span className="rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[9px] sm:text-[10px] md:text-xs">
+        Pattaya 3rd Road
+      </span>
 
-                <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm">
-                  {page.hours}
-                </span>
+      <span className="rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-[9px] sm:text-[10px] md:text-xs">
+        {page.hours}
+      </span>
 
-              </div>
+    </div>
 
-            </div>
-          </div>
+  </div>
+</div>
 
         </section>
 
@@ -821,7 +821,7 @@ export default async function PattayaMassagePage({
       <BreadcrumbJsonLd page={page} />
 
       {/* HERO */}
-      <section className="relative h-[430px] overflow-hidden sm:h-[500px] md:h-[600px]">
+      <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
 
         <img
           src={page.mainImage}
@@ -831,46 +831,46 @@ export default async function PattayaMassagePage({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-        <div className="absolute bottom-0 left-0 right-0">
+<div className="absolute bottom-0 left-0 right-0">
 
-          <div className="container pb-10 md:pb-14">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-            <p className="text-xs font-black tracking-[0.35em] text-red-500">
-              PATTAYA · MASSAGE
-            </p>
+    <p className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      PATTAYA · MASSAGE
+    </p>
 
-            <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
-              {page.name}
-            </h1>
+    <h1 className="mt-1.5 max-w-4xl text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      {page.name}
+    </h1>
 
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300 sm:text-base">
-              {page.name}의 위치, 영업시간, 마사지 코스와 가격정보를
-              한곳에서 확인할 수 있습니다.
-            </p>
+    <p className="mt-1.5 max-w-xl text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      {page.name}의 위치, 영업시간, 마사지 코스와 가격정보를
+      한곳에서 확인할 수 있습니다.
+    </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+    <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                ★ {page.rating}
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        ★ {page.rating}
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                Google 리뷰 {page.reviews}개
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        Google 리뷰 {page.reviews}개
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                파타야
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        파타야 불건마
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                {page.hours}
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        {page.hours}
+      </span>
 
-            </div>
+    </div>
 
-          </div>
+  </div>
 
-        </div>
+</div>
 
       </section>
 
