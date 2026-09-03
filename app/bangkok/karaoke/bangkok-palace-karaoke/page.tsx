@@ -174,7 +174,7 @@ export default function BangkokGungjeonKaraokePage() {
           HERO
       ===================================================== */}
 
-      <section className="relative h-[430px] overflow-hidden sm:h-[500px] md:h-[600px]">
+      <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
         <img
           src={gungjeonMainImage}
           alt="방콕 궁전 가라오케"
@@ -183,41 +183,44 @@ export default function BangkokGungjeonKaraokePage() {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="container pb-10 md:pb-14">
-            <p className="text-xs font-black tracking-[0.35em] text-red-500">
-              BANGKOK · KARAOKE
-            </p>
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-            <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
-              방콕 궁전 가라오케
-            </h1>
+    <p className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      BANGKOK · KARAOKE
+    </p>
 
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300 sm:text-base">
-              방콕 수쿰빗 코리아타운에 위치한 궁전 KTV 정보입니다.
-              위치, 룸, 시설, 영업시간과 최신 가격 정보를
-              방문 전 확인할 수 있도록 정리했습니다.
-            </p>
+    <h1 className="mt-1.5 max-w-4xl text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      방콕 궁전 가라오케
+    </h1>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                Since 2007
-              </span>
+    <p className="mt-1.5 max-w-xl text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      방콕 수쿰빗 코리아타운에 위치한 궁전 KTV 정보입니다.
+      위치, 룸, 시설, 영업시간과 최신 가격 정보를
+      방문 전 확인할 수 있도록 정리했습니다.
+    </p>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                Sukhumvit Plaza 3F
-              </span>
+    <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                19:00 - 04:00
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        방콕 KTV
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                Asok 도보권
-              </span>
-            </div>
-          </div>
-        </div>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        Sukhumvit Plaza 3F
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        19:00 - 04:00
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        Asok 도보권
+      </span>
+
+    </div>
+  </div>
+</div>
       </section>
 
       {/* =====================================================
