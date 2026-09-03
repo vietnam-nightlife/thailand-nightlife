@@ -258,26 +258,26 @@ export default function Home() {
     {/* =========================
     방콕 + 파타야
 ========================== */}
-<div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+<div className="grid grid-cols-2 gap-2 sm:gap-4">
 
   {/* =========================
       방콕
   ========================== */}
   <div
-    className="relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-4
-    shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]
-    sm:p-5"
+    className="relative overflow-hidden rounded-2xl border border-red-500/70 bg-[#111] p-2.5
+    shadow-[0_0_10px_rgba(239,68,68,0.2)]
+    sm:rounded-3xl sm:p-5"
   >
 
-    <div className="text-[10px] font-black tracking-[0.3em] text-red-400">
+    <div className="text-[8px] font-black tracking-[0.2em] text-red-400 sm:text-[10px]">
       BANGKOK
     </div>
 
-    <h3 className="mt-1 text-2xl font-black text-white">
+    <h3 className="mt-1 text-lg font-black text-white sm:text-2xl">
       방콕
     </h3>
 
-    <p className="mt-1 text-xs text-zinc-500">
+    <p className="mt-1 text-[9px] leading-4 text-zinc-500 sm:text-xs">
       방콕의 마사지와 가라오케 정보를 확인하세요.
     </p>
 
@@ -285,17 +285,19 @@ export default function Home() {
     {/* 방콕 마사지 */}
     <a
       href="/bangkok/massage"
-      className="mt-4 block rounded-2xl border border-red-500/40 bg-red-500/5 px-4 py-4 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
+      className="mt-3 block rounded-xl border border-red-500/40 bg-red-500/5 px-2.5 py-3
+      transition-all duration-300 hover:border-red-400 hover:bg-red-500/10
+      sm:mt-4 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         💆
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         방콕 마사지
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-red-400">
+      <div className="mt-0.5 text-[8px] font-bold text-red-400 sm:text-[11px]">
         마사지 보기 →
       </div>
     </a>
@@ -304,17 +306,19 @@ export default function Home() {
     {/* 방콕 가라오케 */}
     <a
       href="/bangkok/karaoke"
-      className="mt-3 block rounded-2xl border border-red-500/40 bg-red-500/5 px-4 py-4 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
+      className="mt-2 block rounded-xl border border-red-500/40 bg-red-500/5 px-2.5 py-3
+      transition-all duration-300 hover:border-red-400 hover:bg-red-500/10
+      sm:mt-3 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         🎤
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         방콕 가라오케
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-red-400">
+      <div className="mt-0.5 text-[8px] font-bold text-red-400 sm:text-[11px]">
         가라오케 보기 →
       </div>
     </a>
@@ -323,17 +327,19 @@ export default function Home() {
     {/* 방콕 에코걸 */}
     <a
       href="/ecogirl/bangkok"
-      className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-4 py-4 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+      className="mt-2 block rounded-xl border border-yellow-400/50 bg-yellow-400/5 px-2.5 py-3
+      transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10
+      sm:mt-3 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         👩
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         방콕 에코걸
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-yellow-400">
+      <div className="mt-0.5 text-[8px] font-bold text-yellow-400 sm:text-[11px]">
         프로필 보기 →
       </div>
     </a>
@@ -345,20 +351,20 @@ export default function Home() {
       파타야
   ========================== */}
   <div
-    className="relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-4
-    shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]
-    sm:p-5"
+    className="relative overflow-hidden rounded-2xl border border-blue-500/70 bg-[#111] p-2.5
+    shadow-[0_0_10px_rgba(59,130,246,0.2)]
+    sm:rounded-3xl sm:p-5"
   >
 
-    <div className="text-[10px] font-black tracking-[0.3em] text-blue-400">
+    <div className="text-[8px] font-black tracking-[0.2em] text-blue-400 sm:text-[10px]">
       PATTAYA
     </div>
 
-    <h3 className="mt-1 text-2xl font-black text-white">
+    <h3 className="mt-1 text-lg font-black text-white sm:text-2xl">
       파타야
     </h3>
 
-    <p className="mt-1 text-xs text-zinc-500">
+    <p className="mt-1 text-[9px] leading-4 text-zinc-500 sm:text-xs">
       파타야의 마사지와 가라오케 정보를 확인하세요.
     </p>
 
@@ -366,17 +372,19 @@ export default function Home() {
     {/* 파타야 마사지 */}
     <a
       href="/pattaya/massage"
-      className="mt-4 block rounded-2xl border border-blue-500/40 bg-blue-500/5 px-4 py-4 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+      className="mt-3 block rounded-xl border border-blue-500/40 bg-blue-500/5 px-2.5 py-3
+      transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10
+      sm:mt-4 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         💆
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         파타야 마사지
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-blue-400">
+      <div className="mt-0.5 text-[8px] font-bold text-blue-400 sm:text-[11px]">
         마사지 보기 →
       </div>
     </a>
@@ -385,17 +393,19 @@ export default function Home() {
     {/* 파타야 가라오케 */}
     <a
       href="/pattaya/karaoke"
-      className="mt-3 block rounded-2xl border border-blue-500/40 bg-blue-500/5 px-4 py-4 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
+      className="mt-2 block rounded-xl border border-blue-500/40 bg-blue-500/5 px-2.5 py-3
+      transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10
+      sm:mt-3 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         🎤
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         파타야 가라오케
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-blue-400">
+      <div className="mt-0.5 text-[8px] font-bold text-blue-400 sm:text-[11px]">
         가라오케 보기 →
       </div>
     </a>
@@ -404,17 +414,19 @@ export default function Home() {
     {/* 파타야 에코걸 */}
     <a
       href="/ecogirl/pattaya"
-      className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-4 py-4 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
+      className="mt-2 block rounded-xl border border-yellow-400/50 bg-yellow-400/5 px-2.5 py-3
+      transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10
+      sm:mt-3 sm:rounded-2xl sm:px-4 sm:py-4"
     >
-      <div className="text-2xl">
+      <div className="text-lg sm:text-2xl">
         👩
       </div>
 
-      <div className="mt-2 text-base font-black text-white">
+      <div className="mt-1.5 text-xs font-black text-white sm:mt-2 sm:text-base">
         파타야 에코걸
       </div>
 
-      <div className="mt-1 text-[11px] font-bold text-yellow-400">
+      <div className="mt-0.5 text-[8px] font-bold text-yellow-400 sm:text-[11px]">
         프로필 보기 →
       </div>
     </a>
