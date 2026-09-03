@@ -304,44 +304,44 @@ export default async function PlaceDetail({
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-          <div className="absolute bottom-0 left-0 right-0">
-            <div className="container pb-10 md:pb-12">
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                BANGKOK · MASSAGE
-              </div>
+    <div className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      BANGKOK · MASSAGE
+    </div>
 
-              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
-                방콕 돈키호테 마사지
-              </h1>
+    <h1 className="mt-1.5 break-words text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      방콕 돈키호테 마사지
+    </h1>
 
-              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
-                방콕 방콕에 위치한 Don Quixote Massage입니다.
-                매장 위치와 운영시간, 내부 시설, 룸 분위기와
-                방문 전 확인사항을 한곳에서 확인할 수 있습니다.
-              </p>
+    <p className="mt-1.5 max-w-xl break-words text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      방콕 방콕에 위치한 Don Quixote Massage입니다.
+      매장 위치와 운영시간, 내부 시설, 룸 분위기와
+      방문 전 확인사항을 한곳에서 확인할 수 있습니다.
+    </p>
 
-              <div className="mt-5 flex flex-wrap gap-3 text-sm">
+    <div className="mt-3 flex flex-wrap gap-1.5 text-[9px] sm:mt-3 sm:gap-2 sm:text-[10px] md:text-xs">
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  Don Quixote Massage
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Don Quixote Massage
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  Sukhumvit Soi 22
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Sukhumvit Soi 22
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  방콕 수쿰빗
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        방콕 불건마
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  누루 마사지
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        누루 마사지
+      </span>
 
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</div>
         </section>
           <section className="container py-10 md:py-12">
 
