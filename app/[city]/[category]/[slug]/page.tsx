@@ -295,7 +295,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[280px] w-full max-w-full overflow-hidden sm:h-[300px] md:h-[340px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 돈키호테 마사지 Don Quixote Massage"
@@ -1083,7 +1083,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[280px] w-full max-w-full overflow-hidden sm:h-[300px] md:h-[340px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 큐브 마사지 CUBE Nuru Massage"
@@ -1092,44 +1092,44 @@ export default async function PlaceDetail({
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-          <div className="absolute bottom-0 left-0 right-0">
-            <div className="container pb-10 md:pb-12">
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                BANGKOK · MASSAGE
-              </div>
+    <div className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      BANGKOK · MASSAGE
+    </div>
 
-              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
-                방콕 큐브 마사지
-              </h1>
+    <h1 className="mt-1.5 break-words text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      방콕 큐브 마사지
+    </h1>
 
-              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
-                방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다.
-                매장 위치와 운영시간, 내부 시설, 룸 분위기와
-                방문 전 확인사항을 한곳에서 확인할 수 있습니다.
-              </p>
+    <p className="mt-1.5 max-w-xl break-words text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다.
+      매장 위치와 운영시간, 내부 시설, 룸 분위기와
+      방문 전 확인사항을 한곳에서 확인할 수 있습니다.
+    </p>
 
-              <div className="mt-5 flex flex-wrap gap-3 text-sm">
+    <div className="mt-3 flex flex-wrap gap-1.5 text-[9px] sm:mt-3 sm:gap-2 sm:text-[10px] md:text-xs">
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  CUBE Nuru Massage
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        CUBE Nuru Massage
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  Sukhumvit Soi 22
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Sukhumvit Soi 22
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  방콕 수쿰빗
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        방콕 불건마
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  누루 마사지
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        누루 마사지
+      </span>
 
-              </div>
-            </div>
-          </div>
+    </div>
+  </div>
+</div>
         </section>
           <section className="container py-10 md:py-12">
 
@@ -1907,7 +1907,7 @@ export default async function PlaceDetail({
         {/* =================================================
             HERO
         ================================================== */}
-        <section className="relative h-[280px] w-full max-w-full overflow-hidden sm:h-[300px] md:h-[340px]">
+        <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
           <img
             src={place.image}
             alt="방콕 바비18 마사지 메인"
@@ -1916,41 +1916,44 @@ export default async function PlaceDetail({
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-          <div className="absolute bottom-0 left-0 right-0">
-            <div className="container pb-10 md:pb-12">
-              <div className="text-xs font-black tracking-[.3em] text-red-500">
-                BANGKOK · MASSAGE
-              </div>
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-              <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
-                방콕 바비18 마사지
-              </h1>
+    <div className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      BANGKOK · MASSAGE
+    </div>
 
-              <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
-                방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다.
-                위치와 영업시간, 내부 시설, 룸 분위기 및
-                방문 전 확인사항을 한곳에서 확인할 수 있습니다.
-              </p>
+    <h1 className="mt-1.5 break-words text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      방콕 바비18 마사지
+    </h1>
 
-              <div className="mt-5 flex flex-wrap gap-3 text-sm">
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  Barbie18 Massage
-                </span>
+    <p className="mt-1.5 max-w-xl break-words text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다.
+      위치와 영업시간, 내부 시설, 룸 분위기 및
+      방문 전 확인사항을 한곳에서 확인할 수 있습니다.
+    </p>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  Sukhumvit Soi 18
-                </span>
+    <div className="mt-3 flex flex-wrap gap-1.5 text-[9px] sm:mt-3 sm:gap-2 sm:text-[10px] md:text-xs">
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  방콕 수쿰빗
-                </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Barbie18 Massage
+      </span>
 
-                <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                  마사지
-                </span>
-              </div>
-            </div>
-          </div>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Sukhumvit Soi 18
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        방콕 불건마
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        마사지
+      </span>
+
+    </div>
+  </div>
+</div>
         </section>
           <section className="container py-10 md:py-12">
             <div className="text-xs font-black tracking-[.3em] text-red-500">
@@ -2831,7 +2834,7 @@ export default async function PlaceDetail({
 
       <KoreanaBusinessJsonLd />
 
-      <section className="relative h-[280px] w-full max-w-full overflow-hidden sm:h-[300px] md:h-[340px]">
+      <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
         <img
           src={place.image}
           alt="방콕 코리아나 가라오케 메인"
@@ -2840,41 +2843,44 @@ export default async function PlaceDetail({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="container pb-12">
-            <div className="text-xs font-black tracking-[.3em] text-red-500">
-              BANGKOK · KOREAN KTV
-            </div>
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-            <h1 className="mt-3 break-words text-3xl font-black leading-tight sm:text-4xl md:text-6xl">
-              방콕 코리아나 가라오케
-            </h1>
+    <div className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      BANGKOK · KOREAN KTV
+    </div>
 
-            <p className="mt-3 max-w-2xl break-words text-sm leading-6 text-zinc-300 sm:mt-4 sm:leading-7 md:text-base">
-              방콕 수쿰빗 소이 11에 위치한 한국식 KTV.
-              코리아나 가라오케의 위치, 영업시간,
-              룸과 시설 및 방문 정보를 확인하세요.
-            </p>
+    <h1 className="mt-1.5 break-words text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      방콕 코리아나 가라오케
+    </h1>
 
-            <div className="mt-6 flex flex-wrap gap-3 text-sm">
-              <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                ★ 4.4
-              </span>
+    <p className="mt-1.5 max-w-xl break-words text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      방콕 수쿰빗 소이 11에 위치한 한국식 KTV.
+      코리아나 가라오케의 위치, 영업시간,
+      룸과 시설 및 방문 정보를 확인하세요.
+    </p>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                Google 리뷰 57개
-              </span>
+    <div className="mt-3 flex flex-wrap gap-1.5 text-[9px] sm:mt-3 sm:gap-2 sm:text-[10px] md:text-xs">
 
-              <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                수쿰빗 소이 11
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        ★ 4.4
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 backdrop-blur">
-                19:00 - 03:00
-              </span>
-            </div>
-          </div>
-        </div>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        Google 리뷰 57개
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        수쿰빗 KTV
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 backdrop-blur">
+        19:00 - 03:00
+      </span>
+
+    </div>
+  </div>
+</div>
       </section>
         <section className="container py-12">
           <div className="text-xs font-black tracking-[.3em] text-red-500">
