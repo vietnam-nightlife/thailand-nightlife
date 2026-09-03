@@ -20,11 +20,10 @@ export default function PlaceCard({ place }: { place: Place }) {
 
           {/* 추천 인기 업소 */}
           {place.featured && (
-            <span className="absolute left-2 top-2 rounded-md bg-red-600 px-2 py-1 text-[10px] font-black leading-tight text-white shadow-lg sm:left-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-xs md:left-4 md:top-4 md:px-4 md:py-2">
-              추천 인기 업소
-            </span>
-          )}
-        </div>
+  <span className="absolute left-4 top-4 hidden rounded-md bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg md:block">
+    추천 인기 업소
+  </span>
+)}
 
         {/* =========================
             업소 정보
