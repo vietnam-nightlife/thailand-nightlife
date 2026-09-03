@@ -13,8 +13,8 @@ export default function PlaceCard({ place }: { place: Place }) {
           <img
             src={place.image}
             alt={place.name}
-            className="h-full w-full object-cover transition duration-700 hover:scale-105"
-  />
+            className="h-full w-full object-contain bg-black transition duration-700 hover:scale-105 md:object-cover" 
+/>
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
 
