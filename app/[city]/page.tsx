@@ -201,7 +201,7 @@ export default async function CityPage({
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {massage.map((p) => (
             <PlaceCard key={p.slug} place={p} />
           ))}
