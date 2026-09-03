@@ -205,7 +205,7 @@ export default function EcoGirlPage() {
 
       <section className="container mx-auto px-5 py-12 sm:py-16">
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-2">
 
           {cities.map((city) => (
 
