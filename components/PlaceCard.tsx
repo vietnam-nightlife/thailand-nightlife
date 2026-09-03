@@ -9,12 +9,12 @@ export default function PlaceCard({ place }: { place: Place }) {
         {/* =========================
             이미지
         ========================== */}
-        <div className="relative h-40 overflow-hidden sm:h-48 md:h-56">
+        <div className="relative h-48 overflow-hidden md:h-56">
           <img
             src={place.image}
             alt={place.name}
-            className="img-cover transition duration-700 hover:scale-105"
-          />
+            className="h-full w-full object-cover transition duration-700 hover:scale-105"
+  />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
 
@@ -77,7 +77,7 @@ export default function PlaceCard({ place }: { place: Place }) {
           </div>
 
           {/* 설명 */}
-          <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-500 sm:mt-3 sm:text-sm sm:leading-6 md:mt-4">
+          <p className="mt-4 hidden line-clamp-2 text-sm leading-6 text-zinc-500 md:block">
             {place.description}
           </p>
 
