@@ -11,10 +11,10 @@ const cities = [
     image:
       "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/bangkok/%EB%B0%A9%EC%BD%95%20%EC%97%90%EC%BD%94%EA%B1%B88.webp",
     description:
-      "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 야시장 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
+      "방콕 여행 일정에 맞춰 식사, 관광, 쇼핑, 풀파티 등 다양한 여행 일정을 함께 즐길 수 있는 동행 서비스를 안내합니다.",
     tags: [
       "방콕 시내 관광",
-      "왕궁 · 왓 아룬 · 왓 포",
+      "클럽 · 풀파티",
       "쇼핑 및 맛집",
       "야시장 및 나이트라이프",
     ],
@@ -26,12 +26,12 @@ const cities = [
     image:
       "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main/app/ecogirl/pattaya/%ED%8C%8C%ED%83%80%EC%95%BC%20%EC%97%90%EC%BD%94%EA%B1%B82.webp",
     description:
-      "파타야의 해변과 관광 명소, 야시장, 쇼핑 등 여행 일정에 맞는 다양한 동행 서비스를 확인할 수 있습니다.",
+      "파타야의 해변과 맛집 데이트, 풀파티, 쇼핑 등 여행 일정에 맞는 다양한 동행 서비스를 확인할 수 있습니다.",
     tags: [
       "파타야 해변",
       "파타야 시내 데이트",
       "요트 투어",
-      "야시장 · 클럽 · 핫플라",
+      "클럽 · 풀파티",
     ],
   },
 ];
@@ -369,7 +369,7 @@ export default function EcoGirlPage() {
                 <strong className="font-bold text-zinc-200">
                   방콕 에코걸
                 </strong>
-                은 방콕 시내 관광과 맛집, 쇼핑, 야시장 등 다양한 일정을
+                은 방콕 시내 관광과 맛집, 쇼핑, 클럽, 풀파티 등 다양한 일정을
                 함께 계획하기에 적합합니다. 왕궁과 왓 아룬, 왓 포 같은
                 대표적인 관광지를 비롯해 방콕의 다양한 여행 코스를
                 함께 확인할 수 있습니다.
@@ -379,7 +379,7 @@ export default function EcoGirlPage() {
                 <strong className="font-bold text-zinc-200">
                   파타야 에코걸
                 </strong>
-                은 파타야 해변과 시내 관광, 요트 투어, 야시장 및 다양한
+                은 파타야 해변과 시내 관광, 요트 투어, 풀파티, 클럽 및 다양한
                 핫플레이스 등 파타야 여행 일정에 맞춰 정보를 확인할 수
                 있습니다. 방콕과는 또 다른 분위기의 여행을 원하는 경우
                 파타야 지역도 함께 비교해보는 것을 추천합니다.
