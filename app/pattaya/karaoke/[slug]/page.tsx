@@ -254,7 +254,7 @@ export default async function PattayaKaraokePage({
           HERO
       ===================================================== */}
 
-      <section className="relative h-[430px] overflow-hidden sm:h-[500px] md:h-[600px]">
+      <section className="relative h-[400px] w-full max-w-full overflow-hidden sm:h-[430px] md:h-[500px]">
         <img
           src={business.mainImage}
           alt={business.name}
@@ -263,39 +263,42 @@ export default async function PattayaKaraokePage({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/0" />
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="container pb-10 md:pb-14">
-            <p className="text-xs font-black tracking-[0.35em] text-red-500">
-              PATTAYA · KARAOKE
-            </p>
+<div className="absolute bottom-0 left-0 right-0">
+  <div className="container pb-6 sm:pb-7 md:pb-8">
 
-            <h1 className="mt-3 max-w-4xl text-3xl font-black leading-tight sm:text-5xl md:text-6xl">
-              {business.name}
-            </h1>
+    <p className="text-[9px] font-black tracking-[.22em] text-red-500 sm:text-[10px] md:text-xs">
+      PATTAYA · KARAOKE
+    </p>
 
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-300 sm:text-base">
-              {business.description}
-            </p>
+    <h1 className="mt-1.5 max-w-4xl text-xl font-black leading-tight sm:mt-2 sm:text-2xl md:text-3xl">
+      {business.name}
+    </h1>
 
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                ★ {business.rating}
-              </span>
+    <p className="mt-1.5 max-w-xl text-[10px] leading-4 text-zinc-300 sm:mt-2 sm:text-xs sm:leading-5 md:text-sm">
+      {business.description}
+    </p>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                Google 리뷰 {business.reviews}
-              </span>
+    <div className="mt-3 flex flex-wrap gap-1.5 sm:mt-3 sm:gap-2">
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                파타야
-              </span>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        ★ {business.rating}
+      </span>
 
-              <span className="rounded-full bg-white/10 px-4 py-2 text-sm backdrop-blur">
-                {business.hours}
-              </span>
-            </div>
-          </div>
-        </div>
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        Google 리뷰 {business.reviews}
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        파타야 KTV
+      </span>
+
+      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[9px] backdrop-blur sm:text-[10px] md:text-xs">
+        {business.hours}
+      </span>
+
+    </div>
+  </div>
+</div>
       </section>
 
       {/* =====================================================
