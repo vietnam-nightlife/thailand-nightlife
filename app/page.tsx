@@ -256,176 +256,167 @@ export default function Home() {
   <div className="mt-7 grid gap-4 md:grid-cols-2">
 
     {/* =========================
-    방콕
+    방콕 + 파타야
 ========================== */}
-<div
-  className="relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-3
-  shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]
-  sm:p-5"
->
+<div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
 
-  <div className="text-[9px] font-black tracking-[0.25em] text-red-400 sm:text-[10px]">
-    BANGKOK
-  </div>
+  {/* =========================
+      방콕
+  ========================== */}
+  <div
+    className="relative overflow-hidden rounded-3xl border border-red-500/70 bg-[#111] p-4
+    shadow-[0_0_12px_rgba(239,68,68,0.25),inset_0_0_20px_rgba(239,68,68,0.04)]
+    sm:p-5"
+  >
 
-  <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">
-    방콕
-  </h3>
+    <div className="text-[10px] font-black tracking-[0.3em] text-red-400">
+      BANGKOK
+    </div>
 
-  <p className="mt-1 text-[10px] text-zinc-500 sm:text-xs">
-    방콕의 마사지와 가라오케 정보를 확인하세요.
-  </p>
+    <h3 className="mt-1 text-2xl font-black text-white">
+      방콕
+    </h3>
+
+    <p className="mt-1 text-xs text-zinc-500">
+      방콕의 마사지와 가라오케 정보를 확인하세요.
+    </p>
 
 
-  {/* 마사지 / 가라오케 */}
-  <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:gap-2">
-
+    {/* 방콕 마사지 */}
     <a
       href="/bangkok/massage"
-      className="rounded-xl border border-red-500/40 bg-red-500/5 px-3 py-2.5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-4 block rounded-2xl border border-red-500/40 bg-red-500/5 px-4 py-4 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         💆
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         방콕 마사지
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-red-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-red-400">
         마사지 보기 →
       </div>
     </a>
 
 
+    {/* 방콕 가라오케 */}
     <a
       href="/bangkok/karaoke"
-      className="rounded-xl border border-red-500/40 bg-red-500/5 px-3 py-2.5 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-3 block rounded-2xl border border-red-500/40 bg-red-500/5 px-4 py-4 transition-all duration-300 hover:border-red-400 hover:bg-red-500/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         🎤
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         방콕 가라오케
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-red-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-red-400">
         가라오케 보기 →
       </div>
     </a>
 
-  </div>
 
-
-  {/* 방콕 에코걸 */}
-  <div className="mt-2 flex justify-center sm:mt-3">
-
+    {/* 방콕 에코걸 */}
     <a
       href="/ecogirl/bangkok"
-      className="w-[48%] rounded-xl border border-yellow-400/50 bg-yellow-400/5 px-3 py-2.5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-4 py-4 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         👩
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         방콕 에코걸
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-yellow-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-yellow-400">
         프로필 보기 →
       </div>
-
     </a>
 
   </div>
 
-</div>
+
+  {/* =========================
+      파타야
+  ========================== */}
+  <div
+    className="relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-4
+    shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]
+    sm:p-5"
+  >
+
+    <div className="text-[10px] font-black tracking-[0.3em] text-blue-400">
+      PATTAYA
+    </div>
+
+    <h3 className="mt-1 text-2xl font-black text-white">
+      파타야
+    </h3>
+
+    <p className="mt-1 text-xs text-zinc-500">
+      파타야의 마사지와 가라오케 정보를 확인하세요.
+    </p>
 
 
-{/* =========================
-    파타야
-========================== */}
-<div
-  className="relative overflow-hidden rounded-3xl border border-blue-500/70 bg-[#111] p-3
-  shadow-[0_0_12px_rgba(59,130,246,0.25),inset_0_0_20px_rgba(59,130,246,0.04)]
-  sm:p-5"
->
-
-  <div className="text-[9px] font-black tracking-[0.25em] text-blue-400 sm:text-[10px]">
-    PATTAYA
-  </div>
-
-  <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">
-    파타야
-  </h3>
-
-  <p className="mt-1 text-[10px] text-zinc-500 sm:text-xs">
-    파타야의 마사지와 가라오케 정보를 확인하세요.
-  </p>
-
-
-  {/* 마사지 / 가라오케 */}
-  <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4 sm:gap-2">
-
+    {/* 파타야 마사지 */}
     <a
       href="/pattaya/massage"
-      className="rounded-xl border border-blue-500/40 bg-blue-500/5 px-3 py-2.5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-4 block rounded-2xl border border-blue-500/40 bg-blue-500/5 px-4 py-4 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         💆
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         파타야 마사지
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-blue-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-blue-400">
         마사지 보기 →
       </div>
     </a>
 
 
+    {/* 파타야 가라오케 */}
     <a
       href="/pattaya/karaoke"
-      className="rounded-xl border border-blue-500/40 bg-blue-500/5 px-3 py-2.5 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-3 block rounded-2xl border border-blue-500/40 bg-blue-500/5 px-4 py-4 transition-all duration-300 hover:border-blue-400 hover:bg-blue-500/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         🎤
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         파타야 가라오케
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-blue-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-blue-400">
         가라오케 보기 →
       </div>
     </a>
 
-  </div>
 
-
-  {/* 파타야 에코걸 */}
-  <div className="mt-2 flex justify-center sm:mt-3">
-
+    {/* 파타야 에코걸 */}
     <a
       href="/ecogirl/pattaya"
-      className="w-[48%] rounded-xl border border-yellow-400/50 bg-yellow-400/5 px-3 py-2.5 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10 sm:rounded-2xl sm:px-4 sm:py-3"
+      className="mt-3 block rounded-2xl border border-yellow-400/50 bg-yellow-400/5 px-4 py-4 transition-all duration-300 hover:border-yellow-300 hover:bg-yellow-400/10"
     >
-      <div className="text-xl sm:text-2xl">
+      <div className="text-2xl">
         👩
       </div>
 
-      <div className="mt-1 text-sm font-black text-white sm:mt-2 sm:text-base">
+      <div className="mt-2 text-base font-black text-white">
         파타야 에코걸
       </div>
 
-      <div className="mt-0.5 text-[9px] font-bold text-yellow-400 sm:text-[11px]">
+      <div className="mt-1 text-[11px] font-bold text-yellow-400">
         프로필 보기 →
       </div>
-
     </a>
 
   </div>
