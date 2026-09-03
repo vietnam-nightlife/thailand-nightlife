@@ -69,7 +69,7 @@ export const places: Place[] = [
     category: "massage",
     district: "방콕",
     rating: 4.7,
-    reviews: 0,
+    reviews: 380,
 
     description:
       "방콕 돈키호테 마사지입니다. 고급스러운 인테리어와 다양한 마사지룸을 갖춘 마사지 전문 매장으로, 매장 외관과 리셉션, 내부 시설 및 룸 사진을 실제 이미지로 확인할 수 있습니다.",
@@ -119,7 +119,7 @@ export const places: Place[] = [
     category: "massage",
     district: "수쿰빗 소이 22",
     rating: 4.6,
-    reviews: 0,
+    reviews: 353,
 
     description:
       "방콕 수쿰빗 소이 22에 위치한 CUBE Nuru Massage입니다. 매장 외관과 내부 공간, 객실 분위기를 실제 사진으로 확인할 수 있습니다.",
@@ -151,7 +151,7 @@ export const places: Place[] = [
     category: "massage",
     district: "수쿰빗 소이 18",
     rating: 4.6,
-    reviews: 0,
+    reviews: 123,
 
     description:
       "방콕 수쿰빗 소이 18에 위치한 Barbie18 Massage입니다. 매장 분위기와 룸 시설을 실제 사진으로 확인할 수 있습니다.",
@@ -216,8 +216,8 @@ export const places: Place[] = [
     category: "karaoke",
     district: "수쿰빗",
 
-    rating: 0,
-    reviews: 0,
+    rating: 4.5,
+    reviews: 81,
 
     description:
       "방콕 수쿰빗 플라자 코리아타운에 위치한 궁전 가라오케입니다. 입구와 내부 룸 사진을 통해 매장 분위기와 시설을 확인할 수 있습니다.",
@@ -250,7 +250,7 @@ export const places: Place[] = [
     category: "massage",
     district: "파타야",
     rating: 4.5,
-    reviews: 17,
+    reviews: 171,
 
     description:
       "파타야에서 이용할 수 있는 바나나 마사지입니다. 편안한 마사지와 휴식을 원하는 여행객들이 방문하기 좋은 마사지샵으로, 방문 전 위치와 영업시간을 확인하고 이용하는 것을 추천합니다.",
@@ -273,7 +273,7 @@ export const places: Place[] = [
     category: "massage",
     district: "파타야",
     rating: 4.6,
-    reviews: 0,
+    reviews: 98,
 
     description:
       "파타야에서 마사지와 휴식을 원하는 여행객들이 이용할 수 있는 88 Massage입니다. 매장 내부는 깔끔하고 편안한 분위기로 구성되어 있습니다.",
@@ -306,7 +306,7 @@ export const places: Place[] = [
   category: "massage",
   district: "파타야",
   rating: 4.5,
-  reviews: 0,
+  reviews: 58,
 
   description:
     "파타야 드래곤 스웨디시 마사지입니다. 매장 외관과 리셉션, 휴게공간, 마사지룸 등의 실제 사진을 확인할 수 있으며 방문 전 위치와 영업시간, 가격정보를 확인할 수 있습니다.",
@@ -396,7 +396,7 @@ export const places: Place[] = [
     category: "karaoke",
     district: "파타야",
     rating: 4.8,
-    reviews: 0,
+    reviews: 63,
 
     description:
       "파타야 페가수스 가라오케입니다. 화려한 외관과 넓은 내부 공간, 프라이빗 룸을 갖춘 가라오케로 매장 외관과 로비, 내부 시설 및 룸 사진을 실제 이미지로 확인할 수 있습니다.",
