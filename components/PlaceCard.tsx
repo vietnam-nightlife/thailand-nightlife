@@ -24,7 +24,7 @@ export default function PlaceCard({ place }: { place: Place }) {
     추천 인기 업소
   </span>
 )}
-
+</div>
         {/* =========================
             업소 정보
         ========================== */}
