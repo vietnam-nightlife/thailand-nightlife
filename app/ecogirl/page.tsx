@@ -189,13 +189,21 @@ export default function EcoGirlPage() {
             태국 에코걸
           </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
-            방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인해보세요.
-            <br className="hidden sm:block" />
-            태국 여행에서 단순한 관광뿐 아니라 현지의 다양한 즐길 거리와 특별한 시간을 경험하고 싶다면 태국 에코걸 투어를 이용해보실 수 있습니다.
+          <div className="mx-auto mt-5 max-w-3xl space-y-5 text-sm leading-8 text-zinc-400 sm:text-base sm:leading-8">
+            <p>
+              방콕 에코걸과 파타야 에코걸 정보를 지역별로 확인해보세요.
+              <br className="hidden sm:block" />
+              태국 여행에서 단순한 관광뿐 아니라 현지의 다양한 즐길 거리와 특별한 시간을 경험하고 싶다면 태국 에코걸 투어를 이용해보실 수 있습니다.
+            </p>
 
-태국 에코걸은 크게 일반 에코걸과 가라오케 에코걸 방식으로 나누어지며, 각각 이용 방법과 특징이 조금씩 다릅니다. 여행 일정과 원하는 스타일에 맞춰 선택할 수 있다는 것이 장점입니다.
-          </p>
+            <p>
+              <strong className="font-bold text-white">태국 에코걸</strong>은 크게
+              <strong className="font-bold text-white"> 일반 에코걸</strong>과
+              <strong className="font-bold text-white"> 가라오케 에코걸</strong> 방식으로 나누어지며,
+              각각 이용 방법과 특징이 조금씩 다릅니다.
+              여행 일정과 원하는 스타일에 맞춰 선택할 수 있다는 것이 장점입니다.
+            </p>
+          </div>
 
         </div>
       </section>
@@ -356,10 +364,10 @@ export default function EcoGirlPage() {
               태국 에코걸 지역별 안내
             </h2>
 
-            <div className="mt-6 space-y-6 text-sm leading-8 text-zinc-400">
+            <div className="mt-8 space-y-8 text-sm leading-8 text-zinc-400 sm:text-base sm:leading-8">
 
               <p>
-                태국 여행을 준비하면서 방콕 에코걸 또는 파타야 에코걸
+                태국 여행을 준비하면서 <strong className="font-bold text-zinc-200">방콕 에코걸</strong> 또는 <strong className="font-bold text-zinc-200">파타야 에코걸</strong>
                 정보를 찾고 있다면 여행 목적과 일정에 맞는 지역을 먼저
                 확인하는 것이 좋습니다. 방콕과 파타야는 태국 여행에서
                 많은 여행객들이 방문하는 대표적인 지역으로 각각 다른
@@ -387,7 +395,7 @@ export default function EcoGirlPage() {
               </p>
 
               <p>
-                태국 에코걸 정보를 확인할 때는 단순히 사진만 확인하기보다
+                <strong className="font-bold text-zinc-200">태국 에코걸</strong> 정보를 확인할 때는 단순히 사진만 확인하기보다
                 실제 여행 일정과 원하는 활동, 방문 지역 등을 함께
                 고려하는 것이 좋습니다. 여행 예정일과 인원, 원하는
                 일정 등을 미리 준비하면 보다 편리하게 안내받을 수 있습니다.
