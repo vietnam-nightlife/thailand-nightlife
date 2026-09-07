@@ -6,6 +6,8 @@ import ImageGallery from "@/components/ImageGallery";
 const GITHUB_RAW =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
+const BASE_URL = "https://www.thailandnightlifetravel.com";
+
 /* =========================================================
    SLUG
 ========================================================= */
@@ -316,13 +318,14 @@ export async function generateMetadata({
       "Pattaya Massage",
     ],
     alternates: {
-      canonical: `/pattaya/massage/${slug}`,
+      canonical: `${BASE_URL}/pattaya/massage/${slug}`,
     },
     openGraph: {
       title: page.name,
       description:
         `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
       type: "website",
+      url: `${BASE_URL}/pattaya/massage/${slug}`,
       images: [
         {
           url: page.mainImage,
@@ -352,25 +355,25 @@ function BreadcrumbJsonLd({
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: `${BASE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "파타야",
-        item: "/pattaya",
+        item: `${BASE_URL}/pattaya`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "마사지",
-        item: "/pattaya/massage",
+        item: `${BASE_URL}/pattaya/massage`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: page.name,
-        item: `/pattaya/massage/${page.slug}`,
+        item: `${BASE_URL}/pattaya/massage/${page.slug}`,
       },
     ],
   };
