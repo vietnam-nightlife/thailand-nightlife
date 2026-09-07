@@ -4,6 +4,8 @@ import Link from "next/link";
 import PlaceCard from "@/components/PlaceCard";
 import { cities, getCity, getPlaces } from "@/lib/data";
 
+const BASE_URL = "https://www.thailandnightlifetravel.com";
+
 export function generateStaticParams() {
   return cities.flatMap((city) =>
     ["massage", "karaoke"].map((category) => ({
@@ -49,6 +51,7 @@ export async function generateMetadata({
       title: `${city.name} ${title} | 태국 눈탱이 방지 위원회`,
       description: `${city.name} ${title} 정보를 확인하세요.`,
       type: "website",
+      url: `${BASE_URL}/${city.slug}/${category}`,
     },
   };
 }
@@ -72,19 +75,19 @@ function CategoryBreadcrumbJsonLd({
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: `${BASE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: cityName,
-        item: `/${citySlug}`,
+        item: `${BASE_URL}/${citySlug}`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: categoryName,
-        item: `/${citySlug}/${category}`,
+        item: `${BASE_URL}/${citySlug}/${category}`,
       },
     ],
   };
