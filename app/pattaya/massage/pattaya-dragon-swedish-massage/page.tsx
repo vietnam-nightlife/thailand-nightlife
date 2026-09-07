@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     description:
       `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
     type: "website",
-    url: `/pattaya/massage/${DRAGON_SLUG}`,
+    url: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
     images: [
       {
         url: page.mainImage,
@@ -108,7 +108,7 @@ function BreadcrumbJsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: "https://www.thailandnightlifetravel.com/",
       },
       {
         "@type": "ListItem",
@@ -120,13 +120,13 @@ function BreadcrumbJsonLd() {
         "@type": "ListItem",
         position: 3,
         name: "마사지",
-        item: "/pattaya/massage",
+        item: "https://www.thailandnightlifetravel.com/pattaya",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: page.name,
-        item: `/pattaya/massage/${DRAGON_SLUG}`,
+        item: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
       },
     ],
   };
