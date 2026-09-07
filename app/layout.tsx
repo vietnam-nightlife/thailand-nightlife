@@ -10,6 +10,20 @@ export const metadata: Metadata = {
     template: "%s | 태국 밤문화 가이드",
   },
 
+export const metadata: Metadata = {
+  title: {
+    default: "태국 밤문화 가이드 | 방콕 파타야 불건마 & 가라오케",
+    template: "%s | 태국 밤문화 가이드",
+  },
+
+  icons: {
+    icon: "https://www.thailandnightlifetravel.com/favicon.ico",
+    shortcut: "https://www.thailandnightlifetravel.com/favicon.ico",
+    apple: "https://www.thailandnightlifetravel.com/favicon.ico",
+  },
+
+  description:
+  
   description:
     "태국 방콕과 파타야의 불건마, 가라오케, 밤문화 정보를 지역별로 정리한 태국 여행 가이드입니다. 위치, 가격, 영업시간 등 여행에 필요한 정보를 확인하세요.",
 
