@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const baseUrl = "https://thailandnightlifetravel.com";
+const baseUrl = "https://www.thailandnightlifetravel.com";
 
 const cities = [
   {
@@ -27,6 +27,8 @@ const cities = [
 ];
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+
   title: "태국 에코걸 | 방콕 에코걸 · 파타야 에코걸",
   description:
     "태국 에코걸 정보를 확인하고 가라오케 에코걸과 일반 에코걸의 이용 방식, 지역별 여행 일정 및 이용 전 참고사항을 알아보세요.",
