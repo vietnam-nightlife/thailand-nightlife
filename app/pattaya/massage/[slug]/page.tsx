@@ -326,12 +326,18 @@ export async function generateMetadata({
         `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
       type: "website",
       url: `${BASE_URL}/pattaya/massage/${slug}`,
+      locale: "ko_KR",
+      siteName: "THAI BOOM",
       images: [
         {
           url: page.mainImage,
           alt: page.name,
         },
       ],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
