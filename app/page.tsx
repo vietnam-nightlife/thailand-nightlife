@@ -9,8 +9,6 @@ import mobileBgImage from "../thailand-mobile.webp";
 
 import type { Metadata } from "next";
 
-import type { Metadata } from "next";
-
 const BASE_URL = "https://www.thailandnightlifetravel.com";
 
 export const metadata: Metadata = {
@@ -27,16 +25,11 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "태국 밤문화 가이드 | 방콕·파타야·에코걸",
-
     description:
       "방콕과 파타야의 마사지와 가라오케,에코걸 정보를 지역별로 확인하세요.",
-
     type: "website",
-
     url: BASE_URL,
-
     locale: "ko_KR",
-
     siteName: "THAI BOOM",
   },
 
