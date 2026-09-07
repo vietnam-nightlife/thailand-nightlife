@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     "Dragon Swedish Massage",
   ],
   alternates: {
-    canonical: `/pattaya/massage/${DRAGON_SLUG}`,
+    canonical: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
   },
   openGraph: {
     title: page.name,
