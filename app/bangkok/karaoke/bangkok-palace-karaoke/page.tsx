@@ -4,7 +4,7 @@ import ImageGallery from "@/components/ImageGallery";
 
 const GUNGJEON_SLUG = "bangkok-palace-karaoke";
 
-const BASE_URL = "https://thailandnightlifetravel.com";
+const BASE_URL = "https://www.thailandnightlifetravel.com";
 
 const GITHUB_RAW =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
