@@ -4,6 +4,8 @@ import Link from "next/link";
 import { places, getPlace } from "@/lib/data";
 import ImageGallery from "@/components/ImageGallery";
 
+const BASE_URL = "https://www.thailandnightlifetravel.com";
+
 export function generateStaticParams() {
   return places.map((p) => ({
     city: p.city,
@@ -41,8 +43,15 @@ export async function generateMetadata({
       title: "방콕 돈키호테 마사지 | Don Quixote Massage Bangkok | 태국 눈탱이 방지 위원회",
       description: "방콕 돈키호테 마사지의 위치, 영업시간, 시설, 룸 사진 및 가격 정보를 확인하세요.",
       keywords: ["방콕 돈키호테 마사지", "돈키호테 마사지", "Don Quixote Massage Bangkok", "방콕 마사지", "방콕 마사지샵", "방콕 마사지 가격"],
-      alternates: { canonical: `/${city}/${category}/${slug}` },
-      openGraph: { title: "방콕 돈키호테 마사지 | Don Quixote Massage Bangkok", description: "방콕 돈키호테 마사지의 위치, 시설, 룸 사진 및 가격 정보를 확인하세요.", type: "website", images: [{ url: place.image, alt: "방콕 돈키호테 마사지" }] },
+      alternates: { canonical: `${BASE_URL}/${city}/${category}/${slug}` },
+      openGraph: { title: "방콕 돈키호테 마사지 | Don Quixote Massage Bangkok", description: "방콕 돈키호테 마사지의 위치, 시설, 룸 사진 및 가격 정보를 확인하세요.", type: "website",
+        url: `${BASE_URL}/${city}/${category}/${slug}`,
+        locale: "ko_KR",
+        siteName: "THAI BOOM", images: [{ url: place.image, alt: "방콕 돈키호테 마사지" }] },
+      robots: {
+        index: true,
+        follow: true,
+      },
     };
   }
 
@@ -65,19 +74,26 @@ export async function generateMetadata({
         "방콕 마사지샵",
       ],
       alternates: {
-        canonical: `/${city}/${category}/${slug}`,
+        canonical: `${BASE_URL}/${city}/${category}/${slug}`,
       },
       openGraph: {
         title: "방콕 바비18 마사지 | Sukhumvit Soi 18",
         description:
           "방콕 바비18 마사지 위치, 시설, 가격 및 방문 정보를 확인하세요.",
         type: "website",
+        url: `${BASE_URL}/${city}/${category}/${slug}`,
+        locale: "ko_KR",
+        siteName: "THAI BOOM",
         images: [
           {
             url: place.image,
             alt: "방콕 바비18 마사지",
           },
         ],
+      },
+      robots: {
+        index: true,
+        follow: true,
       },
     };
   }
@@ -89,7 +105,7 @@ export async function generateMetadata({
       description:
         "방콕 코리아나 가라오케 위치, 영업시간, 룸과 시설, 이용요금 및 방문 정보를 확인하세요.",
       alternates: {
-        canonical: `/${city}/${category}/${slug}`,
+        canonical: `${BASE_URL}/${city}/${category}/${slug}`,
       },
       keywords: [
         "방콕 코리아나 가라오케",
@@ -107,12 +123,19 @@ export async function generateMetadata({
         description:
           "방콕 코리아나 가라오케의 위치, 영업시간, 룸, 시설 및 이용 정보를 확인하세요.",
         type: "website",
+        url: `${BASE_URL}/${city}/${category}/${slug}`,
+        locale: "ko_KR",
+        siteName: "THAI BOOM",
         images: [
           {
             url: place.image,
             alt: "방콕 코리아나 가라오케",
           },
         ],
+      },
+      robots: {
+        index: true,
+        follow: true,
       },
     };
   }
@@ -126,13 +149,16 @@ export async function generateMetadata({
     description:
       `${place.name}의 위치, 영업시간, 평점 및 업소 정보를 확인해보세요.`,
     alternates: {
-      canonical: `/${city}/${category}/${slug}`,
+      canonical: `${BASE_URL}/${city}/${category}/${slug}`,
     },
     openGraph: {
       title: `${place.name} | ${cityName} ${categoryName}`,
       description:
         `${place.name}의 위치, 영업시간 및 업소 정보를 확인하세요.`,
       type: "website",
+        url: `${BASE_URL}/${city}/${category}/${slug}`,
+        locale: "ko_KR",
+        siteName: "THAI BOOM",
       images: [
         {
           url: place.image,
@@ -140,6 +166,10 @@ export async function generateMetadata({
         },
       ],
     },
+      robots: {
+        index: true,
+        follow: true,
+      },
   };
 }
 
@@ -166,25 +196,25 @@ function PlaceBreadcrumbJsonLd({
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "/",
+        item: `${BASE_URL}/`,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: cityName,
-        item: `/${citySlug}`,
+        item: `${BASE_URL}/${citySlug}`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: categoryName,
-        item: `/${citySlug}/${category}`,
+        item: `${BASE_URL}/${citySlug}/${category}`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: placeName,
-        item: `/${citySlug}/${category}/${placeSlug}`,
+        item: `${BASE_URL}/${citySlug}/${category}/${placeSlug}`,
       },
     ],
   };
@@ -216,6 +246,7 @@ function KoreanaBusinessJsonLd() {
       addressCountry: "TH",
     },
     openingHours: "Mo-Su 19:00-03:00",
+    url: `${BASE_URL}/bangkok/karaoke/bangkok-karaoke-01`,
     priceRange: "฿฿",
   };
 
