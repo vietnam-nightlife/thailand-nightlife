@@ -4,7 +4,7 @@ import Link from "next/link";
 import { places, getPlace } from "@/lib/data";
 import ImageGallery from "@/components/ImageGallery";
 
-const BASE_URL = "https://www.thailandnightlifetravel.com";
+const BASE_URL = "https://www.thailandtravelnight.com";
 
 export function generateStaticParams() {
   return places.map((p) => ({

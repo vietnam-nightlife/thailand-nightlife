@@ -82,14 +82,14 @@ export const metadata: Metadata = {
     "Dragon Swedish Massage",
   ],
   alternates: {
-    canonical: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
+    canonical: `https://www.thailandtravelnight.com/pattaya/massage/${DRAGON_SLUG}`,
   },
   openGraph: {
     title: page.name,
     description:
       `${page.name} 위치, 영업시간, 마사지 코스와 가격정보`,
     type: "website",
-    url: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
+    url: `https://www.thailandtravelnight.com/pattaya/massage/${DRAGON_SLUG}`,
     images: [
       {
         url: page.mainImage,
@@ -108,7 +108,7 @@ function BreadcrumbJsonLd() {
         "@type": "ListItem",
         position: 1,
         name: "홈",
-        item: "https://www.thailandnightlifetravel.com/",
+        item: "https://www.thailandtravelnight.com/",
       },
       {
         "@type": "ListItem",
@@ -120,13 +120,13 @@ function BreadcrumbJsonLd() {
         "@type": "ListItem",
         position: 3,
         name: "마사지",
-        item: "https://www.thailandnightlifetravel.com/pattaya",
+        item: "https://www.thailandtravelnight.com/pattaya",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: page.name,
-        item: `https://www.thailandnightlifetravel.com/pattaya/massage/${DRAGON_SLUG}`,
+        item: `https://www.thailandtravelnight.com/pattaya/massage/${DRAGON_SLUG}`,
       },
     ],
   };

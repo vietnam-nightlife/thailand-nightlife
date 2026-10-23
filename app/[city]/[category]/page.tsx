@@ -4,7 +4,7 @@ import Link from "next/link";
 import PlaceCard from "@/components/PlaceCard";
 import { cities, getCity, getPlaces } from "@/lib/data";
 
-const BASE_URL = "https://www.thailandnightlifetravel.com";
+const BASE_URL = "https://www.thailandtravelnight.com";
 
 export function generateStaticParams() {
   return cities.flatMap((city) =>

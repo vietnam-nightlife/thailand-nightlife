@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "https://www.thailandnightlifetravel.com/favicon.ico",
-    shortcut: "https://www.thailandnightlifetravel.com/favicon.ico",
-    apple: "https://www.thailandnightlifetravel.com/favicon.ico",
+    icon: "https://www.thailandtravelnight.com/favicon.ico",
+    shortcut: "https://www.thailandtravelnight.com/favicon.ico",
+    apple: "https://www.thailandtravelnight.com/favicon.ico",
   },
 
   description:

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-const baseUrl = "https://www.thailandnightlifetravel.com";
+const baseUrl = "https://www.thailandtravelnight.com";
 
 const cities = [
   {

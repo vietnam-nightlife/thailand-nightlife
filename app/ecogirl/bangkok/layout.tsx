@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = "https://thailandnightlifetravel.com";
+const baseUrl = "https://thailandtravelnight.com";
 
 export const metadata: Metadata = {
   title: "방콕 에코걸 | 방콕 에코걸 프로필 및 여행 동행",

@@ -9,7 +9,7 @@ import mobileBgImage from "../thailand-mobile.webp";
 
 import type { Metadata } from "next";
 
-const BASE_URL = "https://www.thailandnightlifetravel.com";
+const BASE_URL = "https://www.thailandtravelnight.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

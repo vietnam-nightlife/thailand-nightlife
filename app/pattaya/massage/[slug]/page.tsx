@@ -6,7 +6,7 @@ import ImageGallery from "@/components/ImageGallery";
 const GITHUB_RAW =
   "https://raw.githubusercontent.com/vietnam-nightlife/thailand-nightlife/main";
 
-const BASE_URL = "https://www.thailandnightlifetravel.com";
+const BASE_URL = "https://www.thailandtravelnight.com";
 
 /* =========================================================
    SLUG
