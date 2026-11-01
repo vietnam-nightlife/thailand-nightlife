@@ -51,14 +51,14 @@ export const metadata: Metadata = {
     },
   },
 
-  // Google + Naver 사이트 소유권 인증
-  verification: {
-    google: "ThFt35xBDlOozgmiDBvQ2Zs4J-3P1ychlMBq1zDkCBM",
-    other: {
-      "naver-site-verification":
-        "9e6d1bf8040a990b95504cc645ef1ea5ef6151bc",
-    },
+// Google + Naver 사이트 소유권 인증
+verification: {
+  google: "ThFt35xBDlOozgmiDBvQ2Zs4J-3P1ychlMBq1zDkCBM",
+  other: {
+    "naver-site-verification":
+      "861b678538a394160efae715724cc3eadec322ea",
   },
+},
 
   openGraph: {
     type: "website",
